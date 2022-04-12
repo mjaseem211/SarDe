@@ -78,7 +78,7 @@ class Home extends StatelessWidget {
                         primary: Color(0xFFA49EB8), // background
                         onPrimary: Color(0xFFA49EB8), // foreground
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0)),
+                            borderRadius: BorderRadius.circular(10.0)),
                       ),
                     )),
 
@@ -147,7 +147,7 @@ class Home extends StatelessWidget {
                           color: Color(0xfff4cfc9),
                           width: 8,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(10.0),
                       ),
                     ),
                   ),
@@ -163,7 +163,7 @@ class Home extends StatelessWidget {
                           color: Color(0xffdd7164),
                           width: 8,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(10.0),
                       )),
                   Container(
                     padding: const EdgeInsets.fromLTRB(305, 5, 30, 100),
@@ -212,7 +212,7 @@ class Home extends StatelessWidget {
                           color: Color(0xffefd2bd),
                           width: 8,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(10.0),
                       )),
                   Container(
                     padding: const EdgeInsets.fromLTRB(60, 35, 0, 0),
