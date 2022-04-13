@@ -77,7 +77,7 @@ class Profile extends StatelessWidget {
                         },
                         padding: const EdgeInsets.fromLTRB(40, 70, 180, 0),
                         iconSize: 50,
-                        icon: Image.asset('assets/images/Vector.png')))
+                        icon: Image.asset('assets/images/backbutton.png')))
               ],
             ))));
   }

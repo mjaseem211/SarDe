@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sarde/screens/jobassign.dart';
 import 'package:sarde/screens/profile.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -14,15 +16,15 @@ class Home extends StatelessWidget {
                     child: Column(
               children: <Widget>[
                 Container(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
+                    padding: EdgeInsets.fromLTRB(0, 97.h, 140.w, 0),
                     child: TextButton(
-                        child: const Text(
-                          'Hi ,                 Pradeep',
-                          maxLines: 2,
+                        child: Text(
+                          'Hi ,\nPradeep',
+
                           style: TextStyle(
                               fontFamily: 'IndieFlower',
-                              color: Color(0xFF2B3070),
-                              fontSize: 64,
+                              color:const Color(0xFF2B3070),
+                              fontSize: 64.sp,
                               fontWeight: FontWeight.bold),
                         ),
                         onPressed: () {
@@ -33,168 +35,166 @@ class Home extends StatelessWidget {
                         })),
                 Stack(alignment: Alignment.centerLeft, children: <Widget>[
                   Container(
-                      width: 330,
-                      height: 5.0,
+                      width: 316.w,
+                      height: 5.0.h,
                       decoration: BoxDecoration(
-                        color: const Color(0xffd8d4e9),
+                        color:const Color(0xffd8d4e9),
                         border: Border.all(
-                          color: Color(0xffd8d4e9),
-                          width: 8,
+                          color:const Color(0xffd8d4e9),
+                          width: 8.w,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(6.r),
                       )),
                   Container(
-                      width: 210,
-                      height: 9.0,
+                      width: 198.w,
+                      height: 9.0.h,
                       decoration: BoxDecoration(
                         color: const Color(0xffa49eb8),
                         border: Border.all(
-                          color: Color(0xffa49eb8),
-                          width: 8,
+                          color: const Color(0xffa49eb8),
+                          width: 8.w,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(6.r),
                       )),
                 ]),
-                const Spacer(
-                  flex: 1,
+                SizedBox(
+                  height: 19.h,
                 ),
                 Stack(alignment: Alignment.centerLeft, children: <Widget>[
-                  Positioned(
-                    left: 38,
-                    height: 124,
-                    width: 306,
-                    child: ElevatedButton(
-                      onPressed: () {
-
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => JobAssign()));
-                      },
-                      child: const Text('',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          )),
-                      style: ElevatedButton.styleFrom(
-                        primary: Color(0xFFA49EB8), // background
-                        onPrimary: Color(0xFFA49EB8), // foreground
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.0)),
-                      ),
-                    )),
-
+                    Container(
+                      padding: EdgeInsets.fromLTRB(50.w, 0, 0, 0),
+                      width: 306.w,
+                      height: 124.h,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => JobAssign()));
+                        },
+                        child: Text('',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18.sp,
+                            )),
+                        style: ElevatedButton.styleFrom(
+                          primary:const Color(0xFFA49EB8), // background
+                          onPrimary:const Color(0xFFA49EB8), // foreground
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(9.0.r)),
+                        ),
+                      ),  ),
                   AnimatedContainer(
                       duration: const Duration(seconds: 1),
                       curve: Curves.fastOutSlowIn,
                       alignment: Alignment.bottomLeft,
-                      width: 257,
-                      height: 136,
+                      width: 257.w,
+                      height: 136.h,
                       decoration: BoxDecoration(
                         color: const Color(0xff2b3070),
                         border: Border.all(
-                          color: Color(0xff2b3070),
-                          width: 8,
+                          color:const Color(0xff2b3070),
+                          width: 8.w,
                         ),
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(13.r),
                       )),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(15, 30, 0, 0),
-                    child: const Text(
+                    padding: EdgeInsets.fromLTRB(15.w, 30.h, 0, 0),
+                    child: Text(
                       'Job 303',
-                      maxLines: 2,
+
                       style: TextStyle(
-                          color: Color(0xFFFFFFFF),
-                          fontSize: 18,
+                          color:const Color(0xFFFFFFFF),
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(15, 75, 0, 0),
-                    child: const Text(
+                    padding: EdgeInsets.fromLTRB(15.w, 75.h, 0, 0),
+                    child: Text(
                       'Kuttichira to Maradu',
-                      maxLines: 2,
+
                       style: TextStyle(
-                          color: Color(0xDCFFFFFF),
-                          fontSize: 18,
+                          color:const Color(0xDCFFFFFF),
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(305, 0, 30, 100),
-                    child: const Text(
+                    padding: EdgeInsets.fromLTRB(305.w, 0, 30.w, 100.h),
+                    child: Text(
                       '78 %',
-                      maxLines: 2,
+
                       style: TextStyle(
-                          color: Color(0xFF636262),
-                          fontSize: 18,
+                          color:const Color(0xFF636262),
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
                   ),
                 ]),
-                const Spacer(
-                  flex: 1,
+                SizedBox(
+                  height: 19.h,
                 ),
                 Stack(alignment: Alignment.centerLeft, children: <Widget>[
-                  Positioned(
-                    left: 38,
-                    height: 124,
-                    width: 306,
-                    child: Container(
-                      width: 306,
-                      height: 124,
+
+                    Container(
+                      width: 306.w,
+                      height: 124.h,
                       decoration: BoxDecoration(
-                        color: const Color(0xfff4cfc9),
+                        color:const Color(0xfff4cfc9),
                         border: Border.all(
-                          color: Color(0xfff4cfc9),
-                          width: 8,
+                          color:const Color(0xfff4cfc9),
+                          width: 8.w,
                         ),
-                        borderRadius: BorderRadius.circular(10.0),
+                        borderRadius: BorderRadius.circular(10.0.r),
                       ),
                     ),
-                  ),
+
                   AnimatedContainer(
+
                       duration: const Duration(seconds: 1),
                       curve: Curves.fastOutSlowIn,
                       alignment: Alignment.bottomLeft,
-                      width: 188,
-                      height: 136,
+                      width: 188.w,
+                      height: 136.h,
                       decoration: BoxDecoration(
-                        color: const Color(0xffdd7164),
+                        color:const Color(0xffdd7164),
                         border: Border.all(
-                          color: Color(0xffdd7164),
-                          width: 8,
+                          color:const Color(0xffdd7164),
+                          width: 8.w,
                         ),
-                        borderRadius: BorderRadius.circular(10.0),
+                        borderRadius: BorderRadius.circular(10.0.r),
                       )),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(305, 5, 30, 100),
-                    child: const Text(
+                    padding: EdgeInsets.fromLTRB(305.w, 5.h, 30.w, 100.h),
+                    child: Text(
                       '56 %',
-                      maxLines: 2,
+
                       style: TextStyle(
-                          color: Color(0xFF636262),
-                          fontSize: 18,
+                          color:const Color(0xFF636262),
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(15, 30, 0, 0),
-                    child: const Text(
+                    padding: EdgeInsets.fromLTRB(15.w, 30.h, 0, 0),
+                    child: Text(
                       'Job 308',
-                      maxLines: 2,
+
                       style: TextStyle(
-                          color: Color(0xFFFFFFFF),
-                          fontSize: 18,
+                          color:const Color(0xFFFFFFFF),
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(15, 75, 0, 0),
-                    child: const Text(
+                    padding: EdgeInsets.fromLTRB(15.w, 75.h, 0, 0),
+                    child: Text(
                       'Koyilandy  to Kozhikode',
-                      maxLines: 2,
+
                       style: TextStyle(
-                          color: Color(0xBAFFFFFF),
-                          fontSize: 18,
+                          color:const Color(0xBAFFFFFF),
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
                   ),
@@ -204,39 +204,39 @@ class Home extends StatelessWidget {
                 ),
                 Stack(children: <Widget>[
                   Container(
-                      width: 500,
-                      height: 216,
+                      width: 500.w,
+                      height: 216.h,
                       decoration: BoxDecoration(
-                        color: const Color(0xffefd2bd),
+                        color:const Color(0xffefd2bd),
                         border: Border.all(
-                          color: Color(0xffefd2bd),
-                          width: 8,
+                          color:const Color(0xffefd2bd),
+                          width: 8.w,
                         ),
-                        borderRadius: BorderRadius.circular(10.0),
+                        borderRadius: BorderRadius.circular(10.0.r),
                       )),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(60, 35, 0, 0),
-                    child: const Text(
+                    padding: EdgeInsets.fromLTRB(60.w, 35.h, 0, 0),
+                    child: Text(
                       'Items shiped from inventry, please\n update once collected\n        ',
-                      maxLines: 2,
+
                       style: TextStyle(
-                          color: Color(0xBA000000),
-                          fontSize: 18,
+                          color:const Color(0xBA000000),
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(50, 95, 0, 0),
+                    padding: EdgeInsets.fromLTRB(50.w, 95.h, 0, 0),
                     child: Image.asset('assets/images/Line.jpg'),
                   ),
                   Container(
-                    padding: const EdgeInsets.fromLTRB(60, 115, 0, 0),
-                    child: const Text(
+                    padding: EdgeInsets.fromLTRB(60.w, 115.h, 0, 0),
+                    child: Text(
                       'Quality inspection pending on\n Kuttichira to Maradu.         ',
-                      maxLines: 2,
+
                       style: TextStyle(
-                          color: Color(0xBA000000),
-                          fontSize: 18,
+                          color:const Color(0xBA000000),
+                          fontSize: 18.sp,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
