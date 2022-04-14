@@ -20,10 +20,9 @@ class Home extends StatelessWidget {
                     child: TextButton(
                         child: Text(
                           'Hi ,\nPradeep',
-
                           style: TextStyle(
                               fontFamily: 'IndieFlower',
-                              color:const Color(0xFF2B3070),
+                              color: const Color(0xFF2B3070),
                               fontSize: 64.sp,
                               fontWeight: FontWeight.bold),
                         ),
@@ -38,9 +37,9 @@ class Home extends StatelessWidget {
                       width: 316.w,
                       height: 5.0.h,
                       decoration: BoxDecoration(
-                        color:const Color(0xffd8d4e9),
+                        color: const Color(0xffd8d4e9),
                         border: Border.all(
-                          color:const Color(0xffd8d4e9),
+                          color: const Color(0xffd8d4e9),
                           width: 8.w,
                         ),
                         borderRadius: BorderRadius.circular(6.r),
@@ -61,29 +60,32 @@ class Home extends StatelessWidget {
                   height: 19.h,
                 ),
                 Stack(alignment: Alignment.centerLeft, children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.fromLTRB(50.w, 0, 0, 0),
-                      width: 306.w,
-                      height: 124.h,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => JobAssign()));
-                        },
-                        child: Text('',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18.sp,
-                            )),
-                        style: ElevatedButton.styleFrom(
-                          primary:const Color(0xFFA49EB8), // background
-                          onPrimary:const Color(0xFFA49EB8), // foreground
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(9.0.r)),
-                        ),
-                      ),  ),
+                  Container(
+                    padding: EdgeInsets.fromLTRB(50.w, 0, 0, 0),
+                    width: 306.w,
+                    height: 124.h,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => JobAssign()));
+                      },
+                      child: Text('',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18.sp,
+                          )),
+                      style: ElevatedButton.styleFrom(
+                        primary: const Color(0xFFA49EB8),
+                        // background
+                        onPrimary: const Color(0xFFA49EB8),
+                        // foreground
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(9.0.r)),
+                      ),
+                    ),
+                  ),
                   AnimatedContainer(
                       duration: const Duration(seconds: 1),
                       curve: Curves.fastOutSlowIn,
@@ -93,7 +95,7 @@ class Home extends StatelessWidget {
                       decoration: BoxDecoration(
                         color: const Color(0xff2b3070),
                         border: Border.all(
-                          color:const Color(0xff2b3070),
+                          color: const Color(0xff2b3070),
                           width: 8.w,
                         ),
                         borderRadius: BorderRadius.circular(13.r),
@@ -102,9 +104,8 @@ class Home extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(15.w, 30.h, 0, 0),
                     child: Text(
                       'Job 303',
-
                       style: TextStyle(
-                          color:const Color(0xFFFFFFFF),
+                          color: const Color(0xFFFFFFFF),
                           fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
@@ -113,9 +114,8 @@ class Home extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(15.w, 75.h, 0, 0),
                     child: Text(
                       'Kuttichira to Maradu',
-
                       style: TextStyle(
-                          color:const Color(0xDCFFFFFF),
+                          color: const Color(0xDCFFFFFF),
                           fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
@@ -124,9 +124,8 @@ class Home extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(305.w, 0, 30.w, 100.h),
                     child: Text(
                       '78 %',
-
                       style: TextStyle(
-                          color:const Color(0xFF636262),
+                          color: const Color(0xFF636262),
                           fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
@@ -136,31 +135,28 @@ class Home extends StatelessWidget {
                   height: 19.h,
                 ),
                 Stack(alignment: Alignment.centerLeft, children: <Widget>[
-
-                    Container(
-                      width: 306.w,
-                      height: 124.h,
-                      decoration: BoxDecoration(
-                        color:const Color(0xfff4cfc9),
-                        border: Border.all(
-                          color:const Color(0xfff4cfc9),
-                          width: 8.w,
-                        ),
-                        borderRadius: BorderRadius.circular(10.0.r),
+                  Container(
+                    width: 306.w,
+                    height: 124.h,
+                    decoration: BoxDecoration(
+                      color: const Color(0xfff4cfc9),
+                      border: Border.all(
+                        color: const Color(0xfff4cfc9),
+                        width: 8.w,
                       ),
+                      borderRadius: BorderRadius.circular(10.0.r),
                     ),
-
+                  ),
                   AnimatedContainer(
-
                       duration: const Duration(seconds: 1),
                       curve: Curves.fastOutSlowIn,
                       alignment: Alignment.bottomLeft,
                       width: 188.w,
                       height: 136.h,
                       decoration: BoxDecoration(
-                        color:const Color(0xffdd7164),
+                        color: const Color(0xffdd7164),
                         border: Border.all(
-                          color:const Color(0xffdd7164),
+                          color: const Color(0xffdd7164),
                           width: 8.w,
                         ),
                         borderRadius: BorderRadius.circular(10.0.r),
@@ -169,9 +165,8 @@ class Home extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(305.w, 5.h, 30.w, 100.h),
                     child: Text(
                       '56 %',
-
                       style: TextStyle(
-                          color:const Color(0xFF636262),
+                          color: const Color(0xFF636262),
                           fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
@@ -180,9 +175,8 @@ class Home extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(15.w, 30.h, 0, 0),
                     child: Text(
                       'Job 308',
-
                       style: TextStyle(
-                          color:const Color(0xFFFFFFFF),
+                          color: const Color(0xFFFFFFFF),
                           fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
@@ -191,9 +185,8 @@ class Home extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(15.w, 75.h, 0, 0),
                     child: Text(
                       'Koyilandy  to Kozhikode',
-
                       style: TextStyle(
-                          color:const Color(0xBAFFFFFF),
+                          color: const Color(0xBAFFFFFF),
                           fontSize: 18.sp,
                           fontWeight: FontWeight.normal),
                     ),
@@ -207,9 +200,9 @@ class Home extends StatelessWidget {
                       width: 500.w,
                       height: 216.h,
                       decoration: BoxDecoration(
-                        color:const Color(0xffefd2bd),
+                        color: const Color(0xffefd2bd),
                         border: Border.all(
-                          color:const Color(0xffefd2bd),
+                          color: const Color(0xffefd2bd),
                           width: 8.w,
                         ),
                         borderRadius: BorderRadius.circular(10.0.r),
@@ -218,9 +211,8 @@ class Home extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(60.w, 35.h, 0, 0),
                     child: Text(
                       'Items shiped from inventry, please\n update once collected\n        ',
-
                       style: TextStyle(
-                          color:const Color(0xBA000000),
+                          color: const Color(0xBA000000),
                           fontSize: 18.sp,
                           fontWeight: FontWeight.bold),
                     ),
@@ -233,9 +225,8 @@ class Home extends StatelessWidget {
                     padding: EdgeInsets.fromLTRB(60.w, 115.h, 0, 0),
                     child: Text(
                       'Quality inspection pending on\n Kuttichira to Maradu.         ',
-
                       style: TextStyle(
-                          color:const Color(0xBA000000),
+                          color: const Color(0xBA000000),
                           fontSize: 18.sp,
                           fontWeight: FontWeight.bold),
                     ),

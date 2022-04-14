@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sarde/screens/JobMain.dart';
 import 'package:sarde/screens/home.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
 
 class JobAssign extends StatelessWidget {
   @override
@@ -249,7 +252,7 @@ class JobAssign extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => JobAssign()));
+                                builder: (context) => JobMain()));
                       },
                       child: const Text('',
                           style: TextStyle(
