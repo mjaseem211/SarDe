@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sarde/screens/home.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SignIn extends StatelessWidget {
   @override
@@ -12,6 +13,12 @@ class SignIn extends StatelessWidget {
     TextEditingController nameController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
     return MaterialApp(
+        theme: ThemeData(
+          textTheme: GoogleFonts.lexendDecaTextTheme(
+            Theme.of(context)
+                .textTheme, // If this is not set, then ThemeData.light().textTheme is used.
+          ),
+        ),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
           resizeToAvoidBottomInset: false,
@@ -87,7 +94,6 @@ class SignIn extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18,
-                            fontFamily: 'IndieFlower.ttf',
                             fontWeight: FontWeight.normal,
                           )),
                       style: ElevatedButton.styleFrom(
@@ -102,9 +108,8 @@ class SignIn extends StatelessWidget {
                   ),
                   Container(
                     padding: const EdgeInsets.fromLTRB(0, 1, 160, 0),
-                    child: const Text(
+                    child: Text(
                       'Login',
-                      maxLines: 2,
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
@@ -122,9 +127,10 @@ class SignIn extends StatelessWidget {
                 Container(
                     padding: const EdgeInsets.fromLTRB(10, 70, 10, 0),
                     child: TextButton(
-                      child: const Text(
+                      child: Text(
                         'Contact admin',
-                        style: TextStyle(color: Colors.grey, fontSize: 18),
+                        style: GoogleFonts.lexendDeca(
+                            color: Colors.grey, fontSize: 18),
                       ),
                       onPressed: () {},
                     )),

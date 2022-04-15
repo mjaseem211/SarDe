@@ -2,13 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:sarde/screens/JobMain.dart';
 import 'package:sarde/screens/home.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-
+import 'package:google_fonts/google_fonts.dart';
 
 class JobAssign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: ThemeData(
+          textTheme: GoogleFonts.lexendDecaTextTheme(
+            Theme.of(context)
+                .textTheme, // If this is not set, then ThemeData.light().textTheme is used.
+          ),
+        ),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             resizeToAvoidBottomInset: false,
@@ -20,7 +25,7 @@ class JobAssign extends StatelessWidget {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Home()));
                     },
-                    padding:  EdgeInsets.fromLTRB(0, 10.h, 360.w, 0),
+                    padding: EdgeInsets.fromLTRB(0, 10.h, 360.w, 0),
                     iconSize: 20,
                     icon: Image.asset(
                       'assets/images/backarrow.png',
@@ -105,7 +110,8 @@ class JobAssign extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(0, 16, 23, 0),
                   child: RichText(
                     text: const TextSpan(
-                      text: '18-09-22                                           ',
+                      text:
+                          '18-09-22                                           ',
                       style: TextStyle(
                           color: Color(
                             0xFFBC401E,
@@ -161,7 +167,8 @@ class JobAssign extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(0, 16, 38, 0),
                   child: RichText(
                     text: const TextSpan(
-                      text: '18-09-22                                           ',
+                      text:
+                          '18-09-22                                           ',
                       style: TextStyle(
                           color: Color(
                             0xFFBC401E,
@@ -217,9 +224,9 @@ class JobAssign extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(0, 16, 40, 0),
                   child: RichText(
                     text: const TextSpan(
-                      text: '18-09-22                                           ',
+                      text:
+                          '18-09-22                                           ',
                       style: TextStyle(
-
                           color: Color(
                             0xFFBC401E,
                           ),
@@ -229,30 +236,24 @@ class JobAssign extends StatelessWidget {
                       /*defining default style is optional */
                       children: <TextSpan>[
                         TextSpan(
-
                             text: 'Total : 43  nos',
                             style: TextStyle(
-
                               color: Color(0xFF2B3070),
                               fontWeight: FontWeight.normal,
                               fontSize: 16,
                             )),
                       ],
                     ),
-
                   ),
                 ),
                 Stack(children: <Widget>[
                   Container(
                     padding: EdgeInsets.fromLTRB(0, 140, 0, 0),
-                    height: 234,
+                    height: 224,
                     width: 800,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => JobMain()));
+
                       },
                       child: const Text('',
                           style: TextStyle(

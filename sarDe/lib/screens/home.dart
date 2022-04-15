@@ -3,11 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:sarde/screens/jobassign.dart';
 import 'package:sarde/screens/profile.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: ThemeData(
+          textTheme: GoogleFonts.lexendDecaTextTheme(
+            Theme.of(context)
+                .textTheme, // If this is not set, then ThemeData.light().textTheme is used.
+          ),
+        ),
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             resizeToAvoidBottomInset: false,
@@ -21,7 +28,6 @@ class Home extends StatelessWidget {
                         child: Text(
                           'Hi ,\nPradeep',
                           style: TextStyle(
-                              fontFamily: 'IndieFlower',
                               color: const Color(0xFF2B3070),
                               fontSize: 64.sp,
                               fontWeight: FontWeight.bold),
