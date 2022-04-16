@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sarde/screens/JobMain.dart';
 import 'package:sarde/screens/home.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'job_main/JobMain.dart';
 
 class JobAssign extends StatelessWidget {
   @override
