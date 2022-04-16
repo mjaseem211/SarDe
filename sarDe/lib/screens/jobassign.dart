@@ -253,7 +253,8 @@ class JobAssign extends StatelessWidget {
                     width: 800,
                     child: ElevatedButton(
                       onPressed: () {
-
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => JobMain()));
                       },
                       child: const Text('',
                           style: TextStyle(

@@ -108,7 +108,7 @@ class SignIn extends StatelessWidget {
                   ),
                   Container(
                     padding: const EdgeInsets.fromLTRB(0, 1, 160, 0),
-                    child: Text(
+                    child: const Text(
                       'Login',
                       style: TextStyle(
                           color: Colors.white,
@@ -117,7 +117,7 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(180, 6, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(180, 6, 0, 0),
                     child: Image.asset('assets/images/forwardarrow.png'),
                   ),
                 ]),
