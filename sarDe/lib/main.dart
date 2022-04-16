@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sarde/screens/signin.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +21,9 @@ class MyApp extends StatelessWidget {
             // You can use the library anywhere in the app even in theme
             theme: ThemeData(
               primarySwatch: Colors.blue,
-              textTheme: TextTheme(bodyText2: TextStyle(fontSize: 30.sp)),
+              textTheme:  GoogleFonts.lexendDecaTextTheme(
+                Theme.of(context).textTheme, // If this is not set, then ThemeData.light().textTheme is used.
+              ),
             ),
             home: SignIn(),
           );
