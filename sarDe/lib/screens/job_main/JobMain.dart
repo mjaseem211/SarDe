@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/job_main/widgets/job_main_widgets.dart';
 
-import '../../widgets/app_grid_buttons.dart';
 
 class JobMain extends StatelessWidget {
-  const JobMain({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +27,14 @@ class JobMain extends StatelessWidget {
               SizedBox(
                 height: 29.h,
               ),
-              gridView()
+              gridView(),
+              SizedBox(
+                height: 35.h,
+              ),
+              Startbutton(),
             ],
-          )
+          ),
+
         ],
       ),
     );
