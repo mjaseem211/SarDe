@@ -123,10 +123,9 @@ Widget gridView() {
     ),
   );
 }
-
 // ignore: non_constant_identifier_names
-Widget Startbutton() {
- return  Stack(alignment: Alignment.center, children: <Widget>[
+Widget CloseButton1() {
+  return  Stack(alignment: Alignment.center, children: <Widget>[
     Expanded(
       child: Container(
 
@@ -135,10 +134,13 @@ Widget Startbutton() {
         child: ElevatedButton(
           onPressed: () {
 
+
+
           },
           child:  Padding(
             padding: EdgeInsets.only(left: 55.w,right: 214.w),
             child: Text('Close Day',
+
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 25.sp,
@@ -149,11 +151,11 @@ Widget Startbutton() {
             primary: const Color(0xFF2B3070), // background
             onPrimary:const Color(0xFF2B3070),
 
-              // foreground
-            ),
+            // foreground
           ),
         ),
       ),
+    ),
 
 
     Container(
@@ -162,3 +164,4 @@ Widget Startbutton() {
     ),
   ]);
 }
+

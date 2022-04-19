@@ -1,9 +1,15 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sarde/screens/Complete_checkup_form/complete_checkup_form.dart';
 import 'package:sarde/screens/job_main/widgets/job_main_widgets.dart';
 
 
 class JobMain extends StatelessWidget {
+
+
+
 
 
   @override
@@ -31,7 +37,7 @@ class JobMain extends StatelessWidget {
               SizedBox(
                 height: 35.h,
               ),
-              Startbutton(),
+              CloseButton1(),
             ],
           ),
 
@@ -39,4 +45,6 @@ class JobMain extends StatelessWidget {
       ),
     );
   }
+
+
 }
