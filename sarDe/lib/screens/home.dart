@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sarde/screens/Complete_checkup_form/complete_checkup_form.dart';
+import 'package:sarde/screens/Success_page.dart';
+import 'package:sarde/screens/job_main/JobMain.dart';
 import 'package:sarde/screens/jobassign.dart';
 import 'package:sarde/screens/profile.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -75,7 +78,7 @@ class Home extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => JobAssign()));
+                                builder: (context) => Success_Page()));
                       },
                       child: Text('',
                           style: TextStyle(
