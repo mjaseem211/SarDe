@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sarde/screens/Complete_checkup_form/complete_checkup_form.dart';
+import 'package:sarde/screens/Start_Job_Form/Start_Job_Form.dart';
+import 'package:sarde/screens/job_main/widgets/Close_Button.dart';
 import 'package:sarde/screens/job_main/widgets/job_main_widgets.dart';
+import 'package:sarde/widgets/Back_button.dart';
 
 class JobMain extends StatelessWidget {
   @override
@@ -12,7 +16,12 @@ class JobMain extends StatelessWidget {
         children: [
           Column(
             children: [
-              backButton(),
+              Back_Button(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => Start_Job_Form()));
+                },
+              ),
               SizedBox(
                 height: 66.h,
               ),
@@ -28,7 +37,12 @@ class JobMain extends StatelessWidget {
               SizedBox(
                 height: 35.h,
               ),
-              CloseButton1(),
+              Close_Button3(
+              onPressed:
+              (){ Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Complete_Check_Up()));
+    },),
+
             ],
           ),
         ],

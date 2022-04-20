@@ -2,19 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../widgets/app_grid_buttons.dart';
 
-Widget backButton() {
-  return Padding(
-    padding: EdgeInsets.only(top: 53.h, left: 41.w),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        GestureDetector(
-          child: const Icon(Icons.arrow_back),
-        )
-      ],
-    ),
-  );
-}
+
 
 Widget title() {
   return Padding(
