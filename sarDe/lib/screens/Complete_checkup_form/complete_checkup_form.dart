@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:sarde/screens/Complete_checkup_form/widgets/complete_checkup_widgets.dart';
+import 'package:sarde/screens/job_main/JobMain.dart';
+import 'package:sarde/widgets/Back_button.dart';
 
 class Complete_Check_Up extends StatelessWidget {
   @override
@@ -10,7 +12,13 @@ class Complete_Check_Up extends StatelessWidget {
       backgroundColor: Colors.white,
       body: ListView(shrinkWrap: true, children: [
         Column(children: [
-          backButton(),
+          Back_Button(
+            onTap: ()
+            {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => JobMain()));
+            },
+          ),
           SizedBox(
             height: 26.h,
           ),

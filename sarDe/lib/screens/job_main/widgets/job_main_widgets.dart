@@ -2,19 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../widgets/app_grid_buttons.dart';
 
-Widget backButton() {
-  return Padding(
-    padding: EdgeInsets.only(top: 53.h, left: 41.w),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        GestureDetector(
-          child: const Icon(Icons.arrow_back),
-        )
-      ],
-    ),
-  );
-}
+
 
 Widget title() {
   return Padding(
@@ -123,24 +111,19 @@ Widget gridView() {
     ),
   );
 }
+
 // ignore: non_constant_identifier_names
 Widget CloseButton1() {
-  return  Stack(alignment: Alignment.center, children: <Widget>[
+  return Stack(alignment: Alignment.center, children: <Widget>[
     Expanded(
       child: Container(
-
         height: 98.h,
         width: 390.w,
         child: ElevatedButton(
-          onPressed: () {
-
-
-
-          },
-          child:  Padding(
-            padding: EdgeInsets.only(left: 55.w,right: 214.w),
+          onPressed: () {},
+          child: Padding(
+            padding: EdgeInsets.only(left: 55.w, right: 214.w),
             child: Text('Close Day',
-
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 25.sp,
@@ -149,19 +132,16 @@ Widget CloseButton1() {
           ),
           style: ElevatedButton.styleFrom(
             primary: const Color(0xFF2B3070), // background
-            onPrimary:const Color(0xFF2B3070),
+            onPrimary: const Color(0xFF2B3070),
 
             // foreground
           ),
         ),
       ),
     ),
-
-
     Container(
-      padding:  EdgeInsets.only(right: 54.w,left:330.w),
+      padding: EdgeInsets.only(right: 54.w, left: 330.w),
       child: Image.asset('assets/images/forwardarrow.png'),
     ),
   ]);
 }
-
