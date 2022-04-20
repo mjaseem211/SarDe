@@ -60,6 +60,7 @@ flutter:
     - assets/images/Line.jpg
     - assets/images/backarrow.png
     - assets/images/backbutton.png
+    - assets/images/success.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

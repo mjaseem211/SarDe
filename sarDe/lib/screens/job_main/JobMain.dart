@@ -1,17 +1,8 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Complete_checkup_form/complete_checkup_form.dart';
 import 'package:sarde/screens/job_main/widgets/job_main_widgets.dart';
 
-
 class JobMain extends StatelessWidget {
-
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,11 +31,8 @@ class JobMain extends StatelessWidget {
               CloseButton1(),
             ],
           ),
-
         ],
       ),
     );
   }
-
-
 }
