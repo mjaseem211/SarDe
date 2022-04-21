@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../widgets/app_grid_buttons.dart';
+import 'app_grid_buttons.dart';
 
 
 
@@ -45,7 +45,7 @@ Widget subTitle() {
         Text(
           "Kuttichira to Maradu",
           style: TextStyle(
-            color: Color(0xFF2B3070).withOpacity(0.7),
+            color:const Color(0xFF2B3070).withOpacity(0.7),
             fontSize: 22.sp,
             fontWeight: FontWeight.w400,
           ),
@@ -62,9 +62,14 @@ Widget gridView() {
       children: [
         Column(
           children: [
+
             GridButtons(
               onTap: () {},
+                  name: "Work\n Progress",
+
             ),
+
+
             SizedBox(
               height: 15.h,
             ),
@@ -73,12 +78,19 @@ Widget gridView() {
               onTap: () {
                 print("GRid 2");
               },
+              assetimage: 'assets/images/add_button.png',
+              name: "Labours",
+              top: 98.h,
             ),
             SizedBox(
               height: 15.h,
             ),
             GridButtons(
+              assetimage: 'assets/images/add_button.png',
               height: 98.h,
+              onTap: (){},
+              name: "Tools",
+              top: 52.h,
             )
           ],
         ),
@@ -88,8 +100,11 @@ Widget gridView() {
         Column(
           children: [
             GridButtons(
+              assetimage: 'assets/images/add_button.png',
               height: 144.h,
               width: 143.w,
+              name: "Expense",
+              top: 98.h,
             ),
             SizedBox(
               height: 15.h,
@@ -97,6 +112,8 @@ Widget gridView() {
             GridButtons(
               height: 154.h,
               width: 143.w,
+              name: "Quality\n Check",
+              top: 83.h,
             ),
             SizedBox(
               height: 15.h,
@@ -104,6 +121,8 @@ Widget gridView() {
             GridButtons(
               height: 162.h,
               width: 139.w,
+              name: "Inventory",
+              top: 117.h,
             )
           ],
         ),
@@ -112,36 +131,3 @@ Widget gridView() {
   );
 }
 
-// ignore: non_constant_identifier_names
-Widget CloseButton1() {
-  return Stack(alignment: Alignment.center, children: <Widget>[
-    Expanded(
-      child: Container(
-        height: 98.h,
-        width: 390.w,
-        child: ElevatedButton(
-          onPressed: () {},
-          child: Padding(
-            padding: EdgeInsets.only(left: 55.w, right: 214.w),
-            child: Text('Close Day',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25.sp,
-                  fontWeight: FontWeight.w400,
-                )),
-          ),
-          style: ElevatedButton.styleFrom(
-            primary: const Color(0xFF2B3070), // background
-            onPrimary: const Color(0xFF2B3070),
-
-            // foreground
-          ),
-        ),
-      ),
-    ),
-    Container(
-      padding: EdgeInsets.only(right: 54.w, left: 330.w),
-      child: Image.asset('assets/images/forwardarrow.png'),
-    ),
-  ]);
-}

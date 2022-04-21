@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sarde/screens/home.dart';
+import 'package:sarde/screens/Super_viser_Dashboard/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SignIn extends StatelessWidget {
@@ -118,7 +118,7 @@ class SignIn extends StatelessWidget {
                   ),
                   Container(
                     padding: const EdgeInsets.fromLTRB(180, 6, 0, 0),
-                    child: Image.asset('assets/images/forwardarrow.png'),
+                    child: Image.asset('assets/images/forward_arrow.png'),
                   ),
                 ]),
                 const SizedBox(

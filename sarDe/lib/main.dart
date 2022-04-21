@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sarde/screens/signin.dart';
+import 'package:sarde/screens/Sign_in/signin.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() => runApp(MyApp());

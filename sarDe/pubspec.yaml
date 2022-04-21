@@ -55,12 +55,15 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
   assets:
+
     - assets/images/sarde.png
-    - assets/images/forwardarrow.png
+    - assets/images/forward_arrow.png
     - assets/images/Line.jpg
     - assets/images/backarrow.png
     - assets/images/backbutton.png
     - assets/images/success.png
+    - assets/images/add_button.png
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
@@ -68,11 +71,11 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
 
-fonts:
-  - family: IndieFlower
-    fonts:
-      - asset:
-      - assets/fonts/IndieFlower-Regular.ttf
+  #fonts:
+  #  - family: IndieFlower
+  #    fonts:
+  #      - asset:
+  #      - assets/fonts/IndieFlower-Regular.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

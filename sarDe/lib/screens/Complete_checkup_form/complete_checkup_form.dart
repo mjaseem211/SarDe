@@ -3,7 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:sarde/screens/Complete_checkup_form/widgets/complete_checkup_widgets.dart';
 import 'package:sarde/screens/job_main/JobMain.dart';
-import 'package:sarde/widgets/Back_button.dart';
+import 'package:sarde/widgets/Close_Day_Button.dart';
+import 'package:sarde/screens/success_page/Success_page.dart';
+import 'package:sarde/widgets/Top_Back_button.dart';
+
 
 class Complete_Check_Up extends StatelessWidget {
   @override
@@ -12,7 +15,7 @@ class Complete_Check_Up extends StatelessWidget {
       backgroundColor: Colors.white,
       body: ListView(shrinkWrap: true, children: [
         Column(children: [
-          Back_Button(
+       Top_Back_Button(
             onTap: ()
             {
               Navigator.of(context).pushReplacement(
@@ -158,10 +161,21 @@ class Complete_Check_Up extends StatelessWidget {
           SizedBox(
             height: 104.h,
           ),
-          CloseButton2(),
-        ]),
+           Close_Day_Button(
+             onPressed: (){
+               Navigator.push(
+                   context,
+                   MaterialPageRoute(
+                       builder: (context) => Success_Page()));
+             },
+           )
+              ]),
+
       ]),
-    );
+
+      );
+
+
   }
 
 

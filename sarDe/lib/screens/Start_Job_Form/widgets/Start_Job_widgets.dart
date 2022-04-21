@@ -41,7 +41,7 @@ class Start_Button extends StatelessWidget {
       ),
       Container(
         padding: EdgeInsets.only(right: 54.w, left: 330.w),
-        child: Image.asset('assets/images/forwardarrow.png'),
+        child: Image.asset('assets/images/forward_arrow.png'),
       ),
     ]);
   }
