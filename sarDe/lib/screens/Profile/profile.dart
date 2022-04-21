@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sarde/screens/home.dart';
+import 'package:sarde/screens/Super_viser_Dashboard/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Profile extends StatelessWidget {

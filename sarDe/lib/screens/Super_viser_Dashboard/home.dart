@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sarde/screens/Start_Job_Form/Start_Job_Form.dart';
-import 'package:sarde/screens/profile.dart';
+import 'package:sarde/screens/Profile/profile.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 

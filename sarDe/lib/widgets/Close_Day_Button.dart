@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Complete_checkup_form/complete_checkup_form.dart';
 
-class Close_Button3 extends StatelessWidget {
+class Close_Day_Button extends StatelessWidget {
   final VoidCallback? onPressed;
 
-  Close_Button3({this.onPressed});
+  Close_Day_Button({this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class Close_Button3 extends StatelessWidget {
           height: 94.h,
           width: 390.w,
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: onPressed ?? () {},
             child: Padding(
               padding: EdgeInsets.only(left: 55.w, right: 214.w),
               child: Text('Close Day',
@@ -36,7 +35,7 @@ class Close_Button3 extends StatelessWidget {
       ),
       Container(
         padding: EdgeInsets.only(right: 54.w, left: 330.w),
-        child: Image.asset('assets/images/forwardarrow.png'),
+        child: Image.asset('assets/images/forward_arrow.png'),
       ),
     ]);
   }
