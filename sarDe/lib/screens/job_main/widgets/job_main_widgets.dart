@@ -3,8 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Work_Progress/work_progress.dart';
 import 'app_grid_buttons.dart';
 
-
-
 Widget title() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w, right: 44.w),
@@ -46,7 +44,7 @@ Widget subTitle() {
         Text(
           "Kuttichira to Maradu",
           style: TextStyle(
-            color:const Color(0xFF2B3070).withOpacity(0.7),
+            color: const Color(0xFF2B3070).withOpacity(0.7),
             fontSize: 22.sp,
             fontWeight: FontWeight.w400,
           ),
@@ -55,6 +53,7 @@ Widget subTitle() {
     ),
   );
 }
+
 class job_main_nav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -64,18 +63,13 @@ class job_main_nav extends StatelessWidget {
         children: [
           Column(
             children: [
-
               GridButtons(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => work_progress()));
-
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => work_progress()));
                 },
-                name: "Work\n Progress",
-
+                name: "Work\nProgress",
               ),
-
-
               SizedBox(
                 height: 15.h,
               ),
@@ -118,7 +112,7 @@ class job_main_nav extends StatelessWidget {
               GridButtons(
                 height: 154.h,
                 width: 143.w,
-                name: "Quality\n Check",
+                name: "Quality\nCheck",
                 top: 83.h,
               ),
               SizedBox(
@@ -136,5 +130,4 @@ class job_main_nav extends StatelessWidget {
       ),
     );
   }
-
 }

@@ -7,7 +7,6 @@ import 'package:sarde/widgets/Close_Day_Button.dart';
 import 'package:sarde/screens/success_page/Success_page.dart';
 import 'package:sarde/widgets/Top_Back_button.dart';
 
-
 class Complete_Check_Up extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,9 +14,8 @@ class Complete_Check_Up extends StatelessWidget {
       backgroundColor: Colors.white,
       body: ListView(shrinkWrap: true, children: [
         Column(children: [
-       Top_Back_Button(
-            onTap: ()
-            {
+          Top_Back_Button(
+            onTap: () {
               Navigator.of(context).pushReplacement(
                   MaterialPageRoute(builder: (context) => JobMain()));
             },
@@ -161,22 +159,14 @@ class Complete_Check_Up extends StatelessWidget {
           SizedBox(
             height: 104.h,
           ),
-           Close_Day_Button(
-             onPressed: (){
-               Navigator.push(
-                   context,
-                   MaterialPageRoute(
-                       builder: (context) => Success_Page()));
-             },
-           )
-              ]),
-
+          Close_Day_Button(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Success_Page()));
+            },
+          )
+        ]),
       ]),
-
-      );
-
-
+    );
   }
-
-
 }
