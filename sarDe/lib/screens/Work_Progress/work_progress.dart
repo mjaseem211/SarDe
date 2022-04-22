@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Work_Progress/add_new_work/Add_new_work.dart';
 import 'package:sarde/screens/Work_Progress/add_new_work/work_progress_text_button.dart';
 import 'package:sarde/screens/Work_Progress/work_progress_widgets.dart';
 import 'package:sarde/screens/job_main/JobMain.dart';
@@ -21,16 +20,17 @@ class work_progress extends StatelessWidget {
             SizedBox(
               height: 41.h,
             ),
-
             text_button(
-              onTap: (){
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => new_work()));
-              },
+              text: "Road Marking",
             ),
-            Sub_Heading(),
+            text_button(
+              text: "Road Marking from kuttichira to maradu",
+              font_size: 14.sp,
+              color: Color(0xFF000000).withOpacity(0.5),
+              left: 34.w,
+            ),
             SizedBox(height: 3.h),
-            Data(),
+            text_button1(),
             SizedBox(
               height: 20.h,
             ),
@@ -54,8 +54,8 @@ class work_progress extends StatelessWidget {
             ),
             Bottom_back_button(
               onTap: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => JobMain()));
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => JobMain()));
               },
             ),
           ]),

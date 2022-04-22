@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sarde/screens/job_main/JobMain.dart';
 
 class Bottom_back_button extends StatelessWidget {
   final VoidCallback? onTap;
@@ -8,12 +9,13 @@ class Bottom_back_button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(padding: EdgeInsets.only(left: 43.w,),
+    return Padding(
+      padding: EdgeInsets.only(
+        left: 43.w,
+      ),
       child: GestureDetector(
         child: Row(
-          children: [
-            Image.asset('assets/images/Bottom_back_button.png')
-          ],
+          children: [Image.asset('assets/images/Bottom_back_button.png',height: 41.h,width: 41.w,),],
         ),
         onTap: onTap ?? () {},
       ),
