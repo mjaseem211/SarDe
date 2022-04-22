@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sarde/screens/Work_Progress/work_progress.dart';
 import 'app_grid_buttons.dart';
 
 
@@ -54,80 +55,86 @@ Widget subTitle() {
     ),
   );
 }
+class job_main_nav extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 33.w, right: 40.w),
+      child: Row(
+        children: [
+          Column(
+            children: [
 
-Widget gridView() {
-  return Padding(
-    padding: EdgeInsets.only(left: 33.w, right: 40.w),
-    child: Row(
-      children: [
-        Column(
-          children: [
+              GridButtons(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => work_progress()));
 
-            GridButtons(
-              onTap: () {},
-                  name: "Work\n Progress",
+                },
+                name: "Work\n Progress",
 
-            ),
+              ),
 
 
-            SizedBox(
-              height: 15.h,
-            ),
-            GridButtons(
-              height: 147.h,
-              onTap: () {
-                print("GRid 2");
-              },
-              assetimage: 'assets/images/add_button.png',
-              name: "Labours",
-              top: 98.h,
-            ),
-            SizedBox(
-              height: 15.h,
-            ),
-            GridButtons(
-              assetimage: 'assets/images/add_button.png',
-              height: 98.h,
-              onTap: (){},
-              name: "Tools",
-              top: 52.h,
-            )
-          ],
-        ),
-        SizedBox(
-          width: 13.w,
-        ),
-        Column(
-          children: [
-            GridButtons(
-              assetimage: 'assets/images/add_button.png',
-              height: 144.h,
-              width: 143.w,
-              name: "Expense",
-              top: 98.h,
-            ),
-            SizedBox(
-              height: 15.h,
-            ),
-            GridButtons(
-              height: 154.h,
-              width: 143.w,
-              name: "Quality\n Check",
-              top: 83.h,
-            ),
-            SizedBox(
-              height: 15.h,
-            ),
-            GridButtons(
-              height: 162.h,
-              width: 139.w,
-              name: "Inventory",
-              top: 117.h,
-            )
-          ],
-        ),
-      ],
-    ),
-  );
+              SizedBox(
+                height: 15.h,
+              ),
+              GridButtons(
+                height: 147.h,
+                onTap: () {
+                  print("GRid 2");
+                },
+                assetimage: 'assets/images/add_button.png',
+                name: "Labours",
+                top: 98.h,
+              ),
+              SizedBox(
+                height: 15.h,
+              ),
+              GridButtons(
+                assetimage: 'assets/images/add_button.png',
+                height: 98.h,
+                onTap: () {},
+                name: "Tools",
+                top: 52.h,
+              )
+            ],
+          ),
+          SizedBox(
+            width: 13.w,
+          ),
+          Column(
+            children: [
+              GridButtons(
+                assetimage: 'assets/images/add_button.png',
+                height: 144.h,
+                width: 143.w,
+                name: "Expense",
+                top: 98.h,
+              ),
+              SizedBox(
+                height: 15.h,
+              ),
+              GridButtons(
+                height: 154.h,
+                width: 143.w,
+                name: "Quality\n Check",
+                top: 83.h,
+              ),
+              SizedBox(
+                height: 15.h,
+              ),
+              GridButtons(
+                height: 162.h,
+                width: 139.w,
+                name: "Inventory",
+                top: 117.h,
+              )
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
 }
-

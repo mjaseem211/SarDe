@@ -33,7 +33,7 @@ class JobMain extends StatelessWidget {
               SizedBox(
                 height: 29.h,
               ),
-              gridView(),
+              job_main_nav(),
               SizedBox(
                 height: 35.h,
               ),

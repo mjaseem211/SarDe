@@ -34,7 +34,7 @@ class GridButtons extends StatelessWidget {
           color: color ?? const Color(0xFFDD7164),
           borderRadius: BorderRadius.circular(radius ?? 13.r),
           image: DecorationImage(
-            alignment: Alignment(.8,-0.7),
+            alignment: const Alignment(.8, -0.7),
             image: AssetImage(
               assetimage ?? ' ',
             ),
