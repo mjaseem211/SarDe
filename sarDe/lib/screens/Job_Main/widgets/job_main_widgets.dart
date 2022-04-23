@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Work_Progress/work_progress.dart';
+import 'package:sarde/screens/Job_Main/Expense/Add_new_expense.dart';
+import 'package:sarde/screens/Job_Main/Labours/Add_new_Labours.dart';
+import 'package:sarde/screens/Job_Main/Quality_Check/Quality_Check.dart';
+import 'package:sarde/screens/Job_Main/Tools/Add_new_Tools.dart';
+import 'package:sarde/screens/Job_Main/Work_Progress/work_progress.dart';
 import 'app_grid_buttons.dart';
 
 Widget title() {
@@ -76,7 +80,8 @@ class job_main_nav extends StatelessWidget {
               GridButtons(
                 height: 147.h,
                 onTap: () {
-                  print("GRid 2");
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => Labours()));
                 },
                 assetimage: 'assets/images/add_button.png',
                 name: "Labours",
@@ -86,9 +91,12 @@ class job_main_nav extends StatelessWidget {
                 height: 15.h,
               ),
               GridButtons(
-                assetimage: 'assets/images/add_button.png',
                 height: 98.h,
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => add_new_tools()));
+                },
+                assetimage: 'assets/images/add_button.png',
                 name: "Tools",
                 top: 52.h,
               )
@@ -105,6 +113,10 @@ class job_main_nav extends StatelessWidget {
                 width: 143.w,
                 name: "Expense",
                 top: 98.h,
+                onTap: (){
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => add_new_expense()));
+                },
               ),
               SizedBox(
                 height: 15.h,
@@ -114,6 +126,9 @@ class job_main_nav extends StatelessWidget {
                 width: 143.w,
                 name: "Quality\nCheck",
                 top: 83.h,
+    onTap: (){
+    Navigator.of(context).pushReplacement(
+    MaterialPageRoute(builder: (context) => Quality_Check()));},
               ),
               SizedBox(
                 height: 15.h,

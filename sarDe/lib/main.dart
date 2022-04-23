@@ -21,8 +21,9 @@ class MyApp extends StatelessWidget {
             // You can use the library anywhere in the app even in theme
             theme: ThemeData(
               primarySwatch: Colors.blue,
-              textTheme:  GoogleFonts.lexendDecaTextTheme(
-                Theme.of(context).textTheme, // If this is not set, then ThemeData.light().textTheme is used.
+              textTheme: GoogleFonts.lexendDecaTextTheme(
+                Theme.of(context)
+                    .textTheme, // If this is not set, then ThemeData.light().textTheme is used.
               ),
             ),
             home: SignIn(),
