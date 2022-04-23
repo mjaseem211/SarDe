@@ -14,7 +14,7 @@ class Top_Back_Button extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           GestureDetector(
-            child: const Icon(Icons.arrow_back),
+            child: const Icon(Icons.arrow_back,),
             onTap: onTap ?? () {},
           ),
         ],

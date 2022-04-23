@@ -35,7 +35,7 @@ class Close_Day_Button extends StatelessWidget {
       ),
       Container(
         padding: EdgeInsets.only(right: 54.w, left: 330.w),
-        child: Image.asset('assets/images/forward_arrow.png'),
+        child: Image.asset('assets/images/forward_arrow.png',height: 14.h,width: 8.w,),
       ),
     ]);
   }
