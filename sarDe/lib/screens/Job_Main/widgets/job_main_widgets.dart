@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Job_Main/Expense/Add_new_expense.dart';
+import 'package:sarde/screens/Job_Main/Inventory/Inventory.dart';
 import 'package:sarde/screens/Job_Main/Labours/Add_new_Labours.dart';
 import 'package:sarde/screens/Job_Main/Quality_Check/Quality_Check.dart';
 import 'package:sarde/screens/Job_Main/Tools/Add_new_Tools.dart';
@@ -113,9 +114,9 @@ class job_main_nav extends StatelessWidget {
                 width: 143.w,
                 name: "Expense",
                 top: 98.h,
-                onTap: (){
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => add_new_expense()));
+                onTap: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => add_new_expense()));
                 },
               ),
               SizedBox(
@@ -126,14 +127,19 @@ class job_main_nav extends StatelessWidget {
                 width: 143.w,
                 name: "Quality\nCheck",
                 top: 83.h,
-    onTap: (){
-    Navigator.of(context).pushReplacement(
-    MaterialPageRoute(builder: (context) => Quality_Check()));},
+                onTap: () {
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => Quality_Check()));
+                },
               ),
               SizedBox(
                 height: 15.h,
               ),
               GridButtons(
+                onTap: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => Inventory()));
+                },
                 height: 162.h,
                 width: 139.w,
                 name: "Inventory",
