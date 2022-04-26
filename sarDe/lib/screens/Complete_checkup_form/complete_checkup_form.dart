@@ -160,7 +160,7 @@ class Complete_Check_Up extends StatelessWidget {
             height: 104.h,
           ),
           Close_Day_Button(
-            onPressed: () {
+            onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => Success_Page()));
             },

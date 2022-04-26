@@ -10,14 +10,12 @@ class Start_Job_Form extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Column(children: [
-         Top_Back_Button(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Super_viser_dashboard()));
-              
-            },
-          ),
-
+        Top_Back_Button(
+          onTap: () {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => Super_viser_dashboard()));
+          },
+        ),
         SizedBox(
           height: 66.h,
         ),
@@ -33,40 +31,44 @@ class Start_Job_Form extends StatelessWidget {
         SizedBox(
           height: 24.h,
         ),
-        heading(),
-        subheading(),
-        SizedBox(
-          height: 3.h,
-        ),
-        data(),
-        SizedBox(
-          height: 9.h,
-        ),
-        line(),
-        SizedBox(
-          height: 11.h,
-        ),
-        heading2(),
-        subheading1(),
-        SizedBox(
-          height: 18.h,
-        ),
-        data2(),
-        SizedBox(
-          height: 12.h,
-        ),
-        line(),
-        SizedBox(
-          height: 12.h,
-        ),
-        heading3(),
-        subheading2(),
-        SizedBox(
-          height: 18.h,
-        ),
-        data3(),
-        SizedBox(
-          height: 169.h,
+        Expanded(
+          child: ListView(children: [
+            heading(),
+            subheading(),
+            SizedBox(
+              height: 3.h,
+            ),
+            data(),
+            SizedBox(
+              height: 9.h,
+            ),
+            line(),
+            SizedBox(
+              height: 11.h,
+            ),
+            heading2(),
+            subheading1(),
+            SizedBox(
+              height: 18.h,
+            ),
+            data2(),
+            SizedBox(
+              height: 12.h,
+            ),
+            line(),
+            SizedBox(
+              height: 12.h,
+            ),
+            heading3(),
+            subheading2(),
+            SizedBox(
+              height: 18.h,
+            ),
+            data3(),
+            SizedBox(
+              height: 169.h,
+            ),
+          ]),
         ),
         Start_Button(),
       ]),

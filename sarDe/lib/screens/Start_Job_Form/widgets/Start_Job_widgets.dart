@@ -1,75 +1,77 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sarde/screens/Job_Main/JobMain.dart';
 
 class Start_Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Stack(alignment: Alignment.center, children: <Widget>[
-      Row(
-        children:[ Expanded(
-          child: Container(
-            height: 98.h,
-            width: 390.w,
-            color: const Color(0xff2B3070),
+    return GestureDetector(
+      child: Stack(alignment: Alignment.center, children: <Widget>[
+        Row(
+          children:[ Expanded(
+            child: Container(
+              height: 98.h,
+              width: 390.w,
+              color: const Color(0xff2B3070),
+            ),
+          ),
+        ]),
+        Padding(
+            padding: EdgeInsets.only(left: 328.w, right: 56.w,top: 38.h,bottom: 44.h),
+            child: Image.asset('assets/images/forward_arrow.png',height: 14.h,width: 8.w,)),
+
+        Padding(padding: EdgeInsets.only(right: 220.w,left: 56.w,top:28.h ,bottom:35.h ),
+          child: Text(
+            "Start Job",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 25.sp,
+                color: const Color(0xFFFFFFFF)),
           ),
         ),
       ]),
-      Padding(
-          padding: EdgeInsets.only(left: 328.w, right: 56.w,top: 38.h,bottom: 44.h),
-          child: Image.asset('assets/images/forward_arrow.png',height: 14.h,width: 8.w,)),
-
-      Padding(padding: EdgeInsets.only(right: 220.w,left: 56.w,top:28.h ,bottom:35.h ),
-        child: Text(
-          "Start Job",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 25.sp,
-              color: const Color(0xFFFFFFFF)),
-        ),
-      ),
-    ]);
+      onTap: (){
+    Navigator.of(context).pushReplacement(MaterialPageRoute(
+    builder: (context) => JobMain()));
+      },
+    );
   }
 }
 
 Widget title1() {
-  return ListView(
-    shrinkWrap: true,
-    children:[ Padding(
-      padding: EdgeInsets.only(left: 33.w),
-      child: Row(children: [
-        Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "Job 303",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 35.sp,
-                color: const Color(0xFF2B3070)),
-          ),
+  return Padding(
+    padding: EdgeInsets.only(left: 33.w),
+    child: Row(children: [
+      Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "Job 303",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 35.sp,
+              color: const Color(0xFF2B3070)),
         ),
-      ]),
-    ),
- ] );
+      ),
+    ]),
+  );
 }
 
 Widget subtitle() {
-  return ListView(shrinkWrap: true,
-    children:[ Padding(
-      padding: EdgeInsets.only(left: 33.w),
-      child: Row(children: [
-        Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "NABARD RIDF 23\nKuttichira to Maradu",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 22.sp,
-                color: const Color(0xFF2B3070).withOpacity(0.7)),
-          ),
+  return Padding(
+    padding: EdgeInsets.only(left: 33.w),
+    child: Row(children: [
+      Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "NABARD RIDF 23\nKuttichira to Maradu",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 22.sp,
+              color: const Color(0xFF2B3070).withOpacity(0.7)),
         ),
-      ]),
-    ),
-  ]);
+      ),
+    ]),
+  );
 }
 
 Widget date() {
