@@ -21,7 +21,7 @@ Widget subtitle() {
     child: Row(children: [
       Text("Job 303",
           style: TextStyle(
-              color: Color(0xFF2B3070).withOpacity(0.7),
+              color:const Color(0xFF2B3070).withOpacity(0.7),
               fontSize: 22.sp,
               fontWeight: FontWeight.w400)),
     ]),

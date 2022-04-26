@@ -66,17 +66,17 @@ class Inventory extends StatelessWidget {
               },
               text: "Stud Fixing",
               left: 47.w,
-              right: 257.w,
             ),
             text_button(
               onTap: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (context) => add_new_inventory()));
               },
-              text: "Stud fixing on the sides from kuttichira to maradu",
+              text: "Stud fixing on the sides from kuttichira to\nmaradu",
               font_size: 14.sp,
               color: const Color(0xFF000000).withOpacity(0.5),
               left: 47.w,
+              right: 46.w,
             ),
             SizedBox(
               height: 3.h,
@@ -110,10 +110,11 @@ class Inventory extends StatelessWidget {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (context) => add_new_inventory()));
               },
-              text: "Board fixing on the sides from kuttichira to maradu",
+              text: "Board fixing on the sides from kuttichira to\nmaradu",
               font_size: 14.sp,
               color: const Color(0xFF000000).withOpacity(0.5),
               left: 47.w,
+right: 46.w,
             ),
             SizedBox(
               height: 3.h,
