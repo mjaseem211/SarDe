@@ -1,96 +1,80 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/job_main/JobMain.dart';
 
 class Start_Button extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return Stack(alignment: Alignment.center, children: <Widget>[
-      Expanded(
-        child: Container(
-          height: 98.h,
-          width: 390.w,
-          child: ElevatedButton(
-            onPressed: () {
-
-
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => JobMain()));
-
-
-            },
-            child: Padding(
-              padding: EdgeInsets.only(left: 55.w, right: 214.w),
-              child: Text('Start Job',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25.sp,
-                    fontWeight: FontWeight.w400,
-                  )),
-            ),
-            style: ElevatedButton.styleFrom(
-              primary: const Color(0xFF2B3070), // background
-              onPrimary: const Color(0xFF2B3070),
-
-              // foreground
-            ),
+      Row(
+        children:[ Expanded(
+          child: Container(
+            height: 98.h,
+            width: 390.w,
+            color: const Color(0xff2B3070),
           ),
         ),
-      ),
-      Container(
-        padding: EdgeInsets.only(right: 54.w, left: 330.w),
-        child: Image.asset('assets/images/forward_arrow.png'),
+      ]),
+      Padding(
+          padding: EdgeInsets.only(left: 328.w, right: 56.w,top: 38.h,bottom: 44.h),
+          child: Image.asset('assets/images/forward_arrow.png',height: 14.h,width: 8.w,)),
+
+      Padding(padding: EdgeInsets.only(right: 220.w,left: 56.w,top:28.h ,bottom:35.h ),
+        child: Text(
+          "Start Job",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 25.sp,
+              color: const Color(0xFFFFFFFF)),
+        ),
       ),
     ]);
   }
 }
 
-
-Widget Title1() {
-  return Padding(
-    padding: EdgeInsets.only(left: 33.w),
-    child: Row(
-        children: [
-
-          Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Job 303",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 35.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
+Widget title1() {
+  return ListView(
+    shrinkWrap: true,
+    children:[ Padding(
+      padding: EdgeInsets.only(left: 33.w),
+      child: Row(children: [
+        Container(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "Job 303",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 35.sp,
+                color: const Color(0xFF2B3070)),
           ),
-        ]),
-  );
+        ),
+      ]),
+    ),
+ ] );
 }
 
-Widget SubTitle() {
-  return Padding(
-    padding: EdgeInsets.only(left: 33.w),
-    child: Row(
-        children: [
-
-          Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "NABARD RIDF 23\nKuttichira to Maradu",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 22.sp,
-                  color: const Color(0xFF2B3070).withOpacity(0.7)),
-            ),
+Widget subtitle() {
+  return ListView(shrinkWrap: true,
+    children:[ Padding(
+      padding: EdgeInsets.only(left: 33.w),
+      child: Row(children: [
+        Container(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "NABARD RIDF 23\nKuttichira to Maradu",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 22.sp,
+                color: const Color(0xFF2B3070).withOpacity(0.7)),
           ),
-        ]),
-  );
+        ),
+      ]),
+    ),
+  ]);
 }
 
-Widget Date() {
+Widget date() {
   return Padding(
-    padding: EdgeInsets.only(left: 33.w, right: 189.w),
+    padding: EdgeInsets.only(left: 33.w, right: 149.w),
     child: Row(
       children: [
         Expanded(
@@ -107,61 +91,57 @@ Widget Date() {
         ),
         Expanded(
             child: Container(
-              alignment: Alignment.centerRight,
-              child: Text(
-                "18-09-22",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 22.sp,
-                    color: const Color(0xFFB8493C)),
-              ),
-            )),
+          alignment: Alignment.centerRight,
+          child: Text(
+            "18-09-22",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 22.sp,
+                color: const Color(0xFFB8493C)),
+          ),
+        )),
       ],
     ),
   );
 }
 
-Widget Heading() {
+Widget heading() {
   return Padding(
     padding: EdgeInsets.only(left: 35.w),
-    child: Row(
-        children: [
-
-          Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Road Marking",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ]),
+    child: Row(children: [
+      Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "Road Marking",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 20.sp,
+              color: const Color(0xFFDD7164)),
+        ),
+      ),
+    ]),
   );
 }
 
-Widget SubHeading() {
+Widget subheading() {
   return Padding(
     padding: EdgeInsets.only(left: 36.w),
-    child: Row(
-        children: [
-
-          Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Road Marking from kuttichira to maradu",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14.sp,
-                  color: const Color(0xFF000000).withOpacity(0.5)),
-            ),
-          ),
-        ]),
+    child: Row(children: [
+      Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "Road Marking from kuttichira to maradu",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 14.sp,
+              color: const Color(0xFF000000).withOpacity(0.5)),
+        ),
+      ),
+    ]),
   );
 }
 
-Widget Data() {
+Widget data() {
   return Padding(
     padding: EdgeInsets.only(left: 36.w, right: 44.w),
     child: Row(
@@ -180,15 +160,15 @@ Widget Data() {
         ),
         Expanded(
             child: Container(
-              alignment: Alignment.centerRight,
-              child: Text(
-                "Total : 534  sqm",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16.sp,
-                    color: const Color(0xFF2B3070)),
-              ),
-            )),
+          alignment: Alignment.centerRight,
+          child: Text(
+            "Total : 534  sqm",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 16.sp,
+                color: const Color(0xFF2B3070)),
+          ),
+        )),
       ],
     ),
   );
@@ -197,60 +177,54 @@ Widget Data() {
 Widget line() {
   return Padding(
     padding: EdgeInsets.only(left: 37.w, right: 49.w),
-    child: Row(
-        children: [
-
-          Container(
-            height: 1.h,
-            width: 304.w,
-            color: Color(0xFF000000).withOpacity(0.5),
-            alignment: Alignment.center,
-
-          ),
-        ]),
+    child: Row(children: [
+      Container(
+        height: 1.h,
+        width: 304.w,
+        color: const Color(0xFF000000).withOpacity(0.5),
+        alignment: Alignment.center,
+      ),
+    ]),
   );
 }
 
-Widget Heading2() {
+Widget heading2() {
   return Padding(
     padding: EdgeInsets.only(left: 35.w),
-    child: Row(
-        children: [
-
-          Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Stud Fixing",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ]),
+    child: Row(children: [
+      Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "Stud Fixing",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 20.sp,
+              color: const Color(0xFFDD7164)),
+        ),
+      ),
+    ]),
   );
 }
 
-Widget SubHeading1() {
+Widget subheading1() {
   return Padding(
     padding: EdgeInsets.only(left: 36.w),
-    child: Row(
-        children: [
-
-          Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Stud fixing on the sides from kuttichira to\n maradu",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14.sp,
-                  color: const Color(0xFF000000).withOpacity(0.5)),
-            ),
-          ),
-        ]),
+    child: Row(children: [
+      Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "Stud fixing on the sides from kuttichira to\nmaradu",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 14.sp,
+              color: const Color(0xFF000000).withOpacity(0.5)),
+        ),
+      ),
+    ]),
   );
 }
-Widget Data2() {
+
+Widget data2() {
   return Padding(
     padding: EdgeInsets.only(left: 36.w, right: 44.w),
     child: Row(
@@ -269,58 +243,57 @@ Widget Data2() {
         ),
         Expanded(
             child: Container(
-              alignment: Alignment.centerRight,
-              child: Text(
-                "Total : 184 nos",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16.sp,
-                    color: const Color(0xFF2B3070)),
-              ),
-            )),
+          alignment: Alignment.centerRight,
+          child: Text(
+            "Total : 184 nos",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 16.sp,
+                color: const Color(0xFF2B3070)),
+          ),
+        )),
       ],
     ),
   );
 }
-Widget Heading3() {
+
+Widget heading3() {
   return Padding(
     padding: EdgeInsets.only(left: 35.w),
-    child: Row(
-        children: [
-
-          Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Board Fixing",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 20.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ]),
+    child: Row(children: [
+      Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "Board Fixing",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 20.sp,
+              color: const Color(0xFFDD7164)),
+        ),
+      ),
+    ]),
   );
 }
-Widget SubHeading2() {
+
+Widget subheading2() {
   return Padding(
     padding: EdgeInsets.only(left: 36.w),
-    child: Row(
-        children: [
-
-          Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Board fixing on the sides from kuttichira to\n maradu",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14.sp,
-                  color: const Color(0xFF000000).withOpacity(0.5)),
-            ),
-          ),
-        ]),
+    child: Row(children: [
+      Container(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "Board fixing on the sides from kuttichira to\nmaradu",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 14.sp,
+              color: const Color(0xFF000000).withOpacity(0.5)),
+        ),
+      ),
+    ]),
   );
 }
-Widget Data3() {
+
+Widget data3() {
   return Padding(
     padding: EdgeInsets.only(left: 36.w, right: 48.w),
     child: Row(
@@ -339,18 +312,16 @@ Widget Data3() {
         ),
         Expanded(
             child: Container(
-              alignment: Alignment.centerRight,
-              child: Text(
-                "Total : 43  nos",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16.sp,
-                    color: const Color(0xFF2B3070)),
-              ),
-            )),
+          alignment: Alignment.centerRight,
+          child: Text(
+            "Total : 43  nos",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 16.sp,
+                color: const Color(0xFF2B3070)),
+          ),
+        )),
       ],
     ),
   );
 }
-
-
