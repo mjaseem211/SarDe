@@ -9,42 +9,49 @@ class add_new_work extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(shrinkWrap: true, children: [
-        Column(children: [
-          Title1(),
-          SizedBox(
-            height: 26.h,
-          ),
-          Heading(),
-          SizedBox(
-            height: 2.h,
-          ),
-          line(),
-          SizedBox(
-            height: 1.h,
-          ),
-          Data(),
-          SizedBox(
-            height: 11.h,
-          ),
-          Data1(),
-          SizedBox(
-            height: 57.h,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [Image.asset('assets/images/plus_button.png',height:32.h,width: 30.w,)],
-          ),
-          SizedBox(
-            height: 365.61.h,
-          ),
-          Bottom_back_button(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => JobMain()));
-            },
-          ),
-        ]),
+      body: Column(children: [
+        Title1(),
+        SizedBox(
+          height: 26.h,
+        ),
+        Heading(),
+        SizedBox(
+          height: 2.h,
+        ),
+        line(),
+        Expanded(
+          child: ListView(
+            children:[ SizedBox(
+              height: 1.h,
+            ),
+
+        Data(),
+        SizedBox(
+          height: 11.h,
+        ),
+        Data1(),
+        SizedBox(
+          height: 57.h,
+        ),
+
+      ]  ),
+    ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [Image.asset('assets/images/plus_button.png',height:32.h,width: 30.w,)],
+        ),
+        SizedBox(
+          height: 365.61.h,
+        ),
+        Bottom_back_button(
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => JobMain()));
+          },
+        ),
+        SizedBox(
+          height: 72.h,
+        ),
       ]),
     );
   }

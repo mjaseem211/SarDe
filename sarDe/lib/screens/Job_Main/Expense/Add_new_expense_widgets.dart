@@ -21,47 +21,39 @@ Widget title() {
 
 Widget heading() {
   return Padding(
-    padding: EdgeInsets.only(right: 62.w, left: 36.w),
+    padding: EdgeInsets.only(right: 49.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            child: Text(
-              "Expenses",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
+        FittedBox(
+          child: Text(
+            "Expenses",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
           ),
         ),
         SizedBox(
           width: 73.w,
         ),
-        Expanded(
-            child: Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Amount",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 13.sp,
-                    color: const Color(0xFF2B3070)),
-              ),
+        FittedBox(
+            child: Text(
+              "Amount",
+              style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 13.sp,
+                  color: const Color(0xFF2B3070)),
             )),
         SizedBox(
-          width: 62.w,
+          width: 63.w,
         ),
-        Expanded(
-            child: Container(
-              alignment: Alignment.centerRight,
-              child: Text(
-                "Reference",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 13.sp,
-                    color: const Color(0xFF2B3070)),
-              ),
+        FittedBox(
+            child: Text(
+              "Reference",
+              style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 13.sp,
+                  color: const Color(0xFF2B3070)),
             )),
       ],
     ),
@@ -81,10 +73,10 @@ Widget line() {
 }
 Widget data() {
   return Padding(
-    padding: EdgeInsets.only(right: 53.w, left: 36.w),
+    padding: EdgeInsets.only(right: 186.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -97,9 +89,9 @@ Widget data() {
           ),
         ),
         SizedBox(
-          width: 73.w,
+          width: 77.w,
         ),
-        Expanded(
+        FittedBox(
             child: Container(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -110,21 +102,7 @@ Widget data() {
                     color: const Color(0xFFDD7164)),
               ),
             )),
-        SizedBox(
-          width: 62.w,
-        ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "5 days",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ),
+
       ],
     ),
   );
@@ -132,10 +110,10 @@ Widget data() {
 
 Widget data1() {
   return Padding(
-    padding: EdgeInsets.only(right: 40.w, left: 36.w),
+    padding: EdgeInsets.only(right: 185.w, left: 36.w),
     child: Row(
       children: [
-        Expanded(flex: 2,
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -150,7 +128,7 @@ Widget data1() {
         SizedBox(
           width: 55.w,
         ),
-        Expanded(
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -162,21 +140,7 @@ Widget data1() {
             ),
           ),
         ),
-        SizedBox(
-          width: 75.w,
-        ),
-        Expanded(flex: 2,
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Modern tools",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ),
+
       ],
     ),
   );

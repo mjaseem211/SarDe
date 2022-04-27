@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget title() {
   return Padding(
-      padding: EdgeInsets.only(left: 33.w, top: 109.h),
+      padding: EdgeInsets.only(left: 33.w, top: 109.h,right:189.w),
       child: Row(
         children: [
           Text(
@@ -35,21 +35,23 @@ Widget heading() {
         SizedBox(
           width: 213.w,
         ),
-        Expanded(flex: -3,
+        FittedBox(
+
             child: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "Quantity",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
-          ),
-        )),
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Quantity",
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 13.sp,
+                    color: const Color(0xFF2B3070)),
+              ),
+            )),
       ],
     ),
   );
 }
+
 Widget line() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w, right: 47.w),
@@ -68,7 +70,8 @@ Widget data() {
     padding: EdgeInsets.only(right: 56.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(flex: 3,
+        FittedBox(
+
           child: Text(
             "Rst Paint White",
             style: TextStyle(
@@ -80,17 +83,17 @@ Widget data() {
         SizedBox(
           width: 159.w,
         ),
-        Expanded(
+        FittedBox(
             child: Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "10 Bag",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 13.sp,
-                    color: const Color(0xFFDD7164)),
-              ),
-            )),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "10 Bag",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
+          ),
+        )),
       ],
     ),
   );
