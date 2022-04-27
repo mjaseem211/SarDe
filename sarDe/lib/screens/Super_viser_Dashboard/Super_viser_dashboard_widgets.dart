@@ -62,194 +62,201 @@ Widget slider() {
     ),
   ]);
 }
-Widget Job_container() {
 
-  return Builder(
-    builder: (context) {
-      return GestureDetector(
-        child: Stack(alignment: Alignment.center, children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(left: 43.w),
-            child: Row(children: [
-              Container(
-                  width: 306.w,
-                  height: 124.h,
-                  decoration: BoxDecoration(
-                    color: const Color(0xff2b3070).withOpacity(0.35),
-                    borderRadius: BorderRadius.circular(13.r),
-                  )),
-            ]),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 43.w),
-            child: Row(children: [
-              AnimatedContainer(
-                  duration: const Duration(seconds: 1),
-                  curve: Curves.fastOutSlowIn,
-                  alignment: Alignment.bottomLeft,
-                  width: 257.w,
-                  height: 136.h,
-                  decoration: BoxDecoration(
+Widget Job_container() {
+  return Builder(builder: (context) {
+    return GestureDetector(
+      child: Stack(alignment: Alignment.center, children: <Widget>[
+        Padding(
+          padding: EdgeInsets.only(left: 43.w),
+          child: Row(children: [
+            Container(
+                width: 306.w,
+                height: 124.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xff2b3070).withOpacity(0.35),
+                  borderRadius: BorderRadius.circular(13.r),
+                )),
+          ]),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 43.w),
+          child: Row(children: [
+            AnimatedContainer(
+                duration: const Duration(seconds: 1),
+                curve: Curves.fastOutSlowIn,
+                alignment: Alignment.bottomLeft,
+                width: 257.w,
+                height: 136.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xff2b3070),
+                  border: Border.all(
                     color: const Color(0xff2b3070),
-                    border: Border.all(
-                      color: const Color(0xff2b3070),
-                      width: 8.w,
-                    ),
-                    borderRadius: BorderRadius.circular(13.r),
-                  )),
-            ]),
+                    width: 8.w,
+                  ),
+                  borderRadius: BorderRadius.circular(13.r),
+                )),
+          ]),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 46.5.h, right: 225.w),
+          child: Text(
+            'Job 303',
+            style: TextStyle(
+                color: const Color(0xFFFFFFFF),
+                fontSize: 18.sp,
+                fontWeight: FontWeight.normal),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 46.5.h, right: 225.w),
-            child: Text(
-              'Job 303',
-              style: TextStyle(
-                  color: const Color(0xFFFFFFFF),
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.normal),
-            ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 92.h, right: 118.w),
+          child: Text(
+            'Kuttichira to Maradu',
+            style: TextStyle(
+                color: const Color(0xffffffff).withOpacity(.46),
+                fontSize: 18.sp,
+                fontWeight: FontWeight.normal),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 92.h, right: 118.w),
-            child: Text(
-              'Kuttichira to Maradu',
-              style: TextStyle(
-                  color: const Color(0xffffffff).withOpacity(.46),
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.normal),
-            ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            left: 273.w,
+            bottom: 99.h,
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: 273.w,
-              bottom: 99.h,
-            ),
-            child: Text(
-              '78 %',
-              style: TextStyle(
-                  color: const Color(0xFF000000).withOpacity(0.5),
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.normal),
-            ),
+          child: Text(
+            '78 %',
+            style: TextStyle(
+                color: const Color(0xFF000000).withOpacity(0.5),
+                fontSize: 12.sp,
+                fontWeight: FontWeight.normal),
           ),
-        ]),
-        onTap: () {
-          Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (context) => Start_Job_Form()));
-        },
-      );
-    }
-  );
+        ),
+      ]),
+      onTap: () {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => Start_Job_Form()));
+      },
+    );
+  });
 }
 
 Widget Job_container1() {
-  return  Builder(
-    builder: (context) {
-      return GestureDetector(
-        child: Stack(alignment: Alignment.center, children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(left: 43.w),
-            child: Row(children: [
-              Container(
-                  width: 306.w,
-                  height: 124.h,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffDD7164).withOpacity(0.35),
-                    borderRadius: BorderRadius.circular(13.r),
-                  )),
-            ]),
+  return Builder(builder: (context) {
+    return GestureDetector(
+      child: Stack(alignment: Alignment.center, children: <Widget>[
+        Padding(
+          padding: EdgeInsets.only(left: 43.w),
+          child: Row(children: [
+            Container(
+                width: 306.w,
+                height: 124.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xffDD7164).withOpacity(0.35),
+                  borderRadius: BorderRadius.circular(13.r),
+                )),
+          ]),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 43.w),
+          child: Row(children: [
+            AnimatedContainer(
+                duration: const Duration(seconds: 1),
+                curve: Curves.fastOutSlowIn,
+                alignment: Alignment.bottomLeft,
+                width: 188.w,
+                height: 136.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xffDD7164),
+                  borderRadius: BorderRadius.circular(13.r),
+                )),
+          ]),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 46.5.h, right: 225.w),
+          child: Text(
+            'Job 308',
+            style: TextStyle(
+                color: const Color(0xFFFFFFFF),
+                fontSize: 18.sp,
+                fontWeight: FontWeight.normal),
           ),
-          Padding(
-            padding: EdgeInsets.only(left: 43.w),
-            child: Row(children: [
-              AnimatedContainer(
-                  duration: const Duration(seconds: 1),
-                  curve: Curves.fastOutSlowIn,
-                  alignment: Alignment.bottomLeft,
-                  width: 188.w,
-                  height: 136.h,
-                  decoration: BoxDecoration(
-                    color: const Color(0xffDD7164),
-                    borderRadius: BorderRadius.circular(13.r),
-                  )),
-            ]),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 92.h, right: 95.w),
+          child: Text(
+            'Koyilandy to Kozhikode',
+            style: TextStyle(
+                color: const Color(0xffffffff).withOpacity(.46),
+                fontSize: 18.sp,
+                fontWeight: FontWeight.normal),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 46.5.h, right: 225.w),
-            child: Text(
-              'Job 308',
-              style: TextStyle(
-                  color: const Color(0xFFFFFFFF),
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.normal),
-            ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            left: 273.w,
+            bottom: 99.h,
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 92.h, right: 95.w),
-            child: Text(
-              'Koyilandy to Kozhikode',
-              style: TextStyle(
-                  color: const Color(0xffffffff).withOpacity(.46),
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.normal),
-            ),
+          child: Text(
+            '56 %',
+            style: TextStyle(
+                color: const Color(0xFF000000).withOpacity(0.5),
+                fontSize: 12.sp,
+                fontWeight: FontWeight.normal),
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: 273.w,
-              bottom: 99.h,
-            ),
-            child: Text(
-              '56 %',
-              style: TextStyle(
-                  color: const Color(0xFF000000).withOpacity(0.5),
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.normal),
-            ),
-          ),
-        ]),
-        onTap: () {
-          Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (context) => Start_Job_Form()));
-        },
-      );
-    }
-  );
+        ),
+      ]),
+      onTap: () {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => Start_Job_Form()));
+      },
+    );
+  });
 }
 
-
-Widget Bottom_data(){
-  return  Stack(children: <Widget>[
+Widget Bottom_data() {
+  return Stack(alignment: Alignment.bottomCenter, children: <Widget>[
     Container(
-        width: 500.w,
+        width: 390.w,
         height: 216.h,
         decoration: BoxDecoration(
           color: const Color(0xffefd2bd),
           borderRadius: BorderRadius.circular(10.r),
         )),
-    Padding(padding: EdgeInsets.only(left: 35.w,top: 52.h),
-      child: Text(
-        'Items shiped from inventry, please\nupdate once collected\n        ',
-        style: TextStyle(
-            color: const Color(0xBA000000),
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w400),
+    Row(children: [
+      Padding(
+        padding:
+            EdgeInsets.only(left: 35.w, top: 52.h, right: 19.w, bottom: 112.h),
+        child: Text(
+          'Items shiped from inventry, please\nupdate once collected\n        ',
+          style: TextStyle(
+              color: const Color(0xBA000000),
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w400),
+        ),
       ),
-    ),
-
-    Padding(padding: EdgeInsets.only(left: 24.w,top: 111.h),
-
-        child: Image.asset('assets/images/Line.jpg',width: 332.w,height: 1.h,)),
-    Padding(padding: EdgeInsets.only(
-        left: 35.w,top: 120.h
-    ),
-      child: Text(
-        'Quality inspection pending on\nKuttichira to Maradu.         ',
-        style: TextStyle(
-            color: const Color(0xBA000000),
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w400),
+    ]),
+    Row(children: [
+      Padding(
+          padding:
+              EdgeInsets.only(left: 24.w, right: 34.w, top: 7.h, bottom: 115.h),
+          child: Image.asset(
+            'assets/images/Line.jpg',
+            width: 332.w,
+            height: 1.h,
+          )),
+    ]),
+    Row(children: [
+      Padding(
+        padding:
+            EdgeInsets.only(left: 35.w, top: 9.h, bottom: 44.h, right: 19.w),
+        child: Text(
+          'Quality inspection pending on\nKuttichira to Maradu.         ',
+          style: TextStyle(
+              color: const Color(0xBA000000),
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w400),
+        ),
       ),
-    ),
+    ]),
   ]);
 }

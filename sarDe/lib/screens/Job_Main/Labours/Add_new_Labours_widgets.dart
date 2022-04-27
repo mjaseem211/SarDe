@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget Title1() {
   return Padding(
-    padding: EdgeInsets.only(left: 33.w, top: 109.h),
+    padding: EdgeInsets.only(left: 33.w, top: 109.h, right: 218.w),
     child: Row(children: [
       Text("Labours",
           style: TextStyle(
@@ -19,7 +19,7 @@ Widget Heading() {
     padding: EdgeInsets.only(right: 54.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        FittedBox(
           child: Text(
             "Name",
             style: TextStyle(
@@ -31,8 +31,7 @@ Widget Heading() {
         SizedBox(
           width: 64.w,
         ),
-        Expanded(
-          flex: 2,
+        FittedBox(
           child: Text(
             "Trade",
             style: TextStyle(
@@ -44,8 +43,7 @@ Widget Heading() {
         SizedBox(
           width: 65.w,
         ),
-        Expanded(
-          flex: 1,
+        FittedBox(
           child: Text(
             "Type",
             style: TextStyle(
@@ -57,7 +55,7 @@ Widget Heading() {
         SizedBox(
           width: 30.w,
         ),
-        Expanded(
+        FittedBox(
           child: Text(
             "Hours",
             style: TextStyle(
@@ -89,7 +87,7 @@ Widget Data() {
     padding: EdgeInsets.only(right: 54.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        FittedBox(
           child: Text(
             "Rahul",
             style: TextStyle(
@@ -99,10 +97,9 @@ Widget Data() {
           ),
         ),
         SizedBox(
-          width: 64.w,
+          width: 56.w,
         ),
-        Expanded(
-          flex: 2,
+        FittedBox(
           child: Text(
             "Rope man",
             style: TextStyle(
@@ -112,10 +109,9 @@ Widget Data() {
           ),
         ),
         SizedBox(
-          width: 65.w,
+          width: 50.w,
         ),
-        Expanded(
-          flex: 1,
+        FittedBox(
           child: Text(
             "Own",
             style: TextStyle(
@@ -125,7 +121,7 @@ Widget Data() {
           ),
         ),
         SizedBox(
-          width: 30.w,
+          width: 49.w,
         ),
         Expanded(
           child: Text(
@@ -143,10 +139,10 @@ Widget Data() {
 
 Widget Data1() {
   return Padding(
-    padding: EdgeInsets.only(right: 54.w, left: 33.w),
+    padding: EdgeInsets.only(right: 64.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        FittedBox(
           child: Text(
             "Vinod",
             style: TextStyle(
@@ -156,10 +152,9 @@ Widget Data1() {
           ),
         ),
         SizedBox(
-          width: 64.w,
+          width: 62.w,
         ),
-        Expanded(
-          flex: 2,
+        FittedBox(
           child: Text(
             "Painter",
             style: TextStyle(
@@ -169,10 +164,9 @@ Widget Data1() {
           ),
         ),
         SizedBox(
-          width: 65.w,
+          width: 62.w,
         ),
-        Expanded(
-          flex: 1,
+        FittedBox(
           child: Text(
             "Sub",
             style: TextStyle(
@@ -182,9 +176,9 @@ Widget Data1() {
           ),
         ),
         SizedBox(
-          width: 30.w,
+          width: 53.w,
         ),
-        Expanded(
+        FittedBox(
           child: Text(
             "7",
             style: TextStyle(

@@ -6,35 +6,32 @@ class Super_viser_dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: ListView(
-          shrinkWrap: true,
-          children: [ Column(
-              children: <Widget>[
-                text_button(),
-                SizedBox(
-                  height: 16.h,
-                ),
-                slider(),
-                SizedBox(
+        backgroundColor: Colors.white,
+        body: Column(
+          children: <Widget>[
+            text_button(),
+            SizedBox(
+              height: 16.h,
+            ),
+            slider(),
+            Expanded(
+              child: ListView(
+                children:[ SizedBox(
                   height: 19.h,
                 ),
-                Job_container(),
-                SizedBox(
-                  height: 19.h,
-                ),
-                Job_container1(),
-                SizedBox(
-                  height: 36.h,
-                ),
-                Bottom_data(),
-              ],
-            )
-   ] )
-    );
+
+              Job_container(),
+              SizedBox(
+                height: 19.h,
+              ),
+              Job_container1(),
+              SizedBox(
+                height: 36.h,
+              ),]),
+            ),
+              Bottom_data(),
+          ],
+        ),
+            );
   }
-
-
-
-
 }

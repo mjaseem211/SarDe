@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget title() {
   return Padding(
-      padding: EdgeInsets.only(left: 36.w, top: 109.h),
+      padding: EdgeInsets.only(left: 36.w, top: 109.h,right: 271.w),
       child: Row(
         children: [
           Text(
@@ -17,26 +17,12 @@ Widget title() {
         ],
       ));
 }
-
-Widget line() {
-  return Padding(
-    padding: EdgeInsets.only(left: 33.w, right: 47.w),
-    child: Row(children: [
-      Container(
-        color: const Color(0xFFD8D4E9),
-        height: 2.h,
-        width: 310.w,
-      ),
-    ]),
-  );
-}
-
 Widget heading() {
   return Padding(
-    padding: EdgeInsets.only(right: 48.w, left: 37.w),
+    padding: EdgeInsets.only(right: 52.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        FittedBox(
           child: Text(
             "Item",
             style: TextStyle(
@@ -48,7 +34,8 @@ Widget heading() {
         SizedBox(
           width: 91.w,
         ),
-        Expanded(
+        FittedBox(
+
             child: Container(
           alignment: Alignment.centerLeft,
           child: Text(
@@ -77,13 +64,24 @@ Widget heading() {
     ),
   );
 }
-
+Widget line() {
+  return Padding(
+    padding: EdgeInsets.only(left: 33.w, right: 47.w),
+    child: Row(children: [
+      Container(
+        color: const Color(0xFFD8D4E9),
+        height: 2.h,
+        width: 310.w,
+      ),
+    ]),
+  );
+}
 Widget data() {
   return Padding(
-    padding: EdgeInsets.only(right: 48.w, left: 37.w),
+    padding: EdgeInsets.only(right: 65.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        FittedBox(
           child: Text(
             "Boiler",
             style: TextStyle(
@@ -93,10 +91,10 @@ Widget data() {
           ),
         ),
         SizedBox(
-          width: 91.w,
+          width: 105.w,
         ),
-        Expanded(
-            flex: -2,
+        FittedBox(
+
             child: Container(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -108,9 +106,9 @@ Widget data() {
               ),
             )),
         SizedBox(
-          width: 66.w,
+          width: 107.w,
         ),
-        Expanded(
+        FittedBox(
             child: Container(
           alignment: Alignment.centerRight,
           child: Text(
@@ -128,7 +126,7 @@ Widget data() {
 
 Widget data1() {
   return Padding(
-    padding: EdgeInsets.only(right: 48.w, left: 37.w),
+    padding: EdgeInsets.only(right: 59.w, left: 33.w),
     child: Row(
       children: [
         Expanded(
@@ -141,10 +139,10 @@ Widget data1() {
           ),
         ),
         SizedBox(
-          width: 91.w,
+          width: 71.w,
         ),
-        Expanded(
-            flex: -2,
+        FittedBox(
+
             child: Container(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -156,9 +154,9 @@ Widget data1() {
               ),
             )),
         SizedBox(
-          width: 66.w,
+          width: 101.w,
         ),
-        Expanded(
+        FittedBox(
             child: Container(
           alignment: Alignment.centerRight,
           child: Text(

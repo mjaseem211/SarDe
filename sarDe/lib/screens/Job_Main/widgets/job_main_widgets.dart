@@ -137,8 +137,8 @@ class job_main_nav extends StatelessWidget {
               ),
               GridButtons(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => Inventory()));
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => Inventory()));
                 },
                 height: 162.h,
                 width: 139.w,

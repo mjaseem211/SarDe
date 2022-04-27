@@ -8,20 +8,22 @@ class add_new_expense extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(shrinkWrap: true, children: [
-        Column(children: [
-          title(),
-          SizedBox(
-            height: 26.h,
-          ),
-          heading(),
-          SizedBox(
-            height: 2.h,
-          ),
-          line(),
-          SizedBox(
-            height: 6.h,
-          ),
+      body: Column(children: [
+        title(),
+        SizedBox(
+          height: 26.h,
+        ),
+        heading(),
+        SizedBox(
+          height: 2.h,
+        ),
+        line(),
+        Expanded(
+          child: ListView(
+            children:[ SizedBox(
+              height: 6.h,
+            ),
+
           data(),
           SizedBox(
             height: 15.h,
@@ -29,7 +31,8 @@ class add_new_expense extends StatelessWidget {
           data1(),
           SizedBox(
             height: 47.h,
-          ),
+          ),]),
+        ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [Image.asset('assets/images/plus_button.png')],
@@ -43,8 +46,10 @@ class add_new_expense extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => JobMain()));
             },
           ),
-        ]),
+          SizedBox(
+            height: 72.h,
+          ),
       ]),
-    );
+        );
   }
 }

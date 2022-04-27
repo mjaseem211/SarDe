@@ -11,40 +11,46 @@ class add_new_quality_check extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(shrinkWrap: true, children: [
-        Column(children: [
-          title(),
-          SizedBox(
-            height: 3.h,
-          ),
-          line(),
-          Photoview(),
-          SizedBox(
-            height: 74.h,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
+      body: Column(children: [
+        title(),
+        SizedBox(
+          height: 3.h,
+        ),
+        line(),
+        Expanded(
+          child: ListView(shrinkWrap: true, children: [
+            Photoview(),
+            SizedBox(
+              height: 74.h,
+            ),
+          ]),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: EdgeInsets.only(left: 169.w, right: 169.w),
+              child: Image.asset(
                 'assets/images/plus_button.png',
-                height: 41.h,
-                width: 41.w,
-              )
-            ],
-          ),
-          SizedBox(
-            height: 316.61.h,
-          ),
-          Bottom_back_button(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => JobMain()));
-            },
-          ),
-        ])
+                height: 32.h,
+                width: 30.w,
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 312.61.h,
+        ),
+        Bottom_back_button(
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => JobMain()));
+          },
+        ),
+        SizedBox(
+          height: 72.h,
+        )
       ]),
     );
   }
 }
-
-

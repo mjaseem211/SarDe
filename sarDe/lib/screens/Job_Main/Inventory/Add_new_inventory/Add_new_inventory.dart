@@ -9,60 +9,64 @@ class add_new_inventory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: ListView(shrinkWrap: true, children: [
-        Column(children: [
-          title(),
-          SizedBox(
-            height: 26.h,
-          ),
-          heading(),
-          SizedBox(
-            height: 2.h,
-          ),
-          line(),
-          SizedBox(
-            height: 6.h,
-          ),
-          data(),
-          SizedBox(
-            height: 33.h,
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 103.w, right: 129.w),
-            child: Row(children: [
-              Column(
-                children: [
-                  Image.asset(
-                    'assets/images/plus_button.png',
-                    height: 20.h,
-                    width: 20.w,
-                  )
-                ],
-              ),
-              SizedBox(
-                width: 106.w,
-              ),
-              Column(
-                children: [
-                  Image.asset(
-                    'assets/images/Subtract.png',
-                    height: 5.h,
-                    width: 30.w,
-                  )
-                ],
-              ),
-            ]),
+      body: Column(children: [
+        title(),
+        SizedBox(
+          height: 26.h,
+        ),
+        heading(),
+        SizedBox(
+          height: 2.h,
+        ),
+        line(),
+        Expanded(
+          child: ListView(shrinkWrap: true, children: [
+            SizedBox(
+              height: 6.h,
+            ),
+            data(),
+
+          ]),
+        ),
+        Row(children: [
+          Padding(padding: EdgeInsets.only(left:90.w,top: 33.h),
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/images/plus_button.png',
+                  height: 20.h,
+                  width: 20.w,
+                )
+              ],
+            ),
           ),
           SizedBox(
-            height: 439.3.h,
+            width: 106.w,
           ),
-          Bottom_back_button(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => JobMain()));
-            },
+          Padding(padding: EdgeInsets.only(top: 46.7.h,right: 116.w),
+            child: Column(
+              children: [
+                Image.asset(
+                  'assets/images/Subtract.png',
+                  height: 4.h,
+                  width: 26.w,
+                )
+              ],
+            ),
           ),
         ]),
+        SizedBox(
+          height: 439.3.h,
+        ),
+        Bottom_back_button(
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => JobMain()));
+          },
+        ),
+        SizedBox(
+          height: 72.h,
+        ),
       ]),
     );
   }

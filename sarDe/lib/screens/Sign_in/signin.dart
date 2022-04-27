@@ -34,8 +34,11 @@ class SignIn extends StatelessWidget {
               height: 115.h,
             ),
             Contact_admin(),
+            SizedBox(
+              height: 97.h,
+            ),
           ],
-        )
+        ),
       ]),
     );
   }
