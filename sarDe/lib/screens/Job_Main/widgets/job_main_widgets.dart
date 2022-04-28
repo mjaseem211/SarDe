@@ -84,8 +84,8 @@ class job_main_nav extends StatelessWidget {
               GridButtons(
                 height: 147.h,
                 onTap: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => add_new_labours()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => add_new_labours()));
                 },
                 assetimage: 'assets/images/add_button.png',
                 name: "Labours",
