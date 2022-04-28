@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
 Widget title() {
   return Padding(
-      padding: EdgeInsets.only(left: 36.w,top: 109.h),
+      padding: EdgeInsets.only(left: 36.w, top: 109.h),
       child: Row(
         children: [
           Text(
@@ -38,27 +37,28 @@ Widget heading() {
         ),
         FittedBox(
             child: Text(
-              "Amount",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            )),
+          "Amount",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
+        )),
         SizedBox(
           width: 63.w,
         ),
         FittedBox(
             child: Text(
-              "Reference",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            )),
+          "Reference",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
+        )),
       ],
     ),
   );
 }
+
 Widget line() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w, right: 47.w),
@@ -71,6 +71,7 @@ Widget line() {
     ]),
   );
 }
+
 Widget data() {
   return Padding(
     padding: EdgeInsets.only(right: 186.w, left: 33.w),
@@ -93,16 +94,15 @@ Widget data() {
         ),
         FittedBox(
             child: Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "1800",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 13.sp,
-                    color: const Color(0xFFDD7164)),
-              ),
-            )),
-
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "1800",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
+          ),
+        )),
       ],
     ),
   );
@@ -140,10 +140,7 @@ Widget data1() {
             ),
           ),
         ),
-
       ],
     ),
   );
 }
-
-

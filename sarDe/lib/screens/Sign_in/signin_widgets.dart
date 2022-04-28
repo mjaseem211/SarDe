@@ -86,7 +86,10 @@ class Login_Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 52.w, right: 53.w),
+      padding: EdgeInsets.only(
+        left: 52.w,
+        right: 53.w,
+      ),
       child: GestureDetector(
         child: Stack(alignment: Alignment.center, children: <Widget>[
           Container(

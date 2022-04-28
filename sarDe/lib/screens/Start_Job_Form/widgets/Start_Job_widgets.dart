@@ -7,8 +7,8 @@ class Start_Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Stack(alignment: Alignment.center, children: <Widget>[
-        Row(
-          children:[ Expanded(
+        Row(children: [
+          Expanded(
             child: Container(
               height: 98.h,
               width: 390.w,
@@ -17,10 +17,16 @@ class Start_Button extends StatelessWidget {
           ),
         ]),
         Padding(
-            padding: EdgeInsets.only(left: 328.w, right: 56.w,top: 38.h,bottom: 44.h),
-            child: Image.asset('assets/images/forward_arrow.png',height: 14.h,width: 8.w,)),
-
-        Padding(padding: EdgeInsets.only(right: 220.w,left: 56.w,top:28.h ,bottom:35.h ),
+            padding: EdgeInsets.only(
+                left: 328.w, right: 56.w, top: 38.h, bottom: 44.h),
+            child: Image.asset(
+              'assets/images/forward_arrow.png',
+              height: 14.h,
+              width: 8.w,
+            )),
+        Padding(
+          padding: EdgeInsets.only(
+              right: 220.w, left: 56.w, top: 28.h, bottom: 35.h),
           child: Text(
             "Start Job",
             style: TextStyle(
@@ -30,9 +36,9 @@ class Start_Button extends StatelessWidget {
           ),
         ),
       ]),
-      onTap: (){
-    Navigator.of(context).pushReplacement(MaterialPageRoute(
-    builder: (context) => JobMain()));
+      onTap: () {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => JobMain()));
       },
     );
   }
@@ -109,7 +115,7 @@ Widget date() {
 
 Widget heading() {
   return Padding(
-    padding: EdgeInsets.only(left: 35.w),
+    padding: EdgeInsets.only(left: 35.w, right: 218.w),
     child: Row(children: [
       Container(
         alignment: Alignment.centerLeft,
@@ -127,17 +133,14 @@ Widget heading() {
 
 Widget subheading() {
   return Padding(
-    padding: EdgeInsets.only(left: 36.w),
+    padding: EdgeInsets.only(left: 36.w, right: 56.w),
     child: Row(children: [
-      Container(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          "Road Marking from kuttichira to maradu",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 14.sp,
-              color: const Color(0xFF000000).withOpacity(0.5)),
-        ),
+      Text(
+        "Road Marking from kuttichira to maradu",
+        style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 14.sp,
+            color: const Color(0xFF000000).withOpacity(0.5)),
       ),
     ]),
   );
@@ -148,7 +151,7 @@ Widget data() {
     padding: EdgeInsets.only(left: 36.w, right: 44.w),
     child: Row(
       children: [
-        Expanded(
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -160,7 +163,10 @@ Widget data() {
             ),
           ),
         ),
-        Expanded(
+        SizedBox(
+          width: 124.w,
+        ),
+        FittedBox(
             child: Container(
           alignment: Alignment.centerRight,
           child: Text(
@@ -192,17 +198,14 @@ Widget line() {
 
 Widget heading2() {
   return Padding(
-    padding: EdgeInsets.only(left: 35.w),
+    padding: EdgeInsets.only(left: 35.w, right: 245.w),
     child: Row(children: [
-      Container(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          "Stud Fixing",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 20.sp,
-              color: const Color(0xFFDD7164)),
-        ),
+      Text(
+        "Stud Fixing",
+        style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 20.sp,
+            color: const Color(0xFFDD7164)),
       ),
     ]),
   );
@@ -210,17 +213,14 @@ Widget heading2() {
 
 Widget subheading1() {
   return Padding(
-    padding: EdgeInsets.only(left: 36.w),
+    padding: EdgeInsets.only(left: 36.w, right: 57.w),
     child: Row(children: [
-      Container(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          "Stud fixing on the sides from kuttichira to\nmaradu",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 14.sp,
-              color: const Color(0xFF000000).withOpacity(0.5)),
-        ),
+      Text(
+        "Stud fixing on the sides from kuttichira to\nmaradu",
+        style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 14.sp,
+            color: const Color(0xFF000000).withOpacity(0.5)),
       ),
     ]),
   );
@@ -231,28 +231,25 @@ Widget data2() {
     padding: EdgeInsets.only(left: 36.w, right: 44.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "18-09-22",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16.sp,
-                  color: const Color(0xFFBC401E)),
-            ),
-          ),
-        ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
+        FittedBox(
           child: Text(
-            "Total : 184 nos",
+            "18-09-22",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16.sp,
-                color: const Color(0xFF2B3070)),
+                color: const Color(0xFFBC401E)),
           ),
+        ),
+        SizedBox(
+          width: 135.w,
+        ),
+        FittedBox(
+            child: Text(
+          "Total : 184 nos",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 16.sp,
+              color: const Color(0xFF2B3070)),
         )),
       ],
     ),
@@ -261,17 +258,14 @@ Widget data2() {
 
 Widget heading3() {
   return Padding(
-    padding: EdgeInsets.only(left: 35.w),
+    padding: EdgeInsets.only(left: 35.w, right: 231.w),
     child: Row(children: [
-      Container(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          "Board Fixing",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 20.sp,
-              color: const Color(0xFFDD7164)),
-        ),
+      Text(
+        "Board Fixing",
+        style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 20.sp,
+            color: const Color(0xFFDD7164)),
       ),
     ]),
   );
@@ -279,17 +273,14 @@ Widget heading3() {
 
 Widget subheading2() {
   return Padding(
-    padding: EdgeInsets.only(left: 36.w),
+    padding: EdgeInsets.only(left: 36.w, right: 57.w),
     child: Row(children: [
-      Container(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          "Board fixing on the sides from kuttichira to\nmaradu",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 14.sp,
-              color: const Color(0xFF000000).withOpacity(0.5)),
-        ),
+      Text(
+        "Board fixing on the sides from kuttichira to\nmaradu",
+        style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 14.sp,
+            color: const Color(0xFF000000).withOpacity(0.5)),
       ),
     ]),
   );
@@ -300,28 +291,25 @@ Widget data3() {
     padding: EdgeInsets.only(left: 36.w, right: 48.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "18-09-22",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16.sp,
-                  color: const Color(0xFFBC401E)),
-            ),
-          ),
-        ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
+        FittedBox(
           child: Text(
-            "Total : 43  nos",
+            "18-09-22",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16.sp,
-                color: const Color(0xFF2B3070)),
+                color: const Color(0xFFBC401E)),
           ),
+        ),
+        SizedBox(
+          width: 135.w,
+        ),
+        FittedBox(
+            child: Text(
+          "Total : 43  nos",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 16.sp,
+              color: const Color(0xFF2B3070)),
         )),
       ],
     ),

@@ -16,18 +16,14 @@ class Super_viser_dashboard extends StatelessWidget {
             slider(),
             Expanded(
               child: ListView(
-                children:[ SizedBox(
-                  height: 19.h,
-                ),
+                children:[
 
               Job_container(),
               SizedBox(
                 height: 19.h,
               ),
               Job_container1(),
-              SizedBox(
-                height: 36.h,
-              ),]),
+              ]),
             ),
               Bottom_data(),
           ],

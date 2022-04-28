@@ -14,32 +14,30 @@ class SignIn extends StatelessWidget {
     TextEditingController passwordController = TextEditingController();
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      body: ListView(children: [
-        Column(
-          children: <Widget>[
-            sardelogo(),
-            SizedBox(
-              height: 37.h,
-            ),
-            Username(),
-            SizedBox(
-              height: 10.h,
-            ),
-            password(),
-            SizedBox(
-              height: 28.h,
-            ),
-            Login_Button(),
-            SizedBox(
-              height: 115.h,
-            ),
-            Contact_admin(),
-            SizedBox(
-              height: 97.h,
-            ),
-          ],
-        ),
-      ]),
+      body: Column(
+        children: <Widget>[
+          sardelogo(),
+          Expanded(
+            child: ListView(
+              children:[
+
+          Username(),
+          SizedBox(
+            height: 10.h,
+          ),
+          password(),
+          ]),
+          ),
+          Login_Button(),
+          SizedBox(
+            height: 115.h,
+          ),
+          Contact_admin(),
+          SizedBox(
+            height: 97.h,
+          ),
+        ],
+      ),
     );
   }
 }

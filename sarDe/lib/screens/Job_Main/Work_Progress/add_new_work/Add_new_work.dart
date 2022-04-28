@@ -20,25 +20,23 @@ class add_new_work extends StatelessWidget {
         ),
         line(),
         Expanded(
-          child: ListView(
-            children:[ SizedBox(
-              height: 1.h,
+          child: ListView(children: [
+            Data(),
+            SizedBox(
+              height: 11.h,
             ),
-
-        Data(),
-        SizedBox(
-          height: 11.h,
+            Data1(),
+          ]),
         ),
-        Data1(),
-        SizedBox(
-          height: 57.h,
-        ),
-
-      ]  ),
-    ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Image.asset('assets/images/plus_button.png',height:32.h,width: 30.w,)],
+          children: [
+            Image.asset(
+              'assets/images/plus_button.png',
+              height: 32.h,
+              width: 30.w,
+            )
+          ],
         ),
         SizedBox(
           height: 365.61.h,

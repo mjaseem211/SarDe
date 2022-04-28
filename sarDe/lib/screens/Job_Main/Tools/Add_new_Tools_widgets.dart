@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget title() {
   return Padding(
-      padding: EdgeInsets.only(left: 36.w, top: 109.h,right: 271.w),
+      padding: EdgeInsets.only(left: 36.w, top: 109.h, right: 271.w),
       child: Row(
         children: [
           Text(
@@ -17,6 +17,7 @@ Widget title() {
         ],
       ));
 }
+
 Widget heading() {
   return Padding(
     padding: EdgeInsets.only(right: 52.w, left: 33.w),
@@ -35,7 +36,6 @@ Widget heading() {
           width: 91.w,
         ),
         FittedBox(
-
             child: Container(
           alignment: Alignment.centerLeft,
           child: Text(
@@ -64,6 +64,7 @@ Widget heading() {
     ),
   );
 }
+
 Widget line() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w, right: 47.w),
@@ -76,6 +77,7 @@ Widget line() {
     ]),
   );
 }
+
 Widget data() {
   return Padding(
     padding: EdgeInsets.only(right: 65.w, left: 33.w),
@@ -94,17 +96,16 @@ Widget data() {
           width: 105.w,
         ),
         FittedBox(
-
             child: Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "2",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 13.sp,
-                    color: const Color(0xFFDD7164)),
-              ),
-            )),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "2",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
+          ),
+        )),
         SizedBox(
           width: 107.w,
         ),
@@ -142,17 +143,16 @@ Widget data1() {
           width: 71.w,
         ),
         FittedBox(
-
             child: Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "1",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 13.sp,
-                    color: const Color(0xFFDD7164)),
-              ),
-            )),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "1",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
+          ),
+        )),
         SizedBox(
           width: 101.w,
         ),

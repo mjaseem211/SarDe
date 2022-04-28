@@ -13,7 +13,7 @@ Widget title() {
     padding: EdgeInsets.only(left: 33.w, right: 44.w),
     child: Row(
       children: [
-        Expanded(
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -25,7 +25,10 @@ Widget title() {
             ),
           ),
         ),
-        Expanded(
+        SizedBox(
+          width: 89.w,
+        ),
+        FittedBox(
             child: Container(
           alignment: Alignment.centerRight,
           child: Text(
@@ -43,7 +46,7 @@ Widget title() {
 
 Widget subTitle() {
   return Padding(
-    padding: EdgeInsets.only(left: 33.w),
+    padding: EdgeInsets.only(left: 33.w, right: 134.w),
     child: Row(
       children: [
         Text(
@@ -82,7 +85,7 @@ class job_main_nav extends StatelessWidget {
                 height: 147.h,
                 onTap: () {
                   Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => Labours()));
+                      MaterialPageRoute(builder: (context) => add_new_labours()));
                 },
                 assetimage: 'assets/images/add_button.png',
                 name: "Labours",

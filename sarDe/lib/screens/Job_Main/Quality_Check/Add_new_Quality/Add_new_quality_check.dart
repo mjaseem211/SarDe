@@ -20,9 +20,6 @@ class add_new_quality_check extends StatelessWidget {
         Expanded(
           child: ListView(shrinkWrap: true, children: [
             Photoview(),
-            SizedBox(
-              height: 74.h,
-            ),
           ]),
         ),
         Row(

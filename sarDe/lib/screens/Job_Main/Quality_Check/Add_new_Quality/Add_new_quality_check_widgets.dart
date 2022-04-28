@@ -104,26 +104,26 @@ Widget Photoview() {
             ),
           ]),
         ),
-  Padding(
-  padding: EdgeInsets.only(left: 19.w, right: 30.w),
-  child:   Row(
-          children:[ FittedBox(
-            child: Text("Edge Alignment :",
-                style: TextStyle(
-                    color: const Color(0xFFDD7164),
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w400)),
-          ),
-
-        FittedBox(
-          child: Text("Acceptable",
-              style: TextStyle(
-                  color: const Color(0xFFF7CE46),
-                  fontSize: 12.sp,
-                  fontWeight: FontWeight.w400)),
+        Padding(
+          padding: EdgeInsets.only(left: 19.w, right: 30.w),
+          child: Row(children: [
+            FittedBox(
+              child: Text("Edge Alignment :",
+                  style: TextStyle(
+                      color: const Color(0xFFDD7164),
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w400)),
+            ),
+            FittedBox(
+              child: Text("Acceptable",
+                  style: TextStyle(
+                      color: const Color(0xFFF7CE46),
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w400)),
+            ),
+          ]),
         ),
-  ]),
-  ), ]),
+      ]),
     ),
   ]);
 }

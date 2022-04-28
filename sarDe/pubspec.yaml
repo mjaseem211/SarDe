@@ -59,7 +59,6 @@ flutter:
 
     - assets/images/sarde.png
     - assets/images/forward_arrow.png
-    - assets/images/Line.jpg
     - assets/images/backarrow.png
     - assets/images/backbutton.png
     - assets/images/success.png
@@ -68,6 +67,7 @@ flutter:
     - assets/images/plus_button.png
     - assets/images/photo_view.png
     - assets/images/Subtract.png
+    - assets/images/edit_button.png
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

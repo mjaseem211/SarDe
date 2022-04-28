@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Job_Main/Work_Progress/add_new_work/Add_new_work.dart';
 
-
 Widget Title1() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w, top: 99.h),
@@ -128,9 +127,6 @@ class text_button2 extends StatelessWidget {
     );
   }
 }
-
-
-
 
 class text_button3 extends StatelessWidget {
   @override

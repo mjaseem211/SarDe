@@ -20,28 +20,25 @@ class add_new_tools extends StatelessWidget {
         ),
         line(),
         Expanded(
-          child: ListView(
-            children:[ SizedBox(
-              height: 6.h,
+          child: ListView(children: [
+            data(),
+            SizedBox(
+              height: 15.h,
             ),
-
-        data(),
-        SizedBox(
-          height: 15.h,
-        ),
-        data1(),
-        SizedBox(
-          height: 47.h,
-        ),] ),
+            data1(),
+          ]),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [Padding(padding: EdgeInsets.only(left: 162.w,right: 176.w
-
-
-          ),
-
-              child: Image.asset('assets/images/plus_button.png',height: 32.h,width: 30.w,))],
+          children: [
+            Padding(
+                padding: EdgeInsets.only(left: 162.w, right: 176.w),
+                child: Image.asset(
+                  'assets/images/plus_button.png',
+                  height: 32.h,
+                  width: 30.w,
+                ))
+          ],
         ),
         SizedBox(
           height: 365.61.h,

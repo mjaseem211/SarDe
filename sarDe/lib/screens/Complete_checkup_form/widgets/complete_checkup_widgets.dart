@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget backButton() {
   return Padding(
-    padding: EdgeInsets.only(top: 53.h, left: 38.w),
+    padding: EdgeInsets.only(top: 53.h, left: 38.w, right: 344.w),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
@@ -20,7 +20,7 @@ Widget title() {
     padding: EdgeInsets.only(left: 33.w, right: 44.w),
     child: Row(
       children: [
-        Expanded(
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -32,7 +32,10 @@ Widget title() {
             ),
           ),
         ),
-        Expanded(
+        SizedBox(
+          width: 89.w,
+        ),
+        FittedBox(
             child: Container(
           alignment: Alignment.centerRight,
           child: Text(
@@ -50,13 +53,13 @@ Widget title() {
 
 Widget subTitle() {
   return Padding(
-    padding: EdgeInsets.only(left: 33.w),
+    padding: EdgeInsets.only(left: 33.w, right: 134.w),
     child: Row(
       children: [
         Text(
           "Kuttichira to Maradu",
           style: TextStyle(
-            color: Color(0xFF2B3070).withOpacity(0.7),
+            color: const Color(0xFF2B3070).withOpacity(0.7),
             fontSize: 22.sp,
             fontWeight: FontWeight.w400,
           ),
@@ -68,13 +71,13 @@ Widget subTitle() {
 
 Widget subTitle2() {
   return Padding(
-    padding: EdgeInsets.only(left: 36.w),
+    padding: EdgeInsets.only(left: 36.w, right: 213.w),
     child: Row(
       children: [
         Text(
           "Work Progress",
           style: TextStyle(
-            color: Color(0xFF2B3070),
+            color: const Color(0xFF2B3070),
             fontSize: 20.sp,
             fontWeight: FontWeight.w400,
           ),
@@ -89,41 +92,36 @@ Widget Heading1() {
     padding: EdgeInsets.only(right: 62.w, left: 38.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            child: Text(
-              "Work Name",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
+        FittedBox(
+          child: Text(
+            "Work Name",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
           ),
         ),
         SizedBox(
           width: 70.w,
         ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "Today",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
-          ),
+        FittedBox(
+            child: Text(
+          "Today",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
         )),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
-          child: Text(
-            "Total",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
-          ),
+        SizedBox(
+          width: 74.w,
+        ),
+        FittedBox(
+            child: Text(
+          "Total",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
         )),
       ],
     ),
@@ -139,7 +137,7 @@ Widget line() {
           height: 2.h,
           width: 310.w,
           decoration: BoxDecoration(
-              color: Color(0xFFD8D4E9),
+              color: const Color(0xFFD8D4E9),
               borderRadius: BorderRadius.circular(6.r)),
         ),
       ],
@@ -152,41 +150,36 @@ Widget Heading2() {
     padding: EdgeInsets.only(right: 47.w, left: 38.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            child: Text(
-              "Road Marking",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "Road Marking",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
           width: 51.w,
         ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "128 sqm",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
+        FittedBox(
+            child: Text(
+          "128 sqm",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         )),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
-          child: Text(
-            "121.8 sqm",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
+        SizedBox(
+          width: 52.w,
+        ),
+        FittedBox(
+            child: Text(
+          "121.8 sqm",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         )),
       ],
     ),
@@ -198,41 +191,36 @@ Widget Heading3() {
     padding: EdgeInsets.only(right: 54.w, left: 38.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            child: Text(
-              "Stud fixing",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "Stud fixing",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
-          width: 51.w,
+          width: 76.w,
         ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "55 nos",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
+        FittedBox(
+            child: Text(
+          "55 nos",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         )),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
-          child: Text(
-            "102 nos",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
+        SizedBox(
+          width: 64.w,
+        ),
+        FittedBox(
+            child: Text(
+          "102 nos",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         )),
       ],
     ),
@@ -244,21 +232,19 @@ Widget Heading4() {
     padding: EdgeInsets.only(right: 58.w, left: 38.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            child: Text(
-              "Board Fixing",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "Board Fixing",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
-          width: 51.w,
+          width: 64.w,
         ),
-        Expanded(
+        FittedBox(
             child: Container(
           alignment: Alignment.centerLeft,
           child: Text(
@@ -269,7 +255,10 @@ Widget Heading4() {
                 color: const Color(0xFFDD7164)),
           ),
         )),
-        Expanded(
+        SizedBox(
+          width: 69.w,
+        ),
+        FittedBox(
             child: Container(
           alignment: Alignment.centerRight,
           child: Text(
@@ -287,13 +276,13 @@ Widget Heading4() {
 
 Widget Subtitle3() {
   return Padding(
-      padding: EdgeInsets.only(left: 36.w),
+      padding: EdgeInsets.only(left: 36.w, right: 271.w),
       child: Row(
         children: [
           Text(
             "Expence",
             style: TextStyle(
-              color: Color(0xFF2B3070),
+              color: const Color(0xFF2B3070),
               fontSize: 20.sp,
               fontWeight: FontWeight.w400,
             ),
@@ -304,47 +293,39 @@ Widget Subtitle3() {
 
 Widget Heading5() {
   return Padding(
-    padding: EdgeInsets.only(right: 62.w, left: 36.w),
+    padding: EdgeInsets.only(right: 46.w, left: 36.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            child: Text(
-              "Expenses",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
+        FittedBox(
+          child: Text(
+            "Expenses",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
           ),
         ),
         SizedBox(
           width: 73.w,
         ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "Amount",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
-          ),
+        FittedBox(
+            child: Text(
+          "Amount",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
         )),
         SizedBox(
           width: 62.w,
         ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
-          child: Text(
-            "Reference",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
-          ),
+        FittedBox(
+            child: Text(
+          "Reference",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
         )),
       ],
     ),
@@ -356,45 +337,36 @@ Widget Heading6() {
     padding: EdgeInsets.only(right: 53.w, left: 36.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Vech Rent",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ),
-        SizedBox(
-          width: 77.w,
-        ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerLeft,
+        FittedBox(
           child: Text(
-            "1800",
+            "Vech Rent",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
                 color: const Color(0xFFDD7164)),
           ),
+        ),
+        SizedBox(
+          width: 77.w,
+        ),
+        FittedBox(
+            child: Text(
+          "1800",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         )),
         SizedBox(
-          width: 88.w,
+          width: 89.w,
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "5 days",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "5 days",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
       ],
@@ -407,7 +379,7 @@ Widget Heading7() {
     padding: EdgeInsets.only(right: 40.w, left: 36.w),
     child: Row(
       children: [
-        Expanded(
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -422,7 +394,7 @@ Widget Heading7() {
         SizedBox(
           width: 55.w,
         ),
-        Expanded(
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -458,28 +430,25 @@ Widget Total() {
   return Padding(
     padding: EdgeInsets.only(right: 181.w, left: 97.w),
     child: Row(children: [
-      Expanded(
-        child: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "Total",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFBC401E)),
-          ),
+      FittedBox(
+        child: Text(
+          "Total",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFBC401E)),
         ),
       ),
-      Expanded(
-        child: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "2800",
-            style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 13.sp,
-                color: const Color(0xFFBC401E)),
-          ),
+      SizedBox(
+        width: 48.w,
+      ),
+      FittedBox(
+        child: Text(
+          "2800",
+          style: TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 13.sp,
+              color: const Color(0xFFBC401E)),
         ),
       ),
     ]),
@@ -488,13 +457,13 @@ Widget Total() {
 
 Widget Subtitle4() {
   return Padding(
-      padding: EdgeInsets.only(left: 36.w),
+      padding: EdgeInsets.only(left: 36.w, right: 284.w),
       child: Row(
         children: [
           Text(
             "Labour",
             style: TextStyle(
-              color: Color(0xFF2B3070),
+              color: const Color(0xFF2B3070),
               fontSize: 20.sp,
               fontWeight: FontWeight.w400,
             ),
@@ -508,61 +477,49 @@ Widget Heading8() {
     padding: EdgeInsets.only(right: 62.w, left: 36.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Name",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
+        FittedBox(
+          child: Text(
+            "Name",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
           ),
         ),
         SizedBox(
           width: 74.w,
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Trade",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
+        FittedBox(
+          child: Text(
+            "Trade",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
           ),
         ),
         SizedBox(
           width: 55.w,
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Type",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
+        FittedBox(
+          child: Text(
+            "Type",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
           ),
         ),
         SizedBox(
           width: 19.w,
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Hours",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
+        FittedBox(
+          child: Text(
+            "Hours",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
           ),
         ),
       ],
@@ -572,64 +529,52 @@ Widget Heading8() {
 
 Widget Heading9() {
   return Padding(
-    padding: EdgeInsets.only(right: 40.w, left: 36.w),
+    padding: EdgeInsets.only(right: 89.w, left: 36.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Rahul",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "Rahul",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
-          width: 64.w,
+          width: 66.w,
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Rope man",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "Rope man",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
           width: 40.w,
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Sub",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "Sub",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
           width: 25.w,
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "5",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "5",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
       ],
@@ -639,25 +584,22 @@ Widget Heading9() {
 
 Widget Heading10() {
   return Padding(
-    padding: EdgeInsets.only(right: 40.w, left: 36.w),
+    padding: EdgeInsets.only(right: 89.w, left: 36.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Vinod",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "Vinod",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
           width: 72.w,
         ),
-        Expanded(
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -672,7 +614,7 @@ Widget Heading10() {
         SizedBox(
           width: 50.w,
         ),
-        Expanded(
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -687,7 +629,7 @@ Widget Heading10() {
         SizedBox(
           width: 23.w,
         ),
-        Expanded(
+        FittedBox(
           child: Container(
             alignment: Alignment.centerLeft,
             child: Text(
@@ -706,13 +648,13 @@ Widget Heading10() {
 
 Widget Subtitle5() {
   return Padding(
-      padding: EdgeInsets.only(left: 36.w),
+      padding: EdgeInsets.only(left: 36.w, right: 304.w),
       child: Row(
         children: [
           Text(
             "Tools",
             style: TextStyle(
-              color: Color(0xFF2B3070),
+              color: const Color(0xFF2B3070),
               fontSize: 20.sp,
               fontWeight: FontWeight.w400,
             ),
@@ -726,21 +668,19 @@ Widget Heading11() {
     padding: EdgeInsets.only(right: 48.w, left: 37.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            child: Text(
-              "Item",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
+        FittedBox(
+          child: Text(
+            "Item",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
           ),
         ),
         SizedBox(
           width: 91.w,
         ),
-        Expanded(
+        FittedBox(
             child: Container(
           alignment: Alignment.centerLeft,
           child: Text(
@@ -775,46 +715,37 @@ Widget Heading12() {
     padding: EdgeInsets.only(right: 61.w, left: 37.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Boiler",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "Boiler",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
-          width: 115.w,
+          width: 105.w,
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "2",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "2",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
-          width: 80.w,
+          width: 107.w,
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerRight,
-            child: Text(
-              "Good",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF52972A)),
-            ),
+        FittedBox(
+          child: Text(
+            "Good",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF52972A)),
           ),
         ),
       ],
@@ -824,38 +755,32 @@ Widget Heading12() {
 
 Widget Heading13() {
   return Padding(
-    padding: EdgeInsets.only(right: 61.w, left: 37.w),
+    padding: EdgeInsets.only(right: 55.w, left: 37.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerRight,
-            child: Text(
-              "Spanner 12",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "Spanner 12",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
-          width: 105.w,
+          width: 71.w,
         ),
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "1",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        FittedBox(
+          child: Text(
+            "1",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
         SizedBox(
-          width: 61.w,
+          width: 101.w,
         ),
         Expanded(
           child: Container(
@@ -876,13 +801,13 @@ Widget Heading13() {
 
 Widget Subtitle6() {
   return Padding(
-      padding: EdgeInsets.only(left: 36.w),
+      padding: EdgeInsets.only(left: 36.w, right: 190.w),
       child: Row(
         children: [
           Text(
             "Inventory Usage",
             style: TextStyle(
-              color: Color(0xFF2B3070),
+              color: const Color(0xFF2B3070),
               fontSize: 20.sp,
               fontWeight: FontWeight.w400,
             ),
@@ -896,28 +821,25 @@ Widget Heading14() {
     padding: EdgeInsets.only(left: 36.w, right: 54.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Item",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
-          ),
-        ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
+        FittedBox(
           child: Text(
-            "Quantity",
+            "Item",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
                 color: const Color(0xFF2B3070)),
           ),
+        ),
+        SizedBox(
+          width: 213.w,
+        ),
+        FittedBox(
+            child: Text(
+          "Quantity",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
         )),
       ],
     ),
@@ -929,28 +851,25 @@ Widget Heading15() {
     padding: EdgeInsets.only(left: 36.w, right: 53.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Rst Paint White",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
+        FittedBox(
           child: Text(
-            "10 Bag",
+            "Rst Paint White",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
                 color: const Color(0xFFDD7164)),
           ),
+        ),
+        SizedBox(
+          width: 159.w,
+        ),
+        FittedBox(
+            child: Text(
+          "10 Bag",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         )),
       ],
     ),
@@ -959,13 +878,13 @@ Widget Heading15() {
 
 Widget Subtitle7() {
   return Padding(
-      padding: EdgeInsets.only(left: 36.w),
+      padding: EdgeInsets.only(left: 36.w, right: 218.w),
       child: Row(
         children: [
           Text(
             "Quality Check",
             style: TextStyle(
-              color: Color(0xFF2B3070),
+              color: const Color(0xFF2B3070),
               fontSize: 20.sp,
               fontWeight: FontWeight.w400,
             ),
@@ -979,28 +898,25 @@ Widget Heading16() {
     padding: EdgeInsets.only(left: 36.w, right: 69.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Time",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
-          ),
-        ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
+        FittedBox(
           child: Text(
-            "Status",
+            "Time",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
                 color: const Color(0xFF2B3070)),
           ),
+        ),
+        SizedBox(
+          width: 213.w,
+        ),
+        FittedBox(
+            child: Text(
+          "Status",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
         )),
       ],
     ),
@@ -1012,28 +928,25 @@ Widget Heading17() {
     padding: EdgeInsets.only(left: 36.w, right: 56.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Road Marking",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
+        FittedBox(
           child: Text(
-            "3 times done",
+            "Road Marking",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
                 color: const Color(0xFFDD7164)),
           ),
+        ),
+        SizedBox(
+          width: 128.w,
+        ),
+        FittedBox(
+            child: Text(
+          "3 times done",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         )),
       ],
     ),
@@ -1045,28 +958,25 @@ Widget Heading18() {
     padding: EdgeInsets.only(left: 36.w, right: 56.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Stud Fixing",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
+        FittedBox(
           child: Text(
-            "3 times done",
+            "Stud Fixing",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
                 color: const Color(0xFFDD7164)),
           ),
+        ),
+        SizedBox(
+          width: 145.w,
+        ),
+        FittedBox(
+            child: Text(
+          "3 times done",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         )),
       ],
     ),
@@ -1078,54 +988,27 @@ Widget Heading19() {
     padding: EdgeInsets.only(left: 36.w, right: 56.w),
     child: Row(
       children: [
-        Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Board Fixing",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
+        FittedBox(
           child: Text(
-            "2 times done ",
+            "Board Fixing",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
                 color: const Color(0xFFDD7164)),
           ),
+        ),
+        SizedBox(
+          width: 136.w,
+        ),
+        FittedBox(
+            child: Text(
+          "2 times done ",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         )),
       ],
-    ),
-  );
-}
-Widget CloseButton2() {
-  return Container(
-    height: 98.h,
-    width: 390.w,
-    child: ElevatedButton(
-      onPressed: () {},
-      child: Padding(
-        padding: EdgeInsets.only(left: 55.w, right: 214.w),
-        child: Text('Close Day',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25.sp,
-              fontWeight: FontWeight.w400,
-            )),
-      ),
-      style: ElevatedButton.styleFrom(
-        primary: const Color(0xFF2B3070), // background
-        onPrimary: const Color(0xFF2B3070),
-
-        // foreground
-      ),
     ),
   );
 }

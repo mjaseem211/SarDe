@@ -21,15 +21,12 @@ class add_new_inventory extends StatelessWidget {
         line(),
         Expanded(
           child: ListView(shrinkWrap: true, children: [
-            SizedBox(
-              height: 6.h,
-            ),
             data(),
-
           ]),
         ),
         Row(children: [
-          Padding(padding: EdgeInsets.only(left:90.w,top: 33.h),
+          Padding(
+            padding: EdgeInsets.only(left: 90.w, top: 33.h),
             child: Column(
               children: [
                 Image.asset(
@@ -43,7 +40,8 @@ class add_new_inventory extends StatelessWidget {
           SizedBox(
             width: 106.w,
           ),
-          Padding(padding: EdgeInsets.only(top: 46.7.h,right: 116.w),
+          Padding(
+            padding: EdgeInsets.only(top: 46.7.h, right: 116.w),
             child: Column(
               children: [
                 Image.asset(

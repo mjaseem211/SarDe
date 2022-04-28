@@ -19,9 +19,6 @@ class Inventory extends StatelessWidget {
           subtitle(),
           Expanded(
             child: ListView(children: [
-              SizedBox(
-                height: 52.h,
-              ),
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -126,9 +123,6 @@ class Inventory extends StatelessWidget {
                 right: 67.w,
                 color: const Color(0xFFBC401E),
                 font_size: 16.sp,
-              ),
-              SizedBox(
-                height: 228.h,
               ),
             ]),
           ),

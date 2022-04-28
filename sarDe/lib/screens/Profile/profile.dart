@@ -9,34 +9,31 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        body: ListView(shrinkWrap: true, children: [
-          Column(
-            children: <Widget>[
-              title(),
-              subtitle(),
-              SizedBox(
-                height: 76.h,
-              ),
-              Old_Jobs(),
-              SizedBox(
-                height: 24.h,
-              ),
-              Job_Transfer(),
-              SizedBox(
-                height: 24.h,
-              ),
-              About(),
-              SizedBox(
-                height: 72.h,
-              ),
-              Bottom_back_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => Super_viser_dashboard()));
-                },
-              )
-            ],
-          )
-        ]));
+        body: Column(
+          children: <Widget>[
+            title(),
+            subtitle(),
+            Expanded(
+              child: ListView(children: [
+                Old_Jobs(),
+                SizedBox(
+                  height: 24.h,
+                ),
+                Job_Transfer(),
+                SizedBox(
+                  height: 24.h,
+                ),
+                About(),
+              ]),
+            ),
+            Bottom_back_button(
+              onTap: () {
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => Super_viser_dashboard()));
+              },
+            ),
+            SizedBox(height: 142.h),
+          ],
+        ));
   }
 }
