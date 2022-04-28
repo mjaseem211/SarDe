@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:sarde/screens/Complete_checkup_form/widgets/complete_checkup_widgets.dart';
 import 'package:sarde/screens/Job_Main/Expense/Add_new_expense.dart';
 import 'package:sarde/screens/Job_Main/Inventory/Inventory.dart';
@@ -13,7 +12,19 @@ import 'package:sarde/widgets/Close_Day_Button.dart';
 import 'package:sarde/screens/success_page/Success_page.dart';
 import 'package:sarde/widgets/Top_Back_button.dart';
 
-class Complete_Check_Up extends StatelessWidget {
+class Complete_Check_Up extends StatefulWidget {
+  @override
+  State<Complete_Check_Up> createState() => _Complete_Check_UpState();
+}
+
+class _Complete_Check_UpState extends State<Complete_Check_Up> {
+  bool value1 = false;
+  bool value2 = false;
+  bool value3 = false;
+  bool value4 = false;
+  bool value5 = false;
+  bool value6 = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,23 +70,40 @@ class Complete_Check_Up extends StatelessWidget {
             SizedBox(
               height: 11.88.h,
             ),
-            GestureDetector(
-              child: Padding(
-                padding: EdgeInsets.only(left: 158.w),
-                child: Row(
-                  children: [
-                    Image.asset(
+            Padding(
+              padding: EdgeInsets.only(left: 158.w),
+              child: Row(
+                children: [
+                  GestureDetector(
+                    child: Image.asset(
                       'assets/images/edit_button.png',
                       height: 20.h,
                       width: 20.w,
                     ),
-                  ],
-                ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => work_progress()));
+                    },
+                  ),
+                  SizedBox(
+                    width: 108.88.w,
+                  ),
+                  Checkbox(
+                    hoverColor: const Color(0xff52972A),
+                    focusColor: const Color(0xff52972A),
+                    checkColor: const Color(0xffffffff),
+                    activeColor: const Color(0xff52972A),
+                    value: this.value1,
+                    onChanged: (value) {
+                      setState(() {
+                        this.value1 = value!;
+                      });
+                    },
+                  ),
+                ],
               ),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => work_progress()));
-              },
             ),
             SizedBox(
               height: 29.h,
@@ -104,23 +132,40 @@ class Complete_Check_Up extends StatelessWidget {
             SizedBox(
               height: 12.88.h,
             ),
-            GestureDetector(
-              child: Padding(
-                padding: EdgeInsets.only(left: 158.w),
-                child: Row(
-                  children: [
-                    Image.asset(
+            Padding(
+              padding: EdgeInsets.only(left: 158.w),
+              child: Row(
+                children: [
+                  GestureDetector(
+                    child: Image.asset(
                       'assets/images/edit_button.png',
                       height: 20.h,
                       width: 20.w,
                     ),
-                  ],
-                ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => add_new_expense()));
+                    },
+                  ),
+                  SizedBox(
+                    width: 108.88.w,
+                  ),
+                  Checkbox(
+                    hoverColor: const Color(0xff52972A),
+                    focusColor: const Color(0xff52972A),
+                    checkColor: const Color(0xffffffff),
+                    activeColor: const Color(0xff52972A),
+                    value: this.value2,
+                    onChanged: (value) {
+                      setState(() {
+                        this.value2 = value!;
+                      });
+                    },
+                  ),
+                ],
               ),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => add_new_expense()));
-              },
             ),
             SizedBox(
               height: 29.h,
@@ -145,23 +190,40 @@ class Complete_Check_Up extends StatelessWidget {
             SizedBox(
               height: 31.88.h,
             ),
-            GestureDetector(
-              child: Padding(
-                padding: EdgeInsets.only(left: 158.w),
-                child: Row(
-                  children: [
-                    Image.asset(
+            Padding(
+              padding: EdgeInsets.only(left: 158.w),
+              child: Row(
+                children: [
+                  GestureDetector(
+                    child: Image.asset(
                       'assets/images/edit_button.png',
                       height: 20.h,
                       width: 20.w,
                     ),
-                  ],
-                ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => add_new_labours()));
+                    },
+                  ),
+                  SizedBox(
+                    width: 108.88.w,
+                  ),
+                  Checkbox(
+                    hoverColor: const Color(0xff52972A),
+                    focusColor: const Color(0xff52972A),
+                    checkColor: const Color(0xffffffff),
+                    activeColor: const Color(0xff52972A),
+                    value: this.value3,
+                    onChanged: (value) {
+                      setState(() {
+                        this.value3 = value!;
+                      });
+                    },
+                  ),
+                ],
               ),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => add_new_labours()));
-              },
             ),
             SizedBox(
               height: 29.h,
@@ -186,23 +248,40 @@ class Complete_Check_Up extends StatelessWidget {
             SizedBox(
               height: 14.88.h,
             ),
-            GestureDetector(
-              child: Padding(
-                padding: EdgeInsets.only(left: 158.w),
-                child: Row(
-                  children: [
-                    Image.asset(
+            Padding(
+              padding: EdgeInsets.only(left: 158.w),
+              child: Row(
+                children: [
+                  GestureDetector(
+                    child: Image.asset(
                       'assets/images/edit_button.png',
                       height: 20.h,
                       width: 20.w,
                     ),
-                  ],
-                ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => add_new_tools()));
+                    },
+                  ),
+                  SizedBox(
+                    width: 108.88.w,
+                  ),
+                  Checkbox(
+                    hoverColor: const Color(0xff52972A),
+                    focusColor: const Color(0xff52972A),
+                    checkColor: const Color(0xffffffff),
+                    activeColor: const Color(0xff52972A),
+                    value: this.value4,
+                    onChanged: (value) {
+                      setState(() {
+                        this.value4 = value!;
+                      });
+                    },
+                  ),
+                ],
               ),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => add_new_tools()));
-              },
             ),
             SizedBox(
               height: 44.h,
@@ -223,23 +302,38 @@ class Complete_Check_Up extends StatelessWidget {
             SizedBox(
               height: 19.88.h,
             ),
-            GestureDetector(
-              child: Padding(
-                padding: EdgeInsets.only(left: 158.w),
-                child: Row(
-                  children: [
-                    Image.asset(
+            Padding(
+              padding: EdgeInsets.only(left: 158.w),
+              child: Row(
+                children: [
+                  GestureDetector(
+                    child: Image.asset(
                       'assets/images/edit_button.png',
                       height: 20.h,
                       width: 20.w,
                     ),
-                  ],
-                ),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Inventory()));
+                    },
+                  ),
+                  SizedBox(
+                    width: 108.88.w,
+                  ),
+                  Checkbox(
+                    hoverColor: const Color(0xff52972A),
+                    focusColor: const Color(0xff52972A),
+                    checkColor: const Color(0xffffffff),
+                    activeColor: const Color(0xff52972A),
+                    value: this.value5,
+                    onChanged: (value) {
+                      setState(() {
+                        this.value5 = value!;
+                      });
+                    },
+                  ),
+                ],
               ),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Inventory()));
-              },
             ),
             SizedBox(
               height: 53.h,
@@ -268,23 +362,40 @@ class Complete_Check_Up extends StatelessWidget {
             SizedBox(
               height: 23.88.h,
             ),
-            GestureDetector(
-              child: Padding(
-                padding: EdgeInsets.only(left: 158.w),
-                child: Row(
-                  children: [
-                    Image.asset(
+            Padding(
+              padding: EdgeInsets.only(left: 158.w),
+              child: Row(
+                children: [
+                  GestureDetector(
+                    child: Image.asset(
                       'assets/images/edit_button.png',
                       height: 20.h,
                       width: 20.w,
                     ),
-                  ],
-                ),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Quality_Check()));
+                    },
+                  ),
+                  SizedBox(
+                    width: 108.88.w,
+                  ),
+                  Checkbox(
+                    hoverColor: const Color(0xff52972A),
+                    focusColor: const Color(0xff52972A),
+                    checkColor: const Color(0xffffffff),
+                    activeColor: const Color(0xff52972A),
+                    value: this.value6,
+                    onChanged: (value) {
+                      setState(() {
+                        this.value6 = value!;
+                      });
+                    },
+                  ),
+                ],
               ),
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Quality_Check()));
-              },
             ),
           ]),
         ),

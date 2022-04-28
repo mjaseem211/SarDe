@@ -14,7 +14,13 @@ class Bottom_back_button extends StatelessWidget {
       ),
       child: GestureDetector(
         child: Row(
-          children: [Image.asset('assets/images/Bottom_back_button.png',height: 41.h,width: 41.w,),],
+          children: [
+            Image.asset(
+              'assets/images/Bottom_back_button.png',
+              height: 41.h,
+              width: 41.w,
+            ),
+          ],
         ),
         onTap: onTap ?? () {},
       ),

@@ -19,7 +19,7 @@ class Profile extends StatelessWidget {
                 SizedBox(
                   height: 24.h,
                 ),
-                Job_Transfer(),
+                Job_transfer(),
                 SizedBox(
                   height: 24.h,
                 ),
