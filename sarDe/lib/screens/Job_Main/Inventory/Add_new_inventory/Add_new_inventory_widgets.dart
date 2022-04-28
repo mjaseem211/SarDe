@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget title() {
   return Padding(
-      padding: EdgeInsets.only(left: 33.w, top: 109.h,right:189.w),
+      padding: EdgeInsets.only(left: 33.w, top: 109.h, right: 189.w),
       child: Row(
         children: [
           Text(
@@ -36,17 +36,16 @@ Widget heading() {
           width: 213.w,
         ),
         FittedBox(
-
             child: Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Quantity",
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 13.sp,
-                    color: const Color(0xFF2B3070)),
-              ),
-            )),
+          alignment: Alignment.centerLeft,
+          child: Text(
+            "Quantity",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
+          ),
+        )),
       ],
     ),
   );
@@ -71,7 +70,6 @@ Widget data() {
     child: Row(
       children: [
         FittedBox(
-
           child: Text(
             "Rst Paint White",
             style: TextStyle(

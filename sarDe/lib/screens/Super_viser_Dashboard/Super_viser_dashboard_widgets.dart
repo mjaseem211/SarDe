@@ -239,11 +239,8 @@ Widget Bottom_data() {
       Padding(
           padding:
               EdgeInsets.only(left: 24.w, right: 34.w, top: 7.h, bottom: 115.h),
-          child: Image.asset(
-            'assets/images/Line.jpg',
-            width: 332.w,
-            height: 1.h,
-          )),
+          child: Container(
+              width: 332.w, height: 1.h, color: const Color(0xff8B8888))),
     ]),
     Row(children: [
       Padding(

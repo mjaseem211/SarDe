@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 Widget title(){
-  return Padding(padding: EdgeInsets.only(left: 34.w,top: 257.h),
+  return Padding(padding: EdgeInsets.only(left: 34.w,top: 257.h,right: 94.w),
     child: Row(
         children:[Text(
           'Pradeep',
@@ -18,7 +18,7 @@ Widget title(){
 }
 
 Widget subtitle(){
-  return  Padding(padding: EdgeInsets.only(left: 39.w),
+  return  Padding(padding: EdgeInsets.only(left: 39.w,right: 230.w),
     child: Row(
 
         children:[ Text(
@@ -33,11 +33,11 @@ Widget subtitle(){
 }
 
 Widget Old_Jobs(){
-  return  Padding(padding: EdgeInsets.only(left: 34.w),
+  return  Padding(padding: EdgeInsets.only(left: 34.w,),
     child: Row(
         children:[ TextButton(
           child:  Text(
-            'Old Jobs ',
+            'Old Jobes ',
             style: TextStyle(
                 color:const Color(0xFF2B3070),
                 fontSize: 31.sp,

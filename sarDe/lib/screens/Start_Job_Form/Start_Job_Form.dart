@@ -28,9 +28,7 @@ class Start_Job_Form extends StatelessWidget {
           height: 5.h,
         ),
         date(),
-        SizedBox(
-          height: 24.h,
-        ),
+
         Expanded(
           child: ListView(children: [
             heading(),
@@ -65,9 +63,7 @@ class Start_Job_Form extends StatelessWidget {
               height: 18.h,
             ),
             data3(),
-            SizedBox(
-              height: 169.h,
-            ),
+
           ]),
         ),
         Start_Button(),

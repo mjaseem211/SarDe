@@ -27,19 +27,13 @@ class JobMain extends StatelessWidget {
             height: 3.h,
           ),
           subTitle(),
-          SizedBox(
-            height: 29.h,
-          ),
           Expanded(
             child: ListView(shrinkWrap: true, children: [
               job_main_nav(),
-              SizedBox(
-                height: 35.h,
-              ),
             ]),
           ),
           Close_Day_Button(
-            onTap:  () {
+            onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => Complete_Check_Up()));
             },

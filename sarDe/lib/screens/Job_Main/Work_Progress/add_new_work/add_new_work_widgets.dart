@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget Title1() {
   return Padding(
-    padding: EdgeInsets.only(left: 33.w, top: 109.h,right: 110.w),
+    padding: EdgeInsets.only(left: 33.w, top: 109.h, right: 110.w),
     child: Row(children: [
       Text("Work Progress",
           style: TextStyle(
@@ -20,7 +20,6 @@ Widget Heading() {
     child: Row(
       children: [
         FittedBox(
-
           child: Text(
             "Item Description",
             style: TextStyle(
@@ -45,7 +44,6 @@ Widget Heading() {
           width: 11.w,
         ),
         FittedBox(
-
           child: Text(
             "Length",
             style: TextStyle(
@@ -84,15 +82,15 @@ Widget Heading() {
 }
 
 Widget line() {
-  return Row(children: [Padding(
-  padding: EdgeInsets.only(left: 33.w, right: 47.w),
-    child:
-    Container(
-      color: const Color(0xFFD8D4E9),
-      height: 2.h,
-      width: 310.w,
+  return Row(children: [
+    Padding(
+      padding: EdgeInsets.only(left: 33.w, right: 47.w),
+      child: Container(
+        color: const Color(0xFFD8D4E9),
+        height: 2.h,
+        width: 310.w,
+      ),
     ),
-  ),
   ]);
 }
 
@@ -102,7 +100,6 @@ Widget Data() {
     child: Row(
       children: [
         FittedBox(
-
           child: Text(
             "001-003 RHS",
             style: TextStyle(
@@ -127,7 +124,6 @@ Widget Data() {
           width: 25.w,
         ),
         FittedBox(
-
           child: Text(
             "121.8",
             style: TextStyle(
@@ -171,7 +167,6 @@ Widget Data1() {
     child: Row(
       children: [
         FittedBox(
-
           child: Text(
             "004-006 LHS",
             style: TextStyle(
@@ -196,7 +191,6 @@ Widget Data1() {
           width: 27.w,
         ),
         FittedBox(
-
           child: Text(
             "38.8",
             style: TextStyle(

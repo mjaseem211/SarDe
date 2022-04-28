@@ -4,7 +4,7 @@ import 'package:sarde/screens/job_main/JobMain.dart';
 import '../../../../widgets/Bottom_back_button.dart';
 import 'package:sarde/screens/Job_Main/Labours/Add_new_Labours_widgets.dart';
 
-class Labours extends StatelessWidget {
+class add_new_labours extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,17 +21,11 @@ class Labours extends StatelessWidget {
         line(),
         Expanded(
           child: ListView(children: [
-            SizedBox(
-              height: 1.h,
-            ),
             Data(),
             SizedBox(
               height: 11.h,
             ),
             Data1(),
-            SizedBox(
-              height: 60.7.h,
-            ),
           ]),
         ),
         Row(
