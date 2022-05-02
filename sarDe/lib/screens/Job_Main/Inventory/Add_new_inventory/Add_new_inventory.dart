@@ -20,35 +20,37 @@ class _add_new_inventoryState extends State<add_new_inventory> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
-      body: Column(children: [
-        title(),
-        SizedBox(
-          height: 26.h,
-        ),
-        heading(),
-        SizedBox(
-          height: 2.h,
-        ),
-        line(),
-        Expanded(
-          child: ListView(shrinkWrap: true, children: [
-            data(),
-          ]),
-        ),
-        const dialogue_box(),
-        SizedBox(
-          height: 439.3.h,
-        ),
-        Bottom_back_button(
-          onTap: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => JobMain()));
-          },
-        ),
-        SizedBox(
-          height: 72.h,
-        ),
-      ]),
+      body: SingleChildScrollView(
+        child: Column(children: [
+          title(),
+          SizedBox(
+            height: 26.h,
+          ),
+          heading(),
+          SizedBox(
+            height: 2.h,
+          ),
+          line(),
+          SizedBox(
+            height: 8.h,
+          ),
+          data(),
+          SizedBox(height: 13.h,),
+          const dialogue_box(),
+          SizedBox(
+            height: 439.3.h,
+          ),
+          Bottom_back_button(
+            onTap: () {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => JobMain()));
+            },
+          ),
+          SizedBox(
+            height: 72.h,
+          ),
+        ]),
+      ),
     );
   }
 }

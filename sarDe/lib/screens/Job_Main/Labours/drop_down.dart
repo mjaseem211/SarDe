@@ -28,7 +28,9 @@ class _drop_downState extends State<drop_down> {
           ),
         ),
         icon: Padding(
-          padding: EdgeInsets.only(left: 210.w, right: 24.w),
+          padding: EdgeInsets.only(
+            left: 210.w,
+          ),
           child: const Icon(
             Icons.keyboard_arrow_down_outlined,
             color: Color(0xffDD7164),

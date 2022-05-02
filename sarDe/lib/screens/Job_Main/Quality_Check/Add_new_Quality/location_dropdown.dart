@@ -7,7 +7,6 @@ class location_drop_down extends StatefulWidget {
 }
 
 class _location_drop_downState extends State<location_drop_down> {
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +26,9 @@ class _location_drop_downState extends State<location_drop_down> {
           ),
         ),
         icon: Padding(
-          padding: EdgeInsets.only(left: 172.w, right: 23.w),
+          padding: EdgeInsets.only(
+            left: 172.w,
+          ),
           child: const Icon(
             Icons.keyboard_arrow_down_outlined,
             color: Color(0xffDD7164),

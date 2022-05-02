@@ -30,7 +30,9 @@ class _job_drop_downState extends State<job_drop_down> {
           ),
         ),
         icon: Padding(
-          padding: EdgeInsets.only(left: 18.w, right: 14.w),
+          padding: EdgeInsets.only(
+            left: 20.w,
+          ),
           child: const Icon(
             Icons.keyboard_arrow_down_outlined,
             color: Color(0xffDD7164),

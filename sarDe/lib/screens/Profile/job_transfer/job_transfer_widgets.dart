@@ -13,8 +13,8 @@ Widget title() {
     ]),
   );
 }
-Widget subtitle(){
 
+Widget subtitle() {
   return Padding(
     padding: EdgeInsets.only(
       left: 33.w,
@@ -27,14 +27,11 @@ Widget subtitle(){
               fontWeight: FontWeight.w400)),
     ]),
   );
-
 }
-Widget heading(){
 
+Widget heading() {
   return Padding(
-    padding: EdgeInsets.only(
-      left: 33.w,right: 72.w
-    ),
+    padding: EdgeInsets.only(left: 33.w, right: 72.w),
     child: Row(children: [
       FittedBox(
         child: Text("Job 303 to Job 584",
@@ -46,13 +43,20 @@ Widget heading(){
       SizedBox(
         width: 26.w,
       ),
-      FittedBox(child: Text('02-04-22',style: TextStyle(color:const Color(0xffBC401E),fontSize: 16.sp,fontWeight: FontWeight.w400,),)),
-      
+      FittedBox(
+          child: Text(
+        '02-04-22',
+        style: TextStyle(
+          color: const Color(0xffBC401E),
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w400,
+        ),
+      )),
     ]),
   );
 }
 
-Widget subheading(){
+Widget subheading() {
   return Padding(
     padding: EdgeInsets.only(
       left: 33.w,
@@ -65,13 +69,10 @@ Widget subheading(){
               fontWeight: FontWeight.w400)),
     ]),
   );
-
-
 }
 
-Widget subtitle1(){
-
-  return  Padding(
+Widget subtitle1() {
+  return Padding(
     padding: EdgeInsets.only(
       left: 33.w,
     ),
@@ -85,13 +86,9 @@ Widget subtitle1(){
   );
 }
 
-
-
-Widget line(){
+Widget line() {
   return Padding(
-    padding: EdgeInsets.only(
-      left: 40.w,right: 46.w
-    ),
+    padding: EdgeInsets.only(left: 40.w, right: 46.w),
     child: Row(
       children: [
         Container(
@@ -102,6 +99,4 @@ Widget line(){
       ],
     ),
   );
-
 }
-

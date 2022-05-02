@@ -5,11 +5,15 @@ import 'package:sarde/screens/job_main/JobMain.dart';
 import '../../../../widgets/Bottom_back_button.dart';
 import 'package:sarde/screens/Job_Main/Labours/Add_new_Labours_widgets.dart';
 
+// ignore: camel_case_types
 class add_new_labours extends StatefulWidget {
+  const add_new_labours({Key? key}) : super(key: key);
+
   @override
   State<add_new_labours> createState() => _add_new_laboursState();
 }
 
+// ignore: camel_case_types
 class _add_new_laboursState extends State<add_new_labours> {
   @override
   Widget build(BuildContext context) {
@@ -36,7 +40,7 @@ class _add_new_laboursState extends State<add_new_labours> {
           SizedBox(
             height: 47.h,
           ),
-          dialogue_box(),
+          const dialogue_box(),
           SizedBox(
             height: 365.61.h,
           ),

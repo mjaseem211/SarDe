@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Sign_in/signin_widgets.dart';
 
-class SignIn extends StatelessWidget {
+// ignore: camel_case_types
+class Signin extends StatelessWidget {
+  const Signin({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -9,20 +13,20 @@ class SignIn extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(children: <Widget>[
           sardelogo(),
-          const SizedBox(
-            height: 37,
+          SizedBox(
+            height: 37.h,
           ),
-          Username(),
-          const SizedBox(
-            height: 10,
+          const Username(),
+          SizedBox(
+            height: 10.h,
           ),
-          password(),
-          const SizedBox(
-            height: 28,
+          const password(),
+          SizedBox(
+            height: 28.h,
           ),
-          Login_Button(),
-          const SizedBox(
-            height: 115,
+          const Login_Button(),
+          SizedBox(
+            height: 115.h,
           ),
           Contact_admin(),
         ]),

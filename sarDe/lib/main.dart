@@ -3,13 +3,15 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sarde/screens/Sign_in/signin.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: Size(390, 844),
+        designSize: const Size(390, 844),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (_) {
@@ -26,7 +28,7 @@ class MyApp extends StatelessWidget {
                     .textTheme, // If this is not set, then ThemeData.light().textTheme is used.
               ),
             ),
-            home: SignIn(),
+            home: const Signin(),
           );
         });
   }

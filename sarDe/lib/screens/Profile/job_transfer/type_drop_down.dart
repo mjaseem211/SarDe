@@ -23,12 +23,16 @@ class _type_drop_downState extends State<type_drop_down> {
           child: Text(
             'Type of item',
             style: TextStyle(
-              color: const Color(0xff000000).withOpacity(0.26),fontWeight:FontWeight.w400,fontSize: 14.sp,
+              color: const Color(0xff000000).withOpacity(0.26),
+              fontWeight: FontWeight.w400,
+              fontSize: 14.sp,
             ),
           ),
         ),
         icon: Padding(
-          padding: EdgeInsets.only(left: 190.w, right: 14.w),
+          padding: EdgeInsets.only(
+            left: 190.w,
+          ),
           child: const Icon(
             Icons.keyboard_arrow_down_outlined,
             color: Color(0xffDD7164),
@@ -42,8 +46,11 @@ class _type_drop_downState extends State<type_drop_down> {
         onChanged: (String? newValue) {
           setState(() {});
         },
-        items: <String>['Road Marking', 'Stud Fixing', 'Stud Fixing', ]
-            .map<DropdownMenuItem<String>>((String value) {
+        items: <String>[
+          'Road Marking',
+          'Stud Fixing',
+          'Stud Fixing',
+        ].map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
             child: Text(value),

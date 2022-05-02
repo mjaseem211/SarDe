@@ -17,6 +17,8 @@ Widget sardelogo() {
 }
 
 class Username extends StatelessWidget {
+  const Username({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     TextEditingController nameController = TextEditingController();
@@ -30,8 +32,13 @@ class Username extends StatelessWidget {
           child: TextField(
             controller: nameController,
             decoration: InputDecoration(
-              contentPadding: EdgeInsets.only(left: 35.w, right: 156.w),
-              labelText: 'User Name',
+              contentPadding: EdgeInsets.only(
+                  top: 19.h, left: 35.w, right: 156.w, bottom: 10.h),
+              labelText: 'username',
+              labelStyle: TextStyle(
+                  color: const Color(0xff2B3070).withOpacity(0.4),
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w400),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.r)),
                 borderSide:
@@ -49,7 +56,10 @@ class Username extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class password extends StatelessWidget {
+  const password({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     TextEditingController passwordController = TextEditingController();
@@ -63,8 +73,13 @@ class password extends StatelessWidget {
             obscureText: true,
             controller: passwordController,
             decoration: InputDecoration(
-                contentPadding: EdgeInsets.only(left: 35.w, right: 159.w),
+                contentPadding: EdgeInsets.only(
+                    top: 16.h, left: 35.w, right: 159.w, bottom: 13.h),
                 labelText: 'Password',
+                labelStyle: TextStyle(
+                    color: const Color(0xff2B3070).withOpacity(0.4),
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w400),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10.r)),
                   borderSide:
@@ -81,7 +96,10 @@ class password extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class Login_Button extends StatelessWidget {
+  const Login_Button({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -134,6 +152,7 @@ class Login_Button extends StatelessWidget {
   }
 }
 
+// ignore: non_constant_identifier_names
 Widget Contact_admin() {
   return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
     TextButton(

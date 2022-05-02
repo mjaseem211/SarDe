@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Job_Main/Labours/drop_down.dart';
 
+// ignore: camel_case_types
 class dialogue_box extends StatefulWidget {
   const dialogue_box({Key? key}) : super(key: key);
 
@@ -9,6 +10,7 @@ class dialogue_box extends StatefulWidget {
   State<dialogue_box> createState() => _dialogue_boxState();
 }
 
+// ignore: camel_case_types
 class _dialogue_boxState extends State<dialogue_box> {
   @override
   Widget build(BuildContext context) {
