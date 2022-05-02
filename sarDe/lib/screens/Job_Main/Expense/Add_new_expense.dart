@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sarde/screens/Job_Main/Expense/dialogue_box.dart';
 import 'package:sarde/screens/Job_Main/JobMain.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 import 'package:sarde/screens/Job_Main/Expense/Add_new_expense_widgets.dart';
@@ -8,6 +9,7 @@ class add_new_expense extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Column(children: [
         title(),
@@ -28,10 +30,7 @@ class add_new_expense extends StatelessWidget {
             data1(),
           ]),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [Image.asset('assets/images/plus_button.png')],
-        ),
+        const dialogue_box(),
         SizedBox(
           height: 365.61.h,
         ),

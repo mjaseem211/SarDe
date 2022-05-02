@@ -1,34 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-class thickness_drop_down extends StatefulWidget {
-  const thickness_drop_down({Key? key}) : super(key: key);
+class sub_job_drop_down extends StatefulWidget {
+  const sub_job_drop_down({Key? key}) : super(key: key);
 
   @override
-  State<thickness_drop_down> createState() => _thickness_drop_downState();
+  State<sub_job_drop_down> createState() => _sub_job_drop_downState();
 }
 
-class _thickness_drop_downState extends State<thickness_drop_down> {
+class _sub_job_drop_downState extends State<sub_job_drop_down> {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 35.h,
-      width: 304.w,
+      width: 199.w,
       decoration: BoxDecoration(
           border: Border.all(color: const Color(0xffDD7164), width: 1.w),
           borderRadius: BorderRadius.circular(4.r)),
       child: DropdownButton<String>(
         hint: Padding(
-          padding: EdgeInsets.only(left: 19.w),
+          padding: EdgeInsets.only(left: 13.w),
           child: Text(
-            'Thickness',
+            'Sub Job',
             style: TextStyle(
-              color: const Color(0xff000000).withOpacity(0.26),
+              color: const Color(0xff000000).withOpacity(0.26),fontWeight:FontWeight.w400,fontSize: 14.sp,
             ),
           ),
         ),
         icon: Padding(
-          padding: EdgeInsets.only(left: 172.w, right: 23.w),
+          padding: EdgeInsets.only( left:70.w,right: 14.w),
           child: const Icon(
             Icons.keyboard_arrow_down_outlined,
             color: Color(0xffDD7164),
@@ -42,11 +41,8 @@ class _thickness_drop_downState extends State<thickness_drop_down> {
         onChanged: (String? newValue) {
           setState(() {});
         },
-        items: <String>[
-          'Good',
-          'Service',
-          'Bad',
-        ].map<DropdownMenuItem<String>>((String value) {
+        items: <String>['Road Marking', 'Stud Fixing', 'Stud Fixing', ]
+            .map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
             child: Text(value),

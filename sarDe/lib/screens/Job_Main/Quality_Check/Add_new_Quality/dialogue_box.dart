@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/Edge_alignment_drop_down.dart';
 import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/location_dropdown.dart';
+import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/thickness_dropdown.dart';
 
+// ignore: camel_case_types
 class dialogue_box extends StatefulWidget {
   const dialogue_box({Key? key}) : super(key: key);
 
@@ -10,10 +13,11 @@ class dialogue_box extends StatefulWidget {
   State<dialogue_box> createState() => _dialogue_boxState();
 }
 
+// ignore: camel_case_types
 class _dialogue_boxState extends State<dialogue_box> {
   get isCamera => null;
 
-  Future<String> pickTheImage(isCamera) async {
+  Future<String> pickTheImage(bool isCamera) async {
     final ImagePicker _picker = ImagePicker();
 
     XFile? result;
@@ -30,6 +34,15 @@ class _dialogue_boxState extends State<dialogue_box> {
     }
 
     return result!.path;
+  }
+
+  void openSheet(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return const OptionsList();
+      },
+    );
   }
 
   @override
@@ -88,9 +101,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                               Icons.photo_camera_outlined,
                               color: Colors.grey,
                             ),
-                            onTap: () {
-                              pickTheImage(isCamera);
-                            },
+                            onTap: () => openSheet(context),
                           ),
                         ]),
                       ),
@@ -112,9 +123,13 @@ class _dialogue_boxState extends State<dialogue_box> {
                             top: 326.h, left: 25.w, right: 27.w),
                         child: location_drop_down(),
                       ),
+                     
+                      Padding(
+                          padding: EdgeInsets.only(
+                              top: 374.h, left: 25.w, right: 27.w),
+                          child: const thickness_drop_down()),
 
-
-
+                      Padding(padding:EdgeInsets.only(top: 422.h,left: 25.w,right: 27.w),child: const Edge_alignment_drop_down()),
                       Padding(
                         padding: EdgeInsets.only(
                             top: 467.h, left: 25.w, right: 27.w),
@@ -183,3 +198,36 @@ class _dialogue_boxState extends State<dialogue_box> {
     );
   }
 }
+
+class OptionsList extends StatelessWidget {
+  const OptionsList({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      shrinkWrap: true,
+      children: [
+        ListTile(
+          leading: const Icon(Icons.camera),
+          title: const Text('Camera'),
+          onTap: () {
+            Navigator.pop(context);
+            pickTheImage(true);
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.photo_library),
+          title: const Text('Gallery'),
+          onTap: () {
+            Navigator.pop(context);
+            pickTheImage(false);
+          },
+        ),
+      ],
+    );
+  }
+}
+
+void pickTheImage(bool bool) {}

@@ -1,13 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:photo_view/photo_view.dart';
 import 'package:sarde/screens/Job_Main/JobMain.dart';
 import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/Add_new_quality_check_widgets.dart';
 import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/dialogue_box.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 
+// ignore: camel_case_types
 class add_new_quality_check extends StatelessWidget {
+  const add_new_quality_check({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +22,7 @@ class add_new_quality_check extends StatelessWidget {
           line(),
           Photoview(),
           SizedBox(height: 74.h),
-          dialogue_box(),
+          const dialogue_box(),
           SizedBox(
             height: 312.61.h,
           ),

@@ -1,13 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:sarde/screens/Job_Main/Inventory/Add_new_inventory/dialogue_box.dart';
 import 'package:sarde/screens/Job_Main/JobMain.dart';
 import 'package:sarde/screens/Job_Main/Inventory/Add_new_inventory/Add_new_inventory_widgets.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 
-class add_new_inventory extends StatelessWidget {
+// ignore: camel_case_types
+class add_new_inventory extends StatefulWidget {
+  const add_new_inventory({Key? key}) : super(key: key);
+
+  @override
+  State<add_new_inventory> createState() => _add_new_inventoryState();
+}
+
+// ignore: camel_case_types
+class _add_new_inventoryState extends State<add_new_inventory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Column(children: [
         title(),
@@ -24,35 +35,7 @@ class add_new_inventory extends StatelessWidget {
             data(),
           ]),
         ),
-        Row(children: [
-          Padding(
-            padding: EdgeInsets.only(left: 90.w, top: 33.h),
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/images/plus_button.png',
-                  height: 20.h,
-                  width: 20.w,
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            width: 106.w,
-          ),
-          Padding(
-            padding: EdgeInsets.only(top: 46.7.h, right: 116.w),
-            child: Column(
-              children: [
-                Image.asset(
-                  'assets/images/Subtract.png',
-                  height: 4.h,
-                  width: 26.w,
-                )
-              ],
-            ),
-          ),
-        ]),
+        const dialogue_box(),
         SizedBox(
           height: 439.3.h,
         ),
