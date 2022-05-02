@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'condition_drop_down.dart';
-import 'item_drop_down.dart';
-
+import 'package:sarde/screens/Job_Main/Expense/drop_down.dart';
 // ignore: camel_case_types
 class dialogue_box extends StatefulWidget {
   const dialogue_box({Key? key}) : super(key: key);
@@ -46,9 +43,9 @@ class _dialogue_boxState extends State<dialogue_box> {
                           color: Colors.white,
                         ),
                         padding: EdgeInsets.only(
-                            left: 25.w, top: 59.h, right: 233.w),
+                            left: 25.w, top: 59.h, right: 197.w),
                         child: Text(
-                          "Add Tools",
+                          "Add Expence",
                           style: TextStyle(
                               color: const Color(0xffDD7164),
                               fontSize: 21.sp,
@@ -57,36 +54,36 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsets.only(top: 16.h, left: 16.w, right: 19.w),
-                        child: const item_drop_down(),
+                        EdgeInsets.only(top: 16.h, left: 16.w, right: 19.w),
+                        child: const drop_down(),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 116.h, left: 16.w, right: 222.w),
+                            top: 116.h, left: 16.w, right: 154.w),
                         child: SizedBox(
-                          width: 118.w,
+                          width: 300.w,
                           height: 35.h,
                           child: TextField(
                             decoration: InputDecoration(
                               contentPadding: EdgeInsets.only(
                                 left: 9.w,
                               ),
-                              labelText: 'Quantity',
+                              labelText: 'Amount',
                               labelStyle: TextStyle(
                                 color:
-                                    const Color(0xff000000).withOpacity(0.26),
+                                const Color(0xff000000).withOpacity(0.26),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(4.r)),
+                                BorderRadius.all(Radius.circular(4.r)),
                                 borderSide: BorderSide(
                                     color: const Color(0xFFDD7164), width: 1.w),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius:
-                                    BorderRadius.all(Radius.circular(10.r)),
+                                BorderRadius.all(Radius.circular(10.r)),
                                 borderSide: BorderSide(
                                     width: 1.5.w, color: Colors.blue),
                               ),
@@ -95,9 +92,39 @@ class _dialogue_boxState extends State<dialogue_box> {
                         ),
                       ),
                       Padding(
-                          padding: EdgeInsets.only(
-                              left: 149.w, top: 116.h, right: 19.w),
-                          child: const Condition_drop_down()),
+                        padding: EdgeInsets.only(
+                            top: 116.h, left: 218.w, right: 19.w),
+                        child: SizedBox(
+                          width: 119.w,
+                          height: 35.h,
+                          child: TextField(
+                            decoration: InputDecoration(
+                              contentPadding: EdgeInsets.only(
+                                left: 9.w,
+                              ),
+                              labelText: 'Reference',
+                              labelStyle: TextStyle(
+                                color:
+                                const Color(0xff000000).withOpacity(0.26),
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w400,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(4.r)),
+                                borderSide: BorderSide(
+                                    color: const Color(0xFFDD7164), width: 1.w),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(10.r)),
+                                borderSide: BorderSide(
+                                    width: 1.5.w, color: Colors.blue),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                       Padding(
                         padding: EdgeInsets.only(
                           top: 214.h,
@@ -118,7 +145,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                             ),
                             child: Padding(
                                 padding:
-                                    EdgeInsets.only(left: 251.w, top: 11.h),
+                                EdgeInsets.only(left: 251.w, top: 11.h),
                                 child: Text(
                                   'Add',
                                   style: TextStyle(

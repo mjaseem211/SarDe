@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class thickness_drop_down extends StatefulWidget {
-  const thickness_drop_down({Key? key}) : super(key: key);
+class job_drop_down extends StatefulWidget {
+  const job_drop_down({Key? key}) : super(key: key);
 
   @override
-  State<thickness_drop_down> createState() => _thickness_drop_downState();
+  State<job_drop_down> createState() => _job_drop_downState();
 }
 
-class _thickness_drop_downState extends State<thickness_drop_down> {
+class _job_drop_downState extends State<job_drop_down> {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 35.h,
-      width: 304.w,
+      width: 104.w,
       decoration: BoxDecoration(
           border: Border.all(color: const Color(0xffDD7164), width: 1.w),
           borderRadius: BorderRadius.circular(4.r)),
@@ -21,14 +21,16 @@ class _thickness_drop_downState extends State<thickness_drop_down> {
         hint: Padding(
           padding: EdgeInsets.only(left: 19.w),
           child: Text(
-            'Thickness',
+            'Job',
             style: TextStyle(
               color: const Color(0xff000000).withOpacity(0.26),
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w400,
             ),
           ),
         ),
         icon: Padding(
-          padding: EdgeInsets.only(left: 172.w, right: 23.w),
+          padding: EdgeInsets.only(left: 18.w, right: 14.w),
           child: const Icon(
             Icons.keyboard_arrow_down_outlined,
             color: Color(0xffDD7164),

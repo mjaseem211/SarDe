@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class thickness_drop_down extends StatefulWidget {
-  const thickness_drop_down({Key? key}) : super(key: key);
+class Edge_alignment_drop_down extends StatefulWidget {
+  const Edge_alignment_drop_down({Key? key}) : super(key: key);
 
   @override
-  State<thickness_drop_down> createState() => _thickness_drop_downState();
+  State<Edge_alignment_drop_down> createState() =>
+      _Edge_alignment_drop_downState();
 }
 
-class _thickness_drop_downState extends State<thickness_drop_down> {
+class _Edge_alignment_drop_downState extends State<Edge_alignment_drop_down> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,14 +22,14 @@ class _thickness_drop_downState extends State<thickness_drop_down> {
         hint: Padding(
           padding: EdgeInsets.only(left: 19.w),
           child: Text(
-            'Thickness',
+            'Edge Alignment',
             style: TextStyle(
               color: const Color(0xff000000).withOpacity(0.26),
             ),
           ),
         ),
         icon: Padding(
-          padding: EdgeInsets.only(left: 172.w, right: 23.w),
+          padding: EdgeInsets.only(left: 137.w, right: 23.w),
           child: const Icon(
             Icons.keyboard_arrow_down_outlined,
             color: Color(0xffDD7164),
@@ -43,9 +44,8 @@ class _thickness_drop_downState extends State<thickness_drop_down> {
           setState(() {});
         },
         items: <String>[
-          'Good',
-          'Service',
-          'Bad',
+          'Acceptable',
+          'Not-Acceptable',
         ].map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,

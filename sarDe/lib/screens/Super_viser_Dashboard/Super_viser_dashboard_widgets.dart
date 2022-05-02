@@ -1,9 +1,13 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Profile/profile.dart';
 import 'package:sarde/screens/Start_Job_Form/Start_Job_Form.dart';
 
+// ignore: camel_case_types
 class text_button extends StatelessWidget {
+  const text_button({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -36,10 +40,6 @@ Widget slider() {
             height: 5.0.h,
             decoration: BoxDecoration(
               color: const Color(0xffd8d4e9),
-              border: Border.all(
-                color: const Color(0xffd8d4e9),
-                width: 8.w,
-              ),
               borderRadius: BorderRadius.circular(6.r),
             )),
       ]),
@@ -52,10 +52,6 @@ Widget slider() {
             height: 9.0.h,
             decoration: BoxDecoration(
               color: const Color(0xffa49eb8),
-              border: Border.all(
-                color: const Color(0xffa49eb8),
-                width: 8.w,
-              ),
               borderRadius: BorderRadius.circular(6.r),
             )),
       ]),
@@ -63,6 +59,7 @@ Widget slider() {
   ]);
 }
 
+// ignore: non_constant_identifier_names
 Widget Job_container() {
   return Builder(builder: (context) {
     return GestureDetector(
@@ -90,32 +87,28 @@ Widget Job_container() {
                 height: 136.h,
                 decoration: BoxDecoration(
                   color: const Color(0xff2b3070),
-                  border: Border.all(
-                    color: const Color(0xff2b3070),
-                    width: 8.w,
-                  ),
                   borderRadius: BorderRadius.circular(13.r),
                 )),
           ]),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 46.5.h, right: 225.w),
+          padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 19.w),
           child: Text(
             'Job 303',
             style: TextStyle(
                 color: const Color(0xFFFFFFFF),
                 fontSize: 18.sp,
-                fontWeight: FontWeight.normal),
+                fontWeight: FontWeight.w400),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 92.h, right: 118.w),
+          padding: EdgeInsets.only(top: 92.h, right: 118.w, left: 19.w),
           child: Text(
             'Kuttichira to Maradu',
             style: TextStyle(
                 color: const Color(0xffffffff).withOpacity(.46),
                 fontSize: 18.sp,
-                fontWeight: FontWeight.normal),
+                fontWeight: FontWeight.w400),
           ),
         ),
         Padding(
@@ -128,7 +121,7 @@ Widget Job_container() {
             style: TextStyle(
                 color: const Color(0xFF000000).withOpacity(0.5),
                 fontSize: 12.sp,
-                fontWeight: FontWeight.normal),
+                fontWeight: FontWeight.w400),
           ),
         ),
       ]),
@@ -140,6 +133,7 @@ Widget Job_container() {
   });
 }
 
+// ignore: non_constant_identifier_names
 Widget Job_container1() {
   return Builder(builder: (context) {
     return GestureDetector(
@@ -172,23 +166,23 @@ Widget Job_container1() {
           ]),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 46.5.h, right: 225.w),
+          padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 19.w),
           child: Text(
             'Job 308',
             style: TextStyle(
                 color: const Color(0xFFFFFFFF),
                 fontSize: 18.sp,
-                fontWeight: FontWeight.normal),
+                fontWeight: FontWeight.w400),
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 92.h, right: 95.w),
+          padding: EdgeInsets.only(top: 92.h, right: 95.w, left: 19.w),
           child: Text(
             'Koyilandy to Kozhikode',
             style: TextStyle(
                 color: const Color(0xffffffff).withOpacity(.46),
                 fontSize: 18.sp,
-                fontWeight: FontWeight.normal),
+                fontWeight: FontWeight.w400),
           ),
         ),
         Padding(
@@ -201,7 +195,7 @@ Widget Job_container1() {
             style: TextStyle(
                 color: const Color(0xFF000000).withOpacity(0.5),
                 fontSize: 12.sp,
-                fontWeight: FontWeight.normal),
+                fontWeight: FontWeight.w400),
           ),
         ),
       ]),
@@ -213,6 +207,7 @@ Widget Job_container1() {
   });
 }
 
+// ignore: non_constant_identifier_names
 Widget Bottom_data() {
   return Stack(alignment: Alignment.bottomCenter, children: <Widget>[
     Container(

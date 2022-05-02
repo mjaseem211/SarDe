@@ -5,19 +5,19 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
         child: Column(children: <Widget>[
           sardelogo(),
-          const  SizedBox(
+          const SizedBox(
             height: 37,
           ),
           Username(),
-          const  SizedBox(
+          const SizedBox(
             height: 10,
           ),
           password(),
-          const  SizedBox(
+          const SizedBox(
             height: 28,
           ),
           Login_Button(),
