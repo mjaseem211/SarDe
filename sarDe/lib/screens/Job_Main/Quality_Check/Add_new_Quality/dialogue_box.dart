@@ -15,35 +15,9 @@ class dialogue_box extends StatefulWidget {
 
 // ignore: camel_case_types
 class _dialogue_boxState extends State<dialogue_box> {
-  get isCamera => null;
 
-  Future<String> pickTheImage(bool isCamera) async {
-    final ImagePicker _picker = ImagePicker();
 
-    XFile? result;
 
-    if (isCamera) {
-      result = await _picker.pickImage(source: ImageSource.camera);
-    } else {
-      result = await _picker.pickImage(source: ImageSource.gallery);
-    }
-
-    if (result == null) {
-// user cancelled the selection
-
-    }
-
-    return result!.path;
-  }
-
-  void openSheet(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) {
-        return const OptionsList();
-      },
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +36,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                   backgroundColor: Colors.transparent,
                   insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                   child: Stack(
-                    overflow: Overflow.visible,
-                    children: <Widget>[
+                    clipBehavior: Clip.none, children: <Widget>[
                       Container(
                         width: 356.w,
                         height: 607.h,
@@ -198,7 +171,33 @@ class _dialogue_boxState extends State<dialogue_box> {
     );
   }
 }
+Future<String> pickTheImage(bool isCamera) async {
+  final ImagePicker _picker = ImagePicker();
 
+  XFile? result;
+
+  if (isCamera) {
+    result = await _picker.pickImage(source: ImageSource.camera);
+  } else {
+    result = await _picker.pickImage(source: ImageSource.gallery);
+  }
+
+  if (result == null) {
+// user cancelled the selection
+
+  }
+
+  return result!.path;
+}
+
+void openSheet(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    builder: (context) {
+      return const OptionsList();
+    },
+  );
+}
 class OptionsList extends StatelessWidget {
   const OptionsList({
     Key? key,
@@ -230,4 +229,4 @@ class OptionsList extends StatelessWidget {
   }
 }
 
-void pickTheImage(bool bool) {}
+

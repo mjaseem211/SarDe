@@ -180,8 +180,6 @@ class _dialogue_boxState extends State<dialogue_box> {
                                     fontWeight: FontWeight.w400),
                               ),
                             ),
-
-
                             Padding(
                                 padding: EdgeInsets.only(
                                     top: 88.h, left: 21.w, right: 161.w),

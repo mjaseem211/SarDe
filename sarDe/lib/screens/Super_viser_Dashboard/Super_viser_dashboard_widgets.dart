@@ -90,26 +90,30 @@ Widget Job_container() {
                 )),
           ]),
         ),
-        Padding(
-          padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 19.w),
-          child: Text(
-            'Job 303',
-            style: TextStyle(
-                color: const Color(0xFFFFFFFF),
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w400),
+        Row(
+          children:[ Padding(
+            padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 62.w),
+            child: Text(
+              'Job 303',
+              style: TextStyle(
+                  color: const Color(0xFFFFFFFF),
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w400),
+            ),
           ),
-        ),
-        Padding(
-          padding: EdgeInsets.only(top: 92.h, right: 118.w, left: 19.w),
-          child: Text(
-            'Kuttichira to Maradu',
-            style: TextStyle(
-                color: const Color(0xffffffff).withOpacity(.46),
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w400),
+        ]),
+        Row(
+          children:[ Padding(
+            padding: EdgeInsets.only(top: 92.h, right: 118.w, left: 62.w),
+            child: Text(
+              'Kuttichira to Maradu',
+              style: TextStyle(
+                  color: const Color(0xffffffff).withOpacity(.46),
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w400),
+            ),
           ),
-        ),
+       ] ),
         Padding(
           padding: EdgeInsets.only(
             left: 273.w,
@@ -164,26 +168,30 @@ Widget Job_container1() {
             )),
       ]),
     ),
-    Padding(
-      padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 19.w),
-      child: Text(
-        'Job 308',
-        style: TextStyle(
-            color: const Color(0xFFFFFFFF),
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w400),
+    Row(
+      children:[ Padding(
+        padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 62.w),
+        child: Text(
+          'Job 308',
+          style: TextStyle(
+              color: const Color(0xFFFFFFFF),
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w400),
+        ),
       ),
-    ),
-    Padding(
-      padding: EdgeInsets.only(top: 92.h, right: 95.w, left: 19.w),
-      child: Text(
-        'Koyilandy to Kozhikode',
-        style: TextStyle(
-            color: const Color(0xffffffff).withOpacity(.46),
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w400),
+   ] ),
+    Row(
+      children: [Padding(
+        padding: EdgeInsets.only(top: 92.h, right: 95.w, left: 62.w),
+        child: Text(
+          'Koyilandy to Kozhikode',
+          style: TextStyle(
+              color: const Color(0xffffffff).withOpacity(.46),
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w400),
+        ),
       ),
-    ),
+   ] ),
     Padding(
       padding: EdgeInsets.only(
         left: 273.w,
