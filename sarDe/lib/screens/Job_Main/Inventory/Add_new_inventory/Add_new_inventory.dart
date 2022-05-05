@@ -35,7 +35,9 @@ class _add_new_inventoryState extends State<add_new_inventory> {
             height: 8.h,
           ),
           data(),
-          SizedBox(height: 13.h,),
+          SizedBox(
+            height: 13.h,
+          ),
           const dialogue_box(),
           SizedBox(
             height: 439.3.h,
