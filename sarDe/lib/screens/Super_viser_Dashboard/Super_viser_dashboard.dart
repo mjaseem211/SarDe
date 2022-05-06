@@ -31,6 +31,10 @@ class _Super_viser_dashboardState extends State<Super_viser_dashboard> {
                 height: 19.h,
               ),
               Job_container1(),
+              SizedBox(
+                height: 19.h,
+              ),
+              Job_container2(),
             ]),
           ),
           Bottom_data(),

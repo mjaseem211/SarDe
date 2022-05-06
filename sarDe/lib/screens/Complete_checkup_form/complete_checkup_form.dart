@@ -215,10 +215,10 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                     focusColor: const Color(0xff52972A),
                     checkColor: const Color(0xffffffff),
                     activeColor: const Color(0xff52972A),
-                    value: this.value3,
+                    value: value3,
                     onChanged: (value) {
                       setState(() {
-                        this.value3 = value!;
+                        value3 = value!;
                       });
                     },
                   ),
@@ -273,10 +273,10 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                     focusColor: const Color(0xff52972A),
                     checkColor: const Color(0xffffffff),
                     activeColor: const Color(0xff52972A),
-                    value: this.value4,
+                    value: value4,
                     onChanged: (value) {
                       setState(() {
-                        this.value4 = value!;
+                        value4 = value!;
                       });
                     },
                   ),
@@ -325,10 +325,10 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                     focusColor: const Color(0xff52972A),
                     checkColor: const Color(0xffffffff),
                     activeColor: const Color(0xff52972A),
-                    value: this.value5,
+                    value: value5,
                     onChanged: (value) {
                       setState(() {
-                        this.value5 = value!;
+                        value5 = value!;
                       });
                     },
                   ),
@@ -387,7 +387,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                     focusColor: const Color(0xff52972A),
                     checkColor: const Color(0xffffffff),
                     activeColor: const Color(0xff52972A),
-                    value: this.value6,
+                    value: value6,
                     onChanged: (value) {
                       setState(() {
                         this.value6 = value!;

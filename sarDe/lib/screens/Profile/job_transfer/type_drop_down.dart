@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class type_drop_down extends StatefulWidget {
   const type_drop_down({Key? key}) : super(key: key);
 
@@ -8,6 +9,7 @@ class type_drop_down extends StatefulWidget {
   State<type_drop_down> createState() => _type_drop_downState();
 }
 
+// ignore: camel_case_types
 class _type_drop_downState extends State<type_drop_down> {
   @override
   Widget build(BuildContext context) {
@@ -29,14 +31,10 @@ class _type_drop_downState extends State<type_drop_down> {
             ),
           ),
         ),
-        icon: Padding(
-          padding: EdgeInsets.only(
-            left: 190.w,
-          ),
-          child: const Icon(
-            Icons.keyboard_arrow_down_outlined,
-            color: Color(0xffDD7164),
-          ),
+        isExpanded: true,
+        icon: const Icon(
+          Icons.keyboard_arrow_down_outlined,
+          color: Color(0xffDD7164),
         ),
         elevation: 16,
         underline: Container(

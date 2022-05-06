@@ -25,16 +25,16 @@ class _drop_downState extends State<drop_down> {
           child: Text(
             'Item',
             style: TextStyle(
-              color: const Color(0xff000000).withOpacity(0.26),fontWeight:FontWeight.w400,fontSize: 14.sp,
+              color: const Color(0xff000000).withOpacity(0.26),
+              fontWeight: FontWeight.w400,
+              fontSize: 14.sp,
             ),
           ),
         ),
-        icon: Padding(
-          padding: EdgeInsets.only(left:36.w,),
-          child: const Icon(
-            Icons.keyboard_arrow_down_outlined,
-            color: Color(0xffDD7164),
-          ),
+        isExpanded: true,
+        icon: const Icon(
+          Icons.keyboard_arrow_down_outlined,
+          color: Color(0xffDD7164),
         ),
         elevation: 16,
         underline: Container(
@@ -44,8 +44,10 @@ class _drop_downState extends State<drop_down> {
         onChanged: (String? newValue) {
           setState(() {});
         },
-        items: <String>['Rst paint white', 'Rst paint yellow',]
-            .map<DropdownMenuItem<String>>((String value) {
+        items: <String>[
+          'Rst paint white',
+          'Rst paint yellow',
+        ].map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
             child: Text(value),

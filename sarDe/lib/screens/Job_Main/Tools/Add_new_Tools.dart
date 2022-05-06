@@ -13,40 +13,39 @@ class add_new_tools extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Column(children: [
-          title(),
-          SizedBox(
-            height: 26.h,
-          ),
-          heading(),
-          SizedBox(
-            height: 2.h,
-          ),
-          line(),
-          data(),
-          SizedBox(
-            height: 15.h,
-          ),
-          data1(),
-          SizedBox(
-            height: 47.h,
-          ),
-          const dialogue_box(),
-          SizedBox(
-            height: 365.61.h,
-          ),
-          Bottom_back_button(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => JobMain()));
-            },
-          ),
-          SizedBox(
-            height: 72.h,
-          ),
-        ]),
-      ),
+      body: Column(children: [
+        title(),
+        SizedBox(
+          height: 26.h,
+        ),
+        heading(),
+        SizedBox(
+          height: 2.h,
+        ),
+        line(),
+        Expanded(
+          child: ListView(children: [
+            data(),
+            SizedBox(
+              height: 15.h,
+            ),
+            data1(),
+          ]),
+        ),
+        const dialogue_box(),
+        SizedBox(
+          height: 365.61.h,
+        ),
+        Bottom_back_button(
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => JobMain()));
+          },
+        ),
+        SizedBox(
+          height: 72.h,
+        ),
+      ]),
     );
   }
 }

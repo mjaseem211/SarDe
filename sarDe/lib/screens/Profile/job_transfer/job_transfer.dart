@@ -26,7 +26,8 @@ class job_transfer extends StatelessWidget {
             ]),
           ),
           subtitle1(),
-          Expanded(flex: 4,
+          Expanded(
+            flex: 4,
             child: ListView(shrinkWrap: true, children: [
               heading(),
               subheading(),
@@ -53,7 +54,7 @@ class job_transfer extends StatelessWidget {
             SizedBox(
               width: 142.w,
             ),
-              const dialogue_box(),
+            const dialogue_box(),
           ]),
           SizedBox(
             height: 68.h,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class sub_job_drop_down extends StatefulWidget {
   const sub_job_drop_down({Key? key}) : super(key: key);
 
@@ -8,6 +9,7 @@ class sub_job_drop_down extends StatefulWidget {
   State<sub_job_drop_down> createState() => _sub_job_drop_downState();
 }
 
+// ignore: camel_case_types
 class _sub_job_drop_downState extends State<sub_job_drop_down> {
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class _sub_job_drop_downState extends State<sub_job_drop_down> {
           borderRadius: BorderRadius.circular(4.r)),
       child: DropdownButton<String>(
         hint: Padding(
-          padding: EdgeInsets.only(left: 13.w),
+          padding: EdgeInsets.only(left: 12.w),
           child: Text(
             'Sub Job',
             style: TextStyle(
@@ -29,14 +31,10 @@ class _sub_job_drop_downState extends State<sub_job_drop_down> {
             ),
           ),
         ),
-        icon: Padding(
-          padding: EdgeInsets.only(
-            left: 70.w,
-          ),
-          child: const Icon(
-            Icons.keyboard_arrow_down_outlined,
-            color: Color(0xffDD7164),
-          ),
+        isExpanded: true,
+        icon: const Icon(
+          Icons.keyboard_arrow_down_outlined,
+          color: Color(0xffDD7164),
         ),
         elevation: 16,
         underline: Container(

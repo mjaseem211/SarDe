@@ -68,7 +68,6 @@ class _dialogue_boxState extends State<dialogue_box> {
                           padding: EdgeInsets.only(
                               top: 151.h, left: 138.w, right: 19.w),
                           child: const sub_job_drop_down()),
-
                       Padding(
                         padding: EdgeInsets.only(
                             top: 205.h, left: 16.w, right: 177.w),
@@ -83,19 +82,19 @@ class _dialogue_boxState extends State<dialogue_box> {
                               labelText: 'Item',
                               labelStyle: TextStyle(
                                 color:
-                                const Color(0xff000000).withOpacity(0.26),
+                                    const Color(0xff000000).withOpacity(0.26),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderRadius:
-                                BorderRadius.all(Radius.circular(4.r)),
+                                    BorderRadius.all(Radius.circular(4.r)),
                                 borderSide: BorderSide(
                                     color: const Color(0xFFDD7164), width: 1.w),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius:
-                                BorderRadius.all(Radius.circular(10.r)),
+                                    BorderRadius.all(Radius.circular(10.r)),
                                 borderSide: BorderSide(
                                     width: 1.5.w, color: Colors.blue),
                               ),
@@ -103,7 +102,6 @@ class _dialogue_boxState extends State<dialogue_box> {
                           ),
                         ),
                       ),
-
                       Padding(
                         padding: EdgeInsets.only(
                             top: 205.h, left: 196.w, right: 19.w),
@@ -138,7 +136,6 @@ class _dialogue_boxState extends State<dialogue_box> {
                           ),
                         ),
                       ),
-
                       Padding(
                         padding: EdgeInsets.only(
                             top: 259.h, left: 16.w, right: 177.w),
@@ -153,19 +150,19 @@ class _dialogue_boxState extends State<dialogue_box> {
                               labelText: 'Transfer to job',
                               labelStyle: TextStyle(
                                 color:
-                                const Color(0xff000000).withOpacity(0.26),
+                                    const Color(0xff000000).withOpacity(0.26),
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w400,
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderRadius:
-                                BorderRadius.all(Radius.circular(4.r)),
+                                    BorderRadius.all(Radius.circular(4.r)),
                                 borderSide: BorderSide(
                                     color: const Color(0xFFDD7164), width: 1.w),
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius:
-                                BorderRadius.all(Radius.circular(10.r)),
+                                    BorderRadius.all(Radius.circular(10.r)),
                                 borderSide: BorderSide(
                                     width: 1.5.w, color: Colors.blue),
                               ),
@@ -173,13 +170,19 @@ class _dialogue_boxState extends State<dialogue_box> {
                           ),
                         ),
                       ),
-
-                      Padding(padding:EdgeInsets.only(
-                          top: 270.h, left: 207.w,) ,
-                        child: Text('Lukman',style: TextStyle(color:const Color(0xff000000).withOpacity(0.26),
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w400,
-                        ), ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          top: 270.h,
+                          left: 207.w,
+                        ),
+                        child: Text(
+                          'Lukman',
+                          style: TextStyle(
+                            color: const Color(0xff000000).withOpacity(0.26),
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(

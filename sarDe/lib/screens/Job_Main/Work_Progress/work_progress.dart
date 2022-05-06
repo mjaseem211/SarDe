@@ -6,10 +6,14 @@ import 'package:sarde/screens/Job_Main/Work_Progress/work_progress_widgets.dart'
 import 'package:sarde/screens/job_main/JobMain.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 
+// ignore: camel_case_types
 class work_progress extends StatelessWidget {
+  const work_progress({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
         body: Column(children: [
           Title1(),
@@ -24,15 +28,15 @@ class work_progress extends StatelessWidget {
               ),
               text_button(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => add_new_work()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const add_new_work()));
                 },
                 text: "Road Marking",
               ),
               text_button(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => add_new_work()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const add_new_work()));
                 },
                 text: "Road Marking from kuttichira to maradu",
                 font_size: 14.sp,
@@ -46,15 +50,15 @@ class work_progress extends StatelessWidget {
               ),
               text_button(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => add_new_work()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const add_new_work()));
                 },
                 text: "Stud Fixing",
               ),
               text_button(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => add_new_work()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const add_new_work()));
                 },
                 text: "Stud fixing on the sides from kuttichira to maradu",
                 font_size: 14.sp,
@@ -70,8 +74,8 @@ class work_progress extends StatelessWidget {
               ),
               text_button(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => add_new_work()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const add_new_work()));
                 },
                 text: "Board Fixing",
               ),
