@@ -13,7 +13,7 @@ Widget title() {
               fontSize: 35.sp,
               fontWeight: FontWeight.w400,
             ),
-          )
+          ),
         ],
       ));
 }

@@ -5,6 +5,8 @@ import 'package:sarde/screens/Super_viser_Dashboard/Super_viser_dashboard.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 
 class Profile extends StatelessWidget {
+  const Profile({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,26 +15,27 @@ class Profile extends StatelessWidget {
           children: <Widget>[
             title(),
             subtitle(),
-            Expanded(
-              child: ListView(children: [
-                Old_Jobs(),
-                SizedBox(
-                  height: 24.h,
-                ),
-                Job_transfer(),
-                SizedBox(
-                  height: 24.h,
-                ),
-                About(),
-              ]),
+            SizedBox(
+              height: 76.h,
+            ),
+            Old_Jobs(),
+            SizedBox(
+              height: 24.h,
+            ),
+            Job_transfer(),
+            SizedBox(
+              height: 24.h,
+            ),
+            About(),
+            SizedBox(
+              height: 72.h,
             ),
             Bottom_back_button(
               onTap: () {
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => Super_viser_dashboard()));
+                    builder: (context) => const Super_viser_dashboard()));
               },
             ),
-            SizedBox(height: 142.h),
           ],
         ));
   }

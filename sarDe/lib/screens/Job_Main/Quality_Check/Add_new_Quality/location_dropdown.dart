@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class location_drop_down extends StatefulWidget {
+  const location_drop_down({Key? key}) : super(key: key);
+
   @override
   State<location_drop_down> createState() => _location_drop_downState();
 }
 
+// ignore: camel_case_types
 class _location_drop_downState extends State<location_drop_down> {
   @override
   Widget build(BuildContext context) {
@@ -25,14 +29,10 @@ class _location_drop_downState extends State<location_drop_down> {
             ),
           ),
         ),
-        icon: Padding(
-          padding: EdgeInsets.only(
-            left: 172.w,
-          ),
-          child: const Icon(
-            Icons.keyboard_arrow_down_outlined,
-            color: Color(0xffDD7164),
-          ),
+        isExpanded: true,
+        icon: const Icon(
+          Icons.keyboard_arrow_down_outlined,
+          color: Color(0xffDD7164),
         ),
         elevation: 16,
         underline: Container(

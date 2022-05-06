@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: non_constant_identifier_names
 Widget Title1() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w, top: 109.h, right: 110.w),
@@ -14,6 +15,7 @@ Widget Title1() {
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget Heading() {
   return Padding(
     padding: EdgeInsets.only(right: 48.w, left: 31.w),
@@ -94,6 +96,7 @@ Widget line() {
   ]);
 }
 
+// ignore: non_constant_identifier_names
 Widget Data() {
   return Padding(
     padding: EdgeInsets.only(right: 63.w, left: 40.w),
@@ -161,6 +164,7 @@ Widget Data() {
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget Data1() {
   return Padding(
     padding: EdgeInsets.only(right: 65.w, left: 40.w),

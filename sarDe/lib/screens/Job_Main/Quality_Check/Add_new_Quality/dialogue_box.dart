@@ -15,10 +15,6 @@ class dialogue_box extends StatefulWidget {
 
 // ignore: camel_case_types
 class _dialogue_boxState extends State<dialogue_box> {
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -36,7 +32,8 @@ class _dialogue_boxState extends State<dialogue_box> {
                   backgroundColor: Colors.transparent,
                   insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                   child: Stack(
-                    clipBehavior: Clip.none, children: <Widget>[
+                    clipBehavior: Clip.none,
+                    children: <Widget>[
                       Container(
                         width: 356.w,
                         height: 607.h,
@@ -96,13 +93,14 @@ class _dialogue_boxState extends State<dialogue_box> {
                             top: 326.h, left: 25.w, right: 27.w),
                         child: location_drop_down(),
                       ),
-                     
                       Padding(
                           padding: EdgeInsets.only(
                               top: 374.h, left: 25.w, right: 27.w),
                           child: const thickness_drop_down()),
-
-                      Padding(padding:EdgeInsets.only(top: 422.h,left: 25.w,right: 27.w),child: const Edge_alignment_drop_down()),
+                      Padding(
+                          padding: EdgeInsets.only(
+                              top: 422.h, left: 25.w, right: 27.w),
+                          child: const Edge_alignment_drop_down()),
                       Padding(
                         padding: EdgeInsets.only(
                             top: 467.h, left: 25.w, right: 27.w),
@@ -171,6 +169,7 @@ class _dialogue_boxState extends State<dialogue_box> {
     );
   }
 }
+
 Future<String> pickTheImage(bool isCamera) async {
   final ImagePicker _picker = ImagePicker();
 
@@ -198,6 +197,7 @@ void openSheet(BuildContext context) {
     },
   );
 }
+
 class OptionsList extends StatelessWidget {
   const OptionsList({
     Key? key,
@@ -228,5 +228,3 @@ class OptionsList extends StatelessWidget {
     );
   }
 }
-
-

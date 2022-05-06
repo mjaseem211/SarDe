@@ -46,7 +46,9 @@ class _dialogue_boxState extends State<dialogue_box> {
                           color: Colors.white,
                         ),
                         padding: EdgeInsets.only(
-                            left: 25.w, top: 59.h,),
+                          left: 25.w,
+                          top: 59.h,
+                        ),
                         child: Text(
                           "Add Tools",
                           style: TextStyle(

@@ -90,8 +90,8 @@ Widget Job_container() {
                 )),
           ]),
         ),
-        Row(
-          children:[ Padding(
+        Row(children: [
+          Padding(
             padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 62.w),
             child: Text(
               'Job 303',
@@ -102,8 +102,8 @@ Widget Job_container() {
             ),
           ),
         ]),
-        Row(
-          children:[ Padding(
+        Row(children: [
+          Padding(
             padding: EdgeInsets.only(top: 92.h, right: 118.w, left: 62.w),
             child: Text(
               'Kuttichira to Maradu',
@@ -113,7 +113,7 @@ Widget Job_container() {
                   fontWeight: FontWeight.w400),
             ),
           ),
-       ] ),
+        ]),
         Padding(
           padding: EdgeInsets.only(
             left: 273.w,
@@ -140,76 +140,154 @@ Widget Job_container() {
 Widget Job_container1() {
   return Builder(builder: (context) {
     return GestureDetector(
-    child: Stack(alignment: Alignment.center, children: <Widget>[
-    Padding(
-      padding: EdgeInsets.only(left: 43.w),
-      child: Row(children: [
-        Container(
-            width: 306.w,
-            height: 124.h,
-            decoration: BoxDecoration(
-              color: const Color(0xffDD7164).withOpacity(0.35),
-              borderRadius: BorderRadius.circular(13.r),
-            )),
-      ]),
-    ),
-    Padding(
-      padding: EdgeInsets.only(left: 43.w),
-      child: Row(children: [
-        AnimatedContainer(
-            duration: const Duration(seconds: 1),
-            curve: Curves.fastOutSlowIn,
-            alignment: Alignment.bottomLeft,
-            width: 188.w,
-            height: 136.h,
-            decoration: BoxDecoration(
-              color: const Color(0xffDD7164),
-              borderRadius: BorderRadius.circular(13.r),
-            )),
-      ]),
-    ),
-    Row(
-      children:[ Padding(
-        padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 62.w),
-        child: Text(
-          'Job 308',
-          style: TextStyle(
-              color: const Color(0xFFFFFFFF),
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w400),
+      child: Stack(alignment: Alignment.center, children: <Widget>[
+        Padding(
+          padding: EdgeInsets.only(left: 43.w),
+          child: Row(children: [
+            Container(
+                width: 306.w,
+                height: 124.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xffDD7164).withOpacity(0.35),
+                  borderRadius: BorderRadius.circular(13.r),
+                )),
+          ]),
         ),
-      ),
-   ] ),
-    Row(
-      children: [Padding(
-        padding: EdgeInsets.only(top: 92.h, right: 95.w, left: 62.w),
-        child: Text(
-          'Koyilandy to Kozhikode',
-          style: TextStyle(
-              color: const Color(0xffffffff).withOpacity(.46),
-              fontSize: 18.sp,
-              fontWeight: FontWeight.w400),
+        Padding(
+          padding: EdgeInsets.only(left: 43.w),
+          child: Row(children: [
+            AnimatedContainer(
+                duration: const Duration(seconds: 1),
+                curve: Curves.fastOutSlowIn,
+                alignment: Alignment.bottomLeft,
+                width: 188.w,
+                height: 136.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xffDD7164),
+                  borderRadius: BorderRadius.circular(13.r),
+                )),
+          ]),
         ),
-      ),
-   ] ),
-    Padding(
-      padding: EdgeInsets.only(
-        left: 273.w,
-        bottom: 99.h,
-      ),
-      child: Text(
-        '56 %',
-        style: TextStyle(
-            color: const Color(0xFF000000).withOpacity(0.5),
-            fontSize: 12.sp,
-            fontWeight: FontWeight.w400),
-      ),
-    ),
-    ]),
-    onTap: () {
-    Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => Start_Job_Form()));
-    },
+        Row(children: [
+          Padding(
+            padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 62.w),
+            child: Text(
+              'Job 308',
+              style: TextStyle(
+                  color: const Color(0xFFFFFFFF),
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w400),
+            ),
+          ),
+        ]),
+        Row(children: [
+          Padding(
+            padding: EdgeInsets.only(top: 92.h, right: 95.w, left: 62.w),
+            child: Text(
+              'Koyilandy to Kozhikode',
+              style: TextStyle(
+                  color: const Color(0xffffffff).withOpacity(.46),
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w400),
+            ),
+          ),
+        ]),
+        Padding(
+          padding: EdgeInsets.only(
+            left: 273.w,
+            bottom: 99.h,
+          ),
+          child: Text(
+            '56 %',
+            style: TextStyle(
+                color: const Color(0xFF000000).withOpacity(0.5),
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w400),
+          ),
+        ),
+      ]),
+      onTap: () {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => Start_Job_Form()));
+      },
+    );
+  });
+}
+
+// ignore: non_constant_identifier_names
+Widget Job_container2() {
+  return Builder(builder: (context) {
+    return GestureDetector(
+      child: Stack(alignment: Alignment.center, children: <Widget>[
+        Padding(
+          padding: EdgeInsets.only(left: 43.w),
+          child: Row(children: [
+            Container(
+                width: 306.w,
+                height: 124.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xff2b3070).withOpacity(0.35),
+                  borderRadius: BorderRadius.circular(13.r),
+                )),
+          ]),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 43.w),
+          child: Row(children: [
+            AnimatedContainer(
+                duration: const Duration(seconds: 1),
+                curve: Curves.fastOutSlowIn,
+                alignment: Alignment.bottomLeft,
+                width: 257.w,
+                height: 136.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xff2b3070),
+                  borderRadius: BorderRadius.circular(13.r),
+                )),
+          ]),
+        ),
+        Row(children: [
+          Padding(
+            padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 62.w),
+            child: Text(
+              'Job 303',
+              style: TextStyle(
+                  color: const Color(0xFFFFFFFF),
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w400),
+            ),
+          ),
+        ]),
+        Row(children: [
+          Padding(
+            padding: EdgeInsets.only(top: 92.h, right: 118.w, left: 62.w),
+            child: Text(
+              'Kuttichira to Maradu',
+              style: TextStyle(
+                  color: const Color(0xffffffff).withOpacity(.46),
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w400),
+            ),
+          ),
+        ]),
+        Padding(
+          padding: EdgeInsets.only(
+            left: 273.w,
+            bottom: 99.h,
+          ),
+          child: Text(
+            '78 %',
+            style: TextStyle(
+                color: const Color(0xFF000000).withOpacity(0.5),
+                fontSize: 12.sp,
+                fontWeight: FontWeight.w400),
+          ),
+        ),
+      ]),
+      onTap: () {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => Start_Job_Form()));
+      },
     );
   });
 }

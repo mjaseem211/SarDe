@@ -13,7 +13,6 @@ class item_drop_down extends StatefulWidget {
 class _item_drop_downState extends State<item_drop_down> {
   @override
   Widget build(BuildContext context) {
-
     return Container(
       height: 35.h,
       width: 321.w,
@@ -26,16 +25,16 @@ class _item_drop_downState extends State<item_drop_down> {
           child: Text(
             'Item',
             style: TextStyle(
-              color: const Color(0xff000000).withOpacity(0.26),fontWeight:FontWeight.w400,fontSize: 14.sp,
+              color: const Color(0xff000000).withOpacity(0.26),
+              fontWeight: FontWeight.w400,
+              fontSize: 14.sp,
             ),
           ),
         ),
-        icon: Padding(
-          padding: EdgeInsets.only(left: 200.w,),
-          child: const Icon(
-            Icons.keyboard_arrow_down_outlined,
-            color: Color(0xffDD7164),
-          ),
+        isExpanded: true,
+        icon: const Icon(
+          Icons.keyboard_arrow_down_outlined,
+          color: Color(0xffDD7164),
         ),
         elevation: 16,
         underline: Container(

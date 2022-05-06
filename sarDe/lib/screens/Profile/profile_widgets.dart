@@ -51,34 +51,33 @@ Widget Old_Jobs() {
     ]),
   );
 }
-class Job_transfer  extends StatelessWidget {
 
-
+class Job_transfer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     {
-  return Padding(
-    padding: EdgeInsets.only(left: 34.w),
-    child: Row(children: [
-      TextButton(
-        child: Text(
-          'Job to Job Transfer',
-          style: TextStyle(
-              color: const Color(0xFF2B3070),
-              fontSize: 31.sp,
-              fontWeight: FontWeight.w400),
-        ),
-        onPressed: () {
+      return Padding(
+        padding: EdgeInsets.only(left: 34.w),
+        child: Row(children: [
+          TextButton(
+            child: Text(
+              'Job to Job Transfer',
+              style: TextStyle(
+                  color: const Color(0xFF2B3070),
+                  fontSize: 31.sp,
+                  fontWeight: FontWeight.w400),
+            ),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => job_transfer()));
+            },
+          ),
+        ]),
+      );
+    }
+  }
+}
 
-          Navigator.of(context).pushReplacement(MaterialPageRoute(
-              builder: (context) => job_transfer()));
-        },
-      ),
-    ]),
-  );
-}
-}
-}
 Widget About() {
   return Padding(
     padding: EdgeInsets.only(left: 34.w),

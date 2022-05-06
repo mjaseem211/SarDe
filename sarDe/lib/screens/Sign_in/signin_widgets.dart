@@ -132,9 +132,9 @@ class Login_Button extends StatelessWidget {
               ),
             ],
           ),
-          Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Row(mainAxisAlignment: MainAxisAlignment.end, children: [
             Padding(
-              padding: EdgeInsets.only(left: 239.08.w, right: 32.79.w),
+              padding: EdgeInsets.only(left: 239.08.w, right: 18.79.w),
               child: Image.asset(
                 'assets/images/forward_arrow.png',
                 height: 14.h,
@@ -144,8 +144,8 @@ class Login_Button extends StatelessWidget {
           ]),
         ]),
         onTap: () {
-          Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => Super_viser_dashboard()));
+          Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => const Super_viser_dashboard()));
         },
       ),
     );
