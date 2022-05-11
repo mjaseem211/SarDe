@@ -7,6 +7,8 @@ import 'package:sarde/widgets/Bottom_back_button.dart';
 import 'package:sarde/widgets/text_button.dart';
 
 class Inventory extends StatelessWidget {
+  const Inventory({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +24,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_inventory()));
+                      builder: (context) => const add_new_inventory()));
                 },
                 left: 46.w,
                 right: 207.w,
@@ -31,7 +33,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_inventory()));
+                      builder: (context) => const add_new_inventory()));
                 },
                 text: "Road Marking from kuttichira to maradu",
                 font_size: 14.sp,
@@ -43,7 +45,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_inventory()));
+                      builder: (context) => const add_new_inventory()));
                 },
                 text: "18-09-22",
                 right: 67.w,
@@ -57,7 +59,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_inventory()));
+                      builder: (context) => const add_new_inventory()));
                 },
                 text: "Stud Fixing",
                 left: 47.w,
@@ -65,7 +67,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_inventory()));
+                      builder: (context) => const add_new_inventory()));
                 },
                 text: "Stud fixing on the sides from kuttichira to\nmaradu",
                 font_size: 14.sp,
@@ -79,7 +81,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_inventory()));
+                      builder: (context) => const add_new_inventory()));
                 },
                 text: "18-09-22",
                 left: 249.w,
@@ -93,7 +95,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_inventory()));
+                      builder: (context) => const add_new_inventory()));
                 },
                 text: "Board Fixing",
                 left: 46.w,
@@ -102,7 +104,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_inventory()));
+                      builder: (context) => const add_new_inventory()));
                 },
                 text: "Board fixing on the sides from kuttichira to\nmaradu",
                 font_size: 14.sp,
@@ -116,7 +118,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_inventory()));
+                      builder: (context) => const add_new_inventory()));
                 },
                 text: "18-09-22",
                 left: 257.w,

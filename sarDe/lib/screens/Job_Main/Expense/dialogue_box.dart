@@ -29,7 +29,6 @@ class _dialogue_boxState extends State<dialogue_box> {
                   insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                   child: Stack(
                     overflow: Overflow.visible,
-                    alignment: Alignment.center,
                     children: <Widget>[
                       Container(
                         width: 356.w,
@@ -41,8 +40,8 @@ class _dialogue_boxState extends State<dialogue_box> {
                           ),
                           borderRadius: BorderRadius.circular(8.r),
                           color: Colors.white,
-                        ),
-                        padding: EdgeInsets.only(
+                        ),),
+                    Padding(    padding: EdgeInsets.only(
                             left: 25.w, top: 59.h, right: 197.w),
                         child: Text(
                           "Add Expence",
@@ -54,12 +53,12 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding:
-                        EdgeInsets.only(top: 16.h, left: 16.w, right: 19.w),
+                        EdgeInsets.only(top: 101.h, left: 16.w, right: 19.w),
                         child: const drop_down(),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 116.h, left: 16.w, right: 154.w),
+                            top: 151.h, left: 16.w, right: 154.w),
                         child: SizedBox(
                           width: 300.w,
                           height: 35.h,
@@ -93,7 +92,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 116.h, left: 218.w, right: 19.w),
+                            top: 151.h, left: 218.w, right: 19.w),
                         child: SizedBox(
                           width: 119.w,
                           height: 35.h,
@@ -127,7 +126,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                          top: 214.h,
+                          top: 200.h,
                         ),
                         child: GestureDetector(
                           child: Container(

@@ -12,8 +12,8 @@ class GridButtons extends StatelessWidget {
   final String? assetimage;
   final double? top;
 
-  GridButtons(
-      {this.height,
+  const GridButtons(
+      {Key? key, this.height,
       this.width,
       this.color,
       this.radius,
@@ -21,7 +21,7 @@ class GridButtons extends StatelessWidget {
       this.name,
       this.left,
       this.top,
-      this.assetimage});
+      this.assetimage}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
