@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Job_Main/Work_Progress/add_new_work/Add_new_work.dart';
 
 // ignore: camel_case_types
 class dialogue_box extends StatefulWidget {
@@ -30,7 +29,6 @@ class _dialogue_boxState extends State<dialogue_box> {
                   insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                   child: Stack(
                     overflow: Overflow.visible,
-                    alignment: Alignment.center,
                     children: <Widget>[
                       Container(
                         width: 356.w,
@@ -43,8 +41,10 @@ class _dialogue_boxState extends State<dialogue_box> {
                           borderRadius: BorderRadius.circular(8.r),
                           color: Colors.white,
                         ),
+                      ),
+                      Padding(
                         padding: EdgeInsets.only(
-                            left: 25.w, top: 59.h, right: 136.w),
+                            left: 25.w, top: 59.h, right: 136.w, bottom: 156.h),
                         child: Text(
                           "Add Work Progress",
                           style: TextStyle(
@@ -55,7 +55,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 16.h, left: 16.w, right: 109.w),
+                            top: 101.h, left: 16.w, right: 109.w),
                         child: SizedBox(
                           width: 231.w,
                           height: 35.h,
@@ -89,7 +89,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 16.h, left: 272.w, right: 18.w),
+                            top: 101.h, left: 272.w, right: 18.w),
                         child: SizedBox(
                           width: 66.w,
                           height: 35.h,
@@ -123,7 +123,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 116.h, left: 16.w, right: 275.w),
+                            top: 151.h, left: 16.w, right: 275.w),
                         child: SizedBox(
                           width: 66.w,
                           height: 35.h,
@@ -157,7 +157,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 116.h, left: 90.w, right: 147.w),
+                            top: 151.h, left: 90.w, right: 147.w),
                         child: SizedBox(
                           width: 119.w,
                           height: 35.h,
@@ -191,7 +191,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 116.h, left: 218.w, right: 19.w),
+                            top: 151.h, left: 218.w, right: 19.w),
                         child: SizedBox(
                           width: 119.w,
                           height: 35.h,
@@ -225,7 +225,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                          top: 214.h,
+                          top: 200.h,
                         ),
                         child: GestureDetector(
                           child: Container(

@@ -91,7 +91,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                       Padding(
                         padding: EdgeInsets.only(
                             top: 326.h, left: 25.w, right: 27.w),
-                        child: location_drop_down(),
+                        child: const location_drop_down(),
                       ),
                       Padding(
                           padding: EdgeInsets.only(

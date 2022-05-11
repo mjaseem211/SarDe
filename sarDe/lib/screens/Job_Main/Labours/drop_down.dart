@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class drop_down extends StatefulWidget {
   const drop_down({Key? key}) : super(key: key);
 
@@ -8,6 +9,7 @@ class drop_down extends StatefulWidget {
   State<drop_down> createState() => _drop_downState();
 }
 
+// ignore: camel_case_types
 class _drop_downState extends State<drop_down> {
   @override
   Widget build(BuildContext context) {

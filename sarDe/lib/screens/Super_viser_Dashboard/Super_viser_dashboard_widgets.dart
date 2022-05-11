@@ -21,8 +21,8 @@ class text_button extends StatelessWidget {
                   fontWeight: FontWeight.w400),
             ),
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Profile()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Profile()));
             }),
       ]),
     );

@@ -42,10 +42,13 @@ class _drop_downState extends State<drop_down> {
         ),
         style: TextStyle(color: const Color(0xff000000).withOpacity(0.26)),
         onChanged: (String? newValue) {
-          setState(() {});
+          setState(() {
+          });
         },
-        items: <String>['Vech Rent', 'Machine Rent',]
-            .map<DropdownMenuItem<String>>((String value) {
+        items: <String>[
+          'Vench Rent',
+          'Machine Rent',
+        ].map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
             child: Text(value),

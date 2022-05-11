@@ -21,13 +21,13 @@ class _drop_downState extends State<drop_down> {
           borderRadius: BorderRadius.circular(4.r)),
       child: DropdownButton<String>(
         hint: Padding(
-          padding: EdgeInsets.only(left: 17.w),
+          padding: EdgeInsets.only(left: 19.w),
           child: Text(
             'Item',
             style: TextStyle(
               color: const Color(0xff000000).withOpacity(0.26),
-              fontWeight: FontWeight.w400,
               fontSize: 14.sp,
+              fontWeight: FontWeight.w400,
             ),
           ),
         ),
@@ -41,9 +41,6 @@ class _drop_downState extends State<drop_down> {
           color: Colors.white,
         ),
         style: TextStyle(color: const Color(0xff000000).withOpacity(0.26)),
-        onChanged: (String? newValue) {
-          setState(() {});
-        },
         items: <String>[
           'Rst paint white',
           'Rst paint yellow',
@@ -53,6 +50,9 @@ class _drop_downState extends State<drop_down> {
             child: Text(value),
           );
         }).toList(),
+        onChanged: (String? newValue) {
+          setState(() {});
+        },
       ),
     );
   }
