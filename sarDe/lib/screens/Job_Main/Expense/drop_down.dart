@@ -11,6 +11,8 @@ class drop_down extends StatefulWidget {
 
 // ignore: camel_case_types
 class _drop_downState extends State<drop_down> {
+  String? dropdownValue;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,6 +22,7 @@ class _drop_downState extends State<drop_down> {
           border: Border.all(color: const Color(0xffDD7164), width: 1.w),
           borderRadius: BorderRadius.circular(4.r)),
       child: DropdownButton<String>(
+        value: dropdownValue,
         hint: Padding(
           padding: EdgeInsets.only(left: 13.w),
           child: Text(
@@ -43,6 +46,7 @@ class _drop_downState extends State<drop_down> {
         style: TextStyle(color: const Color(0xff000000).withOpacity(0.26)),
         onChanged: (String? newValue) {
           setState(() {
+            dropdownValue = newValue!;
           });
         },
         items: <String>[
@@ -51,7 +55,16 @@ class _drop_downState extends State<drop_down> {
         ].map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
-            child: Text(value),
+            child: Padding(
+                padding: EdgeInsets.only(left: 13.w),
+                child: Text(
+                  value,
+                  style: TextStyle(
+                    color: const Color(0xff000000).withOpacity(0.26),
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14.sp,
+                  ),
+                )),
           );
         }).toList(),
       ),

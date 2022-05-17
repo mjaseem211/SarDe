@@ -110,7 +110,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                           child: TextField(
                             decoration: InputDecoration(
                               contentPadding:
-                                  EdgeInsets.only(left: 13.w, top: 9.h),
+                                  EdgeInsets.only(left: 19.w, top: 9.h),
                               labelText: 'Comment',
                               labelStyle: TextStyle(
                                 color:

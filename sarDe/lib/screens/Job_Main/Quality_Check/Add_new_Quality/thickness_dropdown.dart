@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: camel_case_types
 class thickness_drop_down extends StatefulWidget {
   const thickness_drop_down({Key? key}) : super(key: key);
 
@@ -8,7 +9,10 @@ class thickness_drop_down extends StatefulWidget {
   State<thickness_drop_down> createState() => _thickness_drop_downState();
 }
 
+// ignore: camel_case_types
 class _thickness_drop_downState extends State<thickness_drop_down> {
+  String? dropdownValue;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,6 +22,7 @@ class _thickness_drop_downState extends State<thickness_drop_down> {
           border: Border.all(color: const Color(0xffDD7164), width: 1.w),
           borderRadius: BorderRadius.circular(4.r)),
       child: DropdownButton<String>(
+        value: dropdownValue,
         hint: Padding(
           padding: EdgeInsets.only(left: 19.w),
           child: Text(
@@ -38,7 +43,9 @@ class _thickness_drop_downState extends State<thickness_drop_down> {
         ),
         style: TextStyle(color: const Color(0xff000000).withOpacity(0.26)),
         onChanged: (String? newValue) {
-          setState(() {});
+          setState(() {
+            dropdownValue = newValue!;
+          });
         },
         items: <String>[
           'Good',
@@ -47,7 +54,8 @@ class _thickness_drop_downState extends State<thickness_drop_down> {
         ].map<DropdownMenuItem<String>>((String value) {
           return DropdownMenuItem<String>(
             value: value,
-            child: Text(value),
+            child: Padding(
+                padding: EdgeInsets.only(left: 19.w), child: Text(value)),
           );
         }).toList(),
       ),
