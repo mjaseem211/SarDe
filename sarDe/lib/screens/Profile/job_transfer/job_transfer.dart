@@ -42,20 +42,20 @@ class job_transfer extends StatelessWidget {
               subheading(),
             ]),
           ),
-          Row(children: [
-            Column(children: [
-              Bottom_back_button(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Profile()));
-                },
-              )
+          Padding(padding: EdgeInsets.only(right: 65.w),
+            child: Row(children: [
+              Expanded(
+                child: Bottom_back_button(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Profile()));
+                  },
+                ),
+              ),
+
+              const dialogue_box(),
             ]),
-            SizedBox(
-              width: 142.w,
-            ),
-            const dialogue_box(),
-          ]),
+          ),
           SizedBox(
             height: 68.h,
           ),

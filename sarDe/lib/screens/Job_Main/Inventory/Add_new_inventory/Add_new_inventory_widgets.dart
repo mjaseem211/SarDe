@@ -32,20 +32,13 @@ Widget heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        SizedBox(
-          width: 213.w,
+        Text(
+          "Quantity",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
         ),
-        FittedBox(
-            child: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "Quantity",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
-          ),
-        )),
       ],
     ),
   );
@@ -69,7 +62,7 @@ Widget data() {
     padding: EdgeInsets.only(right: 56.w, left: 33.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
           child: Text(
             "Rst Paint White",
             style: TextStyle(
@@ -78,20 +71,13 @@ Widget data() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 159.w,
+        Text(
+          "10 Bag",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         ),
-        FittedBox(
-            child: Container(
-          alignment: Alignment.centerLeft,
-          child: Text(
-            "10 Bag",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        )),
       ],
     ),
   );

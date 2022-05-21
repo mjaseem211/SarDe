@@ -4,7 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Super_viser_Dashboard/Super_viser_dashboard.dart';
 import 'package:sarde/widgets/Top_Back_button.dart';
 
+// ignore: camel_case_types
 class Start_Job_Form extends StatelessWidget {
+  const Start_Job_Form({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +16,7 @@ class Start_Job_Form extends StatelessWidget {
         Top_Back_Button(
           onTap: () {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => Super_viser_dashboard()));
+                builder: (context) => const Super_viser_dashboard()));
           },
         ),
         SizedBox(
@@ -64,7 +67,7 @@ class Start_Job_Form extends StatelessWidget {
             data3(),
           ]),
         ),
-        Start_Button(),
+        const Start_Button(),
       ]),
     );
   }

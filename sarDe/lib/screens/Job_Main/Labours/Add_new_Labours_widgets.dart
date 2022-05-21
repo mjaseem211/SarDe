@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: non_constant_identifier_names
 Widget Title1() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w, top: 109.h, right: 218.w),
@@ -14,12 +15,14 @@ Widget Title1() {
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget Heading() {
   return Padding(
     padding: EdgeInsets.only(right: 54.w, left: 33.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
+          flex: 3,
           child: Text(
             "Name",
             style: TextStyle(
@@ -28,10 +31,8 @@ Widget Heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        SizedBox(
-          width: 64.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 3,
           child: Text(
             "Trade",
             style: TextStyle(
@@ -40,10 +41,8 @@ Widget Heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        SizedBox(
-          width: 65.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 3,
           child: Text(
             "Type",
             style: TextStyle(
@@ -52,17 +51,12 @@ Widget Heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        SizedBox(
-          width: 30.w,
-        ),
-        FittedBox(
-          child: Text(
-            "Hours",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
-          ),
+        Text(
+          "Hours",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
         ),
       ],
     ),
@@ -82,12 +76,14 @@ Widget line() {
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget Data() {
   return Padding(
-    padding: EdgeInsets.only(right: 54.w, left: 33.w),
+    padding: EdgeInsets.only(right: 65.w, left: 33.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
+          flex: 6,
           child: Text(
             "Rahul",
             style: TextStyle(
@@ -96,10 +92,8 @@ Widget Data() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 56.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 6,
           child: Text(
             "Rope man",
             style: TextStyle(
@@ -108,10 +102,8 @@ Widget Data() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 50.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 6,
           child: Text(
             "Own",
             style: TextStyle(
@@ -120,10 +112,8 @@ Widget Data() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 49.w,
-        ),
         Expanded(
+          flex: 1,
           child: Text(
             "3",
             style: TextStyle(
@@ -137,12 +127,14 @@ Widget Data() {
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget Data1() {
   return Padding(
     padding: EdgeInsets.only(right: 64.w, left: 33.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
+          flex: 10,
           child: Text(
             "Vinod",
             style: TextStyle(
@@ -151,10 +143,8 @@ Widget Data1() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 62.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 10,
           child: Text(
             "Painter",
             style: TextStyle(
@@ -163,10 +153,8 @@ Widget Data1() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 62.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 10,
           child: Text(
             "Sub",
             style: TextStyle(
@@ -175,10 +163,8 @@ Widget Data1() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 53.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 2,
           child: Text(
             "7",
             style: TextStyle(

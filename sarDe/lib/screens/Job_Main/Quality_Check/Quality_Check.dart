@@ -6,7 +6,10 @@ import 'package:sarde/screens/job_main/JobMain.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 import 'package:sarde/widgets/text_button.dart';
 
+// ignore: camel_case_types
 class Quality_Check extends StatelessWidget {
+  const Quality_Check({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +25,7 @@ class Quality_Check extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_quality_check()));
+                      builder: (context) => const add_new_quality_check()));
                 },
                 left: 38.w,
                 right: 215.w,
@@ -31,7 +34,7 @@ class Quality_Check extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_quality_check()));
+                      builder: (context) => const add_new_quality_check()));
                 },
                 text: "Road Marking from kuttichira to maradu",
                 font_size: 14.sp,
@@ -43,7 +46,7 @@ class Quality_Check extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_quality_check()));
+                      builder: (context) => const add_new_quality_check()));
                 },
                 text: "18-09-22",
                 left: 249.w,
@@ -61,7 +64,7 @@ class Quality_Check extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_quality_check()));
+                      builder: (context) => const add_new_quality_check()));
                 },
                 text: "Stud Fixing",
                 left: 38.w,
@@ -70,7 +73,7 @@ class Quality_Check extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_quality_check()));
+                      builder: (context) => const add_new_quality_check()));
                 },
                 text: "Stud fixing on the sides from kuttichira to\nmaradu",
                 font_size: 14.sp,
@@ -84,7 +87,7 @@ class Quality_Check extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_quality_check()));
+                      builder: (context) => const add_new_quality_check()));
                 },
                 text: "18-09-22",
                 left: 249.w,
@@ -102,7 +105,7 @@ class Quality_Check extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_quality_check()));
+                      builder: (context) => const add_new_quality_check()));
                 },
                 text: "Board Fixing",
                 left: 38.w,
@@ -111,7 +114,7 @@ class Quality_Check extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_quality_check()));
+                      builder: (context) => const add_new_quality_check()));
                 },
                 text: "Board fixing on the sides from kuttichira to\nmaradu",
                 font_size: 14.sp,
@@ -125,7 +128,7 @@ class Quality_Check extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_quality_check()));
+                      builder: (context) => const add_new_quality_check()));
                 },
                 text: "18-09-22",
                 left: 249.w,
@@ -138,7 +141,7 @@ class Quality_Check extends StatelessWidget {
           Bottom_back_button(
             onTap: () {
               Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => JobMain()));
+                  MaterialPageRoute(builder: (context) => const JobMain()));
             },
           ),
           SizedBox(

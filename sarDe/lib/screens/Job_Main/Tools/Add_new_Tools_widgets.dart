@@ -23,7 +23,7 @@ Widget heading() {
     padding: EdgeInsets.only(right: 52.w, left: 33.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
           child: Text(
             "Item",
             style: TextStyle(
@@ -32,12 +32,7 @@ Widget heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        SizedBox(
-          width: 91.w,
-        ),
-        FittedBox(
-            child: Container(
-          alignment: Alignment.centerLeft,
+        Expanded(
           child: Text(
             "Quantity",
             style: TextStyle(
@@ -45,21 +40,14 @@ Widget heading() {
                 fontSize: 13.sp,
                 color: const Color(0xFF2B3070)),
           ),
-        )),
-        SizedBox(
-          width: 66.w,
         ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
-          child: Text(
-            "Condition",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
-          ),
-        )),
+        Text(
+          "Condition",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF2B3070)),
+        ),
       ],
     ),
   );
@@ -83,7 +71,8 @@ Widget data() {
     padding: EdgeInsets.only(right: 65.w, left: 33.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
+          flex: 5,
           child: Text(
             "Boiler",
             style: TextStyle(
@@ -92,12 +81,8 @@ Widget data() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 105.w,
-        ),
-        FittedBox(
-            child: Container(
-          alignment: Alignment.centerLeft,
+        Expanded(
+          flex: 4,
           child: Text(
             "2",
             style: TextStyle(
@@ -105,21 +90,14 @@ Widget data() {
                 fontSize: 13.sp,
                 color: const Color(0xFFDD7164)),
           ),
-        )),
-        SizedBox(
-          width: 107.w,
         ),
-        FittedBox(
-            child: Container(
-          alignment: Alignment.centerRight,
-          child: Text(
-            "Good",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFF52972A)),
-          ),
-        )),
+        Text(
+          "Good",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF52972A)),
+        ),
       ],
     ),
   );
@@ -131,6 +109,7 @@ Widget data1() {
     child: Row(
       children: [
         Expanded(
+          flex: 8,
           child: Text(
             "Spanner 12",
             style: TextStyle(
@@ -139,12 +118,8 @@ Widget data1() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 71.w,
-        ),
-        FittedBox(
-            child: Container(
-          alignment: Alignment.centerLeft,
+        Expanded(
+          flex: 6,
           child: Text(
             "1",
             style: TextStyle(
@@ -152,21 +127,14 @@ Widget data1() {
                 fontSize: 13.sp,
                 color: const Color(0xFFDD7164)),
           ),
-        )),
-        SizedBox(
-          width: 101.w,
         ),
-        FittedBox(
-            child: Container(
-          alignment: Alignment.centerRight,
-          child: Text(
-            "Service",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFF7CE46)),
-          ),
-        )),
+        Text(
+          "Service",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFF7CE46)),
+        ),
       ],
     ),
   );

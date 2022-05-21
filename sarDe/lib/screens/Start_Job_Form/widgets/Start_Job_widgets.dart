@@ -2,44 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Job_Main/JobMain.dart';
 
+// ignore: camel_case_types
 class Start_Button extends StatelessWidget {
+  const Start_Button({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Stack(alignment: Alignment.center, children: <Widget>[
-        Row(children: [
-          Expanded(
-            child: Container(
-              height: 98.h,
-              width: 390.w,
-              color: const Color(0xff2B3070),
+      onTap: () {
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => const JobMain()));
+      },
+      child: Row(children: [
+        Container(
+          height: 98.h,
+          width: 390.w,
+          decoration: const BoxDecoration(
+            color: Color(0xff2B3070),
+            image:DecorationImage(
+             alignment: Alignment(.75,0),
+              image: AssetImage('assets/images/forward_arrow.png',),
             ),
           ),
-        ]),
-        Padding(
-            padding: EdgeInsets.only(
-                left: 328.w, right: 56.w, top: 38.h, bottom: 44.h),
-            child: Image.asset(
-              'assets/images/forward_arrow.png',
-              height: 14.h,
-              width: 8.w,
-            )),
-        Padding(
-          padding: EdgeInsets.only(
-              right: 220.w, left: 56.w, top: 28.h, bottom: 35.h),
-          child: Text(
-            "Start Job",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 25.sp,
-                color: const Color(0xFFFFFFFF)),
+          child: Padding(padding: EdgeInsets.only(left: 56.w,top: 28.h),
+            child: Text(
+              "Start Job",
+              style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 25.sp,
+                  color: const Color(0xFFFFFFFF)),
+            ),
           ),
         ),
       ]),
-      onTap: () {
-        Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => JobMain()));
-      },
     );
   }
 }
@@ -48,15 +43,12 @@ Widget title1() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w),
     child: Row(children: [
-      Container(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          "Job 303",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 35.sp,
-              color: const Color(0xFF2B3070)),
-        ),
+      Text(
+        "Job 303",
+        style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 35.sp,
+            color: const Color(0xFF2B3070)),
       ),
     ]),
   );
@@ -66,15 +58,12 @@ Widget subtitle() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w),
     child: Row(children: [
-      Container(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          "NABARD RIDF 23\nKuttichira to Maradu",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 22.sp,
-              color: const Color(0xFF2B3070).withOpacity(0.7)),
-        ),
+      Text(
+        "NABARD RIDF 23\nKuttichira to Maradu",
+        style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 22.sp,
+            color: const Color(0xFF2B3070).withOpacity(0.7)),
       ),
     ]),
   );
@@ -86,28 +75,21 @@ Widget date() {
     child: Row(
       children: [
         Expanded(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "10-08-22",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 22.sp,
-                  color: const Color(0xFF52972A)),
-            ),
-          ),
-        ),
-        Expanded(
-            child: Container(
-          alignment: Alignment.centerRight,
           child: Text(
-            "18-09-22",
+            "10-08-22",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 22.sp,
-                color: const Color(0xFFB8493C)),
+                color: const Color(0xFF52972A)),
           ),
-        )),
+        ),
+        Text(
+          "18-09-22",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 22.sp,
+              color: const Color(0xFFB8493C)),
+        ),
       ],
     ),
   );
@@ -117,15 +99,12 @@ Widget heading() {
   return Padding(
     padding: EdgeInsets.only(left: 35.w, right: 218.w),
     child: Row(children: [
-      Container(
-        alignment: Alignment.centerLeft,
-        child: Text(
-          "Road Marking",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 20.sp,
-              color: const Color(0xFFDD7164)),
-        ),
+      Text(
+        "Road Marking",
+        style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 20.sp,
+            color: const Color(0xFFDD7164)),
       ),
     ]),
   );
@@ -151,32 +130,22 @@ Widget data() {
     padding: EdgeInsets.only(left: 36.w, right: 44.w),
     child: Row(
       children: [
-        FittedBox(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "18-09-22",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16.sp,
-                  color: const Color(0xFFBC401E)),
-            ),
-          ),
-        ),
-        SizedBox(
-          width: 124.w,
-        ),
-        FittedBox(
-            child: Container(
-          alignment: Alignment.centerRight,
+        Expanded(
           child: Text(
-            "Total : 534  sqm",
+            "18-09-22",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16.sp,
-                color: const Color(0xFF2B3070)),
+                color: const Color(0xFFBC401E)),
           ),
-        )),
+        ),
+        Text(
+          "Total : 534  sqm",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 16.sp,
+              color: const Color(0xFF2B3070)),
+        ),
       ],
     ),
   );
@@ -231,7 +200,7 @@ Widget data2() {
     padding: EdgeInsets.only(left: 36.w, right: 44.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
           child: Text(
             "18-09-22",
             style: TextStyle(
@@ -240,17 +209,13 @@ Widget data2() {
                 color: const Color(0xFFBC401E)),
           ),
         ),
-        SizedBox(
-          width: 135.w,
-        ),
-        FittedBox(
-            child: Text(
+        Text(
           "Total : 184 nos",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,
               color: const Color(0xFF2B3070)),
-        )),
+        ),
       ],
     ),
   );
@@ -291,7 +256,7 @@ Widget data3() {
     padding: EdgeInsets.only(left: 36.w, right: 48.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
           child: Text(
             "18-09-22",
             style: TextStyle(
@@ -300,17 +265,13 @@ Widget data3() {
                 color: const Color(0xFFBC401E)),
           ),
         ),
-        SizedBox(
-          width: 135.w,
-        ),
-        FittedBox(
-            child: Text(
+        Text(
           "Total : 43  nos",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,
               color: const Color(0xFF2B3070)),
-        )),
+        ),
       ],
     ),
   );

@@ -33,25 +33,22 @@ Widget heading() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w, right: 72.w),
     child: Row(children: [
-      FittedBox(
+      Expanded(
         child: Text("Job 303 to Job 584",
             style: TextStyle(
                 color: const Color(0xFFDD7164).withOpacity(0.7),
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w400)),
       ),
-      SizedBox(
-        width: 26.w,
-      ),
-      FittedBox(
-          child: Text(
+      
+      Text(
         '02-04-22',
         style: TextStyle(
-          color: const Color(0xffBC401E),
-          fontSize: 16.sp,
-          fontWeight: FontWeight.w400,
+      color: const Color(0xffBC401E),
+      fontSize: 16.sp,
+      fontWeight: FontWeight.w400,
         ),
-      )),
+      ),
     ]),
   );
 }

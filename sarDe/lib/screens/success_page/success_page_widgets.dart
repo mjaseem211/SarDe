@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Super_viser_Dashboard/Super_viser_dashboard.dart';
 
+// ignore: non_constant_identifier_names
 Widget Success() {
   return Stack(alignment: Alignment.center, children: [
     Row(mainAxisAlignment: MainAxisAlignment.center, children: [
@@ -50,6 +51,8 @@ Widget Success() {
 }
 
 class HomeButton extends StatelessWidget {
+  const HomeButton({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -69,7 +72,7 @@ class HomeButton extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => Super_viser_dashboard()));
+                  builder: (context) => const Super_viser_dashboard()));
             },
           ),
         ],

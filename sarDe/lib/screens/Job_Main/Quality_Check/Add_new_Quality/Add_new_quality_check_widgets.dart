@@ -29,6 +29,7 @@ Widget line() {
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget Photoview() {
   return Row(children: [
     Padding(

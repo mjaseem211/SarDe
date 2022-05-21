@@ -13,32 +13,22 @@ Widget title() {
     padding: EdgeInsets.only(left: 33.w, right: 44.w),
     child: Row(
       children: [
-        FittedBox(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Job 303",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 35.sp,
-                  color: const Color(0xFF2B3070)),
-            ),
-          ),
-        ),
-        SizedBox(
-          width: 89.w,
-        ),
-        FittedBox(
-            child: Container(
-          alignment: Alignment.centerRight,
+        Expanded(
           child: Text(
-            "18-09-22",
+            "Job 303",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 22.sp,
-                color: const Color(0xFFBC401E)),
+                fontSize: 35.sp,
+                color: const Color(0xFF2B3070)),
           ),
-        )),
+        ),
+        Text(
+          "18-09-22",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 22.sp,
+              color: const Color(0xFFBC401E)),
+        ),
       ],
     ),
   );
@@ -62,7 +52,10 @@ Widget subTitle() {
   );
 }
 
+// ignore: camel_case_types
 class job_main_nav extends StatelessWidget {
+  const job_main_nav({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -73,8 +66,8 @@ class job_main_nav extends StatelessWidget {
             children: [
               GridButtons(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => work_progress()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const work_progress()));
                 },
                 name: "Work\nProgress",
               ),
@@ -85,7 +78,7 @@ class job_main_nav extends StatelessWidget {
                 height: 147.h,
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_labours()));
+                      builder: (context) => const add_new_labours()));
                 },
                 assetimage: 'assets/images/add_button.png',
                 name: "Labours",
@@ -97,8 +90,8 @@ class job_main_nav extends StatelessWidget {
               GridButtons(
                 height: 98.h,
                 onTap: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => add_new_tools()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const add_new_tools()));
                 },
                 assetimage: 'assets/images/add_button.png',
                 name: "Tools",
@@ -140,8 +133,8 @@ class job_main_nav extends StatelessWidget {
               ),
               GridButtons(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => Inventory()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const Inventory()));
                 },
                 height: 162.h,
                 width: 139.w,

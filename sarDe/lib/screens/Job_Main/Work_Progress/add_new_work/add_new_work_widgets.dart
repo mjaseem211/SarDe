@@ -21,7 +21,8 @@ Widget Heading() {
     padding: EdgeInsets.only(right: 48.w, left: 31.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
+          flex: 8,
           child: Text(
             "Item Description",
             style: TextStyle(
@@ -30,10 +31,8 @@ Widget Heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        SizedBox(
-          width: 8.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 2,
           child: Text(
             "No",
             style: TextStyle(
@@ -42,10 +41,8 @@ Widget Heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        SizedBox(
-          width: 11.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 4,
           child: Text(
             "Length",
             style: TextStyle(
@@ -54,10 +51,8 @@ Widget Heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        SizedBox(
-          width: 9.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 4,
           child: Text(
             "Width",
             style: TextStyle(
@@ -66,10 +61,8 @@ Widget Heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        SizedBox(
-          width: 12.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 5,
           child: Text(
             "Meter Sqr",
             style: TextStyle(
@@ -102,7 +95,8 @@ Widget Data() {
     padding: EdgeInsets.only(right: 63.w, left: 40.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
+          flex: 6,
           child: Text(
             "001-003 RHS",
             style: TextStyle(
@@ -111,10 +105,8 @@ Widget Data() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 29.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 2,
           child: Text(
             "4",
             style: TextStyle(
@@ -123,10 +115,8 @@ Widget Data() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 25.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 4,
           child: Text(
             "121.8",
             style: TextStyle(
@@ -135,10 +125,8 @@ Widget Data() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 28.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 3,
           child: Text(
             "1",
             style: TextStyle(
@@ -147,10 +135,8 @@ Widget Data() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 48.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 2,
           child: Text(
             "128.4",
             style: TextStyle(
@@ -170,7 +156,8 @@ Widget Data1() {
     padding: EdgeInsets.only(right: 65.w, left: 40.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
+          flex: 11,
           child: Text(
             "004-006 LHS",
             style: TextStyle(
@@ -179,10 +166,8 @@ Widget Data1() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 29.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 4,
           child: Text(
             "2",
             style: TextStyle(
@@ -191,10 +176,8 @@ Widget Data1() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 27.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 7,
           child: Text(
             "38.8",
             style: TextStyle(
@@ -203,10 +186,8 @@ Widget Data1() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 35.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 6,
           child: Text(
             "1",
             style: TextStyle(
@@ -215,10 +196,8 @@ Widget Data1() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 47.w,
-        ),
-        FittedBox(
+        Expanded(
+          flex: 3,
           child: Text(
             "98.4",
             style: TextStyle(
