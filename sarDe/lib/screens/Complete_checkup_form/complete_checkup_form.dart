@@ -12,11 +12,15 @@ import 'package:sarde/widgets/Close_Day_Button.dart';
 import 'package:sarde/screens/success_page/Success_page.dart';
 import 'package:sarde/widgets/Top_Back_button.dart';
 
+// ignore: camel_case_types
 class Complete_Check_Up extends StatefulWidget {
+  const Complete_Check_Up({Key? key}) : super(key: key);
+
   @override
   State<Complete_Check_Up> createState() => _Complete_Check_UpState();
 }
 
+// ignore: camel_case_types
 class _Complete_Check_UpState extends State<Complete_Check_Up> {
   bool value1 = false;
   bool value2 = false;
@@ -33,7 +37,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
         Top_Back_Button(
           onTap: () {
             Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => JobMain()));
+                MaterialPageRoute(builder: (context) => const JobMain()));
           },
         ),
         SizedBox(
@@ -75,16 +79,18 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
               child: Row(
                 children: [
                   GestureDetector(
-                    child: Image.asset(
-                      'assets/images/edit_button.png',
-                      height: 20.h,
-                      width: 20.w,
+                    child: Expanded(
+                      child: Image.asset(
+                        'assets/images/edit_button.png',
+                        height: 20.h,
+                        width: 20.w,
+                      ),
                     ),
                     onTap: () {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => work_progress()));
+                              builder: (context) => const work_progress()));
                     },
                   ),
                   SizedBox(
@@ -95,10 +101,10 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                     focusColor: const Color(0xff52972A),
                     checkColor: const Color(0xffffffff),
                     activeColor: const Color(0xff52972A),
-                    value: this.value1,
+                    value: value1,
                     onChanged: (value) {
                       setState(() {
-                        this.value1 = value!;
+                        value1 = value!;
                       });
                     },
                   ),
@@ -146,7 +152,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => add_new_expense()));
+                              builder: (context) => const add_new_expense()));
                     },
                   ),
                   SizedBox(
@@ -157,10 +163,10 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                     focusColor: const Color(0xff52972A),
                     checkColor: const Color(0xffffffff),
                     activeColor: const Color(0xff52972A),
-                    value: this.value2,
+                    value: value2,
                     onChanged: (value) {
                       setState(() {
-                        this.value2 = value!;
+                        value2 = value!;
                       });
                     },
                   ),
@@ -204,7 +210,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => add_new_labours()));
+                              builder: (context) => const add_new_labours()));
                     },
                   ),
                   SizedBox(
@@ -262,7 +268,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => add_new_tools()));
+                              builder: (context) => const add_new_tools()));
                     },
                   ),
                   SizedBox(
@@ -313,8 +319,10 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                       width: 20.w,
                     ),
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Inventory()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Inventory()));
                     },
                   ),
                   SizedBox(
@@ -376,7 +384,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Quality_Check()));
+                              builder: (context) => const Quality_Check()));
                     },
                   ),
                   SizedBox(
@@ -390,7 +398,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                     value: value6,
                     onChanged: (value) {
                       setState(() {
-                        this.value6 = value!;
+                        value6 = value!;
                       });
                     },
                   ),
@@ -402,7 +410,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
         Close_Day_Button(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => Success_Page()));
+                MaterialPageRoute(builder: (context) => const Success_Page()));
           },
         )
       ]),

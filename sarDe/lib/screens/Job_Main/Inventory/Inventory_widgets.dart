@@ -3,7 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget title() {
   return Padding(
-    padding: EdgeInsets.only(left: 33.w, top: 99.h, right: 189.w),
+    padding: EdgeInsets.only(
+      left: 33.w,
+      top: 99.h,
+    ),
     child: Row(children: [
       Text("Inventory",
           style: TextStyle(
@@ -16,7 +19,9 @@ Widget title() {
 
 Widget subtitle() {
   return Padding(
-    padding: EdgeInsets.only(left: 33.w, right: 273.w),
+    padding: EdgeInsets.only(
+      left: 33.w,
+    ),
     child: Row(children: [
       Text("Job 303",
           style: TextStyle(

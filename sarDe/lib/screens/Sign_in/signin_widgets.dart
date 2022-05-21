@@ -32,8 +32,8 @@ class Username extends StatelessWidget {
           child: TextField(
             controller: nameController,
             decoration: InputDecoration(
-              contentPadding: EdgeInsets.only(
-                  top: 19.h, left: 35.w, right: 156.w, bottom: 10.h),
+              contentPadding:
+                  EdgeInsets.only(top: 19.h, left: 35.w, bottom: 10.h),
               labelText: 'username',
               labelStyle: TextStyle(
                   color: const Color(0xff2B3070).withOpacity(0.4),
@@ -73,8 +73,8 @@ class password extends StatelessWidget {
             obscureText: true,
             controller: passwordController,
             decoration: InputDecoration(
-                contentPadding: EdgeInsets.only(
-                    top: 16.h, left: 35.w, right: 159.w, bottom: 13.h),
+                contentPadding:
+                    EdgeInsets.only(top: 16.h, left: 35.w, bottom: 13.h),
                 labelText: 'Password',
                 labelStyle: TextStyle(
                     color: const Color(0xff2B3070).withOpacity(0.4),
@@ -115,6 +115,7 @@ class Login_Button extends StatelessWidget {
             decoration: BoxDecoration(
               color: const Color(0xffDD7164),
               borderRadius: BorderRadius.circular(10.r),
+
             ),
           ),
           Row(
@@ -132,6 +133,7 @@ class Login_Button extends StatelessWidget {
               ),
             ],
           ),
+
           Row(mainAxisAlignment: MainAxisAlignment.end, children: [
             Padding(
               padding: EdgeInsets.only(left: 239.08.w, right: 18.79.w),
@@ -161,6 +163,6 @@ Widget Contact_admin() {
         style: GoogleFonts.lexendDeca(color: Colors.grey, fontSize: 18.sp),
       ),
       onPressed: () {},
-    )
+    ),
   ]);
 }

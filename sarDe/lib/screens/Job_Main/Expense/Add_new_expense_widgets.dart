@@ -9,7 +9,7 @@ Widget title() {
           Text(
             "Expence",
             style: TextStyle(
-              color: Color(0xFF2B3070),
+              color: const Color(0xFF2B3070),
               fontSize: 20.sp,
               fontWeight: FontWeight.w400,
             ),
@@ -23,7 +23,7 @@ Widget heading() {
     padding: EdgeInsets.only(right: 49.w, left: 33.w),
     child: Row(
       children: [
-        FittedBox(
+        Expanded(
           child: Text(
             "Expenses",
             style: TextStyle(
@@ -32,28 +32,22 @@ Widget heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        SizedBox(
-          width: 73.w,
+        Expanded(
+          child: Text(
+            "Amount",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
+          ),
         ),
-        FittedBox(
-            child: Text(
-          "Amount",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFF2B3070)),
-        )),
-        SizedBox(
-          width: 63.w,
-        ),
-        FittedBox(
-            child: Text(
+        Text(
           "Reference",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,
               color: const Color(0xFF2B3070)),
-        )),
+        ),
       ],
     ),
   );
@@ -77,32 +71,22 @@ Widget data() {
     padding: EdgeInsets.only(right: 186.w, left: 33.w),
     child: Row(
       children: [
-        FittedBox(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Vech Rent",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
-        ),
-        SizedBox(
-          width: 77.w,
-        ),
-        FittedBox(
-            child: Container(
-          alignment: Alignment.centerLeft,
+        Expanded(
           child: Text(
-            "1800",
+            "Vech Rent",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
                 color: const Color(0xFFDD7164)),
           ),
-        )),
+        ),
+        Text(
+          "1800",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
+        ),
       ],
     ),
   );
@@ -113,32 +97,21 @@ Widget data1() {
     padding: EdgeInsets.only(right: 185.w, left: 36.w),
     child: Row(
       children: [
-        FittedBox(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "Machine Rent",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
+        Expanded(
+          child: Text(
+            "Machine Rent",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
           ),
         ),
-        SizedBox(
-          width: 55.w,
-        ),
-        FittedBox(
-          child: Container(
-            alignment: Alignment.centerLeft,
-            child: Text(
-              "1000",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.sp,
-                  color: const Color(0xFFDD7164)),
-            ),
-          ),
+        Text(
+          "1000",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         ),
       ],
     ),

@@ -13,7 +13,7 @@ class work_progress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
         body: Column(children: [
           Title1(),
@@ -44,7 +44,7 @@ class work_progress extends StatelessWidget {
                 left: 34.w,
               ),
               SizedBox(height: 3.h),
-              text_button1(),
+              const text_button1(),
               SizedBox(
                 height: 20.h,
               ),
@@ -68,7 +68,7 @@ class work_progress extends StatelessWidget {
               SizedBox(
                 height: 3.h,
               ),
-              text_button2(),
+              const text_button2(),
               SizedBox(
                 height: 24.h,
               ),
@@ -88,13 +88,13 @@ class work_progress extends StatelessWidget {
               SizedBox(
                 height: 3.h,
               ),
-              text_button3(),
+              const text_button3(),
             ]),
           ),
           Bottom_back_button(
             onTap: () {
               Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => JobMain()));
+                  MaterialPageRoute(builder: (context) => const JobMain()));
             },
           ),
           SizedBox(

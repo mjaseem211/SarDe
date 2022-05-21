@@ -29,7 +29,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                   backgroundColor: Colors.transparent,
                   insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                   child: Stack(
-                    overflow: Overflow.visible,
+                    clipBehavior: Clip.none,
                     children: <Widget>[
                       Container(
                         width: 356.w,
@@ -45,7 +45,9 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            left: 25.w, top: 59.h, right: 211.w),
+                          left: 25.w,
+                          top: 59.h,
+                        ),
                         child: Text(
                           "Add Labour",
                           style: TextStyle(

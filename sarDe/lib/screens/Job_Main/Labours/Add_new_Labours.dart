@@ -18,43 +18,40 @@ class _add_new_laboursState extends State<add_new_labours> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Column(children: [
-          Title1(),
-          SizedBox(
-            height: 26.h,
-          ),
-          Heading(),
-          SizedBox(
-            height: 2.h,
-          ),
-          line(),
-
+      body: Column(children: [
+        Title1(),
+        SizedBox(
+          height: 26.h,
+        ),
+        Heading(),
+        SizedBox(
+          height: 2.h,
+        ),
+        line(),
+        Expanded(
+            child: ListView(shrinkWrap: true, children: [
           Data(),
           SizedBox(
             height: 15.h,
           ),
           Data1(),
-          SizedBox(
-            height: 47.h,
-          ),
-          const dialogue_box(),
-          SizedBox(
-            height: 365.61.h,
-          ),
-          Bottom_back_button(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => JobMain()));
-            },
-          ),
-          SizedBox(
-            height: 72.h,
-          ),
-        ]),
-      ),
+        ])),
+        const dialogue_box(),
+        SizedBox(
+          height: 365.61.h,
+        ),
+        Bottom_back_button(
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => const JobMain()));
+          },
+        ),
+        SizedBox(
+          height: 72.h,
+        )
+      ]),
     );
   }
 }

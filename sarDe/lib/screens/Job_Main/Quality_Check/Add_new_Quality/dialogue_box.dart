@@ -46,7 +46,9 @@ class _dialogue_boxState extends State<dialogue_box> {
                           color: Colors.white,
                         ),
                         padding: EdgeInsets.only(
-                            left: 25.w, top: 60.h, right: 189.w),
+                          left: 25.w,
+                          top: 60.h,
+                        ),
                         child: Text(
                           "Quality Check",
                           style: TextStyle(

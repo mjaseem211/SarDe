@@ -32,6 +32,7 @@ Widget subtitle() {
   );
 }
 
+// ignore: non_constant_identifier_names
 Widget Old_Jobs() {
   return Padding(
     padding: EdgeInsets.only(
@@ -52,7 +53,10 @@ Widget Old_Jobs() {
   );
 }
 
+// ignore: camel_case_types
 class Job_transfer extends StatelessWidget {
+  const Job_transfer({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     {
@@ -68,8 +72,8 @@ class Job_transfer extends StatelessWidget {
                   fontWeight: FontWeight.w400),
             ),
             onPressed: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => job_transfer()));
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => const job_transfer()));
             },
           ),
         ]),
@@ -78,6 +82,7 @@ class Job_transfer extends StatelessWidget {
   }
 }
 
+// ignore: non_constant_identifier_names
 Widget About() {
   return Padding(
     padding: EdgeInsets.only(left: 34.w),

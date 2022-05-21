@@ -7,6 +7,8 @@ import 'package:sarde/screens/job_main/widgets/job_main_widgets.dart';
 import 'package:sarde/widgets/Top_Back_button.dart';
 
 class JobMain extends StatelessWidget {
+  const JobMain({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,8 +17,8 @@ class JobMain extends StatelessWidget {
         children: [
           Top_Back_Button(
             onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Start_Job_Form()));
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (context) => const Start_Job_Form()));
             },
           ),
           SizedBox(
@@ -28,7 +30,7 @@ class JobMain extends StatelessWidget {
           ),
           subTitle(),
           Expanded(
-            child: ListView(shrinkWrap: true, children: [
+            child: ListView(shrinkWrap: true, children: const [
               job_main_nav(),
             ]),
           ),

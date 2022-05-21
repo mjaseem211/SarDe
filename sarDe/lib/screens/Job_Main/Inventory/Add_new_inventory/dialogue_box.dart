@@ -37,8 +37,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                     backgroundColor: Colors.transparent,
                     insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                     child: Stack(
-                      overflow: Overflow.visible,
-                      children: <Widget>[
+                      clipBehavior: Clip.none, children: <Widget>[
                         Container(
                           width: 361.w,
                           height: 183.h,
@@ -163,8 +162,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                     backgroundColor: Colors.transparent,
                     insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                     child: Stack(
-                      overflow: Overflow.visible,
-                      children: <Widget>[
+                      clipBehavior: Clip.none, children: <Widget>[
                         Container(
                           width: 361.w,
                           height: 183.h,

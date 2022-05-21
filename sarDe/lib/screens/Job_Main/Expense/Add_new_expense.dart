@@ -5,7 +5,10 @@ import 'package:sarde/screens/Job_Main/JobMain.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 import 'package:sarde/screens/Job_Main/Expense/Add_new_expense_widgets.dart';
 
+// ignore: camel_case_types
 class add_new_expense extends StatelessWidget {
+  const add_new_expense({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +40,7 @@ class add_new_expense extends StatelessWidget {
         Bottom_back_button(
           onTap: () {
             Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => JobMain()));
+                MaterialPageRoute(builder: (context) => const JobMain()));
           },
         ),
         SizedBox(
