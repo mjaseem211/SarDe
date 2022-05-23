@@ -58,70 +58,58 @@ Widget Photoview() {
       padding: EdgeInsets.only(
         top: 41.h,
       ),
-      child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-        Row(children: [
-          FittedBox(
-            child: Padding(
-              padding: EdgeInsets.only(left: 19.w, right: 85.w),
-              child: Text("12.03.21  12.36 pm",
-                  style: TextStyle(
-                      color: const Color(0xFF2B3070),
-                      fontSize: 13.sp,
-                      fontWeight: FontWeight.w400)),
-            ),
-          ),
-        ]),
-        Row(children: [
-          FittedBox(
-            child: Padding(
-              padding: EdgeInsets.only(left: 19.w, right: 115.w),
-              child: Text("1103 Moordu",
-                  style: TextStyle(
-                      color: const Color(0xFF2B3070),
-                      fontSize: 13.sp,
-                      fontWeight: FontWeight.w400)),
-            ),
-          ),
-        ]),
+      child: Column(children: [
+        Padding(
+          padding: EdgeInsets.only(right: 76.w),
+          child: Row(children: [
+            Text("12.03.21  12.36 pm",
+                style: TextStyle(
+                    color: const Color(0xFF2B3070),
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w400)),
+          ]),
+        ),
+        Padding(
+          padding: EdgeInsets.only(right: 100.w),
+          child: Row(children: [
+            Text("1103 Moordu",
+                style: TextStyle(
+                    color: const Color(0xFF2B3070),
+                    fontSize: 13.sp,
+                    fontWeight: FontWeight.w400)),
+          ]),
+        ),
         SizedBox(
           height: 1.h,
         ),
         Padding(
           padding: EdgeInsets.only(left: 19.w, right: 100.w),
           child: Row(children: [
-            FittedBox(
-              child: Text("Thickness :",
-                  style: TextStyle(
-                      color: const Color(0xFFDD7164),
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w400)),
-            ),
-            FittedBox(
-              child: Text("Good",
-                  style: TextStyle(
-                      color: const Color(0xFF52972A),
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w400)),
-            ),
+            Text("Thickness :",
+                style: TextStyle(
+                    color: const Color(0xFFDD7164),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w400)),
+            Text("Good",
+                style: TextStyle(
+                    color: const Color(0xFF52972A),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w400)),
           ]),
         ),
         Padding(
-          padding: EdgeInsets.only(left: 19.w, right: 30.w),
+          padding: EdgeInsets.only(left: 19.w, right: 42.w),
           child: Row(children: [
-            FittedBox(
-              child: Text("Edge Alignment :",
-                  style: TextStyle(
-                      color: const Color(0xFFDD7164),
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w400)),
-            ),
-            FittedBox(
-              child: Text("Acceptable",
-                  style: TextStyle(
-                      color: const Color(0xFFF7CE46),
-                      fontSize: 12.sp,
-                      fontWeight: FontWeight.w400)),
-            ),
+            Text("Edge Alignment :",
+                style: TextStyle(
+                    color: const Color(0xFFDD7164),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w400)),
+            Text("Acceptable",
+                style: TextStyle(
+                    color: const Color(0xFFF7CE46),
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w400)),
           ]),
         ),
       ]),

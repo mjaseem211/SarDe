@@ -79,7 +79,7 @@ Widget line() {
 // ignore: non_constant_identifier_names
 Widget Data() {
   return Padding(
-    padding: EdgeInsets.only(right: 65.w, left: 33.w),
+    padding: EdgeInsets.only(right: 68.w, left: 33.w),
     child: Row(
       children: [
         Expanded(
@@ -103,7 +103,7 @@ Widget Data() {
           ),
         ),
         Expanded(
-          flex: 6,
+          flex: 7,
           child: Text(
             "Own",
             style: TextStyle(
@@ -112,15 +112,12 @@ Widget Data() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        Expanded(
-          flex: 1,
-          child: Text(
-            "3",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
+        Text(
+          "3",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         ),
       ],
     ),
@@ -130,7 +127,7 @@ Widget Data() {
 // ignore: non_constant_identifier_names
 Widget Data1() {
   return Padding(
-    padding: EdgeInsets.only(right: 64.w, left: 33.w),
+    padding: EdgeInsets.only(right: 68.w, left: 33.w),
     child: Row(
       children: [
         Expanded(
@@ -154,7 +151,7 @@ Widget Data1() {
           ),
         ),
         Expanded(
-          flex: 10,
+          flex: 11,
           child: Text(
             "Sub",
             style: TextStyle(
@@ -163,15 +160,12 @@ Widget Data1() {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        Expanded(
-          flex: 2,
-          child: Text(
-            "7",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
+        Text(
+          "7",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFFDD7164)),
         ),
       ],
     ),

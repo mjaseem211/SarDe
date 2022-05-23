@@ -68,7 +68,7 @@ Widget line() {
 
 Widget data() {
   return Padding(
-    padding: EdgeInsets.only(right: 186.w, left: 33.w),
+    padding: EdgeInsets.only(right: 195.w, left: 33.w),
     child: Row(
       children: [
         Expanded(
@@ -94,7 +94,7 @@ Widget data() {
 
 Widget data1() {
   return Padding(
-    padding: EdgeInsets.only(right: 185.w, left: 36.w),
+    padding: EdgeInsets.only(right: 195.w, left: 33.w),
     child: Row(
       children: [
         Expanded(

@@ -335,7 +335,7 @@ Widget Heading7() {
     child: Row(
       children: [
         Expanded(
-          flex: 5,
+          flex: 11,
           child: Text(
             "Machine Rent",
             style: TextStyle(
@@ -345,7 +345,7 @@ Widget Heading7() {
           ),
         ),
         Expanded(
-          flex: 4,
+          flex: 9,
           child: Text(
             "1000",
             style: TextStyle(
@@ -459,7 +459,7 @@ Widget Heading8() {
 // ignore: non_constant_identifier_names
 Widget Heading9() {
   return Padding(
-    padding: EdgeInsets.only(right: 89.w, left: 36.w),
+    padding: EdgeInsets.only(right: 80.w, left: 36.w),
     child: Row(
       children: [
         Expanded(
@@ -507,7 +507,7 @@ Widget Heading9() {
 // ignore: non_constant_identifier_names
 Widget Heading10() {
   return Padding(
-    padding: EdgeInsets.only(right: 89.w, left: 36.w),
+    padding: EdgeInsets.only(right: 80.w, left: 36.w),
     child: Row(
       children: [
         Expanded(

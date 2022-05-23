@@ -79,12 +79,10 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
               child: Row(
                 children: [
                   GestureDetector(
-                    child: Expanded(
-                      child: Image.asset(
-                        'assets/images/edit_button.png',
-                        height: 20.h,
-                        width: 20.w,
-                      ),
+                    child: Image.asset(
+                      'assets/images/edit_button.png',
+                      height: 20.h,
+                      width: 20.w,
                     ),
                     onTap: () {
                       Navigator.push(

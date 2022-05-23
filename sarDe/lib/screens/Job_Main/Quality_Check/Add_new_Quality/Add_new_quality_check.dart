@@ -12,31 +12,30 @@ class add_new_quality_check extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
-      body: SingleChildScrollView(
-        child: Column(children: [
-          title(),
-          SizedBox(
-            height: 3.h,
-          ),
-          line(),
-          Photoview(),
-          SizedBox(height: 74.h),
-          const dialogue_box(),
-          SizedBox(
-            height: 312.61.h,
-          ),
-          Bottom_back_button(
-            onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => JobMain()));
-            },
-          ),
-          SizedBox(
-            height: 72.h,
-          )
-        ]),
-      ),
+      body: Column(children: [
+        title(),
+        SizedBox(
+          height: 3.h,
+        ),
+        line(),
+        Expanded(child: ListView(shrinkWrap:true,children:[Photoview(),
+       ]),),
+        const dialogue_box(),
+        SizedBox(
+          height: 312.61.h,
+        ),
+        Bottom_back_button(
+          onTap: () {
+            Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => const JobMain()));
+          },
+        ),
+        SizedBox(
+          height: 72.h,
+        )
+      ]),
     );
   }
 }
