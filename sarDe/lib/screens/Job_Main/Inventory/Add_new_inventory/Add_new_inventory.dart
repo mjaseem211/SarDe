@@ -42,7 +42,7 @@ class _add_new_inventoryState extends State<add_new_inventory> {
         Bottom_back_button(
           onTap: () {
             Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => JobMain()));
+                MaterialPageRoute(builder: (context) => const JobMain()));
           },
         ),
         SizedBox(

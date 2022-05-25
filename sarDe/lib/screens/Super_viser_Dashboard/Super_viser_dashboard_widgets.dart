@@ -29,37 +29,52 @@ class text_button extends StatelessWidget {
   }
 }
 
-Widget slider() {
-  return Stack(alignment: Alignment.center, children: <Widget>[
-    Padding(
-      padding: EdgeInsets.only(left: 40.w),
-      child: Row(children: [
-        Container(
-            width: 316.w,
-            height: 5.0.h,
-            decoration: BoxDecoration(
-              color: const Color(0xffd8d4e9),
-              borderRadius: BorderRadius.circular(6.r),
-            )),
-      ]),
-    ),
-    Padding(
-      padding: EdgeInsets.only(left: 43.w),
-      child: Row(children: [
-        Container(
-            width: 198.w,
-            height: 9.0.h,
-            decoration: BoxDecoration(
-              color: const Color(0xffa49eb8),
-              borderRadius: BorderRadius.circular(6.r),
-            )),
-      ]),
-    ),
-  ]);
+class SupervisorSlider extends StatelessWidget {
+  const SupervisorSlider({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      alignment: Alignment.center,
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.only(left: 40.w),
+          child: Row(
+            children: [
+              Container(
+                width: 316.w,
+                height: 5.0.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xffd8d4e9),
+                  borderRadius: BorderRadius.circular(6.r),
+                ),
+              ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(left: 43.w),
+          child: Row(
+            children: [
+              Container(
+                width: 198.w,
+                height: 9.0.h,
+                decoration: BoxDecoration(
+                  color: const Color(0xffa49eb8),
+                  borderRadius: BorderRadius.circular(6.r),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
 }
 
-// ignore: non_constant_identifier_names
-Widget Job_container() {
+Widget jobContainer() {
   return Builder(builder: (context) {
     return GestureDetector(
       child: Stack(alignment: Alignment.center, children: <Widget>[
@@ -130,7 +145,10 @@ Widget Job_container() {
       ]),
       onTap: () {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => const Start_Job_Form()));
+          MaterialPageRoute(
+            builder: (context) => const Start_Job_Form(),
+          ),
+        );
       },
     );
   });
