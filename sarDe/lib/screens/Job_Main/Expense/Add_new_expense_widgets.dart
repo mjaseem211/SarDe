@@ -3,19 +3,20 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget title() {
   return Padding(
-      padding: EdgeInsets.only(left: 36.w, top: 109.h),
-      child: Row(
-        children: [
-          Text(
-            "Expence",
-            style: TextStyle(
-              color: const Color(0xFF2B3070),
-              fontSize: 20.sp,
-              fontWeight: FontWeight.w400,
-            ),
-          )
-        ],
-      ));
+    padding: EdgeInsets.only(left: 36.w, top: 109.h),
+    child: Row(
+      children: [
+        Text(
+          "Expence",
+          style: TextStyle(
+            color: const Color(0xFF2B3070),
+            fontSize: 20.sp,
+            fontWeight: FontWeight.w400,
+          ),
+        )
+      ],
+    ),
+  );
 }
 
 Widget heading() {

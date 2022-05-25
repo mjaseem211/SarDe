@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Super_viser_Dashboard/Super_viser_dashboard.dart';
+import 'package:sarde/screens/Super_viser_Dashboard/supervisor_dashboard.dart';
 
 // ignore: non_constant_identifier_names
 Widget Success() {
@@ -72,7 +72,7 @@ class HomeButton extends StatelessWidget {
             ),
             onTap: () {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) => const Super_viser_dashboard()));
+                  builder: (context) => const SupervisorDashboard()));
             },
           ),
         ],
