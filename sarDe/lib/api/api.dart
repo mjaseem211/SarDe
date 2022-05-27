@@ -1,7 +1,9 @@
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:sarde/models/api_model.dart';
+import 'package:sarde/models/expense.dart';
 import 'package:sarde/models/login.dart';
 
 class SardeAPI {
@@ -46,6 +48,24 @@ class SardeAPI {
     return APIModel<LoginModel>.fromJson(
       response,
       (json) => LoginModel.fromJson(json),
+    );
+  }
+
+  static Future<APIModel<ExpenseModel>> addExpense(
+      String accessToken,
+      String expense,
+      String amt,
+      String reference,
+      ) async {
+    final response = await post('Expense/add_expense', {
+      'access_token' : accessToken,
+      'expense': expense,
+      'amount': amt,
+      'reference': reference,
+    });
+    return APIModel<ExpenseModel>.fromJson(
+      response,
+          (json) => ExpenseModel.fromJson(json),
     );
   }
 }
