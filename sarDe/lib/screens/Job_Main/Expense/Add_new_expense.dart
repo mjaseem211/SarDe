@@ -6,9 +6,15 @@ import 'package:sarde/widgets/Bottom_back_button.dart';
 import 'package:sarde/screens/Job_Main/Expense/Add_new_expense_widgets.dart';
 
 // ignore: camel_case_types
-class add_new_expense extends StatelessWidget {
-  const add_new_expense({Key? key}) : super(key: key);
+class add_new_expense extends StatefulWidget {
 
+  @override
+  State<add_new_expense> createState() => _add_new_expenseState();
+}
+
+class _add_new_expenseState extends State<add_new_expense> {
+
+  final List<Widget> expenseData = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,15 +31,18 @@ class add_new_expense extends StatelessWidget {
         ),
         line(),
         Expanded(
-          child: ListView(children: [
-            data(),
-            SizedBox(
-              height: 15.h,
-            ),
-            data1(),
-          ]),
+          child: ListView.builder(
+              itemCount: expenseData.length,
+              itemBuilder: (BuildContext context,int index){
+                return expenseData[index];
+              }
+          )
         ),
-        const dialogue_box(),
+        dialogue_box(dataCallback: (data){
+          Widget expense = data1(data[0],data[1],data[2]);
+          expenseData.add(expense);
+          setState(() {});
+        },),
         SizedBox(
           height: 365.61.h,
         ),

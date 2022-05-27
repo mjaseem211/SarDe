@@ -67,14 +67,23 @@ Widget line() {
   );
 }
 
-Widget data() {
+Widget data1(String expense,String amount,String reference) {
   return Padding(
-    padding: EdgeInsets.only(right: 195.w, left: 33.w),
+    padding: EdgeInsets.only(right: 49.w, left: 33.w),
     child: Row(
       children: [
         Expanded(
           child: Text(
-            "Vech Rent",
+            "${expense}",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
+          ),
+        ),
+        Expanded(
+          child: Text(
+            "${amount}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -82,7 +91,7 @@ Widget data() {
           ),
         ),
         Text(
-          "1800",
+          "${reference}",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,
@@ -93,28 +102,4 @@ Widget data() {
   );
 }
 
-Widget data1() {
-  return Padding(
-    padding: EdgeInsets.only(right: 195.w, left: 33.w),
-    child: Row(
-      children: [
-        Expanded(
-          child: Text(
-            "Machine Rent",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        ),
-        Text(
-          "1000",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFFDD7164)),
-        ),
-      ],
-    ),
-  );
-}
+

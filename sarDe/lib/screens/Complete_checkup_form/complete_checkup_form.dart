@@ -150,7 +150,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const add_new_expense()));
+                              builder: (context) =>  add_new_expense()));
                     },
                   ),
                   SizedBox(
