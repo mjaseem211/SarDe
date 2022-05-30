@@ -67,7 +67,7 @@ Widget line() {
   );
 }
 
-Widget data1(String expense,String amount,String reference) {
+Widget data1(String expense, String amount, String reference) {
   return Padding(
     padding: EdgeInsets.only(right: 49.w, left: 33.w),
     child: Row(
@@ -101,5 +101,3 @@ Widget data1(String expense,String amount,String reference) {
     ),
   );
 }
-
-

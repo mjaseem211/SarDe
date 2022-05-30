@@ -1,10 +1,14 @@
+
+
+// ignore_for_file: camel_case_types, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Bottom_back_button extends StatelessWidget {
   final VoidCallback? onTap;
 
-  Bottom_back_button({this.onTap});
+  const Bottom_back_button({this.onTap});
 
   @override
   Widget build(BuildContext context) {

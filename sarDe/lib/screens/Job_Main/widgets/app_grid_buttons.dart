@@ -22,7 +22,7 @@ class GridButtons extends StatelessWidget {
       this.name,
       this.left,
       this.top,
-      this.assetimage})
+      this.assetimage,})
       : super(key: key);
 
   @override

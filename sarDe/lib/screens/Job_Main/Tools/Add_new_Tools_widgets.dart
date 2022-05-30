@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,7 +20,7 @@ Widget title() {
       ));
 }
 
-Widget heading() {
+Widget heading_1() {
   return Padding(
     padding: EdgeInsets.only(right: 52.w, left: 33.w),
     child: Row(
@@ -53,7 +55,7 @@ Widget heading() {
   );
 }
 
-Widget line() {
+Widget line_1() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w, right: 47.w),
     child: Row(children: [
@@ -66,15 +68,14 @@ Widget line() {
   );
 }
 
-Widget data() {
+Widget data2(String item, String quantity, String condition) {
   return Padding(
     padding: EdgeInsets.only(right: 52.w, left: 33.w),
     child: Row(
       children: [
         Expanded(
-          flex: 5,
           child: Text(
-            "Boiler",
+            "${item}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -82,9 +83,8 @@ Widget data() {
           ),
         ),
         Expanded(
-          flex: 4,
           child: Text(
-            "2",
+            "${quantity}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -92,50 +92,15 @@ Widget data() {
           ),
         ),
         Text(
-          "Good",
+          "${condition}",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,
-              color: const Color(0xFF52972A)),
+              color: const Color(0xFFDD7164)),
         ),
       ],
     ),
   );
 }
 
-Widget data1() {
-  return Padding(
-    padding: EdgeInsets.only(right: 47.w, left: 33.w),
-    child: Row(
-      children: [
-        Expanded(
-          flex: 8,
-          child: Text(
-            "Spanner 12",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        ),
-        Expanded(
-          flex: 6,
-          child: Text(
-            "1",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        ),
-        Text(
-          "Service",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFFF7CE46)),
-        ),
-      ],
-    ),
-  );
-}
+

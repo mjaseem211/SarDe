@@ -36,7 +36,7 @@ class _add_new_expenseState extends State<add_new_expense> {
               itemBuilder: (BuildContext context,int index){
                 return expenseData[index];
               }
-          )
+          ),
         ),
         dialogue_box(dataCallback: (data){
           Widget expense = data1(data[0],data[1],data[2]);

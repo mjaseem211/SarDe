@@ -4,6 +4,7 @@ import 'package:sarde/api/api.dart';
 import 'package:sarde/screens/Sign_in/signin_widgets.dart';
 import 'package:sarde/screens/Super_viser_Dashboard/supervisor_dashboard.dart';
 import 'package:sarde/services/prefs.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -21,15 +22,23 @@ class _SignInPageState extends State<SignInPage> {
     String password = passController.text.trim();
 
     if (username.isEmpty || password.isEmpty) {
-      // TODO: Show alert
-      // Enter username and password
+      Fluttertoast.showToast(
+        msg: "Please enter username and password",
+        backgroundColor: Colors.grey,
+        textColor: Colors.white,
+      );
+
       return;
     }
 
     final response = await SardeAPI.login(username, password);
 
     if (response.status != "success") {
-      // TODO: Show alert
+      Fluttertoast.showToast(
+        msg: "Login failed",
+        backgroundColor: Colors.grey,
+        textColor: Colors.white,
+      );
       print(response.toJson());
       print("Login failed");
       return;
@@ -68,35 +77,45 @@ class _SignInPageState extends State<SignInPage> {
 
   @override
   Widget build(BuildContext context) {
+    bool _keyboardVisible = false;
+    _keyboardVisible = MediaQuery.of(context).viewInsets.bottom != 0;
+
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            const SardeLogo(),
-            SizedBox(
-              height: 37.h,
-            ),
-            Username(
-              controller: nameController,
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            Password(
-              controller: passController,
-            ),
-            SizedBox(
-              height: 28.h,
-            ),
-            LoginButton(
-              onTap: login,
-            ),
-            SizedBox(
-              height: 115.h,
-            ),
-            const ContactAdmin(),
-          ],
+      resizeToAvoidBottomInset: true,
+      body: GestureDetector(
+        onTap: () {
+          FocusScope.of(context).requestFocus(FocusNode());
+        },
+        child: SingleChildScrollView(
+          reverse: true,
+          physics: const NeverScrollableScrollPhysics(),
+          child: Column(
+            children: <Widget>[
+              const SardeLogo(),
+              SizedBox(
+                height: 37.h,
+              ),
+              Username(
+                controller: nameController,
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              Password(
+                controller: passController,
+              ),
+              SizedBox(
+                height: 28.h,
+              ),
+              LoginButton(
+                onTap: login,
+              ),
+              SizedBox(
+                height: _keyboardVisible ? 20.h : 115.h,
+              ),
+              const ContactAdmin(),
+            ],
+          ),
         ),
       ),
     );

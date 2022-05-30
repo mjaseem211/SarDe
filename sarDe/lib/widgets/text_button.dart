@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types, use_key_in_widget_constructors, non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -9,7 +11,7 @@ class text_button extends StatelessWidget {
   final double? left;
   final double? right;
 
-  text_button(
+  const text_button(
       {this.onTap,
       this.text,
       this.color,

@@ -73,7 +73,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                           padding: EdgeInsets.only(
                               top: 101.h, left: 16.w, right: 19.w),
                           child: SizedBox(
-                            width: 300.w,
+                            width: 321.w,
                             height: 35.h,
                             child: TextFormField(
                               keyboardType: TextInputType.text,
@@ -95,6 +95,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                                   fontWeight: FontWeight.w400,
                                 ),
                                 enabledBorder: OutlineInputBorder(
+
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(4.r)),
                                   borderSide: BorderSide(
@@ -118,6 +119,11 @@ class _dialogue_boxState extends State<dialogue_box> {
                             width: 300.w,
                             height: 35.h,
                             child: TextFormField(
+                              validator: MultiValidator([
+                                PatternValidator(r'^[0-9 ]*$',
+                                    errorText: 'Only use numbers'),
+                                RequiredValidator(errorText: "Amount is required")
+                              ]),
                               keyboardType: TextInputType.number,
                               controller: amtController,
                               decoration: InputDecoration(

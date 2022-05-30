@@ -80,7 +80,7 @@ class job_main_nav extends StatelessWidget {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                       builder: (context) => const add_new_labours()));
                 },
-                assetimage: 'assets/images/add_button.png',
+                assetimage: "assets/images/add_button.png",
                 name: "Labours",
                 top: 98.h,
               ),
@@ -93,7 +93,7 @@ class job_main_nav extends StatelessWidget {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                       builder: (context) => const add_new_tools()));
                 },
-                assetimage: 'assets/images/add_button.png',
+                assetimage: "assets/images/add_button.png",
                 name: "Tools",
                 top: 52.h,
               )
@@ -104,8 +104,8 @@ class job_main_nav extends StatelessWidget {
           ),
           Column(
             children: [
-              GridButtons(
-                assetimage: 'assets/images/add_button.png',
+               GridButtons(
+                assetimage: "assets/images/add_button.png",
                 height: 144.h,
                 width: 143.w,
                 name: "Expense",
@@ -125,7 +125,7 @@ class job_main_nav extends StatelessWidget {
                 top: 83.h,
                 onTap: () {
                   Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => Quality_Check()));
+                      MaterialPageRoute(builder: (context) => const Quality_Check()));
                 },
               ),
               SizedBox(
