@@ -1,27 +1,32 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:sarde/api/api.dart';
-import 'package:sarde/screens/Job_Main/Expense/drop_down.dart';
 
-import '../../../services/prefs.dart';
+import '../../../../../api/api.dart';
+import '../../../../../services/prefs.dart';
 
-// ignore: camel_case_types
-class dialogue_box extends StatefulWidget {
+class Stud_Fixing_dialoguebox extends StatefulWidget {
   final ValueChanged<List<dynamic>> dataCallback;
 
-  const dialogue_box({Key? key, required this.dataCallback}) : super(key: key);
+  const Stud_Fixing_dialoguebox({Key? key, required this.dataCallback})
+      : super(key: key);
 
   @override
-  State<dialogue_box> createState() => _dialogue_boxState();
+  State<Stud_Fixing_dialoguebox> createState() => _Stud_Fixing_dialogueboxState();
 }
 
-// ignore: camel_case_types
-class _dialogue_boxState extends State<dialogue_box> {
-  final TextEditingController expenseController = TextEditingController();
-  final TextEditingController amtController = TextEditingController();
-  final TextEditingController referenceController = TextEditingController();
-  final _addExpenseFormKey = GlobalKey<FormState>();
+class _Stud_Fixing_dialogueboxState extends State<Stud_Fixing_dialoguebox> {
+
+
+  final TextEditingController itemdescriptionController =
+  TextEditingController();
+  final TextEditingController noController = TextEditingController();
+  final TextEditingController lengthController = TextEditingController();
+  final TextEditingController widthController = TextEditingController();
+  final TextEditingController metersqrController = TextEditingController();
+  final _addstudfixprogress = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +46,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                   insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                   child: Form(
                     autovalidateMode: AutovalidateMode.always,
-                    key: _addExpenseFormKey,
+                    key: _addstudfixprogress,
                     child: Stack(
                       clipBehavior: Clip.none,
                       children: <Widget>[
@@ -59,11 +64,9 @@ class _dialogue_boxState extends State<dialogue_box> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                            left: 25.w,
-                            top: 59.h,
-                          ),
+                              left: 25.w, top: 59.h, bottom: 156.h),
                           child: Text(
-                            "Add Expence",
+                            "Add Work Progress",
                             style: TextStyle(
                                 color: const Color(0xffDD7164),
                                 fontSize: 21.sp,
@@ -72,40 +75,38 @@ class _dialogue_boxState extends State<dialogue_box> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: 101.h, left: 16.w, right: 19.w),
+                              top: 101.h, left: 16.w, right: 109.w),
                           child: SizedBox(
-                            width: 321.w,
+                            width: 231.w,
                             height: 35.h,
                             child: TextFormField(
                               keyboardType: TextInputType.text,
                               validator: MultiValidator([
-                                PatternValidator(r'^[a-zA-Z0-9 ]*$',
-                                    errorText: 'Only use alphabets'),
                                 RequiredValidator(
-                                    errorText: "Expense is required")
+                                    errorText: "Item Description is required")
                               ]),
-                              controller: expenseController,
+                              controller: itemdescriptionController,
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(
                                   left: 9.w,
                                 ),
-                                labelText: 'Expense',
+                                labelText: 'Item Description',
                                 labelStyle: TextStyle(
                                   color:
-                                      const Color(0xff000000).withOpacity(0.26),
+                                  const Color(0xff000000).withOpacity(0.26),
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(4.r)),
+                                  BorderRadius.all(Radius.circular(4.r)),
                                   borderSide: BorderSide(
                                       color: const Color(0xFFDD7164),
                                       width: 1.w),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(10.r)),
+                                  BorderRadius.all(Radius.circular(10.r)),
                                   borderSide: BorderSide(
                                       width: 1.5.w, color: Colors.blue),
                                 ),
@@ -115,40 +116,39 @@ class _dialogue_boxState extends State<dialogue_box> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: 151.h, left: 16.w, right: 154.w),
+                              top: 101.h, left: 272.w, right: 18.w),
                           child: SizedBox(
-                            width: 300.w,
+                            width: 66.w,
                             height: 35.h,
                             child: TextFormField(
                               validator: MultiValidator([
                                 PatternValidator(r'^[0-9 ]*$',
                                     errorText: 'Only use numbers'),
-                                RequiredValidator(
-                                    errorText: "Amount is required")
+                                RequiredValidator(errorText: "No is required")
                               ]),
                               keyboardType: TextInputType.number,
-                              controller: amtController,
+                              controller: noController,
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(
                                   left: 9.w,
                                 ),
-                                labelText: 'Amount',
+                                labelText: 'No',
                                 labelStyle: TextStyle(
                                   color:
-                                      const Color(0xff000000).withOpacity(0.26),
+                                  const Color(0xff000000).withOpacity(0.26),
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(4.r)),
+                                  BorderRadius.all(Radius.circular(4.r)),
                                   borderSide: BorderSide(
                                       color: const Color(0xFFDD7164),
                                       width: 1.w),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(10.r)),
+                                  BorderRadius.all(Radius.circular(10.r)),
                                   borderSide: BorderSide(
                                       width: 1.5.w, color: Colors.blue),
                                 ),
@@ -158,33 +158,129 @@ class _dialogue_boxState extends State<dialogue_box> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(
-                              top: 151.h, left: 218.w, right: 19.w),
+                              top: 151.h, left: 16.w, right: 147.w),
                           child: SizedBox(
                             width: 119.w,
                             height: 35.h,
                             child: TextFormField(
-                              controller: referenceController,
+                              validator: MultiValidator([
+                                PatternValidator(r'^[0-9,.]*$',
+                                    errorText: 'Only use numbers'),
+                                RequiredValidator(
+                                    errorText: "Length is required")
+                              ]),
+                              keyboardType: TextInputType.number,
+                              controller: lengthController,
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(
                                   left: 9.w,
                                 ),
-                                labelText: 'Reference',
+                                labelText: 'Length',
                                 labelStyle: TextStyle(
                                   color:
-                                      const Color(0xff000000).withOpacity(0.26),
+                                  const Color(0xff000000).withOpacity(0.26),
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(4.r)),
+                                  BorderRadius.all(Radius.circular(4.r)),
                                   borderSide: BorderSide(
                                       color: const Color(0xFFDD7164),
                                       width: 1.w),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius:
-                                      BorderRadius.all(Radius.circular(10.r)),
+                                  BorderRadius.all(Radius.circular(10.r)),
+                                  borderSide: BorderSide(
+                                      width: 1.5.w, color: Colors.blue),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                              top: 151.h, left: 145.w, right: 19.w),
+                          child: SizedBox(
+                            width: 119.w,
+                            height: 35.h,
+                            child: TextFormField(
+                              validator: MultiValidator([
+                                PatternValidator(r'^[0-9,. ]*$',
+                                    errorText: 'Only use numbers'),
+                                RequiredValidator(
+                                    errorText: "Width is required")
+                              ]),
+                              keyboardType: TextInputType.number,
+                              controller: widthController,
+                              decoration: InputDecoration(
+                                contentPadding: EdgeInsets.only(
+                                  left: 9.w,
+                                ),
+                                labelText: 'Width',
+                                labelStyle: TextStyle(
+                                  color:
+                                  const Color(0xff000000).withOpacity(0.26),
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius:
+                                  BorderRadius.all(Radius.circular(4.r)),
+                                  borderSide: BorderSide(
+                                      color: const Color(0xFFDD7164),
+                                      width: 1.w),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius:
+                                  BorderRadius.all(Radius.circular(10.r)),
+                                  borderSide: BorderSide(
+                                      width: 1.5.w, color: Colors.blue),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            top: 151.h,
+                            left: 275.w,
+                          ),
+                          child: SizedBox(
+                            width: 66.w,
+                            height: 35.h,
+                            child: TextFormField(
+                              validator: MultiValidator([
+                                PatternValidator(r'^[0-9,. ]*$',
+                                    errorText: 'Only use numbers'),
+                                RequiredValidator(
+                                  errorText: "Meter Sqr is required",
+                                )
+                              ]),
+                              keyboardType: TextInputType.number,
+                              controller: metersqrController,
+                              decoration: InputDecoration(
+                                contentPadding: EdgeInsets.only(
+                                  left: 9.w,
+                                ),
+                                labelText: 'Meter Sqr',
+                                labelStyle: TextStyle(
+                                  color:
+                                  const Color(0xff000000).withOpacity(0.26),
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius:
+                                  BorderRadius.all(Radius.circular(4.r)),
+                                  borderSide: BorderSide(
+                                      color: const Color(0xFFDD7164),
+                                      width: 1.w),
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderRadius:
+                                  BorderRadius.all(Radius.circular(10.r)),
                                   borderSide: BorderSide(
                                       width: 1.5.w, color: Colors.blue),
                                 ),
@@ -212,7 +308,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                               ),
                               child: Padding(
                                   padding:
-                                      EdgeInsets.only(left: 251.w, top: 11.h),
+                                  EdgeInsets.only(left: 251.w, top: 11.h),
                                   child: Text(
                                     'Add',
                                     style: TextStyle(
@@ -222,7 +318,8 @@ class _dialogue_boxState extends State<dialogue_box> {
                                   )),
                             ),
                             onTap: () async {
-                              if (_addExpenseFormKey.currentState!.validate()) {
+                              if (_addstudfixprogress.currentState!
+                                  .validate()) {
                                 // If the form is valid, display a snackbar. In the real world,
                                 // you'd often call a server or save the information in a database.
                                 ScaffoldMessenger.of(context).showSnackBar(
@@ -230,21 +327,26 @@ class _dialogue_boxState extends State<dialogue_box> {
                                       content: Text('Processing Data')),
                                 );
                                 final prefs =
-                                    await SardePreferences.getInstance();
+                                await SardePreferences.getInstance();
                                 final token = await prefs.token;
-                                final response = await SardeAPI.addExpense(
+                                final response =
+                                await SardeAPI.addStudFixingworkprogress(
                                     token ?? "",
-                                    expenseController.text.trim(),
-                                    amtController.text.trim(),
-                                    referenceController.text.trim() ?? "");
+                                    itemdescriptionController.text.trim(),
+                                    noController.text.trim(),
+                                    lengthController.text.trim(),
+                                    widthController.text.trim(),
+                                    metersqrController.text.trim() ?? "");
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(content: Text('${response.result}')),
                                 );
                                 if (response.statusCode == 200) {
                                   widget.dataCallback([
-                                    expenseController.text.trim() ?? "",
-                                    amtController.text.trim() ?? "",
-                                    referenceController.text.trim() ?? ""
+                                   itemdescriptionController.text.trim() ?? "",
+                                    noController.text.trim() ?? "",
+                                    lengthController.text.trim() ?? "",
+                                    widthController.text.trim() ?? "",
+                                    metersqrController.text.trim() ?? ""
                                   ]);
                                 }
 
