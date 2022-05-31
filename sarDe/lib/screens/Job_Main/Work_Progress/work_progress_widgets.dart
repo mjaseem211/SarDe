@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Job_Main/Work_Progress/add_new_work/Add_new_work.dart';
+
+import 'Board_Fixing/Board_Fixing.dart';
+import 'Road_Marking/Road_marking.dart';
+import 'Stud_Fixing/Stud_Fixing.dart';
+
 
 // ignore: non_constant_identifier_names
 Widget Title1() {
@@ -43,7 +47,7 @@ class text_button1 extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => const add_new_work()));
+              MaterialPageRoute(builder: (context) => const Road_Marking_work_progress()));
         },
         child: Row(
           children: [
@@ -81,7 +85,7 @@ class text_button2 extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => const add_new_work()));
+              MaterialPageRoute(builder: (context) => const Stud_Fixing_workprogress()));
         },
         child: Row(
           children: [
@@ -119,7 +123,7 @@ class text_button3 extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => const add_new_work()));
+              MaterialPageRoute(builder: (context) => const Board_Fixing_work_progress()));
         },
         child: Row(
           children: [

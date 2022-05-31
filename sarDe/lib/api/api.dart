@@ -5,11 +5,17 @@ import 'package:sarde/models/expense.dart';
 import 'package:sarde/models/login.dart';
 import 'package:sarde/models/Tools.dart';
 
+import '../models/work_progress/Road_Marking.dart';
+import '../models/work_progress/Stud_Fixing.dart';
+import '../models/work_progress/board_fixing.dart';
+
 class SardeAPI {
   static const String _baseUrl = 'http://renr.in/index.php/API/';
 
-  static Future<Map<String, dynamic>> post(String url,
-      Map<String, dynamic> body,) async {
+  static Future<Map<String, dynamic>> post(
+    String url,
+    Map<String, dynamic> body,
+  ) async {
     final response = await http.post(
       Uri.parse(_baseUrl + url),
       body: body,
@@ -34,22 +40,26 @@ class SardeAPI {
     return json.decode(response.body);
   }
 
-  static Future<APIModel<LoginModel>> login(String email,
-      String password,) async {
+  static Future<APIModel<LoginModel>> login(
+    String email,
+    String password,
+  ) async {
     final response = await post('Login/check_login', {
       'email': email,
       'password': password,
     });
     return APIModel<LoginModel>.fromJson(
       response,
-          (json) => LoginModel.fromJson(json),
+      (json) => LoginModel.fromJson(json),
     );
   }
 
-  static Future<APIModel<ExpenseModel>> addExpense(String accessToken,
-      String expense,
-      String amt,
-      String reference,) async {
+  static Future<APIModel<ExpenseModel>> addExpense(
+    String accessToken,
+    String expense,
+    String amt,
+    String reference,
+  ) async {
     final response = await post('Expense/add_expense', {
       'access_token': accessToken,
       'expense': expense,
@@ -58,14 +68,16 @@ class SardeAPI {
     });
     return APIModel<ExpenseModel>.fromJson(
       response,
-          (json) => ExpenseModel.fromJson(json),
+      (json) => ExpenseModel.fromJson(json),
     );
   }
 
-  static Future<APIModel<ToolsModel>> addTools(String accessToken,
-      String item,
-      String quantity,
-      String condition,) async {
+  static Future<APIModel<ToolsModel>> addTools(
+    String accessToken,
+    String item,
+    String quantity,
+    String condition,
+  ) async {
     final response = await post('Tools/add_tools', {
       'access_token': accessToken,
       'item': item,
@@ -74,10 +86,77 @@ class SardeAPI {
     });
     return APIModel<ToolsModel>.fromJson(
       response,
-          (json) => ToolsModel.fromJson(json),
+      (json) => ToolsModel.fromJson(json),
+    );
+  }
+
+  static Future<APIModel<AddBoardFixingWorkProgressModel>>
+      addBoardFixingworkprogress(
+    String accessToken,
+    String itemdescription,
+    String no,
+    String length,
+    String width,
+    String meterSqr,
+  ) async {
+    final response = await post('Work_progress/Board_fixing/add_item', {
+      'access_token': accessToken,
+      'item_description': itemdescription,
+      'no': no,
+      'length': length,
+      'width': width,
+      'meter_sqr': meterSqr
+    });
+    return APIModel<AddBoardFixingWorkProgressModel>.fromJson(
+      response,
+      (json) => AddBoardFixingWorkProgressModel.fromJson(json),
+    );
+  }
+
+  static Future<APIModel<AddRoadMarkingWorkProgressModel>>
+      addRoadMarkingworkprogress(
+    String accessToken,
+    String itemdescription,
+    String no,
+    String length,
+    String width,
+    String meterSqr,
+  ) async {
+    final response = await post('Work_progress/Road_marking/add_item', {
+      'access_token': accessToken,
+      'item_description': itemdescription,
+      'no': no,
+      'length': length,
+      'width': width,
+      'meter_sqr': meterSqr
+    });
+    return APIModel<AddRoadMarkingWorkProgressModel>.fromJson(
+      response,
+      (json) => AddRoadMarkingWorkProgressModel.fromJson(json),
+    );
+  }
+
+
+  static Future<APIModel<AddStudFixingWorkProgressModel>>
+  addStudFixingworkprogress(
+      String accessToken,
+      String itemdescription,
+      String no,
+      String length,
+      String width,
+      String meterSqr,
+      ) async {
+    final response = await post('Work_progress/Stud_fixing/add_item', {
+      'access_token': accessToken,
+      'item_description': itemdescription,
+      'no': no,
+      'length': length,
+      'width': width,
+      'meter_sqr': meterSqr
+    });
+    return APIModel<AddStudFixingWorkProgressModel>.fromJson(
+      response,
+          (json) => AddStudFixingWorkProgressModel.fromJson(json),
     );
   }
 }
-
-
-

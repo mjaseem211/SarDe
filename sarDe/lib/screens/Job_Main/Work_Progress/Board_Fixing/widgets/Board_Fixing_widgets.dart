@@ -1,7 +1,8 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// ignore: non_constant_identifier_names
 Widget Title1() {
   return Padding(
     padding: EdgeInsets.only(left: 33.w, top: 109.h, right: 110.w),
@@ -15,7 +16,6 @@ Widget Title1() {
   );
 }
 
-// ignore: non_constant_identifier_names
 Widget Heading() {
   return Padding(
     padding: EdgeInsets.only(right: 48.w, left: 31.w),
@@ -41,8 +41,7 @@ Widget Heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        Expanded(
-          flex: 4,
+        Expanded(flex: 4,
           child: Text(
             "Length",
             style: TextStyle(
@@ -86,116 +85,58 @@ Widget line() {
   ]);
 }
 
-// ignore: non_constant_identifier_names
-Widget Data() {
+Widget Data(String itemdescription, String no, String length, String width,
+    String metersqr) {
   return Padding(
     padding: EdgeInsets.only(right: 48.w, left: 31.w),
     child: Row(
       children: [
         Expanded(
-          flex: 7,
+          flex: 5,
           child: Text(
-            "001-003 RHS",
+            "${itemdescription}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
+                color: const Color(0xffDD7164)),
           ),
         ),
         Expanded(
           flex: 2,
           child: Text(
-            "4",
+            "${no}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
+                color: const Color(0xffDD7164)),
           ),
         ),
         Expanded(
           flex: 4,
           child: Text(
-            "121.8",
+            "${length}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
+                color: const Color(0xffDD7164)),
           ),
         ),
         Expanded(
           flex: 4,
           child: Text(
-            "1",
+            "${width}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
+                color: const Color(0xffDD7164)),
           ),
         ),
         Text(
-          "128.4",
+          "${metersqr}",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,
-              color: const Color(0xFFDD7164)),
-        ),
-      ],
-    ),
-  );
-}
-
-// ignore: non_constant_identifier_names
-Widget Data1() {
-  return Padding(
-    padding: EdgeInsets.only(right: 48.w, left: 31.w),
-    child: Row(
-      children: [
-        Expanded(
-          flex: 13,
-          child: Text(
-            "004-006 LHS",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        ),
-        Expanded(
-          flex: 4,
-          child: Text(
-            "2",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        ),
-        Expanded(
-          flex: 7,
-          child: Text(
-            "38.8",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        ),
-        Expanded(
-          flex: 8,
-          child: Text(
-            "1",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        ),
-        Text(
-          "98.4",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFFDD7164)),
+              color: const Color(0xffDD7164)),
         ),
       ],
     ),

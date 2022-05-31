@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Job_Main/Expense/dialogue_box.dart';
@@ -5,8 +7,9 @@ import 'package:sarde/screens/Job_Main/JobMain.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 import 'package:sarde/screens/Job_Main/Expense/Add_new_expense_widgets.dart';
 
-// ignore: camel_case_types
 class add_new_expense extends StatefulWidget {
+  const add_new_expense({Key? key}) : super(key: key);
+
 
   @override
   State<add_new_expense> createState() => _add_new_expenseState();
