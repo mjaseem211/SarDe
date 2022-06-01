@@ -1,20 +1,23 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Job_Main/Inventory/Add_new_inventory/dialogue_box.dart';
+import 'package:sarde/screens/Job_Main/Inventory/Board_Fixing/Board_Fixing_inventory_dialoguebox.dart';
 import 'package:sarde/screens/Job_Main/JobMain.dart';
-import 'package:sarde/screens/Job_Main/Inventory/Add_new_inventory/Add_new_inventory_widgets.dart';
+import 'package:sarde/screens/Job_Main/Inventory/Board_Fixing/Board_Fixing_inventory_widgets.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 
-// ignore: camel_case_types
-class add_new_inventory extends StatefulWidget {
-  const add_new_inventory({Key? key}) : super(key: key);
+class Board_Fixing_inventory extends StatefulWidget {
+  const Board_Fixing_inventory({Key? key}) : super(key: key);
 
   @override
-  State<add_new_inventory> createState() => _add_new_inventoryState();
+  State<Board_Fixing_inventory> createState() => _Board_Fixing_inventoryState();
 }
 
-// ignore: camel_case_types
-class _add_new_inventoryState extends State<add_new_inventory> {
+class _Board_Fixing_inventoryState extends State<Board_Fixing_inventory> {
+  @override
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,7 +38,7 @@ class _add_new_inventoryState extends State<add_new_inventory> {
             data(),
           ]),
         ),
-        const dialogue_box(),
+        const Board_Fixing_inventory_dialoguebox(),
         SizedBox(
           height: 364.3.h,
         ),
@@ -52,3 +55,4 @@ class _add_new_inventoryState extends State<add_new_inventory> {
     );
   }
 }
+fffffff
