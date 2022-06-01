@@ -55,3 +55,4 @@ class _Board_Fixing_inventoryState extends State<Board_Fixing_inventory> {
     );
   }
 }
+fffffff
