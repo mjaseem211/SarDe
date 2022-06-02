@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:sarde/models/api_model.dart';
-import 'package:sarde/models/expense.dart';
+import 'package:sarde/models/Expense/expense.dart';
 import 'package:sarde/models/login.dart';
 import 'package:sarde/models/Tools.dart';
 
@@ -178,13 +178,11 @@ class SardeAPI {
     );
   }
 
-
-
   static Future<APIModel<BoardFixingInventoryModel>> addBoardFixinginventory(
-      String accessToken,
-      String item,
-      String quantity,
-      ) async {
+    String accessToken,
+    String item,
+    String quantity,
+  ) async {
     final response = await post('Inventory/Board_fixing/add_item', {
       'access_token': accessToken,
       'item': item,
@@ -192,15 +190,15 @@ class SardeAPI {
     });
     return APIModel<BoardFixingInventoryModel>.fromJson(
       response,
-          (json) => BoardFixingInventoryModel.fromJson(json),
+      (json) => BoardFixingInventoryModel.fromJson(json),
     );
   }
 
   static Future<APIModel<StudFixingInventoryModel>> addStudFixinginventory(
-      String accessToken,
-      String item,
-      String quantity,
-      ) async {
+    String accessToken,
+    String item,
+    String quantity,
+  ) async {
     final response = await post('Inventory/Stud_fixing/add_item', {
       'access_token': accessToken,
       'item': item,
@@ -208,7 +206,7 @@ class SardeAPI {
     });
     return APIModel<StudFixingInventoryModel>.fromJson(
       response,
-          (json) => StudFixingInventoryModel.fromJson(json),
+      (json) => StudFixingInventoryModel.fromJson(json),
     );
   }
 }
