@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,8 +15,8 @@ class Board_Fixing_inventory extends StatefulWidget {
 }
 
 class _Board_Fixing_inventoryState extends State<Board_Fixing_inventory> {
-  @override
 
+  final List<Widget> Board_Fixing_inventoryData = [];
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +34,21 @@ class _Board_Fixing_inventoryState extends State<Board_Fixing_inventory> {
         ),
         line(),
         Expanded(
-          child: ListView(children: [
-            data(),
-          ]),
+          child:ListView.builder(
+              itemCount: Board_Fixing_inventoryData.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Board_Fixing_inventoryData[index];
+              }),
         ),
-        const Board_Fixing_inventory_dialoguebox(),
+        Board_Fixing_inventory_dialoguebox(
+
+          dataCallback: (data) {
+            Widget BoardFixingInventory =
+            Data(data[0], data[1]);
+            Board_Fixing_inventoryData.add(BoardFixingInventory);
+            setState(() {});
+          },
+        ),
         SizedBox(
           height: 364.3.h,
         ),
@@ -55,4 +65,3 @@ class _Board_Fixing_inventoryState extends State<Board_Fixing_inventory> {
     );
   }
 }
-fffffff

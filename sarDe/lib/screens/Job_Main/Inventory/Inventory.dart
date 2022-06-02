@@ -62,7 +62,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Stud_Fixing_inventory()));
+                      builder: (context) => const Stud_Fixing_Inventory()));
                 },
                 text: "Stud Fixing",
                 left: 47.w,
@@ -70,7 +70,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Stud_Fixing_inventory()));
+                      builder: (context) => const Stud_Fixing_Inventory()));
                 },
                 text: "Stud fixing on the sides from kuttichira to\nmaradu",
                 font_size: 14.sp,
@@ -84,7 +84,7 @@ class Inventory extends StatelessWidget {
               text_button(
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Stud_Fixing_inventory()));
+                      builder: (context) => const Stud_Fixing_Inventory()));
                 },
                 text: "18-09-22",
                 left: 249.w,

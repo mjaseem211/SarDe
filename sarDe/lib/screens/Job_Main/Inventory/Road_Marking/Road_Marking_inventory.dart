@@ -15,6 +15,7 @@ class Road_Marking_inventory extends StatefulWidget {
 }
 
 class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
+  final List<Widget> RoadMarkingInventoryData = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,11 +32,21 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
         ),
         line(),
         Expanded(
-          child: ListView(children: [
-            data(),
-          ]),
+          child:ListView.builder(
+              itemCount: RoadMarkingInventoryData.length,
+              itemBuilder: (BuildContext context, int index) {
+                return RoadMarkingInventoryData[index];
+              }),
         ),
-        const Road_Marking_inventory_dialoguebox(),
+         Road_Marking_inventory_dialoguebox(
+
+          dataCallback: (data) {
+            Widget roadmarkinginventory =
+            Data(data[0], data[1]);
+            RoadMarkingInventoryData.add(roadmarkinginventory);
+            setState(() {});
+          },
+        ),
         SizedBox(
           height: 364.3.h,
         ),

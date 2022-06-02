@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -56,15 +58,14 @@ Widget line() {
     ]),
   );
 }
-
-Widget data() {
+Widget Data(String item, String quantity) {
   return Padding(
-    padding: EdgeInsets.only(right: 56.w, left: 33.w),
+    padding: EdgeInsets.only(right: 57.w, left: 33.w),
     child: Row(
       children: [
         Expanded(
           child: Text(
-            "Rst Paint White",
+            "${item}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -72,7 +73,7 @@ Widget data() {
           ),
         ),
         Text(
-          "10 Bag",
+          "${quantity}",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,
@@ -82,3 +83,4 @@ Widget data() {
     ),
   );
 }
+
