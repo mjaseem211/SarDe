@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,14 +7,18 @@ import 'package:sarde/screens/Job_Main/JobMain.dart';
 import 'package:sarde/screens/Job_Main/Inventory/Stud_Fixing/Stud_Fixing_Inventory_widgets.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 
-class Stud_Fixing_inventory extends StatefulWidget {
-  const Stud_Fixing_inventory({Key? key}) : super(key: key);
+import 'Stud_Fixing_Inventory_widgets.dart';
+
+class Stud_Fixing_Inventory extends StatefulWidget {
+  const Stud_Fixing_Inventory({Key? key}) : super(key: key);
 
   @override
-  State<Stud_Fixing_inventory> createState() => _Stud_Fixing_inventoryState();
+  State<Stud_Fixing_Inventory> createState() => _Stud_Fixing_InventoryState();
 }
 
-class _Stud_Fixing_inventoryState extends State<Stud_Fixing_inventory> {
+class _Stud_Fixing_InventoryState extends State<Stud_Fixing_Inventory> {
+  final List<Widget> StudFixinginventoryData = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,11 +35,19 @@ class _Stud_Fixing_inventoryState extends State<Stud_Fixing_inventory> {
         ),
         line(),
         Expanded(
-          child: ListView(children: [
-            data(),
-          ]),
+          child: ListView.builder(
+              itemCount: StudFixinginventoryData.length,
+              itemBuilder: (BuildContext context, int index) {
+                return StudFixinginventoryData[index];
+              }),
         ),
-        const Stud_Fixing_inventory_dialoguebox(),
+        Stud_Fixing_inventory_dialoguebox(
+          dataCallback: (data) {
+            Widget studfixinginventory = Data(data[0], data[1]);
+            StudFixinginventoryData.add(studfixinginventory);
+            setState(() {});
+          },
+        ),
         SizedBox(
           height: 364.3.h,
         ),

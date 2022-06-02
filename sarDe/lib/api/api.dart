@@ -5,6 +5,9 @@ import 'package:sarde/models/expense.dart';
 import 'package:sarde/models/login.dart';
 import 'package:sarde/models/Tools.dart';
 
+import '../models/Inventory/Board_Fixing_inventory.dart';
+import '../models/Inventory/Road_Marking_inventory.dart';
+import '../models/Inventory/Stud_Fixing_inventory.dart';
 import '../models/work_progress/Road_Marking.dart';
 import '../models/work_progress/Stud_Fixing.dart';
 import '../models/work_progress/board_fixing.dart';
@@ -136,16 +139,15 @@ class SardeAPI {
     );
   }
 
-
   static Future<APIModel<AddStudFixingWorkProgressModel>>
-  addStudFixingworkprogress(
-      String accessToken,
-      String itemdescription,
-      String no,
-      String length,
-      String width,
-      String meterSqr,
-      ) async {
+      addStudFixingworkprogress(
+    String accessToken,
+    String itemdescription,
+    String no,
+    String length,
+    String width,
+    String meterSqr,
+  ) async {
     final response = await post('Work_progress/Stud_fixing/add_item', {
       'access_token': accessToken,
       'item_description': itemdescription,
@@ -156,7 +158,57 @@ class SardeAPI {
     });
     return APIModel<AddStudFixingWorkProgressModel>.fromJson(
       response,
-          (json) => AddStudFixingWorkProgressModel.fromJson(json),
+      (json) => AddStudFixingWorkProgressModel.fromJson(json),
+    );
+  }
+
+  static Future<APIModel<RoadMarkingInventoryModel>> addRoadmarkinginventory(
+    String accessToken,
+    String item,
+    String quantity,
+  ) async {
+    final response = await post('Inventory/Road_marking/add_item', {
+      'access_token': accessToken,
+      'item': item,
+      'quantity': quantity,
+    });
+    return APIModel<RoadMarkingInventoryModel>.fromJson(
+      response,
+      (json) => RoadMarkingInventoryModel.fromJson(json),
+    );
+  }
+
+
+
+  static Future<APIModel<BoardFixingInventoryModel>> addBoardFixinginventory(
+      String accessToken,
+      String item,
+      String quantity,
+      ) async {
+    final response = await post('Inventory/Board_fixing/add_item', {
+      'access_token': accessToken,
+      'item': item,
+      'quantity': quantity,
+    });
+    return APIModel<BoardFixingInventoryModel>.fromJson(
+      response,
+          (json) => BoardFixingInventoryModel.fromJson(json),
+    );
+  }
+
+  static Future<APIModel<StudFixingInventoryModel>> addStudFixinginventory(
+      String accessToken,
+      String item,
+      String quantity,
+      ) async {
+    final response = await post('Inventory/Stud_fixing/add_item', {
+      'access_token': accessToken,
+      'item': item,
+      'quantity': quantity,
+    });
+    return APIModel<StudFixingInventoryModel>.fromJson(
+      response,
+          (json) => StudFixingInventoryModel.fromJson(json),
     );
   }
 }
