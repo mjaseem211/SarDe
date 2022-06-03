@@ -254,15 +254,15 @@ class _dialogue_boxState extends State<dialogue_box> {
                                     token ?? "",
                                     itemController.text.trim(),
                                     quantityController.text.trim(),
-                                    conditionController.text.trim() ?? "");
+                                    conditionController.text.trim());
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(content: Text('${response.result}')),
                                 );
                                 if (response.statusCode == 200) {
                                   widget.dataCallback([
-                                    itemController.text.trim() ?? "",
-                                    quantityController.text.trim() ?? "",
-                                    conditionController.text.trim() ?? ""
+                                    itemController.text.trim() ,
+                                    quantityController.text.trim() ,
+                                    conditionController.text.trim()
                                   ]);
                                 }
 

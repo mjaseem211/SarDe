@@ -335,17 +335,17 @@ class _Road_marking_dialogueboxState extends State<Road_marking_dialoguebox> {
                                         noController.text.trim(),
                                         lengthController.text.trim(),
                                         widthController.text.trim(),
-                                        metersqrController.text.trim() ?? "");
+                                        metersqrController.text.trim() );
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(content: Text('${response.result}')),
                                 );
                                 if (response.statusCode == 200) {
                                   widget.dataCallback([
-                                    itemdescriptionController.text.trim() ?? "",
-                                    noController.text.trim() ?? "",
-                                    lengthController.text.trim() ?? "",
-                                    widthController.text.trim() ?? "",
-                                    metersqrController.text.trim() ?? ""
+                                    itemdescriptionController.text.trim() ,
+                                    noController.text.trim() ,
+                                    lengthController.text.trim() ,
+                                    widthController.text.trim() ,
+                                    metersqrController.text.trim()
                                   ]);
                                 }
 
