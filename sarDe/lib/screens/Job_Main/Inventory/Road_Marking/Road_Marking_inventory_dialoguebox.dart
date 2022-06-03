@@ -206,16 +206,15 @@ class _Road_Marking_inventory_dialogueboxState
                                         await SardeAPI.addRoadmarkinginventory(
                                             token ?? "",
                                             itemController.text.trim(),
-                                            quantityController.text.trim() ??
-                                                "");
+                                            quantityController.text.trim());
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
                                           content: Text('${response.result}')),
                                     );
                                     if (response.statusCode == 200) {
                                       widget.dataCallback([
-                                        itemController.text.trim() ?? "",
-                                        quantityController.text.trim() ?? "",
+                                        itemController.text.trim() ,
+                                        quantityController.text.trim() ,
                                       ]);
                                     }
                                     Navigator.pop(context);
