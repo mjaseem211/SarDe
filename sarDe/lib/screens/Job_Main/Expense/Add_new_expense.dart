@@ -7,6 +7,9 @@ import 'package:sarde/screens/Job_Main/JobMain.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 import 'package:sarde/screens/Job_Main/Expense/Add_new_expense_widgets.dart';
 
+import '../../../api/getAllExpenses.dart';
+import '../../../services/prefs.dart';
+
 class add_new_expense extends StatefulWidget {
   const add_new_expense({Key? key}) : super(key: key);
 
@@ -17,7 +20,30 @@ class add_new_expense extends StatefulWidget {
 
 class _add_new_expenseState extends State<add_new_expense> {
 
-  final List<Widget> expenseData = [];
+  final expenseApi = new getAllExpenses();
+
+  @override
+  void initState () {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_){
+      _getAllExpenses(0,10);
+    });
+
+  }
+
+  _getAllExpenses(pageOffset,pageCount) async {
+      final prefs = await SardePreferences.getInstance();
+      var accessToken = await prefs.token;
+      var expenseData = await expenseApi.getExpenses(accessToken: accessToken, pageOffset: pageOffset, pageCount: pageCount);
+      expenseData!.result!.forEach((element) {
+        Widget expense = data1(element.expense??"",element.amount??"",element.reference??"");
+        expenseDataList.add(expense);
+      });
+      setState(() {});
+  }
+
+
+  final List<Widget> expenseDataList = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,20 +61,18 @@ class _add_new_expenseState extends State<add_new_expense> {
         line(),
         Expanded(
           child: ListView.builder(
-              itemCount: expenseData.length,
+              itemCount: expenseDataList.length,
               itemBuilder: (BuildContext context,int index){
-                return expenseData[index];
+                return expenseDataList[index];
               }
           ),
         ),
         dialogue_box(dataCallback: (data){
           Widget expense = data1(data[0],data[1],data[2]);
-          expenseData.add(expense);
+          expenseDataList.add(expense);
           setState(() {});
         },),
-        SizedBox(
-          height: 365.61.h,
-        ),
+
         Bottom_back_button(
           onTap: () {
             Navigator.of(context).pushReplacement(

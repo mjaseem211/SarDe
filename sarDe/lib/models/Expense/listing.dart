@@ -1,29 +1,29 @@
 // To parse this JSON data, do
 //
-//     final listAllExpenseModel = listAllExpenseModelFromJson(jsonString);
+//     final expenseModels = expenseModelsFromJson(jsonString);
 
 import 'dart:convert';
 
-ListAllExpenseModel listAllExpenseModelFromJson(String str) => ListAllExpenseModel.fromJson(json.decode(str));
+ExpenseModels expenseModelsFromJson(String str) => ExpenseModels.fromJson(json.decode(str));
 
-String listAllExpenseModelToJson(ListAllExpenseModel data) => json.encode(data.toJson());
+String expenseModelsToJson(ExpenseModels data) => json.encode(data.toJson());
 
-class ListAllExpenseModel {
-  ListAllExpenseModel({
-    required this.result,
+class ExpenseModels {
+  ExpenseModels({
+    this.result,
     this.status,
   });
 
-  List<Result> result;
+  List<Result>? result;
   String? status;
 
-  factory ListAllExpenseModel.fromJson(Map<String, dynamic> json) => ListAllExpenseModel(
+  factory ExpenseModels.fromJson(Map<String, dynamic> json) => ExpenseModels(
     result: List<Result>.from(json["result"].map((x) => Result.fromJson(x))),
     status: json["status"],
   );
 
   Map<String, dynamic> toJson() => {
-    "result": List<dynamic>.from(result.map((x) => x.toJson())),
+    "result": List<dynamic>.from(result!.map((x) => x.toJson())),
     "status": status,
   };
 }
@@ -44,6 +44,7 @@ class Result {
   String? amount;
   String? reference;
   String? createdDate;
+
 
   factory Result.fromJson(Map<String, dynamic> json) => Result(
     id: json["id"],
