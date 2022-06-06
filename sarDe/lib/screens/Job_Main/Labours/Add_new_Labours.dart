@@ -32,11 +32,10 @@ class _add_new_laboursState extends State<add_new_labours> {
         line(),
         Expanded(
             child: ListView(shrinkWrap: true, children: [
-          Data(),
+          data(),
           SizedBox(
             height: 15.h,
           ),
-          Data1(),
         ])),
         const dialogue_box(),
         SizedBox(
