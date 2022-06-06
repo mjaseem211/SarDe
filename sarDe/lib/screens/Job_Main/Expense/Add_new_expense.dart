@@ -13,41 +13,40 @@ import '../../../services/prefs.dart';
 class add_new_expense extends StatefulWidget {
   const add_new_expense({Key? key}) : super(key: key);
 
-
   @override
   State<add_new_expense> createState() => _add_new_expenseState();
 }
 
 class _add_new_expenseState extends State<add_new_expense> {
-
-  final expenseApi = new getAllExpenses();
+  final expenseApi = GetAllExpenses();
 
   @override
-  void initState () {
+  void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_){
-      _getAllExpenses(0,10);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _getAllExpenses(0, 25);
     });
-
   }
 
-  _getAllExpenses(pageOffset,pageCount) async {
-      final prefs = await SardePreferences.getInstance();
-      var accessToken = await prefs.token;
-      var expenseData = await expenseApi.getExpenses(accessToken: accessToken, pageOffset: pageOffset, pageCount: pageCount);
-      expenseData!.result!.forEach((element) {
-        Widget expense = data1(element.expense??"",element.amount??"",element.reference??"");
-        expenseDataList.add(expense);
-      });
-      setState(() {});
+  _getAllExpenses(pageOffset, pageCount) async {
+    final prefs = await SardePreferences.getInstance();
+    var accessToken = await prefs.token;
+    var expenseData = await expenseApi.getExpenses(
+        accessToken: accessToken, pageOffset: pageOffset, pageCount: pageCount);
+    for (var element in expenseData!.result!) {
+      Widget expense = data1(
+          element.expense ?? "", element.amount ?? "", element.reference ?? "");
+      expenseDataList.add(expense);
+    }
+    setState(() {});
   }
-
 
   final List<Widget> expenseDataList = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       backgroundColor: Colors.white,
       body: Column(children: [
         title(),
@@ -59,20 +58,14 @@ class _add_new_expenseState extends State<add_new_expense> {
           height: 2.h,
         ),
         line(),
-        Expanded(
-          child: ListView.builder(
-              itemCount: expenseDataList.length,
-              itemBuilder: (BuildContext context,int index){
-                return expenseDataList[index];
-              }
-          ),
+        list(),
+        dialogue_box(
+          dataCallback: (data) {
+            Widget expense = data1(data[0], data[1], data[2]);
+            expenseDataList.add(expense);
+            setState(() {});
+          },
         ),
-        dialogue_box(dataCallback: (data){
-          Widget expense = data1(data[0],data[1],data[2]);
-          expenseDataList.add(expense);
-          setState(() {});
-        },),
-
         Bottom_back_button(
           onTap: () {
             Navigator.of(context).pushReplacement(
@@ -83,6 +76,16 @@ class _add_new_expenseState extends State<add_new_expense> {
           height: 72.h,
         ),
       ]),
+    );
+  }
+
+  Widget list() {
+    return Expanded(
+      child: ListView.builder(
+          itemCount: expenseDataList.length,
+          itemBuilder: (BuildContext context, int index) {
+            return expenseDataList[index];
+          }),
     );
   }
 }

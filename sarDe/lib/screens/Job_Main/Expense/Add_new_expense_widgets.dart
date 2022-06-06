@@ -77,7 +77,7 @@ Widget data1(String expense, String amount, String reference) {
             "${expense}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
+                fontSize: 14.sp,
                 color: const Color(0xFFDD7164)),
           ),
         ),
@@ -86,7 +86,7 @@ Widget data1(String expense, String amount, String reference) {
             "${amount}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
+                fontSize: 14.sp,
                 color: const Color(0xFFDD7164)),
           ),
         ),
@@ -94,7 +94,7 @@ Widget data1(String expense, String amount, String reference) {
           "${reference}",
           style: TextStyle(
               fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
+              fontSize: 14.sp,
               color: const Color(0xFFDD7164)),
         ),
       ],
