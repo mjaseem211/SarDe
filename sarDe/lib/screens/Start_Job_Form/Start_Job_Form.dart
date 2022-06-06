@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, camel_case_types
 
 import 'package:flutter/material.dart';
 import 'package:sarde/screens/Start_Job_Form/widgets/Start_Job_widgets.dart';
@@ -6,10 +6,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Super_viser_Dashboard/supervisor_dashboard.dart';
 import 'package:sarde/widgets/Top_Back_button.dart';
 
-// ignore: camel_case_types
-class Start_Job_Form extends StatelessWidget {
+
+class Start_Job_Form extends StatefulWidget {
   const Start_Job_Form({Key? key}) : super(key: key);
 
+  @override
+  State<Start_Job_Form> createState() => _Start_Job_FormState();
+}
+
+class _Start_Job_FormState extends State<Start_Job_Form> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

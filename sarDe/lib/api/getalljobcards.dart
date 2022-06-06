@@ -4,16 +4,16 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-import '../models/Expense/listing.dart';
+import '../models/job_card/job_card.dart';
 
-class GetAllExpenses {
+class GetAllJobCards {
   final Dio _dio = Dio();
 
   final _baseUrl = 'http://renr.in/index.php/API/';
 
-  Future<ExpenseModels?> getExpenses(
+  Future<JobCardModel?> getJobs(
       {required accessToken, required pageOffset, required pageCount}) async {
-    ExpenseModels? expenseResponse;
+    JobCardModel? jobResponse;
     var formData = FormData.fromMap({
       "access_token": accessToken,
       "page_offset": pageOffset,
@@ -21,10 +21,10 @@ class GetAllExpenses {
     });
 
     try {
-      Response response = await _dio
-          .post(_baseUrl + 'Expense/list_all_expenses', data: formData);
+      Response response =
+          await _dio.post(_baseUrl + 'Jobs/list_jobs', data: formData);
 
-      expenseResponse = ExpenseModels.fromJson(response.data);
+      jobResponse = JobCardModel.fromJson(response.data);
     } on DioError catch (e) {
       Fluttertoast.showToast(
           msg: e.message,
@@ -43,6 +43,6 @@ class GetAllExpenses {
 
       }
     }
-    return expenseResponse;
+    return jobResponse;
   }
 }

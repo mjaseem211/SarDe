@@ -209,4 +209,21 @@ class SardeAPI {
       (json) => StudFixingInventoryModel.fromJson(json),
     );
   }
+
+
+  static Future<APIModel<StudFixingInventoryModel>> addLabours(
+      String accessToken,
+      String item,
+      String quantity,
+      ) async {
+    final response = await post('Inventory/Stud_fixing/add_item', {
+      'access_token': accessToken,
+      'item': item,
+      'quantity': quantity,
+    });
+    return APIModel<StudFixingInventoryModel>.fromJson(
+      response,
+          (json) => StudFixingInventoryModel.fromJson(json),
+    );
+  }
 }

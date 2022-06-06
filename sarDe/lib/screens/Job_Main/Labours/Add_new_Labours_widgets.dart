@@ -75,97 +75,47 @@ Widget line() {
     ]),
   );
 }
-
-// ignore: non_constant_identifier_names
-Widget Data() {
+Widget data() {
   return Padding(
-    padding: EdgeInsets.only(right: 68.w, left: 33.w),
+    padding: EdgeInsets.only(right: 54.w, left: 33.w),
     child: Row(
       children: [
         Expanded(
-          flex: 6,
+          flex: 3,
           child: Text(
-            "Rahul",
+            "Name",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
+                color: const Color(0xFF2B3070)),
           ),
         ),
         Expanded(
-          flex: 6,
+          flex: 3,
           child: Text(
-            "Rope man",
+            "Trade",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
+                color: const Color(0xFF2B3070)),
           ),
         ),
         Expanded(
-          flex: 7,
+          flex: 3,
           child: Text(
-            "Own",
+            "Type",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
+                color: const Color(0xFF2B3070)),
           ),
         ),
         Text(
-          "3",
+          "Hours",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,
-              color: const Color(0xFFDD7164)),
-        ),
-      ],
-    ),
-  );
-}
-
-// ignore: non_constant_identifier_names
-Widget Data1() {
-  return Padding(
-    padding: EdgeInsets.only(right: 68.w, left: 33.w),
-    child: Row(
-      children: [
-        Expanded(
-          flex: 10,
-          child: Text(
-            "Vinod",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        ),
-        Expanded(
-          flex: 10,
-          child: Text(
-            "Painter",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        ),
-        Expanded(
-          flex: 11,
-          child: Text(
-            "Sub",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFFDD7164)),
-          ),
-        ),
-        Text(
-          "7",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFFDD7164)),
+              color: const Color(0xFF2B3070)),
         ),
       ],
     ),
