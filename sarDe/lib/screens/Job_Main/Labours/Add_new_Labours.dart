@@ -15,6 +15,8 @@ class add_new_labours extends StatefulWidget {
 
 // ignore: camel_case_types
 class _add_new_laboursState extends State<add_new_labours> {
+  final List<Widget> laboursData = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,13 +33,17 @@ class _add_new_laboursState extends State<add_new_labours> {
         ),
         line(),
         Expanded(
-            child: ListView(shrinkWrap: true, children: [
-          data(),
-          SizedBox(
-            height: 15.h,
-          ),
-        ])),
-        const dialogue_box(),
+          child: ListView.builder(
+              itemCount: laboursData.length,
+              itemBuilder: (BuildContext context, int index) {
+                return laboursData[index];
+              }),
+        ),
+        dialogue_box(dataCallback: (data) {
+          Widget item = data1( data[0], data[1], data[2],data[3]);
+          laboursData.add(item);
+          setState(() {});
+        },),
         SizedBox(
           height: 365.61.h,
         ),

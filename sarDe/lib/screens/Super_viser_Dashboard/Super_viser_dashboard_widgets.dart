@@ -76,7 +76,10 @@ class SupervisorSlider extends StatelessWidget {
   }
 }
 
-Widget jobContainer(String id, String jobTitle,) {
+Widget jobContainer(
+  String id,
+  String jobTitle,
+) {
   return Builder(builder: (context) {
     return GestureDetector(
       child: Stack(alignment: Alignment.center, children: <Widget>[
@@ -84,6 +87,7 @@ Widget jobContainer(String id, String jobTitle,) {
           padding: EdgeInsets.only(left: 43.w),
           child: Row(children: [
             Container(
+                margin: EdgeInsets.only(top: 20.h),
                 width: 306.w,
                 height: 124.h,
                 decoration: BoxDecoration(
@@ -96,6 +100,7 @@ Widget jobContainer(String id, String jobTitle,) {
           padding: EdgeInsets.only(left: 43.w),
           child: Row(children: [
             AnimatedContainer(
+                margin: EdgeInsets.only(top: 20.h),
                 duration: const Duration(seconds: 1),
                 curve: Curves.fastOutSlowIn,
                 alignment: Alignment.bottomLeft,
@@ -109,7 +114,7 @@ Widget jobContainer(String id, String jobTitle,) {
         ),
         Row(children: [
           Padding(
-            padding: EdgeInsets.only(top: 46.5.h, right: 225.w, left: 62.w),
+            padding: EdgeInsets.only(top: 66.5.h, right: 225.w, left: 62.w),
             child: Text(
               '${id}',
               style: TextStyle(
@@ -121,7 +126,7 @@ Widget jobContainer(String id, String jobTitle,) {
         ]),
         Row(children: [
           Padding(
-            padding: EdgeInsets.only(top: 92.h, right: 118.w, left: 62.w),
+            padding: EdgeInsets.only(top: 112.h, right: 118.w, left: 62.w),
             child: Text(
               "${jobTitle}",
               style: TextStyle(
@@ -133,6 +138,7 @@ Widget jobContainer(String id, String jobTitle,) {
         ]),
         Padding(
           padding: EdgeInsets.only(
+            top: 20.h,
             left: 265.w,
             bottom: 99.h,
           ),
