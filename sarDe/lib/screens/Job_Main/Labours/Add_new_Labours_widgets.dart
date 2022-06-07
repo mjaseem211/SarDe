@@ -75,7 +75,8 @@ Widget line() {
     ]),
   );
 }
-Widget data() {
+
+Widget data1(String name, String trade, String type, String hours) {
   return Padding(
     padding: EdgeInsets.only(right: 54.w, left: 33.w),
     child: Row(
@@ -83,39 +84,39 @@ Widget data() {
         Expanded(
           flex: 3,
           child: Text(
-            "Name",
+            "${name}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
+                color: const Color(0xFFDD7164)),
           ),
         ),
         Expanded(
           flex: 3,
           child: Text(
-            "Trade",
+            "${trade}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
+                color: const Color(0xFFDD7164)),
           ),
         ),
         Expanded(
           flex: 3,
           child: Text(
-            "Type",
+            "${type}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
-                color: const Color(0xFF2B3070)),
+                color: const Color(0xFFDD7164)),
           ),
         ),
         Text(
-          "Hours",
+          "${hours}",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,
-              color: const Color(0xFF2B3070)),
+              color: const Color(0xFFDD7164)),
         ),
       ],
     ),

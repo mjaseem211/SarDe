@@ -29,8 +29,10 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
     var jobCardData = await jobsApi.getJobs(
         accessToken: accessToken, pageOffset: pageOffset, pageCount: pageCount);
     for (var element in jobCardData!.result!) {
-      Widget jobCard = jobContainer(element.id ?? "", element.jobTitle ?? "",
-          );
+      Widget jobCard = jobContainer(
+        element.id ?? "",
+        element.jobTitle ?? "",
+      );
       jobCardDataList.add(jobCard);
     }
     setState(() {});

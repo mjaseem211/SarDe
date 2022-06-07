@@ -8,6 +8,7 @@ import 'package:sarde/models/Tools.dart';
 import '../models/Inventory/Board_Fixing_inventory.dart';
 import '../models/Inventory/Road_Marking_inventory.dart';
 import '../models/Inventory/Stud_Fixing_inventory.dart';
+import '../models/Labours/Add_Labours.dart';
 import '../models/work_progress/Road_Marking.dart';
 import '../models/work_progress/Stud_Fixing.dart';
 import '../models/work_progress/board_fixing.dart';
@@ -90,6 +91,26 @@ class SardeAPI {
     return APIModel<ToolsModel>.fromJson(
       response,
       (json) => ToolsModel.fromJson(json),
+    );
+  }
+
+  static Future<APIModel<AddLaboursModel>> addLabours(
+    String accessToken,
+    String name,
+    String trade,
+    String type,
+    String hours,
+  ) async {
+    final response = await post('Labours/add_labours', {
+      'access_token': accessToken,
+      'name': name,
+      'trade': trade,
+      'type': type,
+      'hours': hours,
+    });
+    return APIModel<AddLaboursModel>.fromJson(
+      response,
+      (json) => AddLaboursModel.fromJson(json),
     );
   }
 
@@ -207,23 +228,6 @@ class SardeAPI {
     return APIModel<StudFixingInventoryModel>.fromJson(
       response,
       (json) => StudFixingInventoryModel.fromJson(json),
-    );
-  }
-
-
-  static Future<APIModel<StudFixingInventoryModel>> addLabours(
-      String accessToken,
-      String item,
-      String quantity,
-      ) async {
-    final response = await post('Inventory/Stud_fixing/add_item', {
-      'access_token': accessToken,
-      'item': item,
-      'quantity': quantity,
-    });
-    return APIModel<StudFixingInventoryModel>.fromJson(
-      response,
-          (json) => StudFixingInventoryModel.fromJson(json),
     );
   }
 }

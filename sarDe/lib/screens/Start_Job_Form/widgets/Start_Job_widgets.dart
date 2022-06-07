@@ -21,12 +21,15 @@ class Start_Button extends StatelessWidget {
           width: 390.w,
           decoration: const BoxDecoration(
             color: Color(0xff2B3070),
-            image:DecorationImage(
-             alignment: Alignment(.75,0),
-              image: AssetImage('assets/images/forward_arrow.png',),
+            image: DecorationImage(
+              alignment: Alignment(.75, 0),
+              image: AssetImage(
+                'assets/images/forward_arrow.png',
+              ),
             ),
           ),
-          child: Padding(padding: EdgeInsets.only(left: 56.w,top: 28.h),
+          child: Padding(
+            padding: EdgeInsets.only(left: 56.w, top: 28.h),
             child: Text(
               "Start Job",
               style: TextStyle(
@@ -46,7 +49,7 @@ Widget title1() {
     padding: EdgeInsets.only(left: 33.w),
     child: Row(children: [
       Text(
-        "Job 303",
+        "8",
         style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 35.sp,
