@@ -22,7 +22,7 @@ class JobMain extends StatelessWidget {
             },
           ),
           SizedBox(
-            height: 66.h,
+            height: 26.h,
           ),
           title(),
           SizedBox(
@@ -30,14 +30,19 @@ class JobMain extends StatelessWidget {
           ),
           subTitle(),
           Expanded(
-            child: ListView(shrinkWrap: true, children: const [
-              job_main_nav(),
-            ]),
+            child: ListView(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                children: const [
+                  job_main_nav(),
+                ]),
           ),
           Close_Day_Button(
             onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Complete_Check_Up()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const Complete_Check_Up()));
             },
           ),
         ],

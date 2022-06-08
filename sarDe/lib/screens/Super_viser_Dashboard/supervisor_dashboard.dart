@@ -53,12 +53,15 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
           ),
           const SupervisorSlider(),
           Expanded(
-            child: ListView.builder(
-                itemCount: jobCardDataList.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return jobCardDataList[index];
-                }),
-          ),
+              child: ListView.builder(
+                reverse: true,
+                  shrinkWrap: false,
+                  itemCount: jobCardDataList.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return jobCardDataList[index];
+                  }),
+            ),
+
           Bottom_data(),
         ],
       ),
