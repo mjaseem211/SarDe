@@ -39,8 +39,6 @@ class _SignInPageState extends State<SignInPage> {
         backgroundColor: Colors.grey,
         textColor: Colors.white,
       );
-      print(response.toJson());
-      print("Login failed");
       return;
     }
 
