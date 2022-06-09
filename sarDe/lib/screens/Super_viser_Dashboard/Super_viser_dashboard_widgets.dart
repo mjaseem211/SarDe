@@ -104,7 +104,7 @@ Widget jobContainer(
                 duration: const Duration(seconds: 1),
                 curve: Curves.fastOutSlowIn,
                 alignment: Alignment.bottomLeft,
-                width: 257.w,
+                width: 306.w,
                 height: 136.h,
                 decoration: BoxDecoration(
                   color: const Color(0xff2b3070),
@@ -136,20 +136,20 @@ Widget jobContainer(
             ),
           ),
         ]),
-        Padding(
-          padding: EdgeInsets.only(
-            top: 20.h,
-            left: 265.w,
-            bottom: 99.h,
-          ),
-          child: Text(
-            '78 %',
-            style: TextStyle(
-                color: const Color(0xFF000000).withOpacity(0.5),
-                fontSize: 15.sp,
-                fontWeight: FontWeight.w400),
-          ),
-        ),
+        // Padding(
+        //   padding: EdgeInsets.only(
+        //     top: 20.h,
+        //     left: 265.w,
+        //     bottom: 99.h,
+        //   ),
+        //   child: Text(
+        //     '78 %',
+        //     style: TextStyle(
+        //         color: const Color(0xFF000000).withOpacity(0.5),
+        //         fontSize: 15.sp,
+        //         fontWeight: FontWeight.w400),
+        //   ),
+        // ),
       ]),
       onTap: () {
         Navigator.of(context).pushReplacement(
