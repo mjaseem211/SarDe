@@ -12,10 +12,14 @@ class GetAllExpenses {
   final _baseUrl = 'http://renr.in/index.php/API/';
 
   Future<ExpenseModels?> getExpenses(
-      {required accessToken, required pageOffset, required pageCount}) async {
+      {required accessToken,
+      required job_id,
+      required pageOffset,
+      required pageCount}) async {
     ExpenseModels? expenseResponse;
     var formData = FormData.fromMap({
       "access_token": accessToken,
+      "job_id": job_id,
       "page_offset": pageOffset,
       "page_count": pageCount
     });

@@ -4,7 +4,6 @@ import 'package:sarde/models/api_model.dart';
 import 'package:sarde/models/Expense/expense.dart';
 import 'package:sarde/models/login.dart';
 import 'package:sarde/models/Tools.dart';
-
 import '../models/Inventory/Board_Fixing_inventory.dart';
 import '../models/Inventory/Road_Marking_inventory.dart';
 import '../models/Inventory/Stud_Fixing_inventory.dart';
@@ -60,12 +59,14 @@ class SardeAPI {
 
   static Future<APIModel<ExpenseModel>> addExpense(
     String accessToken,
+    String job_id,
     String expense,
     String amt,
     String reference,
   ) async {
     final response = await post('Expense/add_expense', {
       'access_token': accessToken,
+      'job_id': job_id,
       'expense': expense,
       'amount': amt,
       'reference': reference,

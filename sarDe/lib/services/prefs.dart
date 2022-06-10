@@ -29,4 +29,15 @@ class SardePreferences {
   Future<bool> removeToken() async {
     return _prefs.remove('token');
   }
+
+  // Token Specific
+  Future<String?> get job_id async {
+    return _prefs.getString('job_id');
+  }
+
+  set jod_id(String job_id) {
+    _prefs.setString('access_token','job_id');
+  }
+
+
 }
