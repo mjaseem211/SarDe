@@ -232,8 +232,10 @@ class _dialogue_boxState extends State<dialogue_box> {
                                 final prefs =
                                     await SardePreferences.getInstance();
                                 final token = await prefs.token;
+                                final job_id = await prefs.job_id;
                                 final response = await SardeAPI.addExpense(
                                     token ?? "",
+                                    job_id ?? "",
                                     expenseController.text.trim(),
                                     amtController.text.trim(),
                                     referenceController.text.trim());

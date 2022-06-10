@@ -38,7 +38,7 @@ class GridButtons extends StatelessWidget {
           image: DecorationImage(
             alignment: const Alignment(.8, -0.7),
             image: AssetImage(
-              assetimage ?? '',
+              assetimage ?? "",
             ),
           ),
         ),

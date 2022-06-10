@@ -4,63 +4,52 @@
 
 import 'dart:convert';
 
-ExpenseModels expenseModelsFromJson(String str) => ExpenseModels.fromJson(json.decode(str));
+ExpenseModels expenseModelsFromJson(String str) =>
+    ExpenseModels.fromJson(json.decode(str));
 
 String expenseModelsToJson(ExpenseModels data) => json.encode(data.toJson());
 
 class ExpenseModels {
   ExpenseModels({
-    this.result,
-    this.status,
+    required this.result,
+    required this.status,
   });
 
-  List<Result>? result;
-  String? status;
+  List<Result> result;
+  String status;
 
   factory ExpenseModels.fromJson(Map<String, dynamic> json) => ExpenseModels(
-    result: List<Result>.from(json["result"].map((x) => Result.fromJson(x))),
-    status: json["status"],
-  );
+        result:
+            List<Result>.from(json["result"].map((x) => Result.fromJson(x))),
+        status: json["status"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "result": List<dynamic>.from(result!.map((x) => x.toJson())),
-    "status": status,
-  };
+        "result": List<dynamic>.from(result.map((x) => x.toJson())),
+        "status": status,
+      };
 }
 
 class Result {
   Result({
-    this.id,
-    this.userId,
-    this.expense,
-    this.amount,
-    this.reference,
-    this.createdDate,
+    required this.expense,
+    required this.amount,
+    required this.reference,
   });
 
-  String? id;
-  String? userId;
-  String? expense;
-  String? amount;
-  String? reference;
-  String? createdDate;
-
+  String expense;
+  String amount;
+  String reference;
 
   factory Result.fromJson(Map<String, dynamic> json) => Result(
-    id: json["id"],
-    userId: json["user_id"],
-    expense: json["expense"],
-    amount: json["amount"],
-    reference: json["reference"],
-    createdDate: json["created_date"],
-  );
+        expense: json["expense"],
+        amount: json["amount"],
+        reference: json["reference"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "id": id,
-    "user_id": userId,
-    "expense": expense,
-    "amount": amount,
-    "reference": reference,
-    "created_date": createdDate,
-  };
+        "expense": expense,
+        "amount": amount,
+        "reference": reference,
+      };
 }

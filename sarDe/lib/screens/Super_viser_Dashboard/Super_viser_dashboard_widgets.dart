@@ -5,30 +5,57 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Profile/profile.dart';
 import 'package:sarde/screens/Start_Job_Form/Start_Job_Form.dart';
 
-// ignore: camel_case_types
-class text_button extends StatelessWidget {
-  const text_button({Key? key}) : super(key: key);
+Widget nameButton() {
+  return Builder(
+    builder: (context) {
+      return Padding(
+        padding: EdgeInsets.only(
+          left: 33.w,
+          top: 90.h,
+        ),
+        child: Row(children: [
+          TextButton(
+              child: Text(
+                'Hi,',
+                style: TextStyle(
+                    color: const Color(0xFF2B3070),
+                    fontSize: 64.sp,
+                    fontWeight: FontWeight.w400),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Profile()));
+              }),
+        ]),
+      );
+    },
+  );
+}
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 33.w, top: 97.h, right: 90.w),
-      child: Row(children: [
-        TextButton(
-            child: Text(
-              'Hi,\nPradeep',
-              style: TextStyle(
-                  color: const Color(0xFF2B3070),
-                  fontSize: 64.sp,
-                  fontWeight: FontWeight.w400),
-            ),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const Profile()));
-            }),
-      ]),
-    );
-  }
+Widget nameButton1() {
+  return Builder(
+    builder: (context) {
+      return Padding(
+        padding: EdgeInsets.only(
+          left: 33.w,
+        ),
+        child: Row(children: [
+          TextButton(
+              child: Text(
+                'Shahrooq',
+                style: TextStyle(
+                    color: const Color(0xFF2B3070),
+                    fontSize: 64.sp,
+                    fontWeight: FontWeight.w400),
+              ),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const Profile()));
+              }),
+        ]),
+      );
+    },
+  );
 }
 
 class SupervisorSlider extends StatelessWidget {

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/api/getalljobcards.dart';
 import 'package:sarde/screens/Super_viser_Dashboard/Super_viser_dashboard_widgets.dart';
-
 import '../../services/prefs.dart';
 
 class SupervisorDashboard extends StatefulWidget {
@@ -47,21 +46,21 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
       backgroundColor: Colors.white,
       body: Column(
         children: <Widget>[
-          const text_button(),
+          nameButton(),
+          nameButton1(),
           SizedBox(
             height: 16.h,
           ),
           const SupervisorSlider(),
           Expanded(
-              child: ListView.builder(
+            child: ListView.builder(
                 reverse: true,
-                  shrinkWrap: false,
-                  itemCount: jobCardDataList.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return jobCardDataList[index];
-                  }),
-            ),
-
+                shrinkWrap: false,
+                itemCount: jobCardDataList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return jobCardDataList[index];
+                }),
+          ),
           Bottom_data(),
         ],
       ),
