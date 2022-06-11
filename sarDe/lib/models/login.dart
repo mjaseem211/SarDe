@@ -18,10 +18,13 @@ class LoginModel {
   Result result;
   String status;
 
-  factory LoginModel.fromJson(Map<String, dynamic> json) => LoginModel(
-        result: Result.fromJson(json["result"]),
-        status: json["status"],
-      );
+  factory LoginModel.fromJson(Map<String, dynamic> json) {
+    print(json);
+    return LoginModel(
+      result: Result.fromJson(json["result"]),
+      status: json["status"],
+    );
+  }
 
   Map<String, dynamic> toJson() => {
         "result": result.toJson(),

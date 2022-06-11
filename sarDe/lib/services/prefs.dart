@@ -18,7 +18,7 @@ class SardePreferences {
   }
 
   // Token Specific
-  Future<String?> get token async {
+  String? get token {
     return _prefs.getString('token');
   }
 
@@ -36,8 +36,15 @@ class SardePreferences {
   }
 
   set jod_id(String job_id) {
-    _prefs.setString('access_token','job_id');
+    _prefs.setString('access_token', 'job_id');
   }
 
+  // User Name
+  String? get name {
+    return _prefs.getString('name');
+  }
 
+  set userName(String name) {
+    _prefs.setString('name', name);
+  }
 }

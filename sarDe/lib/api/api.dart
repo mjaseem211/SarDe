@@ -23,6 +23,7 @@ class SardeAPI {
       Uri.parse(_baseUrl + url),
       body: body,
     );
+    print(_baseUrl + url);
 
     // TODO: Status Code != 200
     if (response.statusCode != 200) {
@@ -43,7 +44,7 @@ class SardeAPI {
     return json.decode(response.body);
   }
 
-  static Future<APIModel<LoginModel>> login(
+  static Future<LoginModel> login(
     String email,
     String password,
   ) async {
@@ -51,9 +52,9 @@ class SardeAPI {
       'email': email,
       'password': password,
     });
-    return APIModel<LoginModel>.fromJson(
+
+    return LoginModel.fromJson(
       response,
-      (json) => LoginModel.fromJson(json),
     );
   }
 

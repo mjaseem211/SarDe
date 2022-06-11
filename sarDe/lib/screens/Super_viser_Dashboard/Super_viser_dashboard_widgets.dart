@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
+import 'package:sarde/models/user_details.dart';
 import 'package:sarde/screens/Profile/profile.dart';
 import 'package:sarde/screens/Start_Job_Form/Start_Job_Form.dart';
 
@@ -35,6 +37,7 @@ Widget nameButton() {
 Widget nameButton1() {
   return Builder(
     builder: (context) {
+      UserDetails userDetails = Provider.of<UserDetails>(context);
       return Padding(
         padding: EdgeInsets.only(
           left: 33.w,
@@ -42,15 +45,19 @@ Widget nameButton1() {
         child: Row(children: [
           TextButton(
               child: Text(
-                'Shahrooq',
+                userDetails.name ?? "Good Morning",
                 style: TextStyle(
                     color: const Color(0xFF2B3070),
                     fontSize: 64.sp,
                     fontWeight: FontWeight.w400),
               ),
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const Profile()));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Profile(),
+                  ),
+                );
               }),
         ]),
       );

@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
+import 'package:sarde/models/user_details.dart';
 import 'package:sarde/screens/Profile/job_transfer/job_transfer.dart';
 
 Widget title() {
-  return Padding(
-    padding: EdgeInsets.only(left: 34.w, top: 257.h, right: 94.w),
-    child: Row(children: [
-      Text(
-        'Pradeep',
-        style: TextStyle(
-            color: const Color(0xFF2B3070),
-            fontSize: 64.sp,
-            fontWeight: FontWeight.w400),
-      ),
-    ]),
+  return Builder(
+    builder: (context) {
+      UserDetails userDetails = Provider.of<UserDetails>(context);
+      return Padding(
+        padding: EdgeInsets.only(left: 34.w, top: 257.h, right: 94.w),
+        child: Row(children: [
+          Text(
+            userDetails.name ?? "",
+            style: TextStyle(
+                color: const Color(0xFF2B3070),
+                fontSize: 64.sp,
+                fontWeight: FontWeight.w400),
+          ),
+        ]),
+      );
+    },
   );
 }
 
