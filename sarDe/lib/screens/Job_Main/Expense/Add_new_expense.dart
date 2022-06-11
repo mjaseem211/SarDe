@@ -31,12 +31,13 @@ class _add_new_expenseState extends State<add_new_expense> {
   _getAllExpenses(pageOffset, pageCount) async {
     final prefs = await SardePreferences.getInstance();
     var job_id = await prefs.job_id;
-    var accessToken = await prefs.token;
+    var accessToken = prefs.token;
     var expenseData = await expenseApi.getExpenses(
-        accessToken: accessToken,
-        job_id: job_id,
-        pageOffset: pageOffset,
-        pageCount: pageCount);
+      accessToken: accessToken,
+      job_id: job_id,
+      pageOffset: pageOffset,
+      pageCount: pageCount,
+    );
     for (var element in expenseData!.result) {
       Widget expense =
           data1(element.expense, element.amount, element.reference);
