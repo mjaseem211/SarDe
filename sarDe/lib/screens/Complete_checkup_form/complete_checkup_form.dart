@@ -37,7 +37,10 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
         Top_Back_Button(
           onTap: () {
             Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => const JobMain()));
+              MaterialPageRoute(
+                builder: (context) => const JobMain(),
+              ),
+            );
           },
         ),
         SizedBox(
@@ -150,7 +153,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>  add_new_expense()));
+                              builder: (context) => add_new_expense()));
                     },
                   ),
                   SizedBox(
