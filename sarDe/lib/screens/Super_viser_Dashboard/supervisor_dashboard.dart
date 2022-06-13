@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/api/getalljobcards.dart';
 import 'package:sarde/screens/Super_viser_Dashboard/Super_viser_dashboard_widgets.dart';
+import '../../api/getMESSAGES.dart';
 import '../../services/prefs.dart';
 
 class SupervisorDashboard extends StatefulWidget {
@@ -13,6 +14,7 @@ class SupervisorDashboard extends StatefulWidget {
 
 class _SupervisorDashboardState extends State<SupervisorDashboard> {
   final jobsApi = GetAllJobCards();
+  final getmessage = GetMessages();
 
   @override
   void initState() {
@@ -25,6 +27,16 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
   _getJobCards(pageOffset, pageCount) async {
     final prefs = await SardePreferences.getInstance();
     var accessToken = await prefs.token;
+    var messageCardData =
+        await getmessage.getMessages(accessToken: accessToken);
+    for (var element in messageCardData!.messages) {
+      Widget messageCard = Bottom_data(
+        element.messageTitle,
+        element.messageDescription,
+      );
+      messageDataList.add(messageCard);
+    }
+    setState(() {});
     var jobCardData = await jobsApi.getJobs(
         accessToken: accessToken, pageOffset: pageOffset, pageCount: pageCount);
     for (var element in jobCardData!.result!) {
@@ -37,6 +49,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
     setState(() {});
   }
 
+  final List<Widget> messageDataList = [];
   final List<Widget> jobCardDataList = [];
 
   @override
@@ -61,7 +74,15 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
                   return jobCardDataList[index];
                 }),
           ),
-          Bottom_data(),
+          Expanded(
+            child: ListView.builder(
+                reverse: true,
+                shrinkWrap: false,
+                itemCount: messageDataList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return messageDataList[index];
+                }),
+          ),
         ],
       ),
     );

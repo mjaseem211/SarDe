@@ -353,7 +353,7 @@ Widget jobContainer(
 // }
 
 // ignore: non_constant_identifier_names
-Widget Bottom_data() {
+Widget Bottom_data(String message_title,String message_description) {
   return Container(
     width: 390.w,
     height: 180.h,
@@ -367,7 +367,7 @@ Widget Bottom_data() {
           Padding(
             padding: EdgeInsets.only(left: 35.w, top: 30.h),
             child: Text(
-              "Items shiped from inventry, please\nupdate once collected\n",
+              "${message_title}",
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w400,
@@ -391,7 +391,7 @@ Widget Bottom_data() {
               top: 8.h,
             ),
             child: Text(
-              "Quality inspection pending on\n Kuttichira to Maradu.",
+              "${message_description}",
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w400,
