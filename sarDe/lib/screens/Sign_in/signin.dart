@@ -58,7 +58,7 @@ class _SignInPageState extends State<SignInPage> {
 
   void checkAlreadyLoggedIn() async {
     final prefs = await SardePreferences.getInstance();
-    final token = await prefs.token;
+    final token = prefs.token;
     if (token != null) {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(

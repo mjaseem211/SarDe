@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:sarde/models/user_details.dart';
+import 'package:sarde/providers/job_id.dart';
 import 'package:sarde/screens/Profile/profile.dart';
 import 'package:sarde/screens/Start_Job_Form/Start_Job_Form.dart';
 
@@ -114,86 +115,103 @@ Widget jobContainer(
   String id,
   String jobTitle,
 ) {
-  return Builder(builder: (context) {
-    return GestureDetector(
-      child: Stack(alignment: Alignment.center, children: <Widget>[
-        Padding(
-          padding: EdgeInsets.only(left: 43.w),
-          child: Row(children: [
-            Container(
-                margin: EdgeInsets.only(top: 20.h),
-                width: 306.w,
-                height: 124.h,
-                decoration: BoxDecoration(
-                  color: const Color(0xff2b3070).withOpacity(0.35),
-                  borderRadius: BorderRadius.circular(13.r),
-                )),
-          ]),
-        ),
-        Padding(
-          padding: EdgeInsets.only(left: 43.w),
-          child: Row(children: [
-            AnimatedContainer(
-                margin: EdgeInsets.only(top: 20.h),
-                duration: const Duration(seconds: 1),
-                curve: Curves.fastOutSlowIn,
-                alignment: Alignment.bottomLeft,
-                width: 306.w,
-                height: 136.h,
-                decoration: BoxDecoration(
-                  color: const Color(0xff2b3070),
-                  borderRadius: BorderRadius.circular(13.r),
-                )),
-          ]),
-        ),
-        Row(children: [
+  return Builder(
+    builder: (context) {
+      return GestureDetector(
+        child: Stack(alignment: Alignment.center, children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(top: 66.5.h, right: 225.w, left: 62.w),
-            child: Text(
-              '${id}',
-              style: TextStyle(
+            padding: EdgeInsets.only(left: 43.w),
+            child: Row(
+              children: [
+                Container(
+                  margin: EdgeInsets.only(top: 20.h),
+                  width: 306.w,
+                  height: 124.h,
+                  decoration: BoxDecoration(
+                    color: const Color(0xff2b3070).withOpacity(0.35),
+                    borderRadius: BorderRadius.circular(13.r),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.only(left: 43.w),
+            child: Row(
+              children: [
+                AnimatedContainer(
+                  margin: EdgeInsets.only(top: 20.h),
+                  duration: const Duration(seconds: 1),
+                  curve: Curves.fastOutSlowIn,
+                  alignment: Alignment.bottomLeft,
+                  width: 306.w,
+                  height: 136.h,
+                  decoration: BoxDecoration(
+                    color: const Color(0xff2b3070),
+                    borderRadius: BorderRadius.circular(13.r),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Row(children: [
+            Padding(
+              padding: EdgeInsets.only(top: 66.5.h, right: 225.w, left: 62.w),
+              child: Text(
+                id,
+                style: TextStyle(
                   color: const Color(0xFFFFFFFF),
                   fontSize: 17.sp,
-                  fontWeight: FontWeight.w400),
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
             ),
+          ]),
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 112.h, right: 118.w, left: 62.w),
+                child: Text(
+                  jobTitle,
+                  style: TextStyle(
+                      color: const Color(0xffffffff).withOpacity(.46),
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.w400),
+                ),
+              ),
+            ],
           ),
+          // Padding(
+          //   padding: EdgeInsets.only(
+          //     top: 20.h,
+          //     left: 265.w,
+          //     bottom: 99.h,
+          //   ),
+          //   child: Text(
+          //     '78 %',
+          //     style: TextStyle(
+          //         color: const Color(0xFF000000).withOpacity(0.5),
+          //         fontSize: 15.sp,
+          //         fontWeight: FontWeight.w400),
+          //   ),
+          // ),
         ]),
-        Row(children: [
-          Padding(
-            padding: EdgeInsets.only(top: 112.h, right: 118.w, left: 62.w),
-            child: Text(
-              "${jobTitle}",
-              style: TextStyle(
-                  color: const Color(0xffffffff).withOpacity(.46),
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w400),
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => ChangeNotifierProvider.value(
+                value: JobIDProvider(
+                  id,
+                  jobTitle,
+                ),
+                child: const Start_Job_Form(),
+              ),
             ),
-          ),
-        ]),
-        // Padding(
-        //   padding: EdgeInsets.only(
-        //     top: 20.h,
-        //     left: 265.w,
-        //     bottom: 99.h,
-        //   ),
-        //   child: Text(
-        //     '78 %',
-        //     style: TextStyle(
-        //         color: const Color(0xFF000000).withOpacity(0.5),
-        //         fontSize: 15.sp,
-        //         fontWeight: FontWeight.w400),
-        //   ),
-        // ),
-      ]),
-      onTap: () {
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(
-            builder: (context) => const Start_Job_Form(),
-          ),
-        );
-      },
-    );
-  });
+          );
+        },
+      );
+    },
+  );
 }
 
 // // ignore: non_constant_identifier_names
@@ -353,7 +371,7 @@ Widget jobContainer(
 // }
 
 // ignore: non_constant_identifier_names
-Widget Bottom_data(String message_title,String message_description) {
+Widget Bottom_data(String message_title, String message_description) {
   return Container(
     width: 390.w,
     height: 180.h,
@@ -367,7 +385,7 @@ Widget Bottom_data(String message_title,String message_description) {
           Padding(
             padding: EdgeInsets.only(left: 35.w, top: 30.h),
             child: Text(
-              "${message_title}",
+              message_title,
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w400,
@@ -391,7 +409,7 @@ Widget Bottom_data(String message_title,String message_description) {
               top: 8.h,
             ),
             child: Text(
-              "${message_description}",
+              message_description,
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w400,
