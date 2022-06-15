@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
+import 'package:sarde/providers/job_id.dart';
 import 'package:sarde/screens/Job_Main/JobMain.dart';
 
 // ignore: camel_case_types
@@ -10,46 +12,61 @@ class Start_Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final job = Provider.of<JobIDProvider>(
+      context,
+    );
     return GestureDetector(
       onTap: () {
         Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (context) => const JobMain()));
+          MaterialPageRoute(
+            builder: (context) => ChangeNotifierProvider(
+              create: (context) => job,
+              child: const JobMain(),
+            ),
+          ),
+        );
       },
-      child: Row(children: [
-        Container(
-          height: 98.h,
-          width: 390.w,
-          decoration: const BoxDecoration(
-            color: Color(0xff2B3070),
-            image: DecorationImage(
-              alignment: Alignment(.75, 0),
-              image: AssetImage(
-                'assets/images/forward_arrow.png',
+      child: Row(
+        children: [
+          Container(
+            height: 98.h,
+            width: 390.w,
+            decoration: const BoxDecoration(
+              color: Color(0xff2B3070),
+              image: DecorationImage(
+                alignment: Alignment(.75, 0),
+                image: AssetImage(
+                  'assets/images/forward_arrow.png',
+                ),
+              ),
+            ),
+            child: Padding(
+              padding: EdgeInsets.only(left: 56.w, top: 28.h),
+              child: Text(
+                "Start Job",
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 25.sp,
+                    color: const Color(0xFFFFFFFF)),
               ),
             ),
           ),
-          child: Padding(
-            padding: EdgeInsets.only(left: 56.w, top: 28.h),
-            child: Text(
-              "Start Job",
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 25.sp,
-                  color: const Color(0xFFFFFFFF)),
-            ),
-          ),
-        ),
-      ]),
+        ],
+      ),
     );
   }
 }
 
-Widget title1() {
+Widget title1(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
+
   return Padding(
     padding: EdgeInsets.only(left: 33.w),
     child: Row(children: [
       Text(
-        "8",
+        job.jobID,
         style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 35.sp,

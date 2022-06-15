@@ -26,7 +26,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
 
   _getJobCards(pageOffset, pageCount) async {
     final prefs = await SardePreferences.getInstance();
-    var accessToken = await prefs.token;
+    var accessToken = prefs.token;
     var messageCardData =
         await getmessage.getMessages(accessToken: accessToken);
     for (var element in messageCardData!.messages) {
@@ -38,7 +38,10 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
     }
     setState(() {});
     var jobCardData = await jobsApi.getJobs(
-        accessToken: accessToken, pageOffset: pageOffset, pageCount: pageCount);
+      accessToken: accessToken,
+      pageOffset: pageOffset,
+      pageCount: pageCount,
+    );
     for (var element in jobCardData!.result!) {
       Widget jobCard = jobContainer(
         element.id ?? "",
@@ -67,21 +70,23 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
           const SupervisorSlider(),
           Expanded(
             child: ListView.builder(
-                reverse: true,
-                shrinkWrap: false,
-                itemCount: jobCardDataList.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return jobCardDataList[index];
-                }),
+              reverse: true,
+              shrinkWrap: false,
+              itemCount: jobCardDataList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return jobCardDataList[index];
+              },
+            ),
           ),
           Expanded(
             child: ListView.builder(
-                reverse: true,
-                shrinkWrap: false,
-                itemCount: messageDataList.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return messageDataList[index];
-                }),
+              reverse: true,
+              shrinkWrap: false,
+              itemCount: messageDataList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return messageDataList[index];
+              },
+            ),
           ),
         ],
       ),
