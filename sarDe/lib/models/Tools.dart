@@ -2,6 +2,8 @@
 //
 //     final toolsModel = toolsModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 ToolsModel toolsModelFromJson(String str) => ToolsModel.fromJson(json.decode(str));

@@ -23,8 +23,6 @@ class SardeAPI {
       Uri.parse(_baseUrl + url),
       body: body,
     );
-    print(_baseUrl + url);
-
     // TODO: Status Code != 200
     if (response.statusCode != 200) {
       throw Exception('Failed to load post');
@@ -60,14 +58,14 @@ class SardeAPI {
 
   static Future<APIModel<ExpenseModel>> addExpense(
     String accessToken,
-    String job_id,
+    String jobId,
     String expense,
     String amt,
     String reference,
   ) async {
     final response = await post('Expense/add_expense', {
       'access_token': accessToken,
-      'job_id': job_id,
+      'job_id': jobId,
       'expense': expense,
       'amount': amt,
       'reference': reference,

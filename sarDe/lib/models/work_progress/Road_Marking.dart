@@ -2,6 +2,8 @@
 //
 //     final addRoadMarkingWorkProgressModel = addRoadMarkingWorkProgressModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 AddRoadMarkingWorkProgressModel addRoadMarkingWorkProgressModelFromJson(String str) => AddRoadMarkingWorkProgressModel.fromJson(json.decode(str));

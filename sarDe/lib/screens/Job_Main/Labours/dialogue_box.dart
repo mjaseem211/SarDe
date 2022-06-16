@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:sarde/screens/Job_Main/Labours/drop_down.dart';
-
 import '../../../api/api.dart';
 import '../../../services/prefs.dart';
 
@@ -285,7 +283,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                                 );
                                 final prefs =
                                     await SardePreferences.getInstance();
-                                final token = await prefs.token;
+                                final token = prefs.token;
                                 final response = await SardeAPI.addLabours(
                                   token ?? "",
                                   nameController.text.trim(),

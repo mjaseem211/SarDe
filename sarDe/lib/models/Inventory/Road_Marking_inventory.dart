@@ -2,6 +2,8 @@
 //
 //     final roadMarkingInventoryModel = roadMarkingInventoryModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 RoadMarkingInventoryModel roadMarkingInventoryModelFromJson(String str) => RoadMarkingInventoryModel.fromJson(json.decode(str));

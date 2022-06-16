@@ -31,12 +31,12 @@ class SardePreferences {
   }
 
   // Token Specific
-  Future<String?> get job_id async {
+  Future<String?> get jobId async {
     return _prefs.getString('job_id');
   }
 
-  set jod_id(String job_id) {
-    _prefs.setString('access_token', 'job_id');
+  set jobsId(String jobId) {
+    _prefs.setString('job_id', jobId);
   }
 
   // User Name

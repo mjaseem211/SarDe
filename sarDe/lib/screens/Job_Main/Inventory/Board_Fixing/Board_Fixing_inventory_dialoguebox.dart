@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,7 +23,7 @@ class _Board_Fixing_inventory_dialogueboxState
     extends State<Board_Fixing_inventory_dialoguebox> {
   final TextEditingController itemController = TextEditingController();
   final TextEditingController quantityController = TextEditingController();
-  final _addboardinventory = GlobalKey<FormState>();
+  final _addBoardInventory = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class _Board_Fixing_inventory_dialogueboxState
                     insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                     child: Form(
                       autovalidateMode: AutovalidateMode.always,
-                      key: _addboardinventory,
+                      key: _addBoardInventory,
                       child: Stack(
                         clipBehavior: Clip.none,
                         children: <Widget>[
@@ -191,7 +191,7 @@ class _Board_Fixing_inventory_dialogueboxState
                                       )),
                                 ),
                                 onTap: () async {
-                                  if (_addboardinventory.currentState!
+                                  if (_addBoardInventory.currentState!
                                       .validate()) {
                                     // If the form is valid, display a snackbar. In the real world,
                                     // you'd often call a server or save the information in a database.
@@ -201,7 +201,7 @@ class _Board_Fixing_inventory_dialogueboxState
                                     );
                                     final prefs =
                                         await SardePreferences.getInstance();
-                                    final token = await prefs.token;
+                                    final token = prefs.token;
                                     final response =
                                         await SardeAPI.addBoardFixinginventory(
                                             token ?? "",

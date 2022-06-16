@@ -2,6 +2,8 @@
 //
 //     final studFixingInventoryModel = studFixingInventoryModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 StudFixingInventoryModel studFixingInventoryModelFromJson(String str) => StudFixingInventoryModel.fromJson(json.decode(str));

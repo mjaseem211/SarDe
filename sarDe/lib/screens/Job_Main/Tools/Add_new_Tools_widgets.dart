@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -75,7 +75,7 @@ Widget data2(String item, String quantity, String condition) {
       children: [
         Expanded(
           child: Text(
-            "${item}",
+            item,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -84,7 +84,7 @@ Widget data2(String item, String quantity, String condition) {
         ),
         Expanded(
           child: Text(
-            "${quantity}",
+            quantity,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -92,7 +92,7 @@ Widget data2(String item, String quantity, String condition) {
           ),
         ),
         Text(
-          "${condition}",
+          condition,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,

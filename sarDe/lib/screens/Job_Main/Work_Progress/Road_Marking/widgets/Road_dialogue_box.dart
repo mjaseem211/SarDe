@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -327,7 +327,7 @@ class _Road_marking_dialogueboxState extends State<Road_marking_dialoguebox> {
                                 );
                                 final prefs =
                                     await SardePreferences.getInstance();
-                                final token = await prefs.token;
+                                final token = prefs.token;
                                 final response =
                                     await SardeAPI.addRoadMarkingworkprogress(
                                         token ?? "",

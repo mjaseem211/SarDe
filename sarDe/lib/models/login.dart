@@ -19,7 +19,6 @@ class LoginModel {
   String status;
 
   factory LoginModel.fromJson(Map<String, dynamic> json) {
-    print(json);
     return LoginModel(
       result: Result.fromJson(json["result"]),
       status: json["status"],

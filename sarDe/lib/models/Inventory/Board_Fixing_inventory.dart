@@ -2,6 +2,8 @@
 //
 //     final boardFixingInventoryModel = boardFixingInventoryModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 BoardFixingInventoryModel boardFixingInventoryModelFromJson(String str) => BoardFixingInventoryModel.fromJson(json.decode(str));

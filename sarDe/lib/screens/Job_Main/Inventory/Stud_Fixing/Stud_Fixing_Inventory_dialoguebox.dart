@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,7 +22,7 @@ class _Stud_Fixing_inventory_dialogueboxState
     extends State<Stud_Fixing_inventory_dialoguebox> {
   final TextEditingController itemController = TextEditingController();
   final TextEditingController quantityController = TextEditingController();
-  final _addstudinventory = GlobalKey<FormState>();
+  final _addStudInventory = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,7 @@ class _Stud_Fixing_inventory_dialogueboxState
                     insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                     child: Form(
                       autovalidateMode: AutovalidateMode.always,
-                      key: _addstudinventory,
+                      key: _addStudInventory,
                       child: Stack(
                         clipBehavior: Clip.none,
                         children: <Widget>[
@@ -190,7 +190,7 @@ class _Stud_Fixing_inventory_dialogueboxState
                                       )),
                                 ),
                                 onTap: () async {
-                                  if (_addstudinventory.currentState!
+                                  if (_addStudInventory.currentState!
                                       .validate()) {
                                     // If the form is valid, display a snackbar. In the real world,
                                     // you'd often call a server or save the information in a database.
@@ -200,7 +200,7 @@ class _Stud_Fixing_inventory_dialogueboxState
                                     );
                                     final prefs =
                                         await SardePreferences.getInstance();
-                                    final token = await prefs.token;
+                                    final token = prefs.token;
                                     final response =
                                         await SardeAPI.addStudFixinginventory(
                                             token ?? "",

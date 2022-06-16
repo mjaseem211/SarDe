@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -84,7 +86,7 @@ Widget data1(String name, String trade, String type, String hours) {
         Expanded(
           flex: 3,
           child: Text(
-            "${name}",
+            name,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -94,7 +96,7 @@ Widget data1(String name, String trade, String type, String hours) {
         Expanded(
           flex: 3,
           child: Text(
-            "${trade}",
+            trade,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -104,7 +106,7 @@ Widget data1(String name, String trade, String type, String hours) {
         Expanded(
           flex: 3,
           child: Text(
-            "${type}",
+            type,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -112,7 +114,7 @@ Widget data1(String name, String trade, String type, String hours) {
           ),
         ),
         Text(
-          "${hours}",
+          hours,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,
