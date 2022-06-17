@@ -2,6 +2,8 @@
 //
 //     final addLaboursModel = addLaboursModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 AddLaboursModel addLaboursModelFromJson(String str) => AddLaboursModel.fromJson(json.decode(str));

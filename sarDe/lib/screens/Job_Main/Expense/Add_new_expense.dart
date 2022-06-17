@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,11 +30,11 @@ class _add_new_expenseState extends State<add_new_expense> {
 
   _getAllExpenses(pageOffset, pageCount) async {
     final prefs = await SardePreferences.getInstance();
-    var job_id = await prefs.job_id;
+    var jobId = await prefs.jobId;
     var accessToken = prefs.token;
     var expenseData = await expenseApi.getExpenses(
       accessToken: accessToken,
-      job_id: job_id,
+      jobId: jobId,
       pageOffset: pageOffset,
       pageCount: pageCount,
     );

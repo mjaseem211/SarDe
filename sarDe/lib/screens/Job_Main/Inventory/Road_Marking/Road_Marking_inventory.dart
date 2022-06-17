@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types
+// ignore_for_file: camel_case_types, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +15,7 @@ class Road_Marking_inventory extends StatefulWidget {
 }
 
 class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
-  final List<Widget> RoadMarkingInventoryData = [];
+  final List<Widget> roadMarkingInventoryData = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,9 +33,9 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
         line(),
         Expanded(
           child:ListView.builder(
-              itemCount: RoadMarkingInventoryData.length,
+              itemCount: roadMarkingInventoryData.length,
               itemBuilder: (BuildContext context, int index) {
-                return RoadMarkingInventoryData[index];
+                return roadMarkingInventoryData[index];
               }),
         ),
          Road_Marking_inventory_dialoguebox(
@@ -43,7 +43,7 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
           dataCallback: (data) {
             Widget roadmarkinginventory =
             Data(data[0], data[1]);
-            RoadMarkingInventoryData.add(roadmarkinginventory);
+            roadMarkingInventoryData.add(roadmarkinginventory);
             setState(() {});
           },
         ),

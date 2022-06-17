@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:sarde/api/api.dart';
-import 'package:sarde/screens/Job_Main/Expense/drop_down.dart';
-
 import '../../../services/prefs.dart';
 
 // ignore: camel_case_types
@@ -231,11 +229,11 @@ class _dialogue_boxState extends State<dialogue_box> {
                                 );
                                 final prefs =
                                     await SardePreferences.getInstance();
-                                final token = await prefs.token;
-                                final job_id = await prefs.job_id;
+                                final token = prefs.token;
+                                final jobId = await prefs.jobId;
                                 final response = await SardeAPI.addExpense(
                                     token ?? "",
-                                    job_id ?? "",
+                                    jobId ?? "",
                                     expenseController.text.trim(),
                                     amtController.text.trim(),
                                     referenceController.text.trim());

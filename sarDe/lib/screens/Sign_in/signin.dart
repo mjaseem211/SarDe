@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/api/api.dart';
-import 'package:sarde/models/login.dart';
 import 'package:sarde/screens/Sign_in/signin_widgets.dart';
 import 'package:sarde/screens/Super_viser_Dashboard/supervisor_dashboard.dart';
 import 'package:sarde/services/prefs.dart';
@@ -48,7 +47,6 @@ class _SignInPageState extends State<SignInPage> {
     final prefs = await SardePreferences.getInstance();
     prefs.accessToken = response.result.accessToken;
     prefs.userName = response.result.loggedUserDetails.name;
-    print(prefs.name);
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
         builder: (context) => const SupervisorDashboard(),

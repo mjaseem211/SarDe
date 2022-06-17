@@ -249,7 +249,7 @@ class _dialogue_boxState extends State<dialogue_box> {
                                 );
                                 final prefs =
                                     await SardePreferences.getInstance();
-                                final token = await prefs.token;
+                                final token = prefs.token;
                                 final response = await SardeAPI.addTools(
                                     token ?? "",
                                     itemController.text.trim(),

@@ -112,7 +112,7 @@ class job_main_nav extends StatelessWidget {
                 top: 98.h,
                 onTap: () {
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => add_new_expense()));
+                      builder: (context) => const add_new_expense()));
                 },
               ),
               SizedBox(

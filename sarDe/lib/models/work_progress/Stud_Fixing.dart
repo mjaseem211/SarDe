@@ -2,6 +2,8 @@
 //
 //     final addStudFixingWorkProgressModel = addStudFixingWorkProgressModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 AddStudFixingWorkProgressModel addStudFixingWorkProgressModelFromJson(String str) => AddStudFixingWorkProgressModel.fromJson(json.decode(str));

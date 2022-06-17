@@ -1,4 +1,4 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, file_names
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -94,7 +94,7 @@ Widget Data(String itemdescription, String no, String length, String width,
         Expanded(
           flex: 5,
           child: Text(
-            "${itemdescription}",
+            itemdescription,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -104,7 +104,7 @@ Widget Data(String itemdescription, String no, String length, String width,
         Expanded(
           flex: 2,
           child: Text(
-            "${no}",
+            no,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -114,7 +114,7 @@ Widget Data(String itemdescription, String no, String length, String width,
         Expanded(
           flex: 4,
           child: Text(
-            "${length}",
+            length,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -124,7 +124,7 @@ Widget Data(String itemdescription, String no, String length, String width,
         Expanded(
           flex: 4,
           child: Text(
-            "${width}",
+            width,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -132,7 +132,7 @@ Widget Data(String itemdescription, String no, String length, String width,
           ),
         ),
         Text(
-          "${metersqr}",
+          metersqr,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,
