@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/Edge_alignment_drop_down.dart';
-import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/location_dropdown.dart';
-import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/thickness_dropdown.dart';
+
+// import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/Edge_alignment_drop_down.dart';
+// import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/location_dropdown.dart';
+// import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/thickness_dropdown.dart';
 
 // ignore: camel_case_types
 class dialogue_box extends StatefulWidget {
@@ -92,24 +93,115 @@ class _dialogue_boxState extends State<dialogue_box> {
                       ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 326.h, left: 25.w, right: 27.w),
-                        child: const location_drop_down(),
+                            top: 326.h, left: 29.w, right: 27.w),
+                        child: SizedBox(
+                          width: 304.w,
+                          height: 35.h,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              contentPadding:
+                                  EdgeInsets.only(left: 19.w, top: 9.h),
+                              labelText: 'location',
+                              labelStyle: TextStyle(
+                                color:
+                                    const Color(0xff000000).withOpacity(0.26),
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w400,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(4.r)),
+                                borderSide: BorderSide(
+                                    color: const Color(0xFFDD7164), width: 1.w),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(4.r)),
+                                borderSide: BorderSide(
+                                    width: 1.5.w, color: Colors.blue),
+                              ),
+                            ),
+                          ),
+                        ),
                       ),
-                      Padding(
-                          padding: EdgeInsets.only(
-                              top: 374.h, left: 25.w, right: 27.w),
-                          child: const thickness_drop_down()),
-                      Padding(
-                          padding: EdgeInsets.only(
-                              top: 422.h, left: 25.w, right: 27.w),
-                          child: const Edge_alignment_drop_down()),
+
+                      // child: const location_drop_down(),
+                      // ),
                       Padding(
                         padding: EdgeInsets.only(
-                            top: 467.h, left: 25.w, right: 27.w),
+                            top: 374.h, left: 29.w, right: 27.w),
+                        child: SizedBox(
+                          width: 304.w,
+                          height: 35.h,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              contentPadding:
+                                  EdgeInsets.only(left: 19.w, top: 9.h),
+                              labelText: 'Thickness',
+                              labelStyle: TextStyle(
+                                color:
+                                    const Color(0xff000000).withOpacity(0.26),
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w400,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(4.r)),
+                                borderSide: BorderSide(
+                                    color: const Color(0xFFDD7164), width: 1.w),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(4.r)),
+                                borderSide: BorderSide(
+                                    width: 1.5.w, color: Colors.blue),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      //     child: const thickness_drop_down()),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: 422.h, left: 29.w, right: 27.w),
+                        child: SizedBox(
+                          width: 304.w,
+                          height: 35.h,
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                              contentPadding:
+                                  EdgeInsets.only(left: 19.w, top: 9.h),
+                              labelText: 'Edge Alignment',
+                              labelStyle: TextStyle(
+                                color:
+                                    const Color(0xff000000).withOpacity(0.26),
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w400,
+                              ),
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(4.r)),
+                                borderSide: BorderSide(
+                                    color: const Color(0xFFDD7164), width: 1.w),
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(4.r)),
+                                borderSide: BorderSide(
+                                    width: 1.5.w, color: Colors.blue),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      //     child: const Edge_alignment_drop_down()),
+                      Padding(
+                        padding: EdgeInsets.only(
+                            top: 467.h, left: 29.w, right: 27.w),
                         child: SizedBox(
                           width: 304.w,
                           height: 70.h,
-                          child: TextField(
+                          child: TextFormField(
                             decoration: InputDecoration(
                               contentPadding:
                                   EdgeInsets.only(left: 19.w, top: 9.h),
