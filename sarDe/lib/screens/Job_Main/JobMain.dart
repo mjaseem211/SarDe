@@ -19,7 +19,7 @@ class JobMain extends StatelessWidget {
         children: [
           Top_Back_Button(
             onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
+              Navigator.of(context).pop(MaterialPageRoute(
                   builder: (context) => const Start_Job_Form()));
             },
           ),
