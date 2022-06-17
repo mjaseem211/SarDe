@@ -76,12 +76,14 @@ Widget title1(BuildContext context) {
   );
 }
 
-Widget subtitle() {
+Widget subtitle(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
     padding: EdgeInsets.only(left: 33.w),
     child: Row(children: [
-      Text(
-        "NABARD RIDF 23\nKuttichira to Maradu",
+      Text(job.jobTitle,
         style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 22.sp,

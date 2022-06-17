@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
 class JobIDProvider extends ChangeNotifier {
-  JobIDProvider(this._jobID, this._name);
+  JobIDProvider(this._jobID, this._jobTitle);
 
   String _jobID;
-  String _name;
+  String _jobTitle;
 
   void setJobID(String id) {
     _jobID = id;
     notifyListeners();
   }
 
-  void setName(String name) {
-    _name = name;
+  void setJobTitle(String jobTitle) {
+    _jobTitle = jobTitle;
     notifyListeners();
   }
 
@@ -20,7 +20,7 @@ class JobIDProvider extends ChangeNotifier {
     return _jobID;
   }
 
-  String get name {
-    return _name;
+  String get jobTitle {
+    return _jobTitle;
   }
 }
