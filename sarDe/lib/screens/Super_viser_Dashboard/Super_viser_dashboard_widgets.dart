@@ -8,6 +8,8 @@ import 'package:sarde/providers/job_id.dart';
 import 'package:sarde/screens/Profile/profile.dart';
 import 'package:sarde/screens/Start_Job_Form/Start_Job_Form.dart';
 
+import '../../models/job_card/job_card.dart';
+
 Widget nameButton() {
   return Builder(
     builder: (context) {
@@ -114,6 +116,8 @@ class SupervisorSlider extends StatelessWidget {
 Widget jobContainer(
   String id,
   String jobTitle,
+    Result job,
+
 ) {
   return Builder(
     builder: (context) {
@@ -203,8 +207,9 @@ Widget jobContainer(
                 value: JobIDProvider(
                   id,
                   jobTitle,
+                  job,
                 ),
-                child: const Start_Job_Form(),
+                child:  Start_Job_Form(jobCardModel:job ),
               ),
             ),
           );

@@ -46,6 +46,8 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
       Widget jobCard = jobContainer(
         element.id ?? "",
         element.jobTitle ?? "",
+        element
+
       );
       jobCardDataList.add(jobCard);
     }
@@ -68,7 +70,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
             height: 16.h,
           ),
           const SupervisorSlider(),
-          Expanded(
+          Expanded(flex: 3,
             child: ListView.builder(
               reverse: true,
               shrinkWrap: false,
@@ -78,7 +80,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
               },
             ),
           ),
-          Expanded(
+          Expanded(flex: 2,
             child: ListView.builder(
               reverse: true,
               shrinkWrap: false,
