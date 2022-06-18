@@ -6,6 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:sarde/providers/job_id.dart';
 import 'package:sarde/screens/Job_Main/JobMain.dart';
 
+import '../../../services/prefs.dart';
+
 // ignore: camel_case_types
 class Start_Button extends StatelessWidget {
   const Start_Button({Key? key}) : super(key: key);
@@ -16,8 +18,11 @@ class Start_Button extends StatelessWidget {
       context,
     );
     return GestureDetector(
-      onTap: () {
-        Navigator.of(context).pushReplacement(
+      onTap: () async {
+        final prefs = await SardePreferences.getInstance();
+        prefs.jobsId = await  job.jobID;
+
+        Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => ChangeNotifierProvider(
               create: (context) => job,
@@ -83,7 +88,8 @@ Widget subtitle(BuildContext context) {
   return Padding(
     padding: EdgeInsets.only(left: 33.w),
     child: Row(children: [
-      Text(job.jobTitle,
+      Text(
+        job.jobTitle,
         style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 22.sp,
@@ -93,14 +99,17 @@ Widget subtitle(BuildContext context) {
   );
 }
 
-Widget date() {
+Widget date(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
     padding: EdgeInsets.only(left: 33.w, right: 149.w),
     child: Row(
       children: [
         Expanded(
           child: Text(
-            "10-08-22",
+            "${job.jobResult.createdDate}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 22.sp,
