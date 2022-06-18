@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:sarde/models/api_model.dart';
 import 'package:sarde/models/Expense/expense.dart';
 import 'package:sarde/models/login.dart';
-import 'package:sarde/models/Tools.dart';
+import 'package:sarde/models/Tools/Tools.dart';
 import '../models/Inventory/Board_Fixing_inventory.dart';
 import '../models/Inventory/Road_Marking_inventory.dart';
 import '../models/Inventory/Stud_Fixing_inventory.dart';
@@ -78,12 +78,14 @@ class SardeAPI {
 
   static Future<APIModel<ToolsModel>> addTools(
     String accessToken,
+    String jobId,
     String item,
     String quantity,
     String condition,
   ) async {
     final response = await post('Tools/add_tools', {
       'access_token': accessToken,
+      'job_id': jobId,
       'item': item,
       'quantity': quantity,
       'condition': condition,

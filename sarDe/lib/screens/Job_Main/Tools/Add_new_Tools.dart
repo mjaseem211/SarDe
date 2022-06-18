@@ -7,6 +7,9 @@ import 'package:sarde/screens/Job_Main/Tools/Add_new_Tools_widgets.dart';
 import 'package:sarde/screens/Job_Main/Tools/dialogue_box.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 
+import '../../../api/getAllTools.dart';
+import '../../../services/prefs.dart';
+
 class add_new_tools extends StatefulWidget {
   const add_new_tools({Key? key}) : super(key: key);
 
@@ -15,7 +18,34 @@ class add_new_tools extends StatefulWidget {
 }
 
 class _add_new_toolsState extends State<add_new_tools> {
-  final List<Widget> toolsData = [];
+  final toolsApi = GetAllTools();
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _getAllExpenses(0, 25);
+    });
+  }
+
+  _getAllExpenses(pageOffset, pageCount) async {
+    final prefs = await SardePreferences.getInstance();
+    var jobId = await prefs.jobId;
+    var accessToken = prefs.token;
+    var toolsData = await toolsApi.getTools(
+      accessToken: accessToken,
+      jobId: jobId,
+      pageOffset: pageOffset,
+      pageCount: pageCount,
+    );
+    for (var element in toolsData!.result) {
+      Widget tools =
+      data2(element.item, element.quantity, element.condition);
+      toolsDataList.add(tools);
+    }
+    setState(() {});
+  }
+
+  final List<Widget> toolsDataList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +64,15 @@ class _add_new_toolsState extends State<add_new_tools> {
         line_1(),
         Expanded(
           child: ListView.builder(
-              itemCount: toolsData.length,
+              itemCount: toolsDataList.length,
               itemBuilder: (BuildContext context, int index) {
-                return toolsData[index];
+                return toolsDataList[index];
               }),
         ),
          dialogue_box(
           dataCallback: (data) {
             Widget item = data2( data[0], data[1], data[2]);
-            toolsData.add(item);
+            toolsDataList.add(item);
             setState(() {});
           },
         ),

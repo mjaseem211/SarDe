@@ -23,7 +23,7 @@ class work_progress extends StatelessWidget {
           SizedBox(
             height: 3.h,
           ),
-          Sub_Title(),
+          Sub_Title(context),
           Expanded(
             child: ListView(children: [
               SizedBox(
@@ -106,8 +106,7 @@ class work_progress extends StatelessWidget {
           ),
           Bottom_back_button(
             onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => const JobMain()));
+              Navigator.of(context).pop();
             },
           ),
           SizedBox(
