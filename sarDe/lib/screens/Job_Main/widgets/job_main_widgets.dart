@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import 'package:sarde/screens/Job_Main/Expense/Add_new_expense.dart';
 import 'package:sarde/screens/Job_Main/Inventory/Inventory.dart';
 import 'package:sarde/screens/Job_Main/Labours/Add_new_Labours.dart';
 import 'package:sarde/screens/Job_Main/Quality_Check/Quality_Check.dart';
 import 'package:sarde/screens/Job_Main/Tools/Add_new_Tools.dart';
 import 'package:sarde/screens/Job_Main/Work_Progress/work_progress.dart';
+import '../../../providers/job_id.dart';
 import 'app_grid_buttons.dart';
 
-Widget title() {
+Widget title(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
     padding: EdgeInsets.only(left: 33.w, right: 44.w),
     child: Row(
       children: [
         Expanded(
           child: Text(
-            "Job 303",
+            job.jobID,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 35.sp,
@@ -23,7 +28,7 @@ Widget title() {
           ),
         ),
         Text(
-          "18-09-22",
+          "${job.jobResult.finishDateTime}",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 22.sp,
@@ -34,13 +39,18 @@ Widget title() {
   );
 }
 
-Widget subTitle() {
+Widget subTitle(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
-    padding: EdgeInsets.only(left: 33.w, right: 134.w),
+    padding: EdgeInsets.only(
+      left: 33.w,
+    ),
     child: Row(
       children: [
         Text(
-          "Kuttichira to Maradu",
+          job.jobTitle,
           style: TextStyle(
             color: const Color(0xFF2B3070).withOpacity(0.7),
             fontSize: 22.sp,
@@ -66,7 +76,7 @@ class job_main_nav extends StatelessWidget {
             children: [
               GridButtons(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const work_progress()));
                 },
                 name: "Work\nProgress",
@@ -104,7 +114,7 @@ class job_main_nav extends StatelessWidget {
           ),
           Column(
             children: [
-               GridButtons(
+              GridButtons(
                 assetimage: "assets/images/add_button.png",
                 height: 144.h,
                 width: 143.w,
@@ -124,8 +134,8 @@ class job_main_nav extends StatelessWidget {
                 name: "Quality\nCheck",
                 top: 83.h,
                 onTap: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) => const Quality_Check()));
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const Quality_Check()));
                 },
               ),
               SizedBox(

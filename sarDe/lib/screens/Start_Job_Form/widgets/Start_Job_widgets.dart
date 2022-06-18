@@ -20,7 +20,7 @@ class Start_Button extends StatelessWidget {
     return GestureDetector(
       onTap: () async {
         final prefs = await SardePreferences.getInstance();
-        prefs.jobsId = await  job.jobID;
+        prefs.jobsId = await job.jobID;
 
         Navigator.of(context).push(
           MaterialPageRoute(
@@ -109,7 +109,7 @@ Widget date(BuildContext context) {
       children: [
         Expanded(
           child: Text(
-            "${job.jobResult.createdDate}",
+            "${job.jobResult.startDateTime}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 22.sp,
@@ -117,7 +117,7 @@ Widget date(BuildContext context) {
           ),
         ),
         Text(
-          "18-09-22",
+          "${job.jobResult.finishDateTime}",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 22.sp,
@@ -130,7 +130,7 @@ Widget date(BuildContext context) {
 
 Widget heading() {
   return Padding(
-    padding: EdgeInsets.only(left: 35.w, right: 218.w),
+    padding: EdgeInsets.only(left: 35.w, ),
     child: Row(children: [
       Text(
         "Road Marking",
@@ -143,29 +143,44 @@ Widget heading() {
   );
 }
 
-Widget subheading() {
+Widget subheading(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
-    padding: EdgeInsets.only(left: 36.w, right: 56.w),
-    child: Row(children: [
-      Text(
-        "Road Marking from kuttichira to maradu",
-        style: TextStyle(
-            fontWeight: FontWeight.w400,
-            fontSize: 14.sp,
-            color: const Color(0xFF000000).withOpacity(0.5)),
-      ),
-    ]),
+    padding: EdgeInsets.only(left: 35.w, ),
+    child: Row(
+      children: [
+        Text(
+          "Road Marking from ",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF000000).withOpacity(0.5)),
+        ),
+        Text(
+          job.jobTitle,
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF000000).withOpacity(0.5)),
+        ),
+      ],
+    ),
   );
 }
 
-Widget data() {
+Widget data(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
     padding: EdgeInsets.only(left: 36.w, right: 44.w),
     child: Row(
       children: [
         Expanded(
           child: Text(
-            "18-09-22",
+            "${job.jobResult.finishDateTime}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16.sp,
@@ -173,7 +188,7 @@ Widget data() {
           ),
         ),
         Text(
-          "Total : 534  sqm",
+          job.jobResult.roadMarkingSqm,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,
@@ -186,7 +201,7 @@ Widget data() {
 
 Widget line() {
   return Padding(
-    padding: EdgeInsets.only(left: 37.w, right: 49.w),
+    padding: EdgeInsets.only(left: 37.w, ),
     child: Row(children: [
       Container(
         height: 1.h,
@@ -200,7 +215,7 @@ Widget line() {
 
 Widget heading2() {
   return Padding(
-    padding: EdgeInsets.only(left: 35.w, right: 245.w),
+    padding: EdgeInsets.only(left: 35.w,),
     child: Row(children: [
       Text(
         "Stud Fixing",
@@ -212,30 +227,44 @@ Widget heading2() {
     ]),
   );
 }
-
-Widget subheading1() {
+Widget subheading1(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
-    padding: EdgeInsets.only(left: 36.w, right: 57.w),
-    child: Row(children: [
-      Text(
-        "Stud fixing on the sides from kuttichira to\nmaradu",
-        style: TextStyle(
-            fontWeight: FontWeight.w400,
-            fontSize: 14.sp,
-            color: const Color(0xFF000000).withOpacity(0.5)),
-      ),
-    ]),
+    padding: EdgeInsets.only(left: 35.w, ),
+    child: Row(
+      children: [
+        Text(
+          "Stud fixing on the sides from ",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF000000).withOpacity(0.5)),
+        ),
+        Text(
+          job.jobTitle,
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF000000).withOpacity(0.5)),
+        ),
+      ],
+    ),
   );
 }
 
-Widget data2() {
+Widget data2(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
     padding: EdgeInsets.only(left: 36.w, right: 44.w),
     child: Row(
       children: [
         Expanded(
           child: Text(
-            "18-09-22",
+            "${job.jobResult.finishDateTime}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16.sp,
@@ -243,7 +272,7 @@ Widget data2() {
           ),
         ),
         Text(
-          "Total : 184 nos",
+          job.jobResult.studFixingNos,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,
@@ -256,7 +285,7 @@ Widget data2() {
 
 Widget heading3() {
   return Padding(
-    padding: EdgeInsets.only(left: 35.w, right: 231.w),
+    padding: EdgeInsets.only(left: 35.w,),
     child: Row(children: [
       Text(
         "Board Fixing",
@@ -268,30 +297,44 @@ Widget heading3() {
     ]),
   );
 }
-
-Widget subheading2() {
+Widget subheading2(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
-    padding: EdgeInsets.only(left: 36.w, right: 57.w),
-    child: Row(children: [
-      Text(
-        "Board fixing on the sides from kuttichira to\nmaradu",
-        style: TextStyle(
-            fontWeight: FontWeight.w400,
-            fontSize: 14.sp,
-            color: const Color(0xFF000000).withOpacity(0.5)),
-      ),
-    ]),
+    padding: EdgeInsets.only(left: 35.w, ),
+    child: Row(
+      children: [
+        Text(
+          "Board fixing on the sides from ",
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF000000).withOpacity(0.5)),
+        ),
+        Text(
+          job.jobTitle,
+          style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 13.sp,
+              color: const Color(0xFF000000).withOpacity(0.5)),
+        ),
+      ],
+    ),
   );
 }
 
-Widget data3() {
+Widget data3(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
     padding: EdgeInsets.only(left: 36.w, right: 48.w),
     child: Row(
       children: [
         Expanded(
           child: Text(
-            "18-09-22",
+            "${job.jobResult.finishDateTime}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16.sp,
@@ -299,7 +342,7 @@ Widget data3() {
           ),
         ),
         Text(
-          "Total : 43  nos",
+          job.jobResult.boardFixingNos,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,

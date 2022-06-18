@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 
+import '../../../providers/job_id.dart';
 import 'Board_Fixing/Board_Fixing.dart';
 import 'Road_Marking/Road_marking.dart';
 import 'Stud_Fixing/Stud_Fixing.dart';
@@ -21,13 +23,16 @@ Widget Title1() {
 }
 
 // ignore: non_constant_identifier_names
-Widget Sub_Title() {
+Widget Sub_Title(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
   return Padding(
     padding: EdgeInsets.only(
       left: 33.w,
     ),
     child: Row(children: [
-      Text("Job 303",
+      Text(job.jobID,
           style: TextStyle(
               color: const Color(0xFF2B3070).withOpacity(0.7),
               fontSize: 22.sp,

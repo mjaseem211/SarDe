@@ -48,11 +48,11 @@ class _Start_Job_FormState extends State<Start_Job_Form> {
         Expanded(
           child: ListView(children: [
             heading(),
-            subheading(),
+            subheading(context),
             SizedBox(
               height: 3.h,
             ),
-            data(),
+            data(context),
             SizedBox(
               height: 9.h,
             ),
@@ -61,11 +61,11 @@ class _Start_Job_FormState extends State<Start_Job_Form> {
               height: 11.h,
             ),
             heading2(),
-            subheading1(),
+            subheading1(context),
             SizedBox(
               height: 18.h,
             ),
-            data2(),
+            data2(context),
             SizedBox(
               height: 12.h,
             ),
@@ -74,11 +74,11 @@ class _Start_Job_FormState extends State<Start_Job_Form> {
               height: 12.h,
             ),
             heading3(),
-            subheading2(),
+            subheading2(context),
             SizedBox(
               height: 18.h,
             ),
-            data3(),
+            data3(context),
           ]),
         ),
         ChangeNotifierProvider(

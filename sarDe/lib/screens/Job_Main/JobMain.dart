@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Complete_checkup_form/complete_checkup_form.dart';
-import 'package:sarde/screens/Start_Job_Form/Start_Job_Form.dart';
 import 'package:sarde/widgets/Close_Day_Button.dart';
 import 'package:sarde/screens/job_main/widgets/job_main_widgets.dart';
 import 'package:sarde/widgets/Top_Back_button.dart';
@@ -25,11 +24,11 @@ class JobMain extends StatelessWidget {
           SizedBox(
             height: 26.h,
           ),
-          title(),
+          title(context),
           SizedBox(
             height: 3.h,
           ),
-          subTitle(),
+          subTitle(context),
           Expanded(
             child: ListView(
                 shrinkWrap: true,

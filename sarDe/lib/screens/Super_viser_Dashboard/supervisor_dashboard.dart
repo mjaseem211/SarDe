@@ -70,7 +70,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
             height: 16.h,
           ),
           const SupervisorSlider(),
-          Expanded(flex: 3,
+          Expanded(flex: 12,
             child: ListView.builder(
               reverse: true,
               shrinkWrap: false,
@@ -80,7 +80,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
               },
             ),
           ),
-          Expanded(flex: 2,
+          Expanded(flex: 6,
             child: ListView.builder(
               reverse: true,
               shrinkWrap: false,

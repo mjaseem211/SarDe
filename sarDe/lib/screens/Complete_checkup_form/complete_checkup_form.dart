@@ -36,11 +36,7 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
       body: Column(children: [
         Top_Back_Button(
           onTap: () {
-            Navigator.of(context).pushReplacement(
-              MaterialPageRoute(
-                builder: (context) => const JobMain(),
-              ),
-            );
+            Navigator.of(context).pop();
           },
         ),
         SizedBox(

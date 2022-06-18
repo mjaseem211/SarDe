@@ -250,8 +250,10 @@ class _dialogue_boxState extends State<dialogue_box> {
                                 final prefs =
                                     await SardePreferences.getInstance();
                                 final token = prefs.token;
+                                final jobId = await prefs.jobId;
                                 final response = await SardeAPI.addTools(
                                     token ?? "",
+                                    jobId ?? "",
                                     itemController.text.trim(),
                                     quantityController.text.trim(),
                                     conditionController.text.trim());
