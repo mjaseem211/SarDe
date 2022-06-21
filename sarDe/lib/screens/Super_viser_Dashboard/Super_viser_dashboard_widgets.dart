@@ -116,8 +116,7 @@ class SupervisorSlider extends StatelessWidget {
 Widget jobContainer(
   String id,
   String jobTitle,
-    Result job,
-
+  Result job,
 ) {
   return Builder(
     builder: (context) {
@@ -209,7 +208,7 @@ Widget jobContainer(
                   jobTitle,
                   job,
                 ),
-                child:  Start_Job_Form(jobCardModel:job ),
+                child: Start_Job_Form(jobCardModel: job),
               ),
             ),
           );
@@ -218,6 +217,7 @@ Widget jobContainer(
     },
   );
 }
+
 // ignore: non_constant_identifier_names
 Widget Bottom_data(String message_title, String message_description) {
   return Container(

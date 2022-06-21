@@ -20,7 +20,7 @@ class Start_Button extends StatelessWidget {
     return GestureDetector(
       onTap: () async {
         final prefs = await SardePreferences.getInstance();
-        prefs.jobsId = await job.jobID;
+        prefs.jobsId = job.jobID;
 
         Navigator.of(context).push(
           MaterialPageRoute(

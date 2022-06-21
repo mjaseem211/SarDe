@@ -46,7 +46,7 @@ class Message {
 
   String id;
   String visibility;
-  String supervisorId;
+  String? supervisorId;
   String messageTitle;
   String messageDescription;
   DateTime createdDate;

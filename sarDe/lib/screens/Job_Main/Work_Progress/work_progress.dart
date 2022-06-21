@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Job_Main/Work_Progress/Stud_Fixing/Stud_Fixing.dart';
 import 'package:sarde/widgets/text_button.dart';
 import 'package:sarde/screens/Job_Main/Work_Progress/work_progress_widgets.dart';
-import 'package:sarde/screens/job_main/JobMain.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 
 import 'Board_Fixing/Board_Fixing.dart';
