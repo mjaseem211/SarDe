@@ -7,7 +7,6 @@ import 'package:sarde/screens/Job_Main/Labours/Add_new_Labours.dart';
 import 'package:sarde/screens/Job_Main/Quality_Check/Quality_Check.dart';
 import 'package:sarde/screens/Job_Main/Tools/Add_new_Tools.dart';
 import 'package:sarde/screens/Job_Main/Work_Progress/work_progress.dart';
-import 'package:sarde/screens/job_main/JobMain.dart';
 import 'package:sarde/widgets/Close_Day_Button.dart';
 import 'package:sarde/screens/success_page/Success_page.dart';
 import 'package:sarde/widgets/Top_Back_button.dart';
