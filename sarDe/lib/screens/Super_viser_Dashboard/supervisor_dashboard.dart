@@ -44,8 +44,8 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
     );
     for (var element in jobCardData!.result!) {
       Widget jobCard = jobContainer(
-        element.id ?? "",
-        element.jobTitle ?? "",
+        element.id ,
+        element.jobTitle ,
         element
 
       );
