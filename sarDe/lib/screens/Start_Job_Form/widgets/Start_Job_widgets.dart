@@ -109,7 +109,7 @@ Widget date(BuildContext context) {
       children: [
         Expanded(
           child: Text(
-            "${job.jobResult.startDateTime}",
+            "",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 22.sp,
@@ -117,7 +117,7 @@ Widget date(BuildContext context) {
           ),
         ),
         Text(
-          "${job.jobResult.finishDateTime}",
+          "",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 22.sp,
@@ -180,7 +180,7 @@ Widget data(BuildContext context) {
       children: [
         Expanded(
           child: Text(
-            "${job.jobResult.finishDateTime}",
+            "",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16.sp,
@@ -188,7 +188,7 @@ Widget data(BuildContext context) {
           ),
         ),
         Text(
-          job.jobResult.roadMarkingSqm,
+          "",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,
@@ -264,7 +264,9 @@ Widget data2(BuildContext context) {
       children: [
         Expanded(
           child: Text(
-            "${job.jobResult.finishDateTime}",
+            // "${job.jobResult.finishDateTime}",
+
+            "",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16.sp,
@@ -272,7 +274,9 @@ Widget data2(BuildContext context) {
           ),
         ),
         Text(
-          job.jobResult.studFixingNos,
+          // job.jobResult.studFixingNos,
+
+          "",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,
@@ -334,7 +338,7 @@ Widget data3(BuildContext context) {
       children: [
         Expanded(
           child: Text(
-            "${job.jobResult.finishDateTime}",
+            "",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16.sp,
@@ -342,7 +346,8 @@ Widget data3(BuildContext context) {
           ),
         ),
         Text(
-          job.jobResult.boardFixingNos,
+          // job.jobResult.boardFixingNos,
+          "",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 16.sp,

@@ -28,7 +28,7 @@ Widget title(BuildContext context) {
           ),
         ),
         Text(
-          "${job.jobResult.finishDateTime}",
+          "",
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 22.sp,
