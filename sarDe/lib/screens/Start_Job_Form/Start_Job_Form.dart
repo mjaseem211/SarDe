@@ -14,7 +14,6 @@ class Start_Job_Form extends StatefulWidget {
   const Start_Job_Form({Key? key, required this.jobCardModel}) : super(key: key);
 
   final Result jobCardModel;
-
   @override
   State<Start_Job_Form> createState() => _Start_Job_FormState();
 }
