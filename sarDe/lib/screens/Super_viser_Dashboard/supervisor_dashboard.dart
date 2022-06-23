@@ -43,12 +43,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
       pageCount: pageCount,
     );
     for (var element in jobCardData!.result!) {
-      Widget jobCard = jobContainer(
-        element.id ,
-        element.jobTitle ,
-        element
-
-      );
+      Widget jobCard = jobContainer(element.id, element.jobTitle, element);
       jobCardDataList.add(jobCard);
     }
     setState(() {});
@@ -70,7 +65,8 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
             height: 16.h,
           ),
           const SupervisorSlider(),
-          Expanded(flex: 12,
+          Expanded(
+            flex: 12,
             child: ListView.builder(
               reverse: true,
               shrinkWrap: false,
@@ -80,7 +76,8 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
               },
             ),
           ),
-          Expanded(flex: 6,
+          Expanded(
+            flex: 6,
             child: ListView.builder(
               reverse: true,
               shrinkWrap: false,

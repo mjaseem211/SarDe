@@ -132,10 +132,7 @@ Widget date(BuildContext context) {
   );
 }
 
-Widget  subJobs(BuildContext context) {
-  JobIDProvider job = Provider.of<JobIDProvider>(
-    context,
-  );
+Widget subJobs( String taskName, String taskDetails, String total) {
   return Stack(alignment: Alignment.center, children: [
     Padding(
       padding: EdgeInsets.only(
@@ -143,7 +140,7 @@ Widget  subJobs(BuildContext context) {
       ),
       child: Row(children: [
         Text(
-          "Road Marking",
+          taskName,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 20.sp,
@@ -153,19 +150,13 @@ Widget  subJobs(BuildContext context) {
     ),
     Padding(
       padding: EdgeInsets.only(
+        top: 50.h,
         left: 35.w,
       ),
       child: Row(
         children: [
           Text(
-            "Road Marking from ",
-            style: TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
-                color: const Color(0xFF000000).withOpacity(0.5)),
-          ),
-          Text(
-            job.jobTitle,
+            taskDetails,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -175,12 +166,12 @@ Widget  subJobs(BuildContext context) {
       ),
     ),
     Padding(
-      padding: EdgeInsets.only(left: 36.w, right: 44.w),
+      padding: EdgeInsets.only(left: 36.w, right: 44.w, top: 100.h),
       child: Row(
         children: [
           Expanded(
             child: Text(
-              "",
+             "",
               style: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 16.sp,
@@ -188,7 +179,7 @@ Widget  subJobs(BuildContext context) {
             ),
           ),
           Text(
-            "",
+            total,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 16.sp,
@@ -199,6 +190,7 @@ Widget  subJobs(BuildContext context) {
     ),
     Padding(
       padding: EdgeInsets.only(
+        top: 150.h,
         left: 37.w,
       ),
       child: Row(children: [

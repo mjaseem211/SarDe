@@ -7,11 +7,15 @@ import 'package:sarde/screens/Start_Job_Form/widgets/Start_Job_widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/widgets/Top_Back_button.dart';
 
+import '../../api/getAllsubJObs.dart';
 import '../../models/job_card/job_card.dart';
+import '../../services/prefs.dart';
 
 class Start_Job_Form extends StatefulWidget {
-  const Start_Job_Form({Key? key, required this.jobCardModel})
-      : super(key: key);
+  const Start_Job_Form({
+    Key? key,
+    required this.jobCardModel,
+  }) : super(key: key);
 
   final Result jobCardModel;
 
@@ -20,6 +24,35 @@ class Start_Job_Form extends StatefulWidget {
 }
 
 class _Start_Job_FormState extends State<Start_Job_Form> {
+  final subJobsApi = GetAllSubJobCards();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _getSubJobCards();
+    });
+  }
+
+  _getSubJobCards() async {
+    final prefs = await SardePreferences.getInstance();
+    var accessToken = prefs.token;
+    var jobId = await prefs.jobId;
+    var subJobCardData =
+        await subJobsApi.getSubJobs(accessToken: accessToken, jobId: jobId);
+    for (var element in subJobCardData!.result.subJobs!) {
+      Widget subJobsCard = subJobs(
+        element.taskName,
+        element.taskDetails,
+        element.total,
+      );
+      subJobDataList.add(subJobsCard);
+    }
+    setState(() {});
+  }
+
+  final List<Widget> subJobDataList = [];
+
   @override
   Widget build(BuildContext context) {
     JobIDProvider job = Provider.of<JobIDProvider>(
@@ -46,15 +79,15 @@ class _Start_Job_FormState extends State<Start_Job_Form> {
         ),
         date(context),
         Expanded(
-          child: ListView(children: [
-            subJobs(context),
-            SizedBox(
-              height: 3.h,
-            ),
-            SizedBox(
-              height: 9.h,
-            ),
-          ]),
+          flex: 12,
+          child: ListView.builder(
+            reverse: true,
+            shrinkWrap: false,
+            itemCount: subJobDataList.length,
+            itemBuilder: (BuildContext context, int index) {
+              return subJobDataList[index];
+            },
+          ),
         ),
         ChangeNotifierProvider(
           create: (context) => job,
