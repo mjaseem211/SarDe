@@ -8,6 +8,7 @@ class JobIDProvider extends ChangeNotifier {
   String _jobTitle;
   Result _jobResult;
 
+
   void setJobID(String id) {
     _jobID = id;
     notifyListeners();

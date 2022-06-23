@@ -11,7 +11,7 @@ String jobCardModelToJson(JobCardModel data) => json.encode(data.toJson());
 
 class JobCardModel {
   JobCardModel({
-     this.result,
+    this.result,
     required this.status,
   });
 

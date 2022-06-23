@@ -10,10 +10,11 @@ import 'package:sarde/widgets/Top_Back_button.dart';
 import '../../models/job_card/job_card.dart';
 
 class Start_Job_Form extends StatefulWidget {
-
-  const Start_Job_Form({Key? key, required this.jobCardModel}) : super(key: key);
+  const Start_Job_Form({Key? key, required this.jobCardModel})
+      : super(key: key);
 
   final Result jobCardModel;
+
   @override
   State<Start_Job_Form> createState() => _Start_Job_FormState();
 }
@@ -46,38 +47,13 @@ class _Start_Job_FormState extends State<Start_Job_Form> {
         date(context),
         Expanded(
           child: ListView(children: [
-            heading(),
-            subheading(context),
+            subJobs(context),
             SizedBox(
               height: 3.h,
             ),
-            data(context),
             SizedBox(
               height: 9.h,
             ),
-            line(),
-            SizedBox(
-              height: 11.h,
-            ),
-            heading2(),
-            subheading1(context),
-            SizedBox(
-              height: 18.h,
-            ),
-            data2(context),
-            SizedBox(
-              height: 12.h,
-            ),
-            line(),
-            SizedBox(
-              height: 12.h,
-            ),
-            heading3(),
-            subheading2(context),
-            SizedBox(
-              height: 18.h,
-            ),
-            data3(context),
           ]),
         ),
         ChangeNotifierProvider(
