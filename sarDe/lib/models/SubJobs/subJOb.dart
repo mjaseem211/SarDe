@@ -13,7 +13,7 @@ String listAllSubJobsModelToJson(ListAllSubJobsModel data) =>
 class ListAllSubJobsModel {
   ListAllSubJobsModel({
     required this.result,
-    required  this.status,
+    required this.status,
   });
 
   Result result;
@@ -33,8 +33,8 @@ class ListAllSubJobsModel {
 
 class Result {
   Result({
-    required  this.jobDetails,
-    required  this.subJobs,
+    required this.jobDetails,
+    required this.subJobs,
   });
 
   List<JobDetail> jobDetails;
