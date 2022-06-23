@@ -34,11 +34,11 @@ class ListAllSubJobsModel {
 class Result {
   Result({
     required this.jobDetails,
-    required this.subJobs,
+     this.subJobs,
   });
 
   List<JobDetail> jobDetails;
-  List<SubJob> subJobs;
+  List<SubJob>? subJobs;
 
   factory Result.fromJson(Map<String, dynamic> json) => Result(
         jobDetails: List<JobDetail>.from(
@@ -49,7 +49,7 @@ class Result {
 
   Map<String, dynamic> toJson() => {
         "job_details": List<dynamic>.from(jobDetails.map((x) => x.toJson())),
-        "sub_jobs": List<dynamic>.from(subJobs.map((x) => x.toJson())),
+        "sub_jobs": List<dynamic>.from(subJobs!.map((x) => x.toJson())),
       };
 }
 
