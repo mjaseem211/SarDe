@@ -8,6 +8,7 @@ import '../models/Inventory/Board_Fixing_inventory.dart';
 import '../models/Inventory/Road_Marking_inventory.dart';
 import '../models/Inventory/Stud_Fixing_inventory.dart';
 import '../models/Labours/Add_Labours.dart';
+import '../models/Labours/drop_down_list.dart';
 import '../models/work_progress/Road_Marking.dart';
 import '../models/work_progress/Stud_Fixing.dart';
 import '../models/work_progress/board_fixing.dart';
@@ -98,13 +99,15 @@ class SardeAPI {
 
   static Future<APIModel<AddLaboursModel>> addLabours(
     String accessToken,
+    String jobId,
     String name,
     String trade,
     String type,
     String hours,
   ) async {
-    final response = await post('Labours/add_labours', {
+    final response = await post('Labours/add_labours_work', {
       'access_token': accessToken,
+      'job_id': jobId,
       'name': name,
       'trade': trade,
       'type': type,
@@ -232,4 +235,5 @@ class SardeAPI {
       (json) => StudFixingInventoryModel.fromJson(json),
     );
   }
+
 }
