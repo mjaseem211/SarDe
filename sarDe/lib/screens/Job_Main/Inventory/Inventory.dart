@@ -2,17 +2,48 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Job_Main/Inventory/Road_Marking/Road_Marking_inventory.dart';
 import 'package:sarde/screens/Job_Main/Inventory/Inventory_widgets.dart';
-import 'package:sarde/screens/job_main/JobMain.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
-import 'package:sarde/widgets/text_button.dart';
+import '../../../api/getAllsubJObs.dart';
+import '../../../services/prefs.dart';
 
-import 'Board_Fixing/Board_Fixing_Inventory.dart';
-import 'Stud_Fixing/Stud_Fixing_Inventory.dart';
-
-class Inventory extends StatelessWidget {
+class Inventory extends StatefulWidget {
   const Inventory({Key? key}) : super(key: key);
+
+  @override
+  State<Inventory> createState() => _InventoryState();
+}
+
+class _InventoryState extends State<Inventory> {
+  final subJobsApi = GetAllSubJobCards();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _getSubJobCards();
+    });
+  }
+
+  _getSubJobCards() async {
+    final prefs = await SardePreferences.getInstance();
+    var accessToken = prefs.token;
+    var jobId = await prefs.jobId;
+
+    var subJobCardData =
+        await subJobsApi.getSubJobs(accessToken: accessToken, jobId: jobId);
+    for (var element in subJobCardData!.result.subJobs!) {
+      Widget subJobsCard = subJobsWorkProgress(
+        element.taskName,
+        element.taskDetails,
+        element.total,
+      );
+      subJobDataList.add(subJobsCard);
+    }
+    setState(() {});
+  }
+
+  final List<Widget> subJobDataList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -25,118 +56,19 @@ class Inventory extends StatelessWidget {
           ),
           subtitle(),
           Expanded(
-            child: ListView(children: [
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Road_Marking_inventory()));
-                },
-                left: 46.w,
-                right: 207.w,
-                text: "Road Marking",
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Road_Marking_inventory()));
-                },
-                text: "Road Marking from kuttichira to maradu",
-                font_size: 14.sp,
-                color: const Color(0xFF000000).withOpacity(0.5),
-                left: 47.w,
-                right: 46.w,
-              ),
-              SizedBox(height: 3.h),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Road_Marking_inventory()));
-                },
-                text: "18-09-22",
-                right: 67.w,
-                left: 257.w,
-                color: const Color(0xFFBC401E),
-                font_size: 16.sp,
-              ),
-              SizedBox(
-                height: 20.h,
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Stud_Fixing_Inventory()));
-                },
-                text: "Stud Fixing",
-                left: 47.w,
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Stud_Fixing_Inventory()));
-                },
-                text: "Stud fixing on the sides from kuttichira to\nmaradu",
-                font_size: 14.sp,
-                color: const Color(0xFF000000).withOpacity(0.5),
-                left: 47.w,
-                right: 46.w,
-              ),
-              SizedBox(
-                height: 3.h,
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Stud_Fixing_Inventory()));
-                },
-                text: "18-09-22",
-                left: 249.w,
-                right: 67.w,
-                color: const Color(0xFFBC401E),
-                font_size: 16.sp,
-              ),
-              SizedBox(
-                height: 34.h,
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Board_Fixing_inventory()));
-                },
-                text: "Board Fixing",
-                left: 46.w,
-                right: 220.w,
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Board_Fixing_inventory()));
-                },
-                text: "Board fixing on the sides from kuttichira to\nmaradu",
-                font_size: 14.sp,
-                color: const Color(0xFF000000).withOpacity(0.5),
-                left: 47.w,
-                right: 46.w,
-              ),
-              SizedBox(
-                height: 3.h,
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const Board_Fixing_inventory()));
-                },
-                text: "18-09-22",
-                left: 257.w,
-                right: 67.w,
-                color: const Color(0xFFBC401E),
-                font_size: 16.sp,
-              ),
-            ]),
+            flex: 12,
+            child: ListView.builder(
+              reverse: true,
+              shrinkWrap: false,
+              itemCount: subJobDataList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return subJobDataList[index];
+              },
+            ),
           ),
           Bottom_back_button(
             onTap: () {
-              Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => const JobMain()));
+              Navigator.of(context).pop();
             },
           ),
           SizedBox(
