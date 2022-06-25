@@ -73,8 +73,7 @@ class _add_new_expenseState extends State<add_new_expense> {
         ),
         Bottom_back_button(
           onTap: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => const JobMain()));
+            Navigator.of(context).pop();
           },
         ),
         SizedBox(

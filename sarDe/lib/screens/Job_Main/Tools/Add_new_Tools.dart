@@ -80,8 +80,7 @@ class _add_new_toolsState extends State<add_new_tools> {
         ),
         Bottom_back_button(
           onTap: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => const JobMain()));
+            Navigator.of(context).pop();
           },
         ),
         SizedBox(

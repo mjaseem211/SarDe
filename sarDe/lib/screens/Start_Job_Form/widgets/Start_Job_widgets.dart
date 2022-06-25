@@ -169,7 +169,7 @@ Widget subJobs(String taskName, String taskDetails, String total) {
         children: [
           Expanded(
             child: Text(
-              "",
+              "Date",
               style: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 16.sp,

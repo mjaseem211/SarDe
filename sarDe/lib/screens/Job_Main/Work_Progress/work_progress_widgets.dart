@@ -24,7 +24,7 @@ Widget Sub_Title() {
       left: 33.w,
     ),
     child: Row(children: [
-      Text("job.jobID,",
+      Text("Job 303",
           style: TextStyle(
               color: const Color(0xFF2B3070).withOpacity(0.7),
               fontSize: 22.sp,
@@ -74,7 +74,7 @@ Widget subJobsWorkProgress(String taskName, String taskDetails, String total) {
             children: [
               Expanded(
                 child: Text(
-                  "",
+                  "Date",
                   style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 16.sp,
