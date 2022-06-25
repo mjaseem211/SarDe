@@ -8,10 +8,7 @@ import '../models/Inventory/Board_Fixing_inventory.dart';
 import '../models/Inventory/Road_Marking_inventory.dart';
 import '../models/Inventory/Stud_Fixing_inventory.dart';
 import '../models/Labours/Add_Labours.dart';
-import '../models/Labours/drop_down_list.dart';
-import '../models/work_progress/Road_Marking.dart';
-import '../models/work_progress/Stud_Fixing.dart';
-import '../models/work_progress/board_fixing.dart';
+import '../models/work_progress/Add_new_work_progress.dart';
 
 class SardeAPI {
   static const String _baseUrl = 'http://renr.in/index.php/API/';
@@ -119,72 +116,29 @@ class SardeAPI {
     );
   }
 
-  static Future<APIModel<AddBoardFixingWorkProgressModel>>
-      addBoardFixingworkprogress(
+  static Future<APIModel<AddNewWorkProgressModel>> addNewWorkProgress(
     String accessToken,
+    String jobId,
+    String subJobId,
     String itemdescription,
     String no,
     String length,
     String width,
     String meterSqr,
   ) async {
-    final response = await post('Work_progress/Board_fixing/add_item', {
+    final response = await post('WorkProgress/add_item', {
       'access_token': accessToken,
+      'job_id': jobId,
+      'subjob_id': subJobId,
       'item_description': itemdescription,
       'no': no,
       'length': length,
       'width': width,
       'meter_sqr': meterSqr
     });
-    return APIModel<AddBoardFixingWorkProgressModel>.fromJson(
+    return APIModel<AddNewWorkProgressModel>.fromJson(
       response,
-      (json) => AddBoardFixingWorkProgressModel.fromJson(json),
-    );
-  }
-
-  static Future<APIModel<AddRoadMarkingWorkProgressModel>>
-      addRoadMarkingworkprogress(
-    String accessToken,
-    String itemdescription,
-    String no,
-    String length,
-    String width,
-    String meterSqr,
-  ) async {
-    final response = await post('Work_progress/Road_marking/add_item', {
-      'access_token': accessToken,
-      'item_description': itemdescription,
-      'no': no,
-      'length': length,
-      'width': width,
-      'meter_sqr': meterSqr
-    });
-    return APIModel<AddRoadMarkingWorkProgressModel>.fromJson(
-      response,
-      (json) => AddRoadMarkingWorkProgressModel.fromJson(json),
-    );
-  }
-
-  static Future<APIModel<AddStudFixingWorkProgressModel>>
-      addStudFixingworkprogress(
-    String accessToken,
-    String itemdescription,
-    String no,
-    String length,
-    String width,
-    String meterSqr,
-  ) async {
-    final response = await post('Work_progress/Stud_fixing/add_item', {
-      'access_token': accessToken,
-      'item_description': itemdescription,
-      'no': no,
-      'length': length,
-      'width': width,
-      'meter_sqr': meterSqr
-    });
-    return APIModel<AddStudFixingWorkProgressModel>.fromJson(
-      response,
-      (json) => AddStudFixingWorkProgressModel.fromJson(json),
+      (json) => AddNewWorkProgressModel.fromJson(json),
     );
   }
 
@@ -235,5 +189,4 @@ class SardeAPI {
       (json) => StudFixingInventoryModel.fromJson(json),
     );
   }
-
 }

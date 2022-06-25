@@ -85,8 +85,8 @@ Widget line() {
   ]);
 }
 
-Widget Data(String itemdescription, String no, String length, String width,
-    String metersqr) {
+Widget Data(String itemDescription, String no, String length, String width,
+    String meterSqr) {
   return Padding(
     padding: EdgeInsets.only(right: 48.w, left: 31.w),
     child: Row(
@@ -94,7 +94,7 @@ Widget Data(String itemdescription, String no, String length, String width,
         Expanded(
           flex: 5,
           child: Text(
-            itemdescription,
+            itemDescription,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
@@ -132,7 +132,7 @@ Widget Data(String itemdescription, String no, String length, String width,
           ),
         ),
         Text(
-          metersqr,
+          meterSqr,
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 13.sp,

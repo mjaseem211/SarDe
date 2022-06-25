@@ -2,6 +2,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class SardePreferences {
   final SharedPreferences _prefs;
+
   SardePreferences._(this._prefs);
 
   static Future<SardePreferences> getInstance() async {
@@ -30,7 +31,7 @@ class SardePreferences {
     return _prefs.remove('token');
   }
 
-  // Token Specific
+  // JobId Specific
   Future<String?> get jobId async {
     return _prefs.getString('job_id');
   }
@@ -39,6 +40,15 @@ class SardePreferences {
     _prefs.setString('job_id', jobId);
   }
 
+
+  // SubJobId
+  Future<String?> get subJobId async {
+    return _prefs.getString('subjob_id');
+  }
+
+  set subJobsId(String subJobId) {
+    _prefs.setString('subjob_id', subJobId);
+  }
   // User Name
   String? get name {
     return _prefs.getString('name');
