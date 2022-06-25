@@ -1,16 +1,49 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Job_Main/Work_Progress/Stud_Fixing/Stud_Fixing.dart';
-import 'package:sarde/widgets/text_button.dart';
 import 'package:sarde/screens/Job_Main/Work_Progress/work_progress_widgets.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
+import '../../../api/getAllsubJObs.dart';
+import '../../../services/prefs.dart';
 
-import 'Board_Fixing/Board_Fixing.dart';
-import 'Road_Marking/Road_marking.dart';
-
-// ignore: camel_case_types
-class work_progress extends StatelessWidget {
+class work_progress extends StatefulWidget {
   const work_progress({Key? key}) : super(key: key);
+
+  @override
+  State<work_progress> createState() => _work_progressState();
+}
+
+class _work_progressState extends State<work_progress> {
+  final subJobsApi = GetAllSubJobCards();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _getSubJobCards();
+    });
+  }
+
+  _getSubJobCards() async {
+    final prefs = await SardePreferences.getInstance();
+    var accessToken = prefs.token;
+    var jobId = await prefs.jobId;
+
+    var subJobCardData =
+        await subJobsApi.getSubJobs(accessToken: accessToken, jobId: jobId);
+    for (var element in subJobCardData!.result.subJobs!) {
+      Widget subJobsCard = subJobsWorkProgress(
+        element.taskName,
+        element.taskDetails,
+        element.total,
+      );
+      subJobDataList.add(subJobsCard);
+    }
+    setState(() {});
+  }
+
+  final List<Widget> subJobDataList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -22,86 +55,17 @@ class work_progress extends StatelessWidget {
           SizedBox(
             height: 3.h,
           ),
-          Sub_Title(context),
+          Sub_Title(),
           Expanded(
-            child: ListView(children: [
-              SizedBox(
-                height: 41.h,
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) =>
-                          const Road_Marking_work_progress()));
-                },
-                text: "Road Marking",
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) =>
-                          const Road_Marking_work_progress()));
-                },
-                text: "Road Marking from kuttichira to maradu",
-                font_size: 14.sp,
-                color: const Color(0xFF000000).withOpacity(0.5),
-                left: 34.w,
-              ),
-              SizedBox(height: 3.h),
-              const text_button1(),
-              SizedBox(
-                height: 20.h,
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) =>
-                          const Stud_Fixing_workprogress()));
-                },
-                text: "Stud Fixing",
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) =>
-                          const Stud_Fixing_workprogress()));
-                },
-                text: "Stud fixing on the sides from kuttichira to maradu",
-                font_size: 14.sp,
-                color: const Color(0xFF000000).withOpacity(0.5),
-                left: 34.w,
-              ),
-              SizedBox(
-                height: 3.h,
-              ),
-              const text_button2(),
-              SizedBox(
-                height: 24.h,
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) =>
-                          const Board_Fixing_work_progress()));
-                },
-                text: "Board Fixing",
-              ),
-              text_button(
-                onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) =>
-                          const Board_Fixing_work_progress()));
-                },
-                text: "Board fixing on the sides from kuttichira to maradu",
-                font_size: 14.sp,
-                color: const Color(0xFF000000).withOpacity(0.5),
-                left: 34.w,
-              ),
-              SizedBox(
-                height: 3.h,
-              ),
-              const text_button3(),
-            ]),
+            flex: 12,
+            child: ListView.builder(
+              reverse: true,
+              shrinkWrap: false,
+              itemCount: subJobDataList.length,
+              itemBuilder: (BuildContext context, int index) {
+                return subJobDataList[index];
+              },
+            ),
           ),
           Bottom_back_button(
             onTap: () {

@@ -113,11 +113,7 @@ class SupervisorSlider extends StatelessWidget {
   }
 }
 
-Widget jobContainer(
-  String id,
-  String jobTitle,
-  Result job,
-) {
+Widget jobContainer(String id, String jobTitle, Result job) {
   return Builder(
     builder: (context) {
       return GestureDetector(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:sarde/screens/Job_Main/Expense/Add_new_expense.dart';
 import 'package:sarde/screens/Job_Main/Inventory/Inventory.dart';
@@ -13,7 +14,9 @@ import 'app_grid_buttons.dart';
 Widget title(BuildContext context) {
   JobIDProvider job = Provider.of<JobIDProvider>(
     context,
+
   );
+  var finishDate=  job.jobResult.finishDate;
   return Padding(
     padding: EdgeInsets.only(left: 33.w, right: 44.w),
     child: Row(
@@ -28,7 +31,7 @@ Widget title(BuildContext context) {
           ),
         ),
         Text(
-          "",
+          DateFormat("dd/MM/yyyy").format(finishDate),
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 22.sp,
@@ -87,7 +90,7 @@ class job_main_nav extends StatelessWidget {
               GridButtons(
                 height: 147.h,
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const add_new_labours()));
                 },
                 assetimage: "assets/images/add_button.png",
@@ -100,7 +103,7 @@ class job_main_nav extends StatelessWidget {
               GridButtons(
                 height: 98.h,
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const add_new_tools()));
                 },
                 assetimage: "assets/images/add_button.png",
@@ -121,7 +124,7 @@ class job_main_nav extends StatelessWidget {
                 name: "Expense",
                 top: 98.h,
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const add_new_expense()));
                 },
               ),
@@ -134,7 +137,7 @@ class job_main_nav extends StatelessWidget {
                 name: "Quality\nCheck",
                 top: 83.h,
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const Quality_Check()));
                 },
               ),
@@ -143,7 +146,7 @@ class job_main_nav extends StatelessWidget {
               ),
               GridButtons(
                 onTap: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const Inventory()));
                 },
                 height: 162.h,

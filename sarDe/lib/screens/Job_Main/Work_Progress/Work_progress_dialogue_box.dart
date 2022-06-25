@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
-import '../../../../../api/api.dart';
-import '../../../../../services/prefs.dart';
+import '../../../api/api.dart';
+import '../../../services/prefs.dart';
 
 class Road_marking_dialoguebox extends StatefulWidget {
   final ValueChanged<List<dynamic>> dataCallback;
@@ -328,23 +328,27 @@ class _Road_marking_dialogueboxState extends State<Road_marking_dialoguebox> {
                                 final prefs =
                                     await SardePreferences.getInstance();
                                 final token = prefs.token;
+                                final jobId = await prefs.jobId;
+                                final subJobId = await prefs.subJobId;
                                 final response =
-                                    await SardeAPI.addRoadMarkingworkprogress(
+                                    await SardeAPI.addNewWorkProgress(
                                         token ?? "",
+                                        jobId ?? "",
+                                        subJobId ?? "",
                                         itemdescriptionController.text.trim(),
                                         noController.text.trim(),
                                         lengthController.text.trim(),
                                         widthController.text.trim(),
-                                        metersqrController.text.trim() );
+                                        metersqrController.text.trim());
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(content: Text('${response.result}')),
                                 );
                                 if (response.statusCode == 200) {
                                   widget.dataCallback([
-                                    itemdescriptionController.text.trim() ,
-                                    noController.text.trim() ,
-                                    lengthController.text.trim() ,
-                                    widthController.text.trim() ,
+                                    itemdescriptionController.text.trim(),
+                                    noController.text.trim(),
+                                    lengthController.text.trim(),
+                                    widthController.text.trim(),
                                     metersqrController.text.trim()
                                   ]);
                                 }

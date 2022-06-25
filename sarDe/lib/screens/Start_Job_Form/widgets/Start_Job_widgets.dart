@@ -12,7 +12,6 @@ import '../../../services/prefs.dart';
 // ignore: camel_case_types
 class Start_Button extends StatelessWidget {
   const Start_Button({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     final job = Provider.of<JobIDProvider>(
@@ -22,7 +21,6 @@ class Start_Button extends StatelessWidget {
       onTap: () async {
         final prefs = await SardePreferences.getInstance();
         prefs.jobsId = job.jobID;
-
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => ChangeNotifierProvider(
@@ -132,7 +130,7 @@ Widget date(BuildContext context) {
   );
 }
 
-Widget subJobs( String taskName, String taskDetails, String total) {
+Widget subJobs(String taskName, String taskDetails, String total) {
   return Stack(alignment: Alignment.center, children: [
     Padding(
       padding: EdgeInsets.only(
@@ -171,7 +169,7 @@ Widget subJobs( String taskName, String taskDetails, String total) {
         children: [
           Expanded(
             child: Text(
-             "",
+              "",
               style: TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 16.sp,

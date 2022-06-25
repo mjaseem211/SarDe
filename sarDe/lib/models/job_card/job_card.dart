@@ -14,7 +14,6 @@ class JobCardModel {
     this.result,
     required this.status,
   });
-
   List<Result>? result;
   String status;
 
