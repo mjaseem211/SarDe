@@ -31,7 +31,7 @@ Widget subtitle() {
   );
 }
 
-Widget subJobsWorkProgress(String taskName, String taskDetails, String total) {
+Widget subJobsWorkProgress(String taskName, String taskDetails) {
   return Builder(builder: (context) {
     return GestureDetector(
       child: Stack(alignment: Alignment.center, children: [
@@ -67,24 +67,15 @@ Widget subJobsWorkProgress(String taskName, String taskDetails, String total) {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(left: 36.w, right: 44.w, top: 100.h),
+          padding: EdgeInsets.only(left: 257.w, top: 100.h),
           child: Row(
             children: [
-              Expanded(
-                child: Text(
-                  "",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16.sp,
-                      color: const Color(0xFFBC401E)),
-                ),
-              ),
               Text(
-                total,
+                "Date",
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 16.sp,
-                    color: const Color(0xFF2B3070)),
+                    color: const Color(0xFFBC401E)),
               ),
             ],
           ),

@@ -4,10 +4,9 @@ import 'package:sarde/models/api_model.dart';
 import 'package:sarde/models/Expense/expense.dart';
 import 'package:sarde/models/login.dart';
 import 'package:sarde/models/Tools/Tools.dart';
-import '../models/Inventory/Board_Fixing_inventory.dart';
 import '../models/Inventory/Road_Marking_inventory.dart';
-import '../models/Inventory/Stud_Fixing_inventory.dart';
 import '../models/Labours/Add_Labours.dart';
+import '../models/Quality check/Add_Quality_Check.dart';
 import '../models/work_progress/Add_new_work_progress.dart';
 
 class SardeAPI {
@@ -158,35 +157,27 @@ class SardeAPI {
     );
   }
 
-  static Future<APIModel<BoardFixingInventoryModel>> addBoardFixinginventory(
+  static Future<APIModel<AddNewQualityCheckModel>> addQualityCheck(
     String accessToken,
-    String item,
-    String quantity,
+    String jobId,
+    String userFile,
+    String subJobId,
+    String thickness,
+    String edgeAlignment,
+    String comment,
   ) async {
-    final response = await post('Inventory/Board_fixing/add_item', {
+    final response = await post('QualityCheck/add_quality_check', {
       'access_token': accessToken,
-      'item': item,
-      'quantity': quantity,
+      'job_id': jobId,
+      'userfile': userFile,
+      'subjob_id': subJobId,
+      'thickness': thickness,
+      'edge_alignment': edgeAlignment,
+      'comment': comment
     });
-    return APIModel<BoardFixingInventoryModel>.fromJson(
+    return APIModel<AddNewQualityCheckModel>.fromJson(
       response,
-      (json) => BoardFixingInventoryModel.fromJson(json),
-    );
-  }
-
-  static Future<APIModel<StudFixingInventoryModel>> addStudFixinginventory(
-    String accessToken,
-    String item,
-    String quantity,
-  ) async {
-    final response = await post('Inventory/Stud_fixing/add_item', {
-      'access_token': accessToken,
-      'item': item,
-      'quantity': quantity,
-    });
-    return APIModel<StudFixingInventoryModel>.fromJson(
-      response,
-      (json) => StudFixingInventoryModel.fromJson(json),
+      (json) => AddNewQualityCheckModel.fromJson(json),
     );
   }
 }

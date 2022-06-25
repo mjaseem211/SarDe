@@ -40,7 +40,6 @@ class _Quality_CheckState extends State<Quality_Check> {
       Widget subJobsCard = subJobsWorkProgress(
         element.taskName,
         element.taskDetails,
-        element.total,
       );
       subJobDataList.add(subJobsCard);
     }
