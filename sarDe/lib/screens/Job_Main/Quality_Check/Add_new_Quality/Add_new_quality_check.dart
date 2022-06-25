@@ -22,16 +22,18 @@ class add_new_quality_check extends StatelessWidget {
           height: 3.h,
         ),
         line(),
-        Expanded(child: ListView(shrinkWrap:true,children:[Photoview(),
-       ]),),
+        Expanded(
+          child: ListView(shrinkWrap: true, children: [
+            Photoview(),
+          ]),
+        ),
         const dialogue_box(),
         SizedBox(
           height: 312.61.h,
         ),
         Bottom_back_button(
           onTap: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => const JobMain()));
+            Navigator.of(context).pop();
           },
         ),
         SizedBox(

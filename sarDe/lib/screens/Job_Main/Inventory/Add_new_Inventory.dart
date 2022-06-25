@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Job_Main/Inventory/Road_Marking/Road_Marking_inventory_dialoguebox.dart';
+import 'package:sarde/screens/Job_Main/Inventory/Add_new_inventory_dialoguebox.dart';
 import 'package:sarde/screens/Job_Main/JobMain.dart';
-import 'package:sarde/screens/Job_Main/Inventory/Road_Marking/Road_Marking_inventory_widgets.dart';
+import 'package:sarde/screens/Job_Main/Inventory/Add_new_inventory_widgets.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
 
 class Road_Marking_inventory extends StatefulWidget {
@@ -16,6 +16,7 @@ class Road_Marking_inventory extends StatefulWidget {
 
 class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
   final List<Widget> roadMarkingInventoryData = [];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,17 +33,15 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
         ),
         line(),
         Expanded(
-          child:ListView.builder(
+          child: ListView.builder(
               itemCount: roadMarkingInventoryData.length,
               itemBuilder: (BuildContext context, int index) {
                 return roadMarkingInventoryData[index];
               }),
         ),
-         Road_Marking_inventory_dialoguebox(
-
+        Road_Marking_inventory_dialoguebox(
           dataCallback: (data) {
-            Widget roadmarkinginventory =
-            Data(data[0], data[1]);
+            Widget roadmarkinginventory = Data(data[0], data[1]);
             roadMarkingInventoryData.add(roadmarkinginventory);
             setState(() {});
           },
@@ -52,8 +51,7 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
         ),
         Bottom_back_button(
           onTap: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => const JobMain()));
+            Navigator.of(context).pop();
           },
         ),
         SizedBox(
