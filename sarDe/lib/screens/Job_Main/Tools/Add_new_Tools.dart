@@ -18,6 +18,7 @@ class add_new_tools extends StatefulWidget {
 
 class _add_new_toolsState extends State<add_new_tools> {
   final toolsApi = GetAllTools();
+
   @override
   void initState() {
     super.initState();
@@ -37,8 +38,7 @@ class _add_new_toolsState extends State<add_new_tools> {
       pageCount: pageCount,
     );
     for (var element in toolsData!.result) {
-      Widget tools =
-      data2(element.item, element.quantity, element.condition);
+      Widget tools = data2(element.item, element.quantity, element.condition);
       toolsDataList.add(tools);
     }
     setState(() {});
@@ -68,9 +68,9 @@ class _add_new_toolsState extends State<add_new_tools> {
                 return toolsDataList[index];
               }),
         ),
-         dialogue_box(
+        dialogue_box(
           dataCallback: (data) {
-            Widget item = data2( data[0], data[1], data[2]);
+            Widget item = data2(data[0], data[1], data[2]);
             toolsDataList.add(item);
             setState(() {});
           },

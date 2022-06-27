@@ -2,10 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Job_Main/Inventory/Add_new_inventory_dialoguebox.dart';
-import 'package:sarde/screens/Job_Main/JobMain.dart';
 import 'package:sarde/screens/Job_Main/Inventory/Add_new_inventory_widgets.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
+import '../../../api/getAllnventory.dart';
+import '../../../services/prefs.dart';
+import 'Add_new_Inventory_dialoguebox.dart';
 
 class Road_Marking_inventory extends StatefulWidget {
   const Road_Marking_inventory({Key? key}) : super(key: key);
@@ -15,7 +16,36 @@ class Road_Marking_inventory extends StatefulWidget {
 }
 
 class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
-  final List<Widget> roadMarkingInventoryData = [];
+  final inventoryApi = GetAllInventory();
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _getAllExpenses(0, 25);
+    });
+  }
+
+  _getAllExpenses(pageOffset, pageCount) async {
+    final prefs = await SardePreferences.getInstance();
+    var jobId = await prefs.jobId;
+    var accessToken = prefs.token;
+    var subJobId = await prefs.subJobId;
+    var expenseData = await inventoryApi.getInventory(
+      accessToken: accessToken,
+      jobId: jobId,
+      subJobId: subJobId,
+      pageOffset: pageOffset,
+      pageCount: pageCount,
+    );
+    for (var element in expenseData!.result) {
+      Widget inventory = Data(element.item, element.quantity);
+      inventoryDataList.add(inventory);
+    }
+    setState(() {});
+  }
+
+  final List<Widget> inventoryDataList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +64,15 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
         line(),
         Expanded(
           child: ListView.builder(
-              itemCount: roadMarkingInventoryData.length,
+              itemCount: inventoryDataList.length,
               itemBuilder: (BuildContext context, int index) {
-                return roadMarkingInventoryData[index];
+                return inventoryDataList[index];
               }),
         ),
-        Road_Marking_inventory_dialoguebox(
+        inventoryDialogueBox(
           dataCallback: (data) {
-            Widget roadmarkinginventory = Data(data[0], data[1]);
-            roadMarkingInventoryData.add(roadmarkinginventory);
+            Widget inventory = Data(data[0], data[1]);
+            inventoryDataList.add(inventory);
             setState(() {});
           },
         ),

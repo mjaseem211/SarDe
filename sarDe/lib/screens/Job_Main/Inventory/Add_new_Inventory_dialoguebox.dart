@@ -3,24 +3,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-
 import '../../../api/api.dart';
 import '../../../services/prefs.dart';
 
-class Road_Marking_inventory_dialoguebox extends StatefulWidget {
+class inventoryDialogueBox extends StatefulWidget {
   final ValueChanged<List<dynamic>> dataCallback;
 
-  const Road_Marking_inventory_dialoguebox(
-      {Key? key, required this.dataCallback})
+  const inventoryDialogueBox({Key? key, required this.dataCallback})
       : super(key: key);
 
   @override
-  State<Road_Marking_inventory_dialoguebox> createState() =>
-      _Road_Marking_inventory_dialogueboxState();
+  State<inventoryDialogueBox> createState() => _inventoryDialogueBoxState();
 }
 
-class _Road_Marking_inventory_dialogueboxState
-    extends State<Road_Marking_inventory_dialoguebox> {
+class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
   final TextEditingController itemController = TextEditingController();
   final TextEditingController quantityController = TextEditingController();
   final _addRoadInventory = GlobalKey<FormState>();
@@ -202,9 +198,13 @@ class _Road_Marking_inventory_dialogueboxState
                                     final prefs =
                                         await SardePreferences.getInstance();
                                     final token = prefs.token;
+                                    final jobId = await prefs.jobId;
+                                    final subJobId = await prefs.subJobId;
                                     final response =
-                                        await SardeAPI.addRoadmarkinginventory(
+                                        await SardeAPI.addNewInventory(
                                             token ?? "",
+                                            jobId ?? "",
+                                            subJobId ?? "",
                                             itemController.text.trim(),
                                             quantityController.text.trim());
                                     ScaffoldMessenger.of(context).showSnackBar(
@@ -213,8 +213,8 @@ class _Road_Marking_inventory_dialogueboxState
                                     );
                                     if (response.statusCode == 200) {
                                       widget.dataCallback([
-                                        itemController.text.trim() ,
-                                        quantityController.text.trim() ,
+                                        itemController.text.trim(),
+                                        quantityController.text.trim(),
                                       ]);
                                     }
                                     Navigator.pop(context);

@@ -19,7 +19,7 @@ class addNewWorkProgress extends StatefulWidget {
 class _addNewWorkProgressState extends State<addNewWorkProgress> {
   final workProgressApi = GetAllWorkProgress();
 
-  get subJobId => null;
+  // get subJobId => null;
 
   @override
   void initState() {
@@ -86,8 +86,7 @@ class _addNewWorkProgressState extends State<addNewWorkProgress> {
         ),
         Bottom_back_button(
           onTap: () {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => const JobMain()));
+            Navigator.of(context).pop();
           },
         ),
         SizedBox(

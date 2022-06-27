@@ -58,6 +58,7 @@ Widget line() {
     ]),
   );
 }
+
 Widget Data(String item, String quantity) {
   return Padding(
     padding: EdgeInsets.only(right: 57.w, left: 33.w),
@@ -83,4 +84,3 @@ Widget Data(String item, String quantity) {
     ),
   );
 }
-

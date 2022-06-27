@@ -12,8 +12,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => UserDetails(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (context) => UserDetails(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => UserDetails(),
+        ),
+      ],
       child: ScreenUtilInit(
         designSize: const Size(390, 844),
         minTextAdapt: true,
