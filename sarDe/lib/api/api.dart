@@ -4,7 +4,7 @@ import 'package:sarde/models/api_model.dart';
 import 'package:sarde/models/Expense/expense.dart';
 import 'package:sarde/models/login.dart';
 import 'package:sarde/models/Tools/Tools.dart';
-import '../models/Inventory/Road_Marking_inventory.dart';
+import '../models/Inventory/Inventory.dart';
 import '../models/Labours/Add_Labours.dart';
 import '../models/Quality check/Add_Quality_Check.dart';
 import '../models/work_progress/Add_new_work_progress.dart';
@@ -141,23 +141,29 @@ class SardeAPI {
     );
   }
 
-  static Future<APIModel<RoadMarkingInventoryModel>> addRoadmarkinginventory(
+  static Future<APIModel<AddNewInventoryModel>> addNewInventory(
     String accessToken,
+    String jobId,
+    String subJobId,
     String item,
     String quantity,
   ) async {
-    final response = await post('Inventory/Road_marking/add_item', {
+    final response = await post('/Inventory/add_item', {
       'access_token': accessToken,
+      'job_id': jobId,
+      'subjob_Id': subJobId,
       'item': item,
       'quantity': quantity,
     });
-    return APIModel<RoadMarkingInventoryModel>.fromJson(
+    print(response);
+    return APIModel<AddNewInventoryModel>.fromJson(
       response,
-      (json) => RoadMarkingInventoryModel.fromJson(json),
+      (json) => AddNewInventoryModel.fromJson(json),
+
     );
   }
 
-  static Future<APIModel<AddNewQualityCheckModel>> addQualityCheck(
+  static Future<APIModel<AddNewQualityCheckModel>> addNewQualityCheck(
     String accessToken,
     String jobId,
     String userFile,

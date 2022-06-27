@@ -32,7 +32,8 @@ Widget line() {
 }
 
 // ignore: non_constant_identifier_names
-Widget Photoview() {
+Widget Photoview(String fileFullUrl, String thickness, String id,
+    String edgeAlignment, String comment) {
   return Row(children: [
     Padding(
       padding: EdgeInsets.only(
