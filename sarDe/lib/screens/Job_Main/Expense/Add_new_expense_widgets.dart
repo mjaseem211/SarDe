@@ -26,7 +26,7 @@ Widget heading() {
     padding: EdgeInsets.only(right: 49.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        Expanded( flex: 8,
           child: Text(
             "Expenses",
             style: TextStyle(
@@ -35,7 +35,7 @@ Widget heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        Expanded(
+        Expanded(flex: 7,
           child: Text(
             "Amount",
             style: TextStyle(
@@ -44,12 +44,14 @@ Widget heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        Text(
-          "Reference",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFF2B3070)),
+        Expanded(flex: 4,
+          child: Text(
+            "Reference",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
+          ),
         ),
       ],
     ),
@@ -74,7 +76,7 @@ Widget data1(String expense, String amount, String reference) {
     padding: EdgeInsets.only(right: 49.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        Expanded(flex: 8,
           child: Text(
             expense,
             style: TextStyle(
@@ -83,7 +85,7 @@ Widget data1(String expense, String amount, String reference) {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        Expanded(
+        Expanded(flex: 7,
           child: Text(
             amount,
             style: TextStyle(
@@ -92,12 +94,14 @@ Widget data1(String expense, String amount, String reference) {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        Text(
-          reference,
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 14.sp,
-              color: const Color(0xFFDD7164)),
+        Expanded(flex: 4,
+          child: Text(
+            reference,
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 14.sp,
+                color: const Color(0xFFDD7164)),
+          ),
         ),
       ],
     ),

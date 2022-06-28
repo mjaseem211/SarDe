@@ -25,7 +25,7 @@ Widget heading_1() {
     padding: EdgeInsets.only(right: 52.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        Expanded(flex: 10,
           child: Text(
             "Item",
             style: TextStyle(
@@ -34,7 +34,7 @@ Widget heading_1() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        Expanded(
+        Expanded(flex: 9,
           child: Text(
             "Quantity",
             style: TextStyle(
@@ -43,12 +43,14 @@ Widget heading_1() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        Text(
-          "Condition",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFF2B3070)),
+        Expanded(flex: 5,
+          child: Text(
+            "Condition",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
+          ),
         ),
       ],
     ),
@@ -73,30 +75,33 @@ Widget data2(String item, String quantity, String condition) {
     padding: EdgeInsets.only(right: 52.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        Expanded(flex: 12,
           child: Text(
+
             item,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
+                fontSize: 14.sp,
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        Expanded(
+        Expanded(flex: 9,
           child: Text(
             quantity,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
+                fontSize: 14.sp,
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        Text(
-          condition,
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFFDD7164)),
+        Expanded(flex: 5,
+          child: Text(
+            condition,
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 14.sp,
+                color: const Color(0xFFDD7164)),
+          ),
         ),
       ],
     ),
