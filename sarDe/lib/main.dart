@@ -2,18 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:sarde/models/user_details.dart';
-import 'package:sarde/providers/job_id.dart';
 import 'package:sarde/screens/Sign_in/signin.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'models/job_card/job_card.dart';
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-
 
   @override
   Widget build(BuildContext context) {

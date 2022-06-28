@@ -61,7 +61,8 @@ class _add_new_toolsState extends State<add_new_tools> {
           height: 2.h,
         ),
         line_1(),
-        Expanded(
+
+        Expanded(flex: 2,
           child: ListView.builder(
               itemCount: toolsDataList.length,
               itemBuilder: (BuildContext context, int index) {
@@ -75,9 +76,7 @@ class _add_new_toolsState extends State<add_new_tools> {
             setState(() {});
           },
         ),
-        SizedBox(
-          height: 365.61.h,
-        ),
+
         Bottom_back_button(
           onTap: () {
             Navigator.of(context).pop();

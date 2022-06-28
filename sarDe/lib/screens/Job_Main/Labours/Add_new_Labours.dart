@@ -79,9 +79,7 @@ class _add_new_laboursState extends State<add_new_labours> {
             setState(() {});
           },
         ),
-        SizedBox(
-          height: 365.61.h,
-        ),
+
         Bottom_back_button(
           onTap: () {
             Navigator.of(context).pop();

@@ -24,7 +24,7 @@ Widget Heading() {
     child: Row(
       children: [
         Expanded(
-          flex: 3,
+          flex: 4,
           child: Text(
             "Name",
             style: TextStyle(
@@ -51,14 +51,17 @@ Widget Heading() {
                 fontWeight: FontWeight.w400,
                 fontSize: 13.sp,
                 color: const Color(0xFF2B3070)),
+         
           ),
         ),
-        Text(
-          "Hours",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFF2B3070)),
+        Expanded(flex: 2,
+          child: Text(
+            "Hours",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
+          ),
         ),
       ],
     ),
@@ -84,12 +87,12 @@ Widget data1(String name, String trade, String type, String hours) {
     child: Row(
       children: [
         Expanded(
-          flex: 3,
+          flex: 4,
           child: Text(
             name,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
+                fontSize: 14.sp,
                 color: const Color(0xFFDD7164)),
           ),
         ),
@@ -99,7 +102,7 @@ Widget data1(String name, String trade, String type, String hours) {
             trade,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
+                fontSize: 14.sp,
                 color: const Color(0xFFDD7164)),
           ),
         ),
@@ -109,16 +112,18 @@ Widget data1(String name, String trade, String type, String hours) {
             type,
             style: TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 13.sp,
+                fontSize: 14.sp,
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        Text(
-          hours,
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFFDD7164)),
+        Expanded(flex: 2,
+          child: Text(
+            hours,
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 14.sp,
+                color: const Color(0xFFDD7164)),
+          ),
         ),
       ],
     ),
