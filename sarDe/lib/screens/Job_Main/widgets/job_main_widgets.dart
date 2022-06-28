@@ -31,7 +31,7 @@ Widget title(BuildContext context) {
           ),
         ),
         Text(
-          DateFormat("dd/MM/yyyy").format(finishDate),
+          DateFormat("dd-MM-yyyy").format(finishDate),
           style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 22.sp,

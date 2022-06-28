@@ -19,29 +19,28 @@ class addNewWorkProgress extends StatefulWidget {
 class _addNewWorkProgressState extends State<addNewWorkProgress> {
   final workProgressApi = GetAllWorkProgress();
 
-  // get subJobId => null;
 
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _getAllExpenses(0, 25);
+      _getAllWorkProgress(0, 25);
     });
   }
 
-  _getAllExpenses(pageOffset, pageCount) async {
+  _getAllWorkProgress(pageOffset, pageCount) async {
     final prefs = await SardePreferences.getInstance();
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;
     var subJobId = await prefs.subJobId;
-    var expenseData = await workProgressApi.getWorkProgress(
+    var workProgressData = await workProgressApi.getWorkProgress(
       accessToken: accessToken,
       jobId: jobId,
       subJobId: subJobId,
       pageOffset: pageOffset,
       pageCount: pageCount,
     );
-    for (var element in expenseData!.result) {
+    for (var element in workProgressData!.result) {
       Widget workProgress =
       Data(element.itemDescription, element.no, element.length,element.width,element.meterSqr);
       WorkprogressDataList.add(workProgress);

@@ -68,28 +68,32 @@ Widget subJobsWorkProgress(String taskName, String taskDetails, String total) {
             ],
           ),
         ),
-        Padding(
-          padding: EdgeInsets.only(left: 36.w, right: 44.w, top: 100.h),
-          child: Row(
-            children: [
-              Expanded(
-                child: Text(
-                  "Date",
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16.sp,
-                      color: const Color(0xFFBC401E)),
-                ),
+        Builder(
+          builder: (context) {
+            return Padding(
+              padding: EdgeInsets.only(left: 36.w, right: 44.w, top: 100.h),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      "Date",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16.sp,
+                          color: const Color(0xFFBC401E)),
+                    ),
+                  ),
+                  Text(
+                    total,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16.sp,
+                        color: const Color(0xFF2B3070)),
+                  ),
+                ],
               ),
-              Text(
-                total,
-                style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16.sp,
-                    color: const Color(0xFF2B3070)),
-              ),
-            ],
-          ),
+            );
+          }
         ),
         Padding(
           padding: EdgeInsets.only(
