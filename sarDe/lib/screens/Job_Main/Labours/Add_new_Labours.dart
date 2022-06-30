@@ -3,11 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Job_Main/Labours/dialogue_box.dart';
-import 'package:sarde/screens/job_main/JobMain.dart';
 import '../../../../widgets/Bottom_back_button.dart';
 import 'package:sarde/screens/Job_Main/Labours/Add_new_Labours_widgets.dart';
-
-import '../../../api/getallLabours.dart';
+import '../../../api/getAllLabours.dart';
 import '../../../services/prefs.dart';
 
 // ignore: camel_case_types

@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import '../../../api/api.dart';
 import '../../../services/prefs.dart';
-import 'drop_down.dart';
 
 // ignore: camel_case_types
 class dialogue_box extends StatefulWidget {

@@ -2,13 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/screens/Job_Main/Quality_Check/Add_new_Quality/Add_new_quality_check.dart';
 import 'package:sarde/screens/Job_Main/Quality_Check/Quality_Check_widgets.dart';
-import 'package:sarde/screens/job_main/JobMain.dart';
 import 'package:sarde/widgets/Bottom_back_button.dart';
-import 'package:sarde/widgets/text_button.dart';
-
-import '../../../api/getAllsubJObs.dart';
+import '../../../api/getAllSubJObs.dart';
 import '../../../services/prefs.dart';
 
 class Quality_Check extends StatefulWidget {

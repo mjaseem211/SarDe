@@ -63,7 +63,7 @@ class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
                               color: Colors.white,
                             ),
                             padding: EdgeInsets.only(
-                                left: 25.w, top: 44.h, right: 202.w),
+                                left: 25.w, top: 44.h),
                             child: Text(
                               "Add Material",
                               style: TextStyle(
@@ -266,7 +266,7 @@ class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
                             color: Colors.white,
                           ),
                           padding: EdgeInsets.only(
-                              left: 25.w, top: 44.h, right: 180.w),
+                              left: 25.w, top: 44.h),
                           child: Text(
                             "Material Usage",
                             style: TextStyle(

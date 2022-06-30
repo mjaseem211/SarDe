@@ -3,8 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:sarde/screens/Job_Main/Work_Progress/Work_progress_dialogue_box.dart';
-import 'package:sarde/screens/job_main/JobMain.dart';
-import '../../../api/getAllworkprogress.dart';
+import '../../../api/getAllWorkprogress.dart';
 import '../../../services/prefs.dart';
 import '../../../widgets/Bottom_back_button.dart';
 import 'package:sarde/screens/Job_Main/Work_Progress/Add_new_work_progress_widgets.dart';

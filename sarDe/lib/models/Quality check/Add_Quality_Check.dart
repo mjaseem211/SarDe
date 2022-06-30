@@ -2,6 +2,8 @@
 //
 //     final addNewQualityCheckModel = addNewQualityCheckModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 AddNewQualityCheckModel addNewQualityCheckModelFromJson(String str) => AddNewQualityCheckModel.fromJson(json.decode(str));

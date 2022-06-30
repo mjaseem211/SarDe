@@ -2,6 +2,8 @@
 //
 //     final listAllLaboursModel = listAllLaboursModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 ListAllLaboursModel listAllLaboursModelFromJson(String str) => ListAllLaboursModel.fromJson(json.decode(str));
