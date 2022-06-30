@@ -41,7 +41,7 @@ class _InventoryState extends State<Inventory> {
       subJobDataList.add(subJobsCard);
     }
     setState(() {});
-  }
+}
 
   final List<Widget> subJobDataList = [];
 

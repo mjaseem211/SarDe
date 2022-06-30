@@ -2,6 +2,8 @@
 //
 //     final addNewWorkProgressModel = addNewWorkProgressModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 AddNewWorkProgressModel addNewWorkProgressModelFromJson(String str) => AddNewWorkProgressModel.fromJson(json.decode(str));

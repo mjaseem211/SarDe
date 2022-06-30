@@ -2,6 +2,8 @@
 //
 //     final addNewInventoryModel = addNewInventoryModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 AddNewInventoryModel addNewInventoryModelFromJson(String str) => AddNewInventoryModel.fromJson(json.decode(str));

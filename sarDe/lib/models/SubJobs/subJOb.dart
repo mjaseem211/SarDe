@@ -2,6 +2,8 @@
 //
 //     final listAllSubJobsModel = listAllSubJobsModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 ListAllSubJobsModel listAllSubJobsModelFromJson(String str) =>

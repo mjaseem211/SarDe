@@ -155,7 +155,6 @@ class SardeAPI {
       'item': item,
       'quantity': quantity,
     });
-    print(response);
     return APIModel<AddNewInventoryModel>.fromJson(
       response,
       (json) => AddNewInventoryModel.fromJson(json),

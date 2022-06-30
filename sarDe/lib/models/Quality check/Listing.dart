@@ -2,6 +2,8 @@
 //
 //     final listAllQualityCheckModel = listAllQualityCheckModelFromJson(jsonString);
 
+// ignore_for_file: file_names
+
 import 'dart:convert';
 
 ListAllQualityCheckModel listAllQualityCheckModelFromJson(String str) =>
