@@ -25,11 +25,11 @@ class _add_new_quality_checkState extends State<add_new_quality_check> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _getAllExpenses(0, 25);
+      _getAllQualityCheck(0, 25);
     });
   }
 
-  _getAllExpenses(pageOffset, pageCount) async {
+  _getAllQualityCheck(pageOffset, pageCount) async {
     final prefs = await SardePreferences.getInstance();
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;

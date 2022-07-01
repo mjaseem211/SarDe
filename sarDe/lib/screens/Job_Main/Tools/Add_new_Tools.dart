@@ -22,11 +22,11 @@ class _add_new_toolsState extends State<add_new_tools> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _getAllExpenses(0, 25);
+      _getAllTools(0, 25);
     });
   }
 
-  _getAllExpenses(pageOffset, pageCount) async {
+  _getAllTools(pageOffset, pageCount) async {
     final prefs = await SardePreferences.getInstance();
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;
