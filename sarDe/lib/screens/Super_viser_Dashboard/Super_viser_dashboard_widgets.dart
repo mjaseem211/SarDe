@@ -222,7 +222,12 @@ Widget Bottom_data(String message_title, String message_description) {
     height: 180.h,
     decoration: BoxDecoration(
       color: const Color(0xffefd2bd),
-      borderRadius: BorderRadius.circular(10.r),
+      borderRadius: BorderRadius.only(
+        
+        topLeft: Radius.circular(10.r),
+        topRight: Radius.circular(10.r)
+        
+      )
     ),
     child: Column(
       children: [

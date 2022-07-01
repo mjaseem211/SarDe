@@ -24,7 +24,7 @@ Widget Heading() {
     child: Row(
       children: [
         Expanded(
-          flex: 4,
+          flex: 3,
           child: Text(
             "Name",
             style: TextStyle(
@@ -83,11 +83,11 @@ Widget line() {
 
 Widget data1(String name, String trade, String type, String hours) {
   return Padding(
-    padding: EdgeInsets.only(right: 54.w, left: 33.w),
+    padding: EdgeInsets.only(right: 45.w, left: 33.w,top: 8.h),
     child: Row(
       children: [
         Expanded(
-          flex: 4,
+          flex: 3,
           child: Text(
             name,
             style: TextStyle(

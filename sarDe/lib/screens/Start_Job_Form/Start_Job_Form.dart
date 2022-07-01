@@ -81,7 +81,7 @@ class _Start_Job_FormState extends State<Start_Job_Form> {
         Expanded(
           flex: 12,
           child: ListView.builder(
-            reverse: true,
+            reverse: false,
             shrinkWrap: false,
             itemCount: subJobDataList.length,
             itemBuilder: (BuildContext context, int index) {

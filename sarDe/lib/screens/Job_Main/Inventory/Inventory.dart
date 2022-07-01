@@ -41,7 +41,7 @@ class _InventoryState extends State<Inventory> {
       subJobDataList.add(subJobsCard);
     }
     setState(() {});
-}
+  }
 
   final List<Widget> subJobDataList = [];
 
@@ -58,7 +58,7 @@ class _InventoryState extends State<Inventory> {
           Expanded(
             flex: 12,
             child: ListView.builder(
-              reverse: true,
+              reverse: false,
               shrinkWrap: false,
               itemCount: subJobDataList.length,
               itemBuilder: (BuildContext context, int index) {

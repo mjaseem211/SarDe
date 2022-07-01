@@ -57,7 +57,7 @@ class _Quality_CheckState extends State<Quality_Check> {
           Expanded(
             flex: 12,
             child: ListView.builder(
-              reverse: true,
+              reverse: false,
               shrinkWrap: false,
               itemCount: subJobDataList.length,
               itemBuilder: (BuildContext context, int index) {
