@@ -22,11 +22,11 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _getAllExpenses(0, 25);
+      _getAllInventory(0, 25);
     });
   }
 
-  _getAllExpenses(pageOffset, pageCount) async {
+  _getAllInventory(pageOffset, pageCount) async {
     final prefs = await SardePreferences.getInstance();
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;

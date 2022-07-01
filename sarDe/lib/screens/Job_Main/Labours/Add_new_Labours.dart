@@ -24,11 +24,11 @@ class _add_new_laboursState extends State<add_new_labours> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      _getAllExpenses(0, 25);
+      _getAllLabours(0, 25);
     });
   }
 
-  _getAllExpenses(pageOffset, pageCount) async {
+  _getAllLabours(pageOffset, pageCount) async {
     final prefs = await SardePreferences.getInstance();
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;
