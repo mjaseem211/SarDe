@@ -174,13 +174,14 @@ class _dialogue_boxState extends State<dialogue_box> {
                             width: 188.w,
                             height: 35.h,
                             child: TextFormField(
+
                               validator: MultiValidator([
                                 PatternValidator(r'^[a-zA-Z0-9 ]*$',
                                     errorText: 'Only Alphanumeric'),
                                 RequiredValidator(
                                     errorText: "Condition is required")
                               ]),
-                              keyboardType: TextInputType.number,
+                              keyboardType: TextInputType.text,
                               controller: conditionController,
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(

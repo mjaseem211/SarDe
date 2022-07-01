@@ -61,14 +61,12 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
         children: <Widget>[
           nameButton(),
           nameButton1(),
-          SizedBox(
-            height: 16.h,
-          ),
+
           const SupervisorSlider(),
           Expanded(
-            flex: 12,
+            flex: 16,
             child: ListView.builder(
-              reverse: true,
+              reverse: false,
               shrinkWrap: false,
               itemCount: jobCardDataList.length,
               itemBuilder: (BuildContext context, int index) {
@@ -77,7 +75,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
             ),
           ),
           Expanded(
-            flex: 6,
+            flex: 8,
             child: ListView.builder(
               reverse: true,
               shrinkWrap: false,

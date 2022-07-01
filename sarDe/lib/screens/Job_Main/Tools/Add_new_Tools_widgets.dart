@@ -72,7 +72,7 @@ Widget line_1() {
 
 Widget data2(String item, String quantity, String condition) {
   return Padding(
-    padding: EdgeInsets.only(right: 52.w, left: 33.w),
+    padding: EdgeInsets.only(right: 52.w, left: 33.w,top: 8.h),
     child: Row(
       children: [
         Expanded(flex: 12,

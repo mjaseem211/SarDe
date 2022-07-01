@@ -59,7 +59,7 @@ class _work_progressState extends State<work_progress> {
           Expanded(
             flex: 12,
             child: ListView.builder(
-              reverse: true,
+              reverse: false,
               shrinkWrap: false,
               itemCount: subJobDataList.length,
               itemBuilder: (BuildContext context, int index) {

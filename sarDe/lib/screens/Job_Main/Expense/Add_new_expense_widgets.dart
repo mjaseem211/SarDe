@@ -26,7 +26,8 @@ Widget heading() {
     padding: EdgeInsets.only(right: 49.w, left: 33.w),
     child: Row(
       children: [
-        Expanded( flex: 8,
+        Expanded(
+          flex: 8,
           child: Text(
             "Expenses",
             style: TextStyle(
@@ -35,7 +36,8 @@ Widget heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        Expanded(flex: 7,
+        Expanded(
+          flex: 7,
           child: Text(
             "Amount",
             style: TextStyle(
@@ -44,7 +46,8 @@ Widget heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        Expanded(flex: 4,
+        Expanded(
+          flex: 4,
           child: Text(
             "Reference",
             style: TextStyle(
@@ -73,10 +76,11 @@ Widget line() {
 
 Widget data1(String expense, String amount, String reference) {
   return Padding(
-    padding: EdgeInsets.only(right: 49.w, left: 33.w),
+    padding: EdgeInsets.only(right: 49.w, left: 33.w, top: 8.h),
     child: Row(
       children: [
-        Expanded(flex: 8,
+        Expanded(
+          flex: 9,
           child: Text(
             expense,
             style: TextStyle(
@@ -85,7 +89,8 @@ Widget data1(String expense, String amount, String reference) {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        Expanded(flex: 7,
+        Expanded(
+          flex: 7,
           child: Text(
             amount,
             style: TextStyle(
@@ -94,7 +99,8 @@ Widget data1(String expense, String amount, String reference) {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        Expanded(flex: 4,
+        Expanded(
+          flex: 4,
           child: Text(
             reference,
             style: TextStyle(
