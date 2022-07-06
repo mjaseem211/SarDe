@@ -57,4 +57,15 @@ class SardePreferences {
   set userName(String name) {
     _prefs.setString('name', name);
   }
+
+// userFile
+
+
+  String? get userfile {
+    return _prefs.getString('userfile');
+  }
+
+  set userFile(String userfile) {
+    _prefs.setString('userfile', userfile);
+  }
 }

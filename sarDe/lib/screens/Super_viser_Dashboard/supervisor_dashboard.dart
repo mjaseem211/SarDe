@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:sarde/api/getalljobcards.dart';
+import 'package:sarde/api/getAllJobCards.dart';
 import 'package:sarde/screens/Super_viser_Dashboard/Super_viser_dashboard_widgets.dart';
 import '../../api/getMESSAGES.dart';
 import '../../services/prefs.dart';
@@ -43,7 +42,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
       pageCount: pageCount,
     );
     for (var element in jobCardData!.result!) {
-      Widget jobCard = jobContainer(element.id, element.jobTitle, element);
+      Widget jobCard = jobContainer(element.id, element.jobTitle, element,element);
       jobCardDataList.add(jobCard);
     }
     setState(() {});
@@ -77,6 +76,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
           Expanded(
             flex: 8,
             child: ListView.builder(
+              physics: const NeverScrollableScrollPhysics(),
               reverse: true,
               shrinkWrap: false,
               itemCount: messageDataList.length,

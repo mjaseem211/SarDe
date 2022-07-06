@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../services/prefs.dart';
 import 'Add_new_work_progress.dart';
 
 // ignore: non_constant_identifier_names
@@ -108,7 +109,10 @@ Widget subJobsWorkProgress(String taskName, String taskDetails, String total) {
           ]),
         ),
       ]),
-      onTap: () {
+      onTap: () async {
+        final prefs = await SardePreferences.getInstance();
+        var accessToken = prefs.token;
+        var jobId = await prefs.jobId;
         Navigator.of(context).push(MaterialPageRoute(
             builder: (context) => const addNewWorkProgress()));
       },

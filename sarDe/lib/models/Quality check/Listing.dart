@@ -2,8 +2,6 @@
 //
 //     final listAllQualityCheckModel = listAllQualityCheckModelFromJson(jsonString);
 
-// ignore_for_file: file_names
-
 import 'dart:convert';
 
 ListAllQualityCheckModel listAllQualityCheckModelFromJson(String str) =>
@@ -42,6 +40,7 @@ class Result {
     required this.fileName,
     required this.fileFullUrl,
     required this.subjobId,
+    required this.location,
     required this.thickness,
     required this.edgeAlignment,
     required this.comment,
@@ -54,6 +53,7 @@ class Result {
   String fileName;
   String fileFullUrl;
   String subjobId;
+  String location;
   String thickness;
   String edgeAlignment;
   String comment;
@@ -66,6 +66,7 @@ class Result {
         fileName: json["file_name"],
         fileFullUrl: json["file_full_url"],
         subjobId: json["subjob_id"],
+        location: json["location"],
         thickness: json["thickness"],
         edgeAlignment: json["edge_alignment"],
         comment: json["comment"],
@@ -79,6 +80,7 @@ class Result {
         "file_name": fileName,
         "file_full_url": fileFullUrl,
         "subjob_id": subjobId,
+        "location": location,
         "thickness": thickness,
         "edge_alignment": edgeAlignment,
         "comment": comment,

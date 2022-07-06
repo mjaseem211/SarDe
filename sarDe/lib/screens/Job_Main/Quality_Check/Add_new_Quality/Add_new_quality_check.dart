@@ -15,8 +15,6 @@ class add_new_quality_check extends StatefulWidget {
 }
 
 class _add_new_quality_checkState extends State<add_new_quality_check> {
-
-
   final qualityCheckApi = GetAllQualityCheck();
 
   // get subJobId => null;
@@ -40,16 +38,14 @@ class _add_new_quality_checkState extends State<add_new_quality_check> {
       subJobId: subJobId,
     );
     for (var element in qualityCheckData!.result) {
-      Widget qualityCheck =
-      Photoview(element.fileFullUrl, element.id, element.thickness,element.edgeAlignment,element.comment);
+      Widget qualityCheck = Photoview(element.fileFullUrl, element.location,
+          element.thickness, element.edgeAlignment, element.comment);
       qualityCheckDataList.add(qualityCheck);
     }
     setState(() {});
   }
 
   final List<Widget> qualityCheckDataList = [];
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +65,14 @@ class _add_new_quality_checkState extends State<add_new_quality_check> {
                 return qualityCheckDataList[index];
               }),
         ),
-        const dialogue_box(),
+        dialogue_box(
+          dataCallback: (data) {
+            Widget qualityCheck =
+                Photoview(data[0], data[1], data[2], data[3], data[4]);
+            qualityCheckDataList.add(qualityCheck);
+            setState(() {});
+          },
+        ),
         SizedBox(
           height: 312.61.h,
         ),
