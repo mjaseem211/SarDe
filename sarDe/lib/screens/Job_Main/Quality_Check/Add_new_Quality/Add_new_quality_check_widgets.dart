@@ -32,7 +32,7 @@ Widget line() {
 }
 
 // ignore: non_constant_identifier_names
-Widget Photoview(String fileFullUrl, String thickness, String id,
+Widget Photoview(String fileFullUrl, String thickness, String location,
     String edgeAlignment, String comment) {
   return Row(children: [
     Padding(
@@ -46,8 +46,8 @@ Widget Photoview(String fileFullUrl, String thickness, String id,
             height: 116.h,
             width: 140.w,
             child: PhotoView(
-              imageProvider: const AssetImage(
-                'assets/images/photo_view.png',
+              imageProvider: AssetImage(
+                fileFullUrl,
               ),
               backgroundDecoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(6.r)),
@@ -65,17 +65,7 @@ Widget Photoview(String fileFullUrl, String thickness, String id,
         Padding(
           padding: EdgeInsets.only(right: 76.w),
           child: Row(children: [
-            Text("12.03.21  12.36 pm",
-                style: TextStyle(
-                    color: const Color(0xFF2B3070),
-                    fontSize: 13.sp,
-                    fontWeight: FontWeight.w400)),
-          ]),
-        ),
-        Padding(
-          padding: EdgeInsets.only(right: 100.w),
-          child: Row(children: [
-            Text("1103 Moordu",
+            Text(location,
                 style: TextStyle(
                     color: const Color(0xFF2B3070),
                     fontSize: 13.sp,
@@ -88,12 +78,12 @@ Widget Photoview(String fileFullUrl, String thickness, String id,
         Padding(
           padding: EdgeInsets.only(left: 19.w, right: 100.w),
           child: Row(children: [
-            Text("Thickness :",
+            Text("Thickness",
                 style: TextStyle(
                     color: const Color(0xFFDD7164),
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w400)),
-            Text("Good",
+            Text(thickness,
                 style: TextStyle(
                     color: const Color(0xFF52972A),
                     fontSize: 12.sp,
@@ -103,12 +93,12 @@ Widget Photoview(String fileFullUrl, String thickness, String id,
         Padding(
           padding: EdgeInsets.only(left: 19.w, right: 42.w),
           child: Row(children: [
-            Text("Edge Alignment :",
+            Text("EdgeAlignment",
                 style: TextStyle(
                     color: const Color(0xFFDD7164),
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w400)),
-            Text("Acceptable",
+            Text(comment,
                 style: TextStyle(
                     color: const Color(0xFFF7CE46),
                     fontSize: 12.sp,

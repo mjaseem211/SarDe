@@ -19,7 +19,7 @@ class inventoryDialogueBox extends StatefulWidget {
 class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
   final TextEditingController itemController = TextEditingController();
   final TextEditingController quantityController = TextEditingController();
-  final _addRoadInventory = GlobalKey<FormState>();
+  final _addInventory = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
                     insetPadding: EdgeInsets.only(left: 17.w, right: 17.w),
                     child: Form(
                       autovalidateMode: AutovalidateMode.always,
-                      key: _addRoadInventory,
+                      key: _addInventory,
                       child: Stack(
                         clipBehavior: Clip.none,
                         children: <Widget>[
@@ -187,7 +187,7 @@ class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
                                       )),
                                 ),
                                 onTap: () async {
-                                  if (_addRoadInventory.currentState!
+                                  if (_addInventory.currentState!
                                       .validate()) {
                                     // If the form is valid, display a snackbar. In the real world,
                                     // you'd often call a server or save the information in a database.

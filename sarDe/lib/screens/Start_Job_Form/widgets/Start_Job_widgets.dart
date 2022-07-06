@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:sarde/providers/job_id.dart';
 import 'package:sarde/screens/Job_Main/JobMain.dart';
+import '../../../providers/sub_jobid.dart';
 import '../../../services/prefs.dart';
 
 class Start_Button extends StatelessWidget {
@@ -16,10 +17,14 @@ class Start_Button extends StatelessWidget {
     final job = Provider.of<JobIDProvider>(
       context,
     );
+    final subJob = Provider.of<JobIDProvider>(
+      context,
+    );
     return GestureDetector(
       onTap: () async {
         final prefs = await SardePreferences.getInstance();
         prefs.jobsId = job.jobID;
+        prefs.subJobsId = subJob.subJobResult.id;
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => ChangeNotifierProvider(

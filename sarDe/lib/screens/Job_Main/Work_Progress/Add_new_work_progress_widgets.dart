@@ -41,7 +41,8 @@ Widget Heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        Expanded(flex: 4,
+        Expanded(
+          flex: 4,
           child: Text(
             "Length",
             style: TextStyle(

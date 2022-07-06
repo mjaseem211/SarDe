@@ -12,18 +12,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) => UserDetails(),
-        ),
-      ],
-      child: ScreenUtilInit(
-        designSize: const Size(390, 844),
-        minTextAdapt: true,
-        splitScreenMode: true,
-        builder: (_) {
-          return MaterialApp(
+    return ScreenUtilInit(
+      designSize: const Size(390, 844),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_) {
+        return MultiProvider(
+          providers: [
+            ChangeNotifierProvider(
+              create: (context) => UserDetails(),
+            ),
+          ],
+          child: MaterialApp(
+            home: const SignInPage(),
             debugShowCheckedModeBanner: false,
             // Use this line to prevent extra rebuilds
             useInheritedMediaQuery: true,
@@ -36,10 +37,9 @@ class MyApp extends StatelessWidget {
                 // If this is not set, then ThemeData.light().textTheme is used.
               ),
             ),
-            home: const SignInPage(),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }

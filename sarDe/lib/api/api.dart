@@ -148,17 +148,16 @@ class SardeAPI {
     String item,
     String quantity,
   ) async {
-    final response = await post('/Inventory/add_item', {
+    final response = await post('Inventory/add_item', {
       'access_token': accessToken,
       'job_id': jobId,
-      'subjob_Id': subJobId,
+      'subjob_id': subJobId,
       'item': item,
       'quantity': quantity,
     });
     return APIModel<AddNewInventoryModel>.fromJson(
       response,
       (json) => AddNewInventoryModel.fromJson(json),
-
     );
   }
 
@@ -166,6 +165,7 @@ class SardeAPI {
     String accessToken,
     String jobId,
     String userFile,
+    String location,
     String subJobId,
     String thickness,
     String edgeAlignment,
@@ -175,6 +175,7 @@ class SardeAPI {
       'access_token': accessToken,
       'job_id': jobId,
       'userfile': userFile,
+      'location': location,
       'subjob_id': subJobId,
       'thickness': thickness,
       'edge_alignment': edgeAlignment,

@@ -18,7 +18,6 @@ class addNewWorkProgress extends StatefulWidget {
 class _addNewWorkProgressState extends State<addNewWorkProgress> {
   final workProgressApi = GetAllWorkProgress();
 
-
   @override
   void initState() {
     super.initState();
@@ -40,8 +39,8 @@ class _addNewWorkProgressState extends State<addNewWorkProgress> {
       pageCount: pageCount,
     );
     for (var element in workProgressData!.result) {
-      Widget workProgress =
-      Data(element.itemDescription, element.no, element.length,element.width,element.meterSqr);
+      Widget workProgress = Data(element.itemDescription, element.no,
+          element.length, element.width, element.meterSqr);
       WorkprogressDataList.add(workProgress);
     }
     setState(() {});
@@ -73,14 +72,11 @@ class _addNewWorkProgressState extends State<addNewWorkProgress> {
         ),
         Road_marking_dialoguebox(
           dataCallback: (data) {
-            Widget roadmarkingworkprogress =
+            Widget workprogress =
                 Data(data[0], data[1], data[2], data[3], data[4]);
-            WorkprogressDataList.add(roadmarkingworkprogress);
+            WorkprogressDataList.add(workprogress);
             setState(() {});
           },
-        ),
-        SizedBox(
-          height: 365.61.h,
         ),
         Bottom_back_button(
           onTap: () {

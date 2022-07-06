@@ -31,14 +31,14 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;
     var subJobId = await prefs.subJobId;
-    var expenseData = await inventoryApi.getInventory(
+    var inventoryData = await inventoryApi.getInventory(
       accessToken: accessToken,
       jobId: jobId,
       subJobId: subJobId,
       pageOffset: pageOffset,
       pageCount: pageCount,
     );
-    for (var element in expenseData!.result) {
+    for (var element in inventoryData!.result) {
       Widget inventory = Data(element.item, element.quantity);
       inventoryDataList.add(inventory);
     }
@@ -75,9 +75,6 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
             inventoryDataList.add(inventory);
             setState(() {});
           },
-        ),
-        SizedBox(
-          height: 364.3.h,
         ),
         Bottom_back_button(
           onTap: () {

@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '../../models/SubJobs/subJOb.dart';
 
 class SubJobIDProvider extends ChangeNotifier {
-  SubJobIDProvider(this._subJob);
+  SubJobIDProvider(this._subJobId);
 
-  Result _subJob;
+  String _subJobId;
 
-  void setJobID(Result subJob) {
-    _subJob = subJob;
+  void setJobID(String id) {
+    _subJobId = id;
     notifyListeners();
   }
 
-  Result get subJob {
-    return _subJob;
+  String get subJob {
+    return _subJobId;
   }
 }

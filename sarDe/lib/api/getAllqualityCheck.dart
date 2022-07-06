@@ -22,7 +22,7 @@ class GetAllQualityCheck {
 
     try {
       Response response = await _dio
-          .post(_baseUrl + ' QualityCheck/list_quality_check', data: formData);
+          .post(_baseUrl + 'QualityCheck/list_quality_check', data: formData);
 
       qualityCheckResponse = ListAllQualityCheckModel.fromJson(response.data);
     } on DioError catch (e) {

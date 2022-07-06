@@ -7,7 +7,6 @@ import 'package:sarde/models/user_details.dart';
 import 'package:sarde/providers/job_id.dart';
 import 'package:sarde/screens/Profile/profile.dart';
 import 'package:sarde/screens/Start_Job_Form/Start_Job_Form.dart';
-
 import '../../models/job_card/job_card.dart';
 
 Widget nameButton() {
@@ -113,7 +112,7 @@ class SupervisorSlider extends StatelessWidget {
   }
 }
 
-Widget jobContainer(String id, String jobTitle, Result job) {
+Widget jobContainer(String id, String jobTitle, Result job,Result subJob) {
   return Builder(
     builder: (context) {
       return GestureDetector(
@@ -203,6 +202,7 @@ Widget jobContainer(String id, String jobTitle, Result job) {
                   id,
                   jobTitle,
                   job,
+                  subJob,
 
                 ),
                 child: Start_Job_Form(jobCardModel: job),
