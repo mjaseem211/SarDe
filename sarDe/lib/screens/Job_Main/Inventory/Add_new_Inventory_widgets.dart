@@ -25,7 +25,7 @@ Widget heading() {
     padding: EdgeInsets.only(right: 57.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        Expanded(flex: 9,
           child: Text(
             "Item",
             style: TextStyle(
@@ -34,12 +34,14 @@ Widget heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        Text(
-          "Quantity",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFF2B3070)),
+        Expanded(flex: 2,
+          child: Text(
+            "Quantity",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
+          ),
         ),
       ],
     ),
@@ -64,7 +66,7 @@ Widget Data(String item, String quantity) {
     padding: EdgeInsets.only(right: 57.w, left: 33.w),
     child: Row(
       children: [
-        Expanded(
+        Expanded(flex: 9,
           child: Text(
             item,
             style: TextStyle(
@@ -73,12 +75,14 @@ Widget Data(String item, String quantity) {
                 color: const Color(0xFFDD7164)),
           ),
         ),
-        Text(
-          quantity,
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFFDD7164)),
+        Expanded(flex: 1,
+          child: Text(
+            quantity,
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFFDD7164)),
+          ),
         ),
       ],
     ),

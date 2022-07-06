@@ -73,9 +73,7 @@ class _add_new_quality_checkState extends State<add_new_quality_check> {
             setState(() {});
           },
         ),
-        SizedBox(
-          height: 312.61.h,
-        ),
+
         Bottom_back_button(
           onTap: () {
             Navigator.of(context).pop();
