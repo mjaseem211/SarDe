@@ -22,7 +22,7 @@ Widget Heading() {
     child: Row(
       children: [
         Expanded(
-          flex: 8,
+          flex: 10,
           child: Text(
             "Item Description",
             style: TextStyle(
@@ -32,7 +32,7 @@ Widget Heading() {
           ),
         ),
         Expanded(
-          flex: 2,
+          flex: 3,
           child: Text(
             "No",
             style: TextStyle(
@@ -42,7 +42,7 @@ Widget Heading() {
           ),
         ),
         Expanded(
-          flex: 4,
+          flex: 5,
           child: Text(
             "Length",
             style: TextStyle(
@@ -61,12 +61,15 @@ Widget Heading() {
                 color: const Color(0xFF2B3070)),
           ),
         ),
-        Text(
-          "Meter Sqr",
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xFF2B3070)),
+        Expanded(
+          flex: 6,
+          child: Text(
+            "Meter Sqr",
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xFF2B3070)),
+          ),
         ),
       ],
     ),
@@ -93,7 +96,7 @@ Widget Data(String itemDescription, String no, String length, String width,
     child: Row(
       children: [
         Expanded(
-          flex: 5,
+          flex: 4,
           child: Text(
             itemDescription,
             style: TextStyle(
@@ -113,7 +116,7 @@ Widget Data(String itemDescription, String no, String length, String width,
           ),
         ),
         Expanded(
-          flex: 4,
+          flex: 2,
           child: Text(
             length,
             style: TextStyle(
@@ -123,7 +126,7 @@ Widget Data(String itemDescription, String no, String length, String width,
           ),
         ),
         Expanded(
-          flex: 4,
+          flex: 2,
           child: Text(
             width,
             style: TextStyle(
@@ -132,12 +135,14 @@ Widget Data(String itemDescription, String no, String length, String width,
                 color: const Color(0xffDD7164)),
           ),
         ),
-        Text(
-          meterSqr,
-          style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 13.sp,
-              color: const Color(0xffDD7164)),
+        Expanded(
+          child: Text(
+            meterSqr,
+            style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 13.sp,
+                color: const Color(0xffDD7164)),
+          ),
         ),
       ],
     ),
