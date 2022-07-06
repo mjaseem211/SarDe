@@ -62,8 +62,7 @@ class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
                               borderRadius: BorderRadius.circular(8.r),
                               color: Colors.white,
                             ),
-                            padding: EdgeInsets.only(
-                                left: 25.w, top: 44.h),
+                            padding: EdgeInsets.only(left: 25.w, top: 44.h),
                             child: Text(
                               "Add Material",
                               style: TextStyle(
@@ -187,8 +186,7 @@ class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
                                       )),
                                 ),
                                 onTap: () async {
-                                  if (_addInventory.currentState!
-                                      .validate()) {
+                                  if (_addInventory.currentState!.validate()) {
                                     // If the form is valid, display a snackbar. In the real world,
                                     // you'd often call a server or save the information in a database.
                                     ScaffoldMessenger.of(context).showSnackBar(
@@ -208,8 +206,9 @@ class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
                                             itemController.text.trim(),
                                             quantityController.text.trim());
                                     ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                          content: Text('${response.result}')),
+                                      const SnackBar(
+                                          content: Text(
+                                              'Inventory Added Successfully')),
                                     );
                                     if (response.statusCode == 200) {
                                       widget.dataCallback([
@@ -265,8 +264,7 @@ class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
                             borderRadius: BorderRadius.circular(8.r),
                             color: Colors.white,
                           ),
-                          padding: EdgeInsets.only(
-                              left: 25.w, top: 44.h),
+                          padding: EdgeInsets.only(left: 25.w, top: 44.h),
                           child: Text(
                             "Material Usage",
                             style: TextStyle(

@@ -174,7 +174,6 @@ class _dialogue_boxState extends State<dialogue_box> {
                             width: 188.w,
                             height: 35.h,
                             child: TextFormField(
-
                               validator: MultiValidator([
                                 PatternValidator(r'^[a-zA-Z0-9 ]*$',
                                     errorText: 'Only Alphanumeric'),
@@ -259,12 +258,14 @@ class _dialogue_boxState extends State<dialogue_box> {
                                     quantityController.text.trim(),
                                     conditionController.text.trim());
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('${response.result}')),
+                                  const SnackBar(
+                                      content:
+                                          Text('Tools Added Successfully')),
                                 );
                                 if (response.statusCode == 200) {
                                   widget.dataCallback([
-                                    itemController.text.trim() ,
-                                    quantityController.text.trim() ,
+                                    itemController.text.trim(),
+                                    quantityController.text.trim(),
                                     conditionController.text.trim()
                                   ]);
                                 }

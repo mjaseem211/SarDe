@@ -341,7 +341,9 @@ class _Road_marking_dialogueboxState extends State<Road_marking_dialoguebox> {
                                         widthController.text.trim(),
                                         metersqrController.text.trim());
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('${response.result}')),
+                                  const SnackBar(
+                                      content: Text(
+                                          'WorkProgress Added Successfully')),
                                 );
                                 if (response.statusCode == 200) {
                                   widget.dataCallback([

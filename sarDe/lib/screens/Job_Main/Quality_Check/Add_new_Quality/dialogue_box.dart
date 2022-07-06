@@ -316,8 +316,9 @@ class _dialogue_boxState extends State<dialogue_box> {
                                           thicknessController.text.trim());
 
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                        content: Text('${response.result}')),
+                                    const SnackBar(
+                                        content: Text(
+                                            'QualityCheck Added Successfully')),
                                   );
                                   if (response.statusCode == 200) {
                                     widget.dataCallback([

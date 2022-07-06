@@ -9,7 +9,7 @@ Widget title() {
     builder: (context) {
       UserDetails userDetails = Provider.of<UserDetails>(context);
       return Padding(
-        padding: EdgeInsets.only(left: 34.w, top: 257.h, right: 94.w),
+        padding: EdgeInsets.only(left: 34.w, top: 257.h),
         child: Row(children: [
           Text(
             userDetails.name ?? "",
@@ -26,7 +26,7 @@ Widget title() {
 
 Widget subtitle() {
   return Padding(
-    padding: EdgeInsets.only(left: 39.w, right: 230.w),
+    padding: EdgeInsets.only(left: 39.w),
     child: Row(children: [
       Text(
         'Supervisor',
@@ -48,7 +48,7 @@ Widget Old_Jobs() {
     child: Row(children: [
       TextButton(
         child: Text(
-          'Old Jobes ',
+          'Old Jobs ',
           style: TextStyle(
               color: const Color(0xFF2B3070),
               fontSize: 31.sp,

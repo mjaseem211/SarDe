@@ -72,7 +72,7 @@ class _dialogue_boxState extends State<dialogue_box> {
 
                         Padding(
                           padding: EdgeInsets.only(
-                            top:101.h,
+                            top: 101.h,
                             left: 16.w,
                           ),
                           child: SizedBox(
@@ -125,7 +125,8 @@ class _dialogue_boxState extends State<dialogue_box> {
                               validator: MultiValidator([
                                 PatternValidator(r'^[a-zA-Z0-9 ]*$',
                                     errorText: 'Only use alphanumeric'),
-                                RequiredValidator(errorText: "Trade is required")
+                                RequiredValidator(
+                                    errorText: "Trade is required")
                               ]),
                               controller: tradeController,
                               decoration: InputDecoration(
@@ -156,8 +157,6 @@ class _dialogue_boxState extends State<dialogue_box> {
                             ),
                           ),
                         ),
-
-
 
                         // Padding(
                         //   padding: EdgeInsets.only(
@@ -300,7 +299,9 @@ class _dialogue_boxState extends State<dialogue_box> {
                                   hoursController.text.trim(),
                                 );
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('${response.result}')),
+                                  const SnackBar(
+                                      content:
+                                          Text('Labour Added Successfully')),
                                 );
                                 if (response.statusCode == 200) {
                                   widget.dataCallback([

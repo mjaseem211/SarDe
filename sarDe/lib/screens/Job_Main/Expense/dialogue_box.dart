@@ -238,8 +238,12 @@ class _dialogue_boxState extends State<dialogue_box> {
                                     amtController.text.trim(),
                                     referenceController.text.trim());
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('${response.result}')),
+                                  const SnackBar(
+                                      content:
+                                          Text('Expense Added Successfully')),
                                 );
+                                //   SnackBar(content: Text('${response.result}')),
+                                // );
                                 if (response.statusCode == 200) {
                                   widget.dataCallback([
                                     expenseController.text.trim(),
