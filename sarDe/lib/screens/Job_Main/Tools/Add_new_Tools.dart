@@ -27,6 +27,13 @@ class _add_new_toolsState extends State<add_new_tools> {
   }
 
   _getAllTools(pageOffset, pageCount) async {
+    // loading circularIndicator
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(child: CircularProgressIndicator());
+      },
+    );
     final prefs = await SardePreferences.getInstance();
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;
@@ -41,6 +48,8 @@ class _add_new_toolsState extends State<add_new_tools> {
       toolsDataList.add(tools);
     }
     setState(() {});
+    // pop the loading circle
+    Navigator.of (context).pop();
   }
 
   final List<Widget> toolsDataList = [];

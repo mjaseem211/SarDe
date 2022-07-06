@@ -3,13 +3,16 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:sarde/models/user_details.dart';
 import 'package:sarde/screens/Profile/job_transfer/job_transfer.dart';
+import 'package:sarde/screens/Sign_in/signin.dart';
+
+import '../../services/prefs.dart';
 
 Widget title() {
   return Builder(
     builder: (context) {
       UserDetails userDetails = Provider.of<UserDetails>(context);
       return Padding(
-        padding: EdgeInsets.only(left: 34.w, top: 257.h),
+        padding: EdgeInsets.only(left: 34.w, top: 200.h),
         child: Row(children: [
           Text(
             userDetails.name ?? "",
@@ -106,4 +109,27 @@ Widget About() {
       ),
     ]),
   );
+}
+
+Widget logout() {
+  return Builder(builder: (context) {
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      TextButton(
+        child: Text(
+          'Logout',
+          style: TextStyle(
+              color: const Color(0xFF909396),
+              fontSize: 25.sp,
+              fontWeight: FontWeight.w400),
+        ),
+        onPressed: () async {
+
+          SardePreferences prefs = await SardePreferences.getInstance();
+          prefs.removeToken();
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (BuildContext ctx) => const SignInPage()));
+        },
+      ),
+    ]);
+  });
 }

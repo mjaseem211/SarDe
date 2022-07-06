@@ -49,6 +49,7 @@ class SardePreferences {
   set subJobsId(String subJobId) {
     _prefs.setString('subjob_id', subJobId);
   }
+
   // User Name
   String? get name {
     return _prefs.getString('name');

@@ -30,7 +30,13 @@ class _SignInPageState extends State<SignInPage> {
 
       return;
     }
-
+// loading circularIndicator
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(child: CircularProgressIndicator());
+      },
+    );
     final response = await SardeAPI.login(username, password);
 
     if (response.status != "success") {
