@@ -27,6 +27,13 @@ class _add_new_expenseState extends State<add_new_expense> {
   }
 
   _getAllExpenses(pageOffset, pageCount) async {
+    // loading circularIndicator
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(child: CircularProgressIndicator());
+      },
+    );
     final prefs = await SardePreferences.getInstance();
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;
@@ -42,6 +49,9 @@ class _add_new_expenseState extends State<add_new_expense> {
       expenseDataList.add(expense);
     }
     setState(() {});
+
+    // pop the loading circle
+    Navigator.of (context).pop();
   }
 
   final List<Widget> expenseDataList = [];

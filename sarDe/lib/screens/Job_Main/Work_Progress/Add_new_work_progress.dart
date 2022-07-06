@@ -27,6 +27,13 @@ class _addNewWorkProgressState extends State<addNewWorkProgress> {
   }
 
   _getAllWorkProgress(pageOffset, pageCount) async {
+    // loading circularIndicator
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(child: CircularProgressIndicator());
+      },
+    );
     final prefs = await SardePreferences.getInstance();
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;
@@ -43,7 +50,8 @@ class _addNewWorkProgressState extends State<addNewWorkProgress> {
           element.length, element.width, element.meterSqr);
       WorkprogressDataList.add(workProgress);
     }
-    setState(() {});
+    setState(() {}); // pop the loading circle
+    Navigator.of(context).pop();
   }
 
   final List<Widget> WorkprogressDataList = [];

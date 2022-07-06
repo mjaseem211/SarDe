@@ -28,7 +28,11 @@ class Profile extends StatelessWidget {
             ),
             About(),
             SizedBox(
-              height: 72.h,
+              height: 50.h,
+            ),
+            logout(),
+            SizedBox(
+              height: 30.h,
             ),
             Bottom_back_button(
               onTap: () {

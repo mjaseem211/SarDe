@@ -34,6 +34,13 @@ class _Start_Job_FormState extends State<Start_Job_Form> {
   }
 
   _getSubJobCards() async {
+    // loading circularIndicator
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(child: CircularProgressIndicator());
+      },
+    );
     final prefs = await SardePreferences.getInstance();
     var accessToken = prefs.token;
     var jobId = await prefs.jobId;
@@ -48,6 +55,8 @@ class _Start_Job_FormState extends State<Start_Job_Form> {
       subJobDataList.add(subJobsCard);
     }
     setState(() {});
+    // pop the loading circle
+    Navigator.of(context).pop();
   }
 
   final List<Widget> subJobDataList = [];

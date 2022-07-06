@@ -28,6 +28,13 @@ class _add_new_quality_checkState extends State<add_new_quality_check> {
   }
 
   _getAllQualityCheck(pageOffset, pageCount) async {
+    // loading circularIndicator
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(child: CircularProgressIndicator());
+      },
+    );
     final prefs = await SardePreferences.getInstance();
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;
@@ -42,7 +49,8 @@ class _add_new_quality_checkState extends State<add_new_quality_check> {
           element.thickness, element.edgeAlignment, element.comment);
       qualityCheckDataList.add(qualityCheck);
     }
-    setState(() {});
+    setState(() {}); // pop the loading circle
+    Navigator.of(context).pop();
   }
 
   final List<Widget> qualityCheckDataList = [];
@@ -73,7 +81,6 @@ class _add_new_quality_checkState extends State<add_new_quality_check> {
             setState(() {});
           },
         ),
-
         Bottom_back_button(
           onTap: () {
             Navigator.of(context).pop();

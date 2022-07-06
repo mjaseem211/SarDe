@@ -24,6 +24,7 @@ class _SupervisorDashboardState extends State<SupervisorDashboard> {
   }
 
   _getJobCards(pageOffset, pageCount) async {
+
     final prefs = await SardePreferences.getInstance();
     var accessToken = prefs.token;
     var messageCardData =

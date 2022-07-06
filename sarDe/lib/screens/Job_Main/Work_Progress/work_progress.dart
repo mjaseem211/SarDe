@@ -26,6 +26,12 @@ class _work_progressState extends State<work_progress> {
   }
 
   _getSubJobCards() async {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(child: CircularProgressIndicator());
+      },
+    );
     final prefs = await SardePreferences.getInstance();
     var accessToken = prefs.token;
     var jobId = await prefs.jobId;
@@ -41,6 +47,9 @@ class _work_progressState extends State<work_progress> {
       subJobDataList.add(subJobsCard);
     }
     setState(() {});
+
+    // pop the loading circle
+    Navigator.of (context).pop();
   }
 
   final List<Widget> subJobDataList = [];

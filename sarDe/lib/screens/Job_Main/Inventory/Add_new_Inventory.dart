@@ -27,6 +27,13 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
   }
 
   _getAllInventory(pageOffset, pageCount) async {
+    // loading circularIndicator
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(child: CircularProgressIndicator());
+      },
+    );
     final prefs = await SardePreferences.getInstance();
     var jobId = await prefs.jobId;
     var accessToken = prefs.token;
@@ -43,6 +50,8 @@ class _Road_Marking_inventoryState extends State<Road_Marking_inventory> {
       inventoryDataList.add(inventory);
     }
     setState(() {});
+    // pop the loading circle
+    Navigator.of (context).pop();
   }
 
   final List<Widget> inventoryDataList = [];

@@ -195,6 +195,7 @@ Widget jobContainer(String id, String jobTitle, Result job,Result subJob) {
           // ),
         ]),
         onTap: () {
+
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) => ChangeNotifierProvider.value(
