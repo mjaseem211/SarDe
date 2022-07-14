@@ -81,6 +81,10 @@ class _Start_Job_FormState extends State<Start_Job_Form> {
         SizedBox(
           height: 3.h,
         ),
+        jobDescription(context),
+        SizedBox(
+          height: 3.h,
+        ),
         subtitle(context),
         SizedBox(
           height: 5.h,
