@@ -10,12 +10,13 @@ class SardeLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 293.h, left: 75.w, right: 154.47.w),
+      padding: EdgeInsets.only(top: 280.h),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
             'assets/images/sarde.png',
-            height: 85.w,
+            height: 85.h,
             width: 154.w,
           ),
         ],
@@ -73,6 +74,7 @@ class Password extends StatelessWidget {
   }) : super(key: key);
 
   final TextEditingController controller;
+
   @override
   Widget build(BuildContext context) {
     return Padding(

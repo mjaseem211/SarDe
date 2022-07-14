@@ -74,7 +74,7 @@ Widget title1(BuildContext context) {
     padding: EdgeInsets.only(left: 33.w),
     child: Row(children: [
       Text(
-        job.jobID,
+        "Job " "${job.jobID}",
         style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 35.sp,
@@ -93,6 +93,23 @@ Widget subtitle(BuildContext context) {
     child: Row(children: [
       Text(
         job.jobTitle,
+        style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 22.sp,
+            color: const Color(0xFF2B3070).withOpacity(0.7)),
+      ),
+    ]),
+  );
+}
+Widget jobDescription(BuildContext context) {
+  JobIDProvider job = Provider.of<JobIDProvider>(
+    context,
+  );
+  return Padding(
+    padding: EdgeInsets.only(left: 33.w),
+    child: Row(children: [
+      Text(
+        job.jobResult.jobDescription,
         style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 22.sp,

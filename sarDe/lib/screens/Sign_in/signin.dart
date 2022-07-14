@@ -30,6 +30,13 @@ class _SignInPageState extends State<SignInPage> {
 
       return;
     }
+
+    final response = await SardeAPI.login(username, password);
+
+    if (response.status != "success") {
+      // TODO: Show alert
+      return;
+    }
 // loading circularIndicator
     showDialog(
       context: context,
@@ -37,17 +44,6 @@ class _SignInPageState extends State<SignInPage> {
         return const Center(child: CircularProgressIndicator());
       },
     );
-    final response = await SardeAPI.login(username, password);
-
-    if (response.status != "success") {
-      Fluttertoast.showToast(
-        msg: "Login failed",
-        backgroundColor: Colors.grey,
-        textColor: Colors.white,
-      );
-      return;
-    }
-
     // Login Success
 
     final prefs = await SardePreferences.getInstance();
@@ -96,7 +92,7 @@ class _SignInPageState extends State<SignInPage> {
             children: <Widget>[
               const SardeLogo(),
               SizedBox(
-                height: 37.h,
+                height: 45.h,
               ),
               Username(
                 controller: nameController,

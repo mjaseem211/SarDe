@@ -156,7 +156,7 @@ Widget jobContainer(String id, String jobTitle, Result job,Result subJob) {
             Padding(
               padding: EdgeInsets.only(top: 66.5.h, right: 225.w, left: 62.w),
               child: Text(
-                id,
+                "Job " "${id}",
                 style: TextStyle(
                   color: const Color(0xFFFFFFFF),
                   fontSize: 17.sp,

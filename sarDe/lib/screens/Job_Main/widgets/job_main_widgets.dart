@@ -23,7 +23,7 @@ Widget title(BuildContext context) {
       children: [
         Expanded(
           child: Text(
-            job.jobID,
+            "Job " "${job.jobID}",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
                 fontSize: 35.sp,
