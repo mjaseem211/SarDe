@@ -197,7 +197,45 @@ class ContactAdmin extends StatelessWidget {
             'Contact admin',
             style: GoogleFonts.lexendDeca(color: Colors.grey, fontSize: 18.sp),
           ),
-          onPressed: () {},
+          onPressed: () => openSheet(context),
+        ),
+      ],
+    );
+  }
+}
+
+void openSheet(BuildContext context) {
+  showModalBottomSheet(
+    context: context,
+    builder: (context) {
+      return const OptionsList();
+    },
+  );
+}
+
+class OptionsList extends StatelessWidget {
+  const OptionsList({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      shrinkWrap: true,
+      children: [
+        ListTile(
+          leading: const Icon(Icons.phone),
+          title: const Text('Call'),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
+        ListTile(
+          leading: const Icon(Icons.email_outlined),
+          title: const Text('Email'),
+          onTap: () {
+            Navigator.pop(context);
+          },
         ),
       ],
     );
