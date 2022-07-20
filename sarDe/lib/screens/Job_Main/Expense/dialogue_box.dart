@@ -76,12 +76,12 @@ class _dialogue_boxState extends State<dialogue_box> {
                             height: 35.h,
                             child: TextFormField(
                               keyboardType: TextInputType.text,
-                              validator: MultiValidator([
-                                PatternValidator(r'^[a-zA-Z0-9 ]*$',
-                                    errorText: 'Only use alphabets'),
-                                RequiredValidator(
-                                    errorText: "Expense is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   PatternValidator(r'^[a-zA-Z0-9 ]*$',
+                              //       errorText: 'Only use alphabets'),
+                              //   RequiredValidator(
+                              //       errorText: "Expense is required")
+                              // ]),
                               controller: expenseController,
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(
@@ -118,12 +118,12 @@ class _dialogue_boxState extends State<dialogue_box> {
                             width: 300.w,
                             height: 35.h,
                             child: TextFormField(
-                              validator: MultiValidator([
-                                PatternValidator(r'^[0-9 ]*$',
-                                    errorText: 'Only use numbers'),
-                                RequiredValidator(
-                                    errorText: "Amount is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   PatternValidator(r'^[0-9 ]*$',
+                              //       errorText: 'Only use numbers'),
+                              //   RequiredValidator(
+                              //       errorText: "Amount is required")
+                              // ]),
                               keyboardType: TextInputType.number,
                               controller: amtController,
                               decoration: InputDecoration(

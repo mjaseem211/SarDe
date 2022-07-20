@@ -114,10 +114,10 @@ class _dialogue_boxState extends State<dialogue_box> {
                             height: 35.h,
                             child: TextFormField(
                               keyboardType: TextInputType.text,
-                              validator: MultiValidator([
-                                RequiredValidator(
-                                    errorText: "Location is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   RequiredValidator(
+                              //       errorText: "Location is required")
+                              // ]),
                               controller: locationController,
                               decoration: InputDecoration(
                                 contentPadding:
@@ -157,10 +157,10 @@ class _dialogue_boxState extends State<dialogue_box> {
                             height: 35.h,
                             child: TextFormField(
                               keyboardType: TextInputType.text,
-                              validator: MultiValidator([
-                                RequiredValidator(
-                                    errorText: "Location is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   RequiredValidator(
+                              //       errorText: "Location is required")
+                              // ]),
                               controller: thicknessController,
                               decoration: InputDecoration(
                                 contentPadding:
@@ -198,10 +198,10 @@ class _dialogue_boxState extends State<dialogue_box> {
                             height: 35.h,
                             child: TextFormField(
                               keyboardType: TextInputType.text,
-                              validator: MultiValidator([
-                                RequiredValidator(
-                                    errorText: "Edge Alignment is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   RequiredValidator(
+                              //       errorText: "Edge Alignment is required")
+                              // ]),
                               controller: edgeAlignmentController,
                               decoration: InputDecoration(
                                 contentPadding:

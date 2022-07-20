@@ -122,12 +122,12 @@ class _dialogue_boxState extends State<dialogue_box> {
                             height: 35.h,
                             child: TextFormField(
                               keyboardType: TextInputType.text,
-                              validator: MultiValidator([
-                                PatternValidator(r'^[a-zA-Z0-9 ]*$',
-                                    errorText: 'Only use alphanumeric'),
-                                RequiredValidator(
-                                    errorText: "Trade is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   PatternValidator(r'^[a-zA-Z0-9 ]*$',
+                              //       errorText: 'Only use alphanumeric'),
+                              //   RequiredValidator(
+                              //       errorText: "Trade is required")
+                              // ]),
                               controller: tradeController,
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(
@@ -172,11 +172,11 @@ class _dialogue_boxState extends State<dialogue_box> {
                             height: 35.h,
                             child: TextFormField(
                               keyboardType: TextInputType.text,
-                              validator: MultiValidator([
-                                PatternValidator(r'^[a-zA-Z0-9 ]*$',
-                                    errorText: 'Only use alphanumeric'),
-                                RequiredValidator(errorText: "Type is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   PatternValidator(r'^[a-zA-Z0-9 ]*$',
+                              //       errorText: 'Only use alphanumeric'),
+                              //   RequiredValidator(errorText: "Type is required")
+                              // ]),
                               controller: typeController,
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(
@@ -213,13 +213,13 @@ class _dialogue_boxState extends State<dialogue_box> {
                             width: 91.w,
                             height: 35.h,
                             child: TextFormField(
-                              keyboardType: TextInputType.text,
-                              validator: MultiValidator([
-                                PatternValidator(r'^[0-9]*$',
-                                    errorText: 'Only use numbers'),
-                                RequiredValidator(
-                                    errorText: "Hours is required")
-                              ]),
+                              keyboardType: TextInputType.number,
+                              // validator: MultiValidator([
+                              //   PatternValidator(r'^[0-9]*$',
+                              //       errorText: 'Only use numbers'),
+                              //   RequiredValidator(
+                              //       errorText: "Hours is required")
+                              // ]),
                               controller: hoursController,
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(

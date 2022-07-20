@@ -80,10 +80,10 @@ class _Road_marking_dialogueboxState extends State<Road_marking_dialoguebox> {
                             height: 35.h,
                             child: TextFormField(
                               keyboardType: TextInputType.text,
-                              validator: MultiValidator([
-                                RequiredValidator(
-                                    errorText: "Item Description is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   RequiredValidator(
+                              //       errorText: "Item Description is required")
+                              // ]),
                               controller: itemdescriptionController,
                               decoration: InputDecoration(
                                 contentPadding: EdgeInsets.only(
@@ -120,11 +120,11 @@ class _Road_marking_dialogueboxState extends State<Road_marking_dialoguebox> {
                             width: 66.w,
                             height: 35.h,
                             child: TextFormField(
-                              validator: MultiValidator([
-                                PatternValidator(r'^[0-9 ]*$',
-                                    errorText: 'Only use numbers'),
-                                RequiredValidator(errorText: "No is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   PatternValidator(r'^[0-9 ]*$',
+                              //       errorText: 'Only use numbers'),
+                              //   RequiredValidator(errorText: "No is required")
+                              // ]),
                               keyboardType: TextInputType.number,
                               controller: noController,
                               decoration: InputDecoration(
@@ -162,12 +162,12 @@ class _Road_marking_dialogueboxState extends State<Road_marking_dialoguebox> {
                             width: 119.w,
                             height: 35.h,
                             child: TextFormField(
-                              validator: MultiValidator([
-                                PatternValidator(r'^[0-9,.]*$',
-                                    errorText: 'Only use numbers'),
-                                RequiredValidator(
-                                    errorText: "Length is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   PatternValidator(r'^[0-9,.]*$',
+                              //       errorText: 'Only use numbers'),
+                              //   RequiredValidator(
+                              //       errorText: "Length is required")
+                              // ]),
                               keyboardType: TextInputType.number,
                               controller: lengthController,
                               decoration: InputDecoration(
@@ -205,12 +205,12 @@ class _Road_marking_dialogueboxState extends State<Road_marking_dialoguebox> {
                             width: 119.w,
                             height: 35.h,
                             child: TextFormField(
-                              validator: MultiValidator([
-                                PatternValidator(r'^[0-9,. ]*$',
-                                    errorText: 'Only use numbers'),
-                                RequiredValidator(
-                                    errorText: "Width is required")
-                              ]),
+                              // validator: MultiValidator([
+                              //   PatternValidator(r'^[0-9,. ]*$',
+                              //       errorText: 'Only use numbers'),
+                              //   RequiredValidator(
+                              //       errorText: "Width is required")
+                              // ]),
                               keyboardType: TextInputType.number,
                               controller: widthController,
                               decoration: InputDecoration(
@@ -250,13 +250,13 @@ class _Road_marking_dialogueboxState extends State<Road_marking_dialoguebox> {
                             width: 66.w,
                             height: 35.h,
                             child: TextFormField(
-                              validator: MultiValidator([
-                                PatternValidator(r'^[0-9,. ]*$',
-                                    errorText: 'Only use numbers'),
-                                RequiredValidator(
-                                  errorText: "Meter Sqr is required",
-                                )
-                              ]),
+                              // validator: MultiValidator([
+                              //   PatternValidator(r'^[0-9,. ]*$',
+                              //       errorText: 'Only use numbers'),
+                              //   RequiredValidator(
+                              //     errorText: "Meter Sqr is required",
+                              //   )
+                              // ]),
                               keyboardType: TextInputType.number,
                               controller: metersqrController,
                               decoration: InputDecoration(
