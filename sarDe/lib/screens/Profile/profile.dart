@@ -36,7 +36,7 @@ class Profile extends StatelessWidget {
             ),
             Bottom_back_button(
               onTap: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const SupervisorDashboard()));
               },
             ),

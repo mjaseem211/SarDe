@@ -81,10 +81,10 @@ class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
                               height: 35.h,
                               child: TextFormField(
                                 keyboardType: TextInputType.text,
-                                validator: MultiValidator([
-                                  RequiredValidator(
-                                      errorText: "Item Description is required")
-                                ]),
+                                // validator: MultiValidator([
+                                //   RequiredValidator(
+                                //       errorText: "Item Description is required")
+                                // ]),
                                 controller: itemController,
                                 decoration: InputDecoration(
                                   contentPadding: EdgeInsets.only(
@@ -121,11 +121,11 @@ class _inventoryDialogueBoxState extends State<inventoryDialogueBox> {
                               width: 118.w,
                               height: 35.h,
                               child: TextFormField(
-                                validator: MultiValidator([
-                                  PatternValidator(r'^[0-9 ]*$',
-                                      errorText: 'Only use numbers'),
-                                  RequiredValidator(errorText: "No is required")
-                                ]),
+                                // validator: MultiValidator([
+                                //   PatternValidator(r'^[0-9 ]*$',
+                                //       errorText: 'Only use numbers'),
+                                //   RequiredValidator(errorText: "No is required")
+                                // ]),
                                 keyboardType: TextInputType.number,
                                 controller: quantityController,
                                 decoration: InputDecoration(
