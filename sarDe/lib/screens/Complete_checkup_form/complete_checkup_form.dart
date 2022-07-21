@@ -406,9 +406,9 @@ class _Complete_Check_UpState extends State<Complete_Check_Up> {
         Close_Day_Button(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const Success_Page()));
+                MaterialPageRoute(builder: (context) => const SuccessPage()));
           },
-        )
+        ),
       ]),
     );
   }

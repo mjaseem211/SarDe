@@ -9,9 +9,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // ignore: camel_case_types
 class Close_Day_Button extends StatelessWidget {
   final VoidCallback? onTap;
+  final String? text;
 
   // ignore: use_key_in_widget_constructors
-  const Close_Day_Button({this.onTap});
+  const Close_Day_Button({this.onTap,this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class Close_Day_Button extends StatelessWidget {
               ),
             ),
           ),
-          child: Padding(padding: EdgeInsets.only(left: 56.w,top: 28.h),  child: Text(
+          child: Padding(padding: EdgeInsets.only(left: 56.w,top: 28.h),  child: Text(text??
             "Close Day",
             style: TextStyle(
                 fontWeight: FontWeight.w400,
