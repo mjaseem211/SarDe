@@ -61,7 +61,7 @@ Widget subTitle() {
 
 Widget subTitle2() {
   return Padding(
-    padding: EdgeInsets.only(left: 36.w, right: 213.w),
+    padding: EdgeInsets.only(left: 36.w),
     child: Row(
       children: [
         Text(
