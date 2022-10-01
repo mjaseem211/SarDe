@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Widget title() {
   return Padding(
-      padding: EdgeInsets.only(left: 36.w, top: 109.h, right: 271.w),
+      padding: EdgeInsets.only(left: 36.w, top: 109.h),
       child: Row(
         children: [
           Text(
